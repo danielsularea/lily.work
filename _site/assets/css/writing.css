@@ -4,14 +4,28 @@
 /*
 /*****************************************************************************/
 
-.comingsoon {
-	opacity: 0.2;
-}
-
-a#works {
+a#writing {
 	color: #999999;
 }
 
-img#logo:hover {
-	opacity: 0.5;
+div#container {
+  font-family: 'Vollkorn';
+  font-size: 18px;
+  line-height: 22px;
+}
+
+div#container a {
+	color: #444444;
+}
+
+div#container a:hover {
+	color: #999999;
+}
+
+div.category {
+  margin-top: 20px;
+  font-family: 'Proxima Nova';
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
 }
