@@ -1,0 +1,39 @@
+.uk-navbar {
+  background: none;
+  border: none;
+}
+
+.uk-navbar-nav > li > a {
+  color: #ffffff;
+  font-weight: 400;
+  font-family: 'Proxima Nova';
+}
+
+.uk-navbar li#brand {
+  visibility: hidden;
+}
+
+body {
+  overflow: hidden;
+  background: #eeeeee;
+  background: url(/static/img/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+div#wrap {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  text-align: center;
+}
+
+div#wrap img#box {
+  max-width: 300px;
+  max-height: 300px;
+}

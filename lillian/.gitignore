@@ -1,0 +1,9 @@
+*.log
+*.pot
+*.pyc
+lillian/local_settings.py
+*.swp
+.DS_Store
+Doxyfile
+html
+latex

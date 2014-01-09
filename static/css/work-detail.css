@@ -1,0 +1,92 @@
+@media (max-width: 640px) {
+  div#content {
+    font-size: 1.0rem;
+    line-height: 1.1rem;
+  }
+}
+
+@media (min-width: 640px) {
+  div#content {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+  }
+}
+
+@media (min-width:960px) {
+  div#content {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+}
+
+@media (min-width:1100px) {
+  div#content {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+} 
+
+a {
+	cursor: pointer;
+}
+
+a.link {
+  color: #ea5e2c;
+}
+
+a.link:hover {
+  color: #444444;
+}
+
+.underline {
+	border-bottom: 1px dotted #444444;
+}
+
+html, body {
+	max-width: 100%;
+	overflow-x: hidden;
+	padding-bottom: 10px;
+}
+
+div#container {
+  padding: 75px 0px 0px;
+  text-align: center;
+  font-family: 'Proxima Nova Light';
+}
+
+div#container div#overflow-container {
+	width: 250%;
+	margin-left: -75%;
+}
+
+div#container div#overflow-container img {
+	margin: 0.5%;
+}
+
+div#container div#header {
+  font-family: 'Proxima Nova Bold';
+  font-weight: lighter;
+  margin-bottom: 10px;
+}
+
+div#container img#cbr-logo {
+  margin: 20% 0px 2%;
+}
+
+div#container img {
+  margin: 5% 0px;
+}
+
+div#container img#intro-logo {
+  margin: 10% 0px 14%;
+}
+
+div#container div#content2 {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+a.scroll {
+  font-family: 'Proxima Nova';
+  text-transform: uppercase;
+}
