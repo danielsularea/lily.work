@@ -1,5 +1,5 @@
 ---
-layout: writing-post
+layout: post-writing
 title:  Humble Beginnings
 categories: writing
 ---

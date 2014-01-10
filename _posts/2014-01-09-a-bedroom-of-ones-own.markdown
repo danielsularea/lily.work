@@ -1,5 +1,5 @@
 ---
-layout: writing-post
+layout: post-writing
 title:  A Bedroom of One's Own
 categories: writing
 ---

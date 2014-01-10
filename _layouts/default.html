@@ -18,11 +18,7 @@
     <body>
         <div id="wrap" class="uk-width-4-5 uk-container-center uk-text-center">
           <a href="{{ site.url }}/index.html"><img id="logo" class="uk-width-3-5 uk-width-medium-2-5 uk-width-large-3-10 uk-block" src="{{ site.url }}/assets/img/signature.png"></a>
-          <ul class="uk-subnav">
-            <li><a id="works" href="{{ site.url }}/index.html">works</a></li>
-            <li><a id="writing" href="{{ site.url }}/writing">writing</a></li>
-            <li><a id="about" href="{{ site.url }}/about">about</a></li>
-          </ul>
+          {% include header.html %}
           {{ content }}
         </div>
         {% include footer.html %}
