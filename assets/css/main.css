@@ -44,11 +44,15 @@ div#writing a:hover {
 
 div.category {
   margin-top: 20px;
-  font-family: 'Proxima Nova';
+  font-family: 'proximanova-regular';
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 2px;
   color: #999999;
+}
+
+div#spacer {
+  height: 100px;
 }
 
 /*****************************************************************************/
@@ -57,9 +61,6 @@ div.category {
 /*
 /*****************************************************************************/
 
-div#about div#links {
-	padding-right: 2%;
-}
 
 div#about div#links a {
 	color: #999999;

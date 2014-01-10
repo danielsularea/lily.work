@@ -71,7 +71,6 @@ a.link:hover {
 html, body {
   max-width: 100%;
   overflow-x: hidden;
-  padding-bottom: 10px;
 }
 
 div#wrap {
