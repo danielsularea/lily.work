@@ -63,7 +63,7 @@ a.link:hover {
 }
 
 .smallcaps {
-  font-family: 'proximanova-regular';
+  font-family: 'proximanova-regular', 'Lato', 'Helvetica Neue', 'Helvetica';
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -88,7 +88,7 @@ ul.uk-subnav a#works {
 div#container {
   padding: 75px 0px 0px;
   text-align: center;
-  font-family: 'proximanova-light';
+  font-family: 'proximanova-light', 'Lato', 'Helvetica Neue', 'Helvetica';
 }
 
 div#container div#overflow-container {
@@ -103,7 +103,7 @@ div#container div#overflow-container img {
 div#container div#header {
   margin-bottom: 10px;
   font-size: 14px;
-  font-family: 'proximanova-semibold';
+  font-family: 'proximanova-semibold', 'Lato', 'Helvetica Neue', 'Helvetica';
 }
 
 div#container img {

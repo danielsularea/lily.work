@@ -78,7 +78,7 @@ img#logo:hover {
 }
 
 ul.uk-subnav {
-	font-family: 'proximanova-regular';
+	font-family: 'proximanova-regular', 'Lato', 'Helvetica Neue', 'Helvetica';
 	text-transform: uppercase;
 	font-size: 13px;
 	margin: 50px 0 100px;

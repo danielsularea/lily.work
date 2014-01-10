@@ -24,7 +24,7 @@
 /*****************************************************************************/
 
 div#writing {
-  font-family: 'Vollkorn';
+  font-family: 'Vollkorn', 'Times New Roman';
   font-size: 18px;
   line-height: 22px;
 }
@@ -44,7 +44,7 @@ div#writing a:hover {
 
 div.category {
   margin-top: 20px;
-  font-family: 'proximanova-regular';
+  font-family: 'proximanova-regular', 'Lato', 'Helvetica Neue', 'Helvetica';
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 2px;
