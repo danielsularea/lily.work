@@ -48,6 +48,7 @@ div.category {
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 2px;
+  color: #999999;
 }
 
 /*****************************************************************************/
@@ -56,16 +57,16 @@ div.category {
 /*
 /*****************************************************************************/
 
-div#about a {
-	color: #888888;
-}
-
-div#about a:hover {
-	border-bottom: 1px dotted #EA9C81;
-}
-
 div#about div#links {
 	padding-right: 2%;
+}
+
+div#about div#links a {
+	color: #999999;
+}
+
+div#about div#links a:hover {
+	color: #666666;
 }
 
 div#about div#content {
@@ -76,6 +77,10 @@ div#about div#content {
 
 div#about div#content a {
 	color: #EA9C81;
+}
+
+div#about div#content a:hover {
+	border-bottom: 1px dotted #EA9C81;
 }
 
 div#about div#content div#caption {
