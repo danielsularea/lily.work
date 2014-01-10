@@ -1,7 +1,11 @@
 @media (max-width: 640px) {
   div#content {
-    font-size: 1.0rem;
-    line-height: 1.1rem;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+  }
+  div#container div#content2 {
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 
@@ -10,6 +14,10 @@
     font-size: 1.1rem;
     line-height: 1.3rem;
   }
+  div#container div#content2 {
+    font-size: 18px;
+    line-height: 28px;
+  }
 }
 
 @media (min-width:960px) {
@@ -17,12 +25,20 @@
     font-size: 1.1rem;
     line-height: 1.4rem;
   }
+  div#container div#content2 {
+    font-size: 20px;
+    line-height: 32px;
+  }
 }
 
 @media (min-width:1100px) {
   div#content {
     font-size: 1.2rem;
     line-height: 1.5rem;
+  }
+  div#container div#content2 {
+    font-size: 20px;
+    line-height: 32px;
   }
 }
 
@@ -86,9 +102,9 @@ div#container div#overflow-container img {
 }
 
 div#container div#header {
-  /*font-family: 'proximanova-light';*/
   margin-bottom: 10px;
-  /*font-weight: bolder;*/
+  font-size: 14px;
+  font-family: 'proximanova-semibold';
 }
 
 div#container img {
@@ -101,11 +117,6 @@ div#container img#cbr-logo {
 
 div#container img#intro-logo {
   margin: 10% 0px 14%;
-}
-
-div#container div#content2 {
-  font-size: 20px;
-  line-height: 32px;
 }
 
 div#container div.category {
