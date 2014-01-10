@@ -115,6 +115,7 @@ div#container img#intro-logo {
 div#container div.category {
   font-size: 14px;
   color: #666666;
+  font-family: 'proximanova-semibold', 'Lato', 'Helvetica Neue', 'Helvetica';
 }
 
 div#container a.scroll {
