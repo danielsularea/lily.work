@@ -62,12 +62,6 @@ a.link:hover {
   font-weight: lighter;
 }
 
-.smallcaps {
-  font-family: 'proximanova-regular', 'Lato', 'Helvetica Neue', 'Helvetica';
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
 html, body {
   max-width: 100%;
   overflow-x: hidden;
