@@ -4,12 +4,17 @@
 /*
 /*****************************************************************************/
 
-.comingsoon {
-	opacity: 0.2;
+.faded {
+	opacity: 0.75;
+	-webkit-transition: opacity 0.25s ease-in-out;
+  	-moz-transition: opacity 0.25s ease-in-out;
+  	-ms-transition: opacity 0.25s ease-in-out;
+  	-o-transition: opacity 0.25s ease-in-out;
+  	transition: opacity 0.25s ease-in-out;
 }
 
-img#logo:hover {
-	opacity: 0.5;
+.faded:hover {
+	opacity: 1;
 }
 
 /*****************************************************************************/
@@ -26,6 +31,11 @@ div#writing {
 
 div#writing a {
 	color: #444444;
+	-webkit-transition: color 0.1s ease-in-out;
+  	-moz-transition: color 0.1s ease-in-out;
+  	-ms-transition: color 0.1s ease-in-out;
+  	-o-transition: color 0.1s ease-in-out;
+  	transition: color 0.1s ease-in-out;
 }
 
 div#writing a:hover {
@@ -70,9 +80,9 @@ div#about div#content a {
 
 div#about div#content div#caption {
 	font-family: 'Vollkorn';
-  	color: #aaaaaa;
+  	color: #888888;
   	font-size: 22px;
   	line-height: 30px;
   	font-style: italic;
-  	text-align: center;
+  	text-align: left;
 }
