@@ -24,7 +24,7 @@
     font-size: 1.2rem;
     line-height: 1.5rem;
   }
-} 
+}
 
 a {
   cursor: pointer;
@@ -47,9 +47,8 @@ a.link:hover {
 }
 
 .smallcaps {
-  font-family: 'Proxima Nova';
+  font-family: 'proximanova-regular';
   text-transform: uppercase;
-  font-weight: 300;
   letter-spacing: 1px;
 }
 
@@ -74,8 +73,7 @@ ul.uk-subnav a#works {
 div#container {
   padding: 75px 0px 0px;
   text-align: center;
-  font-family: 'Proxima Nova';
-  /*font-weight: lighter;*/
+  font-family: 'proximanova-light';
 }
 
 div#container div#overflow-container {
@@ -88,9 +86,9 @@ div#container div#overflow-container img {
 }
 
 div#container div#header {
-  font-family: 'Proxima Nova';
+  /*font-family: 'proximanova-light';*/
   margin-bottom: 10px;
-  font-weight: bolder;
+  /*font-weight: bolder;*/
 }
 
 div#container img {
