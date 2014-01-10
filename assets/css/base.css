@@ -99,14 +99,6 @@ ul.uk-subnav a:hover {
 
 div#wrap {
 	padding: 15% 0 0;
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	margin: 0 auto -200px;
-}
-
-.push {
-	height: 200px;
 }
 
 div#footer {
