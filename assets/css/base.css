@@ -108,11 +108,11 @@ div#wrap {
 }
 
 div#footer {
-	height: 200px;
-	background: #eeeeee;
+	height: 125px;
 }
 
-div#footer div#contact {
+div#footer div#footer-inner {
+	border-top: 1px solid #eeeeee;
 	color: #888888;
 	font-family: 'proximanova-regular', 'Lato', 'Helvetica Neue', 'Helvetica';
 }
