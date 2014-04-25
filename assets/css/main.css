@@ -4,7 +4,7 @@
 /*
 /*****************************************************************************/
 
-.faded {
+/*.faded {
 	opacity: 0.75;
 	-webkit-transition: opacity 0.25s ease-in-out;
   	-moz-transition: opacity 0.25s ease-in-out;
@@ -15,7 +15,7 @@
 
 .faded:hover {
 	opacity: 1;
-}
+}*/
 
 /*****************************************************************************/
 /*
@@ -81,7 +81,8 @@ div#about div#content a {
 }
 
 div#about div#content a:hover {
-	border-bottom: 1px dotted #EA9C81;
+	/*border-bottom: 1px dotted #EA9C81;*/
+  color: #000000;
 }
 
 div#about div#content div#philosophy {
