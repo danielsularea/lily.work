@@ -18,9 +18,78 @@
   src: url('../fonts/Swiss721BT-Heavy.eot');
   src: url('../fonts/Swiss721BT-Heavy.eot?#iefix') format('embedded-opentype'), url('../fonts/Swiss721BT-Heavy.woff') format('woff'), url('../fonts/Swiss721BT-Heavy.ttf') format('truetype'), url('../fonts/Swiss721BT-Heavy.svg#webfont') format('svg');
 }
+a {
+  color: #111;
+}
+a:hover {
+  color: #111;
+  text-decoration: none;
+}
+html,
 body {
+  width: 100%;
+  height: 100%;
   background: #fff;
-  font-family: 'swiss721-heavy';
+  font-family: 'swiss721-medium';
   font-size: 14px;
   color: #111;
+  height: 2000px;
+}
+html .wrap .lc-nav,
+body .wrap .lc-nav {
+  height: 150px;
+}
+html .wrap .lc-nav .lc-nav-content img,
+body .wrap .lc-nav .lc-nav-content img {
+  width: 150px;
+}
+html .wrap .lc-nav .lc-nav-content a,
+body .wrap .lc-nav .lc-nav-content a {
+  line-height: 42px;
+  margin-left: 10px;
+  padding-bottom: 3px;
+  -webkit-transition: border-bottom 0.15s;
+  /* For Safari 3.1 to 6.0 */
+  transition: border-bottom 0.15s;
+}
+html .wrap .lc-nav .lc-nav-content a:hover,
+body .wrap .lc-nav .lc-nav-content a:hover {
+  border-bottom: 2px solid #111;
+}
+html .lc-border,
+body .lc-border {
+  background: #111;
+  position: fixed;
+}
+html .lc-border-left,
+body .lc-border-left,
+html .lc-border-right,
+body .lc-border-right {
+  top: 0;
+  bottom: 0;
+  width: 15px;
+}
+html .lc-border-left,
+body .lc-border-left {
+  left: 0;
+}
+html .lc-border-right,
+body .lc-border-right {
+  right: 0;
+}
+html .lc-border-top,
+body .lc-border-top,
+html .lc-border-bottom,
+body .lc-border-bottom {
+  left: 0;
+  right: 0;
+  height: 15px;
+}
+html .lc-border-top,
+body .lc-border-top {
+  top: 0;
+}
+html .lc-border-bottom,
+body .lc-border-bottom {
+  bottom: 0;
 }

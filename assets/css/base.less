@@ -31,6 +31,15 @@
 @font-med: 'swiss721-medium';
 @font-heavy: 'swiss721-heavy';
 
+a {
+	color: #111;
+
+	&:hover {
+		color: #111;
+		text-decoration: none;
+	}
+}
+
 html,
 body {
 	width: 100%;
@@ -39,6 +48,70 @@ body {
 	font-family: @font-med;
 	font-size: 14px;
 	color: #111;
+	height: 2000px;
+
+	.wrap {
+
+		.lc-nav {
+			height: 150px;
+
+			.lc-nav-content {
+				img {
+					width: 150px;
+				}
+
+				a {
+					line-height: 42px;
+					margin-left: 10px;
+					padding-bottom: 3px;
+					-webkit-transition: border-bottom 0.15s; /* For Safari 3.1 to 6.0 */
+					transition: border-bottom 0.15s;
+
+					&:hover {
+						border-bottom: 2px solid #111;
+					}
+				}
+			}
+		}
+
+		.lc-gallery {
+			.uk-grid {
+
+			}
+		}
+	}
+
+	.lc-border {
+	  background: #111;
+	  position: fixed;
+	}
+
+	.lc-border-left, .lc-border-right {
+	  top: 0; bottom: 0;
+	  width: 15px;
+	}
+
+	.lc-border-left {
+	  left: 0;
+	}
+
+	.lc-border-right {
+	  right: 0;
+	}
+	    
+	.lc-border-top, .lc-border-bottom {
+	  left: 0;
+	  right: 0;
+	  height: 15px;
+	}
+
+	.lc-border-top {
+	  top: 0;
+	}
+
+	.lc-border-bottom {
+	  bottom: 0;
+	}
 }
 
 
