@@ -35,26 +35,45 @@ body {
   color: #111;
   height: 2000px;
 }
-html .wrap .lc-nav,
-body .wrap .lc-nav {
-  height: 150px;
+html .lc-nav,
+body .lc-nav {
+  position: fixed;
+  top: 10px;
+  height: 100px;
+  background: #fff;
 }
-html .wrap .lc-nav .lc-nav-content img,
-body .wrap .lc-nav .lc-nav-content img {
-  width: 150px;
+html .lc-nav .lc-nav-content img,
+body .lc-nav .lc-nav-content img {
+  height: 30px;
 }
-html .wrap .lc-nav .lc-nav-content a,
-body .wrap .lc-nav .lc-nav-content a {
-  line-height: 42px;
+html .lc-nav .lc-nav-content a,
+body .lc-nav .lc-nav-content a {
+  line-height: 30px;
   margin-left: 10px;
   padding-bottom: 3px;
   -webkit-transition: border-bottom 0.15s;
   /* For Safari 3.1 to 6.0 */
   transition: border-bottom 0.15s;
 }
-html .wrap .lc-nav .lc-nav-content a:hover,
-body .wrap .lc-nav .lc-nav-content a:hover {
+html .lc-nav .lc-nav-content a:hover,
+body .lc-nav .lc-nav-content a:hover {
   border-bottom: 2px solid #111;
+}
+html .lc-gallery,
+body .lc-gallery {
+  padding-top: 115px;
+}
+html .lc-gallery .lc-photo,
+body .lc-gallery .lc-photo {
+  overflow: hidden;
+}
+html .lc-gallery .lc-photo-tall,
+body .lc-gallery .lc-photo-tall {
+  height: 750px;
+}
+html .lc-gallery .lc-photo-short,
+body .lc-gallery .lc-photo-short {
+  height: 375px;
 }
 html .lc-border,
 body .lc-border {
@@ -67,7 +86,7 @@ html .lc-border-right,
 body .lc-border-right {
   top: 0;
   bottom: 0;
-  width: 15px;
+  width: 10px;
 }
 html .lc-border-left,
 body .lc-border-left {
@@ -83,7 +102,7 @@ html .lc-border-bottom,
 body .lc-border-bottom {
   left: 0;
   right: 0;
-  height: 15px;
+  height: 10px;
 }
 html .lc-border-top,
 body .lc-border-top {

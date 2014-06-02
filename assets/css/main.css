@@ -1,45 +1,33 @@
 /*! by Lillian Chen | http://www.lillian-chen.com */
-
 /*****************************************************************************/
 /*
 /* Works
 /*
 /*****************************************************************************/
-
-.works {
-	.lc-gallery {
-		padding-top: 115px;
-
-		.lc-photo-tall {
-			height: 750px;
-			-webkit-background-size: cover !important;
-		  -moz-background-size: cover !important;
-		  -o-background-size: cover !important;
-		  background-size: cover !important;
-		}
-
-		.lc-photo-short {
-			height: 375px;
-			-webkit-background-size: cover !important;
-		  -moz-background-size: cover !important;
-		  -o-background-size: cover !important;
-		  background-size: cover !important;
-		}
-	}
+.works .lc-gallery {
+  padding-top: 115px;
 }
-
+.works .lc-gallery .lc-photo-tall {
+  height: 750px;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+}
+.works .lc-gallery .lc-photo-short {
+  height: 375px;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+}
 /*****************************************************************************/
 /*
 /* Writing
 /*
 /*****************************************************************************/
-
-
-
 /*****************************************************************************/
 /*
 /* About
 /*
 /*****************************************************************************/
-
-
