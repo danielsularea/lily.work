@@ -48,11 +48,15 @@ body .lc-nav {
 }
 html .lc-nav .lc-nav-content img,
 body .lc-nav .lc-nav-content img {
-  height: 40px;
+  height: 55px;
+}
+html .lc-nav .lc-nav-content img:hover,
+body .lc-nav .lc-nav-content img:hover {
+  opacity: 0.5;
 }
 html .lc-nav .lc-nav-content a,
 body .lc-nav .lc-nav-content a {
-  line-height: 40px;
+  line-height: 60px;
   margin-left: 10px;
   padding-bottom: 3px;
   -webkit-transition: border-bottom 0.15s;
