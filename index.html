@@ -4,3 +4,114 @@ title: Works
 id: works
 ---
 
+<div class="lc-gallery uk-width-4-5 uk-container-center">
+	{% for work in site.data.works %}
+		{% case forloop.index | modulo: 6 %}
+			{% when 1 %}
+				<a href="">
+					<div class="lc-photo tall uk-width-1-2 uk-float-left uk-vertical-align" style="background:url({{ site.url }}/assets/img/{{ work.img }}) no-repeat center center;">
+						<div class="lc-overlay uk-vertical-align-middle">
+							<span class="title tk-vollkorn">{{ work.title }}</span><br>
+							<span class="tags">
+								{% for tag in work.tags %}
+								{% if forloop.index > 1 %}/ {% endif %}
+								{{ tag }}
+								{% endfor %}
+							</span>
+						</div>
+					</div>
+				</a>
+			{% when 2 %}
+				<div class="uk-width-1-2 uk-float-left">
+					<a href="">
+						<div class="lc-photo short uk-width-1-1 uk-vertical-align" style="background:url({{ site.url }}/assets/img/{{ work.img }}) no-repeat center center;">
+							<div class="lc-overlay uk-vertical-align-middle">
+								<span class="title tk-vollkorn">{{ work.title }}</span><br>
+								<span class="tags">
+									{% for tag in work.tags %}
+									{% if forloop.index > 1 %}/ {% endif %}
+									{{ tag }}
+									{% endfor %}
+								</span>
+							</div>
+						</div>
+					</a>
+				{% if forloop.last %}
+				</div>
+				{% endif %}
+			{% when 3 %}
+					<a href="">
+						<div class="lc-photo short uk-width-1-1 uk-vertical-align" style="background:url({{ site.url }}/assets/img/fiberspark/dual-screen.jpg) no-repeat center center;">
+							<div class="lc-overlay uk-vertical-align-middle">
+								<span class="title tk-vollkorn">{{ work.title }}</span><br>
+								<span class="tags">
+									{% for tag in work.tags %}
+									{% if forloop.index > 1 %}/ {% endif %}
+									{{ tag }}
+									{% endfor %}
+								</span>
+							</div>
+						</div>
+					</a>
+				</div>
+			{% when 4 %}
+				{% if forloop.rindex == 2 %}
+				<div class="uk-width-1-1 uk-float-left">
+					<a href="">
+						<div class="lc-photo short uk-width-1-2 uk-vertical-align uk-float-left" style="background:url({{ site.url }}/assets/img/{{ work.img }}) no-repeat center center;">
+				{% else %}
+				<div class="uk-width-1-2 uk-float-left">
+					<a href="">
+						<div class="lc-photo short uk-width-1-1 uk-vertical-align" style="background:url({{ site.url }}/assets/img/{{ work.img }}) no-repeat center center;">
+				{% endif %}
+							<div class="lc-overlay uk-vertical-align-middle">
+								<span class="title tk-vollkorn">{{ work.title }}</span><br>
+								<span class="tags">
+									{% for tag in work.tags %}
+									{% if forloop.index > 1 %}/ {% endif %}
+									{{ tag }}
+									{% endfor %}
+								</span>
+							</div>
+						</div>
+					</a>
+				{% if forloop.last %}
+				</div>
+				{% endif %}
+			{% when 5 %}
+				{% if forloop.last %}
+				<a href="">
+						<div class="lc-photo short uk-width-1-2 uk-vertical-align uk-float-left" style="background:url({{ site.url }}/assets/img/{{ work.img}}) no-repeat center center;">
+				{% else %}
+				<a href="">
+						<div class="lc-photo short uk-width-1-1 uk-vertical-align" style="background:url({{ site.url }}/assets/img/{{ work.img}}) no-repeat center center;">
+				{% endif %}
+							<div class="lc-overlay uk-vertical-align-middle">
+								<span class="title tk-vollkorn">{{ work.title }}</span><br>
+								<span class="tags">
+									{% for tag in work.tags %}
+									{% if forloop.index > 1 %}/ {% endif %}
+									{{ tag }}
+									{% endfor %}
+								</span>
+							</div>
+						</div>
+					</a>
+				</div>
+			{% else %}
+				<a href="">
+					<div class="lc-photo tall uk-width-1-2 uk-float-left uk-vertical-align" style="background:url({{ site.url }}/assets/img/{{ work.img }}) no-repeat center center;">
+						<div class="lc-overlay uk-vertical-align-middle">
+							<span class="title tk-vollkorn">{{ work.title }}</span><br>
+							<span class="tags">
+								{% for tag in work.tags %}
+								{% if forloop.index > 1 %}/ {% endif %}
+								{{ tag }}
+								{% endfor %}
+							</span>
+						</div>
+					</div>
+				</a>
+		{% endcase %}
+	{% endfor %}
+</div>

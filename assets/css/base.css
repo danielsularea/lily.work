@@ -33,14 +33,18 @@ body {
   font-family: 'swiss721-medium';
   font-size: 14px;
   color: #111;
-  height: 2000px;
 }
 html .lc-nav,
 body .lc-nav {
   position: fixed;
   top: 10px;
-  height: 100px;
+  height: 150px;
   background: #fff;
+  border-bottom: 2px solid #111;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
 }
 html .lc-nav .lc-nav-content img,
 body .lc-nav .lc-nav-content img {

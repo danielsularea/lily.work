@@ -5,21 +5,40 @@
 /*
 /*****************************************************************************/
 .works .lc-gallery {
-  padding-top: 110px;
+  padding-top: 160px;
 }
-.works .lc-gallery .lc-photo-tall {
-  height: 750px;
+.works .lc-gallery .lc-photo {
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
   -o-background-size: cover !important;
   background-size: cover !important;
 }
-.works .lc-gallery .lc-photo-short {
-  height: 375px;
-  -webkit-background-size: cover !important;
-  -moz-background-size: cover !important;
-  -o-background-size: cover !important;
-  background-size: cover !important;
+.works .lc-gallery .lc-photo:hover {
+  background: #fff !important;
+}
+.works .lc-gallery .lc-photo .lc-overlay {
+  visibility: hidden;
+  color: #111;
+}
+.works .lc-gallery .lc-photo .lc-overlay .title {
+  font-size: 22px;
+  line-height: 30px;
+  font-style: italic;
+  font-weight: normal;
+}
+.works .lc-gallery .lc-photo .lc-overlay .tags {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.works .lc-gallery .lc-photo:hover .lc-overlay {
+  visibility: visible;
+}
+.works .lc-gallery .tall {
+  height: 600px;
+}
+.works .lc-gallery .short {
+  height: 300px;
 }
 /*****************************************************************************/
 /*
