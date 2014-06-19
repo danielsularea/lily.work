@@ -66,6 +66,7 @@ body .lc-nav {
   left: 0;
   margin-right: auto;
   margin-left: auto;
+  z-index: 9999;
 }
 html .lc-nav .lc-nav-content img,
 body .lc-nav .lc-nav-content img {
