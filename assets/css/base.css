@@ -77,6 +77,11 @@ html .lc-nav .lc-nav-content a:hover,
 body .lc-nav .lc-nav-content a:hover {
   border-bottom: 2px solid #111;
 }
+html .lc-footer,
+body .lc-footer {
+  margin-top: 50px;
+  height: 100px;
+}
 html .lc-border,
 body .lc-border {
   background: #111;
