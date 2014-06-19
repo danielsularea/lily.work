@@ -45,3 +45,25 @@
 /* About
 /*
 /*****************************************************************************/
+.about {
+  padding-top: 150px;
+}
+.about a {
+  text-decoration: underline;
+}
+.about a:hover {
+  color: #888;
+}
+.about .lc-info {
+  border-right: 2px solid #111;
+}
+.about .lc-info .headline {
+  margin-top: 75px;
+  padding-right: 50px;
+  font-size: 20px;
+  line-height: 24px;
+  font-style: italic;
+}
+.about .lc-contact {
+  margin-top: 80px;
+}

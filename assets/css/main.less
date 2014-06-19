@@ -1,5 +1,8 @@
 /*! by Lillian Chen | http://www.lillian-chen.com */
 
+@font-med: 'swiss721-medium';
+@font-heavy: 'swiss721-heavy';
+
 /*****************************************************************************/
 /*
 /* Works
@@ -60,5 +63,30 @@
 /*****************************************************************************/
 
 .about {
-	
+	padding-top: 150px;
+
+	a {
+		// border-bottom: 2px dotted #111;
+		text-decoration: underline;
+
+		&:hover {
+			color: #888;
+		}
+	}
+
+	.lc-info {
+		border-right: 2px solid #111;
+
+		.headline {
+			margin-top: 75px;
+			padding-right: 50px;
+			font-size: 20px;
+			line-height: 24px;
+			font-style: italic;
+		}
+	}
+
+	.lc-contact {
+		margin-top: 80px;
+	}
 }
