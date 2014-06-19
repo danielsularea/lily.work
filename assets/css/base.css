@@ -50,10 +50,6 @@ html .lc-nav .lc-nav-content img,
 body .lc-nav .lc-nav-content img {
   height: 55px;
 }
-html .lc-nav .lc-nav-content img:hover,
-body .lc-nav .lc-nav-content img:hover {
-  opacity: 0.5;
-}
 html .lc-nav .lc-nav-content a,
 body .lc-nav .lc-nav-content a {
   line-height: 60px;

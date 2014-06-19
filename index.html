@@ -6,7 +6,7 @@ id: works
 
 <div class="works">
 	<div class="lc-gallery uk-width-4-5 uk-container-center">
-		{% for work in site.data.works %}
+		{% for work in site.data.works reversed %}
 			{% case forloop.index | modulo: 6 %}
 				{% when 1 %}
 					<a href="">
@@ -42,7 +42,7 @@ id: works
 					{% endif %}
 				{% when 3 %}
 						<a href="">
-							<div class="lc-photo short uk-width-1-1 uk-vertical-align" style="background:url({{ site.url }}/assets/img/fiberspark/dual-screen.jpg) no-repeat center center;">
+							<div class="lc-photo short uk-width-1-1 uk-vertical-align" style="background:url({{ site.url }}/assets/img/{{ work.img }}) no-repeat center center;">
 								<div class="lc-overlay uk-vertical-align-middle">
 									<span class="title tk-vollkorn">{{ work.title }}</span><br>
 									<span class="tags">

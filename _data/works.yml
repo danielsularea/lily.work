@@ -1,24 +1,30 @@
 - title: Dreamcatcher
-  tags: [ identity, website design ]
+  tags: [ hackathon, identity, web design ]
   website: 
   img: dreamcatcher/cards.jpg
+  skills: [ photoshop ]
 - title: Cornell Business Review
-  tags: [ identity, print, website design ]
+  tags: [ print, identity, website design ]
   website: 
   img: work3.jpg
+  skills: [ indesign, photoshop ]
 - title: Fiberspark
   tags: [ identity, website design ]
   website: 
   img: fiberspark/dual-screen.jpg
-- title: Cornell Business Review
-  tags: [ identity, print, website design ]
+  skills: [ photoshop ]
+- title: Ellaspark
+  tags: [ frontend development, identity ]
+  website: www.ellaspark.com
+  img: ellaspark/card-front-mockup.jpg
+  skills: [ jquery ]
+- title: Life Changing Labs
+  tags: [ web development, identity ]
+  website: www.lifechanginglabs.com
+  img: lifechanginglabs/landing-mockup.jpg
+  skills: [ jquery, jekyll ]
+- title: Pathogenesis
+  tags: [ game design ]
   website: 
-  img: work3.jpg
-- title: Fiberspark
-  tags: [ identity, website design ]
-  website: 
-  img: fiberspark/dual-screen.jpg
-- title: Dreamcatcher
-  tags: [ identity, website design ]
-  website: 
-  img: dreamcatcher/cards.jpg
+  img: patho/gamemanual-mockup.jpg
+  skills: [ illustrator, photoshop ]
