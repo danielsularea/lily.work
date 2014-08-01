@@ -25,6 +25,9 @@ a:hover {
   color: #111;
   text-decoration: none;
 }
+.hidden {
+  display: none;
+}
 .smallcaps {
   font-family: 'swiss721-medium';
   font-size: 14px;
@@ -49,7 +52,7 @@ body .construction {
   left: 0;
   right: 0;
   background: rgba(255, 255, 255, 0.9);
-  z-index: 1000;
+  z-index: 10000;
 }
 html .construction div,
 body .construction div {
@@ -61,11 +64,12 @@ body .lc-nav {
   top: 10px;
   height: 150px;
   background: #fff;
-  border-bottom: 2px solid #111;
   right: 0;
   left: 0;
   margin-right: auto;
   margin-left: auto;
+  border-bottom: 2px solid #111;
+  transition: height 500ms;
   z-index: 9999;
 }
 html .lc-nav .lc-nav-content img,
@@ -75,15 +79,23 @@ body .lc-nav .lc-nav-content img {
 html .lc-nav .lc-nav-content a,
 body .lc-nav .lc-nav-content a {
   line-height: 60px;
+}
+html .lc-nav .lc-nav-content a.lc-nav-link,
+body .lc-nav .lc-nav-content a.lc-nav-link {
   margin-left: 10px;
   padding-bottom: 3px;
-  -webkit-transition: border-bottom 0.15s;
-  /* For Safari 3.1 to 6.0 */
-  transition: border-bottom 0.15s;
 }
-html .lc-nav .lc-nav-content a:hover,
-body .lc-nav .lc-nav-content a:hover {
+html .lc-nav .lc-nav-content a.lc-nav-link:hover,
+body .lc-nav .lc-nav-content a.lc-nav-link:hover {
   border-bottom: 2px solid #111;
+}
+html .lc-tiny-nav,
+body .lc-tiny-nav {
+  height: 60px;
+}
+html .lc-tiny-nav .lc-nav-content img,
+body .lc-tiny-nav .lc-nav-content img {
+  display: none;
 }
 html .lc-footer,
 body .lc-footer {

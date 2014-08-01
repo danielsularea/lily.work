@@ -21,7 +21,7 @@
     <script type="text/javascript" src="{{ site.url }}/assets/js/index.js"></script>
 	</head>
 
-	<body class="works uk-width-1-1 uk-text-center">
+	<body id="top" class="works uk-width-1-1 uk-text-center">
 		<div class="construction uk-width-1-1 uk-height-1-1 uk-vertical-align">
 			<div class="uk-vertical-align-middle tk-vollkorn">
 				Doing some awesome re-construction right now.<br>Come back soon!
@@ -29,10 +29,11 @@
 		</div>
 		<div class="lc-nav uk-width-4-5 uk-text-center uk-vertical-align">
 			<div class="lc-nav-content uk-width-1-1 uk-vertical-align-middle uk-text-right">
-				<a href="{{ site.url }}/index.html"><img class="uk-float-left" src="{{ site.url }}/assets/img/signature.png"></a>
-				<a id="works" href="{{ site.url }}/index.html">Works</a>
-				<a id="about" href="{{ site.url }}/about">About</a>
-				<a id="blog" href="{{ site.url }}/blog">Blog</a>
+				<a href="{{ site.url }}/index.html"><img class="lc-nav-brand uk-float-left" src="{{ site.url }}/assets/img/signature.png"></a>
+				<a class="lc-nav-link-top uk-float-left hidden" href="#top">back to top <i class="uk-icon-long-arrow-up"></i></a>
+				<a class="lc-nav-link" id="works" href="{{ site.url }}/index.html">Works</a>
+				<a class="lc-nav-link" id="about" href="{{ site.url }}/about">About</a>
+				<a class="lc-nav-link" id="blog" href="{{ site.url }}/blog">Blog</a>
 			</div>
 		</div>
 		{{ content }}
