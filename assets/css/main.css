@@ -96,3 +96,26 @@
 .blog .blog-entry .date {
   font-size: 12px;
 }
+.post {
+  padding-top: 180px;
+}
+.post .uk-icon-long-arrow-left {
+  margin-bottom: 50px;
+  color: #888;
+}
+.post .uk-icon-long-arrow-left:hover {
+  color: #000;
+}
+.post .date {
+  font-size: 12px;
+}
+.post .title {
+  margin-top: 5px;
+  margin-bottom: 25px;
+  font-size: 25px;
+  font-style: italic;
+}
+.post .body {
+  font-size: 16px;
+  line-height: 18px;
+}

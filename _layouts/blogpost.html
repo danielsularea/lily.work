@@ -15,7 +15,7 @@
 	  <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/base.css">
 	  <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/main.css">
 	  <style type="text/css">
-      .lc-nav-content a#{{ page.id }} {
+      .lc-nav-content a#blog {
       	border-bottom: 2px solid #111;
       }
     </style>
@@ -36,7 +36,14 @@
 				<a class="lc-nav-link" id="blog" href="{{ site.url }}/blog">Blog</a>
 			</div>
 		</div>
-		{{ content }}
+		<div class="post uk-width-4-5 uk-container-center uk-text-left">
+			<a href=""><i class="uk-icon-long-arrow-left"></i></a>
+			<div class="date smallcaps">{{ page.date | date: "%b %-d, %Y" }}</div>
+			<div class="title tk-vollkorn">{{ page.title }}</div>
+			<div class="body tk-vollkorn">
+				{{ content }}
+			</div>
+		</div>
 		<div class="lc-border lc-border-left"></div>
     <div class="lc-border lc-border-right"></div>
     <div class="lc-border lc-border-top"></div>
