@@ -4,7 +4,7 @@
   img: fiberspark/dual-screen.jpg
   skills: [ photoshop ]
 - title: Dreamcatcher
-  tags: [ hackathon, identity, web design ]
+  tags: [ identity, web design ]
   website: 
   img: dreamcatcher/cards.jpg
   skills: [ photoshop ]
@@ -14,7 +14,7 @@
   img: ellaspark/card-front-mockup.jpg
   skills: [ jquery ]
 - title: Speare
-  tags: [ hackathon, frontend development ]
+  tags: [ frontend development ]
   website: www.spea.re
   img: speare/analysis-mockup.jpg
   skills: [ jquery ]

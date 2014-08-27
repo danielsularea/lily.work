@@ -40,6 +40,33 @@ a {
 	}
 }
 
+a.crossout {
+	position: relative;
+}
+
+a.crossout::after {
+	content: '';
+	border-bottom: 10px solid;
+	border-color: #333;
+	position: absolute;
+	top: 30%;
+	width: 0;
+	right: 100%;
+	-webkit-transition: right .3s ease-in-out,width .3s ease-in-out;
+	-moz-transition: right .3s ease-in-out,width .3s ease-in-out;
+	-o-transition: right .3s ease-in-out,width .3s ease-in-out;
+	transition: right .3s ease-in-out,width .3s ease-in-out;
+	-webkit-transition-timing-function: cubic-bezier(0.19,1,.22,1);
+	-moz-transition-timing-function: cubic-bezier(0.19,1,.22,1);
+	-o-transition-timing-function: cubic-bezier(0.19,1,.22,1);
+	transition-timing-function: cubic-bezier(0.19,1,.22,1);
+}
+
+a.crossout:hover::after {
+	right: 0;
+	width: 100%;
+}
+
 .hidden {
 	display: none;
 }
