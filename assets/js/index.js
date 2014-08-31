@@ -2,10 +2,10 @@ $( document ).ready(function() {
 	$(window).scroll(function () {
 	  if ($(document).scrollTop() < 150) {
 	    $('.lc-nav').removeClass('lc-tiny-nav');
-	    $('.lc-nav-link-top').addClass('hidden');
+	    $('.lc-back-top').addClass('hidden');
 	  } else {
 	    $('.lc-nav').addClass('lc-tiny-nav');
-	    $('.lc-nav-link-top').removeClass('hidden');
+	    $('.lc-back-top').removeClass('hidden');
 	  }
 	});
 

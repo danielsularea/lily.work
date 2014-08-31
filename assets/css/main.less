@@ -28,6 +28,7 @@
 		  	color: #111;
 
 		  	.title {
+		  		font-family: "Vollkorn";
 		  		font-size: 22px;
 		  		line-height: 30px;
 		  		font-style: italic;
@@ -75,20 +76,31 @@
 
 .about {
 	padding-top: 150px;
+	font-family: "Vollkorn";
 
 	a {
-		text-decoration: underline;
-		// background: yellow;
+		text-decoration: none;
+	  background-image: linear-gradient(to top,
+	    rgba(0,0,0,0) 11%,
+	    rgba(0,0,0,.3) 11%,
+	    rgba(0,0,0,.3) 16%,
+	    rgba(0,0,0,0) 16%
+    );
 
-		&:hover {
-			color: #888;
-		}
+    &:hover {
+    	background-image: linear-gradient(to top,
+		    rgba(0,0,0,0) 11%,
+		    rgba(0,0,0,1) 11%,
+		    rgba(0,0,0,1) 16%,
+		    rgba(0,0,0,0) 16%
+	    );
+    }
 	}
 
 	.lc-info {
 		border-right: 2px solid #111;
 
-		.headline {
+		.body {
 			margin-top: 75px;
 			padding-right: 50px;
 			font-size: 20px;
@@ -116,9 +128,15 @@
 		padding: 30px 0;
 
 		.title {
+			font-family: "Vollkorn";
 			margin-top: 5px;
 			font-size: 25px;
 			font-style: italic;
+
+			a.crossout::after {
+				top: 30%;
+				border-bottom: 10px solid #333;
+			}
 		}
 
 		.date {
@@ -146,12 +164,63 @@
 	.title {
 		margin-top: 5px;
 		margin-bottom: 25px;
+		font-family: "Vollkorn";
 		font-size: 25px;
 		font-style: italic;
 	}
 
-	.body {
-		font-size: 16px;
-		line-height: 18px;
+	.wrapper {
+		overflow: hidden;
+		font-family: "Vollkorn";
+		font-size: 17px;
+		line-height: 22px;
+
+		.body {
+			position: relative;
+			float: left;
+			margin-left: 7%;
+			width: 93%;
+
+			.header {
+				// margin: 0 15px 10px -100px;
+				// float: left;
+				font-family: @font-heavy;
+				font-size: 12px;
+				text-transform: uppercase;
+			}
+
+			.img-aside-left {
+				margin: 20px 25px 20px -7%;
+				float: left;
+			}
+
+			.img-aside-right {
+				margin: 20px 25px 20px 0;
+				float: right;
+			}
+
+			a {
+				text-decoration: none;
+			  background-image: linear-gradient(to top,
+			    rgba(0,0,0,0) 11%,
+			    rgba(0,0,0,.3) 11%,
+			    rgba(0,0,0,.3) 16%,
+			    rgba(0,0,0,0) 16%
+		    );
+
+		    &:hover {
+		    	background-image: linear-gradient(to top,
+				    rgba(0,0,0,0) 11%,
+				    rgba(0,0,0,1) 11%,
+				    rgba(0,0,0,1) 16%,
+				    rgba(0,0,0,0) 16%
+			    );
+		    }
+			}
+
+			em {
+				color: #111;
+			}
+		}
 	}
 }

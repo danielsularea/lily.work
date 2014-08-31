@@ -8,6 +8,9 @@
   /* Firefox */
   color: #444444;
 }
+no-overflow {
+  overflow: none;
+}
 @font-face {
   font-family: 'swiss721-medium';
   src: url('../fonts/Swiss721BT-Medium.eot');
@@ -30,10 +33,9 @@ a.crossout {
 }
 a.crossout::after {
   content: '';
-  border-bottom: 10px solid;
-  border-color: #333;
+  border-bottom: 5px solid #333;
   position: absolute;
-  top: 30%;
+  top: 35%;
   width: 0;
   right: 100%;
   -webkit-transition: right 0.3s ease-in-out, width 0.3s ease-in-out;
@@ -80,7 +82,14 @@ body .construction {
 }
 html .construction div,
 body .construction div {
+  font-family: "Vollkorn";
   font-size: 20px;
+}
+html .lc-back-top,
+body .lc-back-top {
+  position: fixed;
+  right: 5%;
+  bottom: 10%;
 }
 html .lc-nav,
 body .lc-nav {
@@ -106,12 +115,31 @@ body .lc-nav .lc-nav-content a {
 }
 html .lc-nav .lc-nav-content a.lc-nav-link,
 body .lc-nav .lc-nav-content a.lc-nav-link {
-  margin-left: 10px;
-  padding-bottom: 3px;
+  position: relative;
+  margin-left: 7px;
 }
-html .lc-nav .lc-nav-content a.lc-nav-link:hover,
-body .lc-nav .lc-nav-content a.lc-nav-link:hover {
-  border-bottom: 2px solid #111;
+html .lc-nav .lc-nav-content a.lc-nav-link::after,
+body .lc-nav .lc-nav-content a.lc-nav-link::after {
+  content: '';
+  border-bottom: 7px solid;
+  border-color: #333;
+  position: absolute;
+  top: 15%;
+  right: 100%;
+  width: 0;
+  -webkit-transition: right 0.3s ease-in-out, width 0.3s ease-in-out;
+  -moz-transition: right 0.3s ease-in-out, width 0.3s ease-in-out;
+  -o-transition: right 0.3s ease-in-out, width 0.3s ease-in-out;
+  transition: right 0.3s ease-in-out, width 0.3s ease-in-out;
+  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+html .lc-nav .lc-nav-content a.lc-nav-link:hover::after,
+body .lc-nav .lc-nav-content a.lc-nav-link:hover::after {
+  width: 100%;
+  right: 0;
 }
 html .lc-tiny-nav,
 body .lc-tiny-nav {

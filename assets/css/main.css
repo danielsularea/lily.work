@@ -21,6 +21,7 @@
   color: #111;
 }
 .works .lc-gallery .lc-photo .lc-overlay .title {
+  font-family: "Vollkorn";
   font-size: 22px;
   line-height: 30px;
   font-style: italic;
@@ -56,17 +57,19 @@
 /*****************************************************************************/
 .about {
   padding-top: 150px;
+  font-family: "Vollkorn";
 }
 .about a {
-  text-decoration: underline;
+  text-decoration: none;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 11%, rgba(0, 0, 0, 0.3) 11%, rgba(0, 0, 0, 0.3) 16%, rgba(0, 0, 0, 0) 16%);
 }
 .about a:hover {
-  color: #888;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 11%, #000000 11%, #000000 16%, rgba(0, 0, 0, 0) 16%);
 }
 .about .lc-info {
   border-right: 2px solid #111;
 }
-.about .lc-info .headline {
+.about .lc-info .body {
   margin-top: 75px;
   padding-right: 50px;
   font-size: 20px;
@@ -89,9 +92,14 @@
   padding: 30px 0;
 }
 .blog .blog-entry .title {
+  font-family: "Vollkorn";
   margin-top: 5px;
   font-size: 25px;
   font-style: italic;
+}
+.blog .blog-entry .title a.crossout::after {
+  top: 30%;
+  border-bottom: 10px solid #333;
 }
 .blog .blog-entry .date {
   font-size: 12px;
@@ -112,10 +120,42 @@
 .post .title {
   margin-top: 5px;
   margin-bottom: 25px;
+  font-family: "Vollkorn";
   font-size: 25px;
   font-style: italic;
 }
-.post .body {
-  font-size: 16px;
-  line-height: 18px;
+.post .wrapper {
+  overflow: hidden;
+  font-family: "Vollkorn";
+  font-size: 17px;
+  line-height: 22px;
+}
+.post .wrapper .body {
+  position: relative;
+  float: left;
+  margin-left: 7%;
+  width: 93%;
+}
+.post .wrapper .body .header {
+  font-family: 'swiss721-heavy';
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.post .wrapper .body .img-aside-left {
+  margin: 20px 25px 20px -7%;
+  float: left;
+}
+.post .wrapper .body .img-aside-right {
+  margin: 20px 25px 20px 0;
+  float: right;
+}
+.post .wrapper .body a {
+  text-decoration: none;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 11%, rgba(0, 0, 0, 0.3) 11%, rgba(0, 0, 0, 0.3) 16%, rgba(0, 0, 0, 0) 16%);
+}
+.post .wrapper .body a:hover {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 11%, #000000 11%, #000000 16%, rgba(0, 0, 0, 0) 16%);
+}
+.post .wrapper .body em {
+  color: #111;
 }
