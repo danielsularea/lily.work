@@ -192,6 +192,9 @@ body .lc-border-bottom {
   bottom: 0;
 }
 @media (max-width: 767px) {
+  body {
+    padding-bottom: 25px;
+  }
   body .lc-nav {
     height: 75px;
   }
