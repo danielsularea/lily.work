@@ -16,18 +16,18 @@
   website: www.ellaspark.com
   img: ellaspark/card-front-mockup.jpg
   skills: [ jquery ]
-- title: Speare
-  url: speare.html
-  tags: [ frontend development ]
-  website: www.spea.re
-  img: speare/analysis-mockup.jpg
-  skills: [ jquery ]
 - title: Hello World
   url: hello-world.html
   tags: [ frontend & backend development ]
   website: www.helloworld.lillian-chen.com
   img: helloworld/landing1-mockup.jpg
   skills: [ php ]
+- title: Speare
+  url: speare.html
+  tags: [ frontend development ]
+  website: www.spea.re
+  img: speare/analysis-mockup.jpg
+  skills: [ jquery ]
 - title: Life Changing Labs
   url: life-changing-labs.html
   tags: [ frontend & backend development ]
