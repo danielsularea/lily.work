@@ -6,7 +6,7 @@
   skills: [ photoshop ]
 - title: Dreamcatcher
   url: dreamcatcher.html
-  tags: [ identity, web design ]
+  tags: [ branding ]
   website: 
   img: dreamcatcher/cards.jpg
   skills: [ photoshop ]
@@ -36,7 +36,7 @@
   skills: [ jquery, jekyll ]
 - title: Cornell Business Review
   url: cornell-business-review.html
-  tags: [ print, branding, website design ]
+  tags: [ print design, branding ]
   website: 
   img: cbr/mockup.jpg
 #   skills: [ indesign, photoshop ]

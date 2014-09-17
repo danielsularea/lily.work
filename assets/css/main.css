@@ -41,6 +41,11 @@
 .works .lc-gallery .short {
   height: 300px;
 }
+@media (max-width: 767px) {
+  .works .lc-gallery {
+    padding-top: 100px;
+  }
+}
 /*****************************************************************************/
 /*
 /* Work Detail
@@ -70,6 +75,12 @@
   line-height: 23px;
   color: #888;
   font-style: italic;
+}
+.work-detail .uk-button {
+  padding: 5px 20px;
+  background: #000;
+  font-size: 12px;
+  color: #fff;
 }
 /*****************************************************************************/
 /*
