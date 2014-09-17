@@ -8,7 +8,7 @@
   /* Firefox */
   color: #444444;
 }
-no-overflow {
+.no-overflow {
   overflow: none;
 }
 @font-face {
@@ -190,4 +190,15 @@ body .lc-border-top {
 html .lc-border-bottom,
 body .lc-border-bottom {
   bottom: 0;
+}
+@media (max-width: 767px) {
+  body .lc-nav {
+    height: 75px;
+  }
+  body .lc-nav .lc-nav-content img {
+    height: 30px;
+  }
+  body .lc-nav .lc-nav-content a {
+    line-height: 35px;
+  }
 }

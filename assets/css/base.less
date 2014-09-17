@@ -10,11 +10,11 @@
   color: #444444;
 }
 
-no-overflow {
+.no-overflow {
 	overflow: none;
 }
 
-@font-face{ 
+@font-face { 
 	font-family: 'swiss721-medium';
 	src: url('../fonts/Swiss721BT-Medium.eot');
 	src: url('../fonts/Swiss721BT-Medium.eot?#iefix') format('embedded-opentype'),
@@ -23,7 +23,7 @@ no-overflow {
 	     url('../fonts/Swiss721BT-Medium.svg#webfont') format('svg');
 }
 
-@font-face{ 
+@font-face { 
 	font-family: 'swiss721-heavy';
 	src: url('../fonts/Swiss721BT-Heavy.eot');
 	src: url('../fonts/Swiss721BT-Heavy.eot?#iefix') format('embedded-opentype'),
@@ -214,5 +214,17 @@ body {
 	}
 }
 
+@media (max-width: 767px) {
+	body .lc-nav {
+		height: 75px;
+	}
 
+	body .lc-nav .lc-nav-content img {
+		height: 30px;
+	}
+
+	body .lc-nav .lc-nav-content a {
+		line-height: 35px;
+	}
+}
 

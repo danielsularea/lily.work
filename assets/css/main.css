@@ -47,8 +47,29 @@
 /*
 /*****************************************************************************/
 .work-detail {
-  height: 1000px;
-  padding-top: 100px;
+  padding-top: 250px;
+}
+.work-detail .title {
+  font-family: 'swiss721-heavy';
+  font-size: 22px;
+  line-height: 24px;
+}
+.work-detail .subtitle {
+  font-size: 16px;
+  line-height: 24px;
+}
+.work-detail img {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.work-detail .quote {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-family: 'Vollkorn';
+  font-size: 17px;
+  line-height: 23px;
+  color: #888;
+  font-style: italic;
 }
 /*****************************************************************************/
 /*
@@ -78,6 +99,19 @@
 }
 .about .lc-contact {
   margin-top: 80px;
+}
+@media (max-width: 767px) {
+  .about {
+    padding-top: 50px;
+  }
+  .about .lc-info {
+    border: none;
+  }
+  .about .lc-info .body {
+    padding-right: 0;
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 /*****************************************************************************/
 /*
@@ -140,6 +174,10 @@
   font-family: 'swiss721-heavy';
   font-size: 12px;
   text-transform: uppercase;
+}
+.post .wrapper .body img {
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 .post .wrapper .body .img-aside-left {
   margin: 20px 25px 20px -7%;

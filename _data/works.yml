@@ -1,40 +1,48 @@
 - title: Fiberspark
+  url: fiberspark.html
   tags: [ identity, website design ]
   website: 
   img: fiberspark/dual-screen.jpg
   skills: [ photoshop ]
 - title: Dreamcatcher
+  url: dreamcatcher.html
   tags: [ identity, web design ]
   website: 
   img: dreamcatcher/cards.jpg
   skills: [ photoshop ]
 - title: Ellaspark
+  url: ellaspark.html
   tags: [ frontend development, identity ]
   website: www.ellaspark.com
   img: ellaspark/card-front-mockup.jpg
   skills: [ jquery ]
 - title: Speare
+  url: speare.html
   tags: [ frontend development ]
   website: www.spea.re
   img: speare/analysis-mockup.jpg
   skills: [ jquery ]
 - title: Hello World
+  url: hello-world.html
   tags: [ frontend & backend development ]
   website: www.helloworld.lillian-chen.com
   img: helloworld/landing1-mockup.jpg
   skills: [ php ]
 - title: Life Changing Labs
+  url: life-changing-labs.html
   tags: [ frontend & backend development ]
   website: www.lifechanginglabs.com
   img: lifechanginglabs/landing-mockup.jpg
   skills: [ jquery, jekyll ]
 - title: Cornell Business Review
+  url: cornell-business-review.html
   tags: [ print, branding, website design ]
   website: 
-  img: work3.jpg
-  skills: [ indesign, photoshop ]
-- title: Pathogenesis
-  tags: [ game design ]
-  website: 
-  img: patho/gamemanual-mockup.jpg
-  skills: [ illustrator, photoshop ]
+  img: cbr/mockup.jpg
+#   skills: [ indesign, photoshop ]
+# - title: Pathogenesis
+#   url: pathogenesis.html
+#   tags: [ game design ]
+#   website: 
+#   img: patho/gamemanual-mockup.jpg
+#   skills: [ illustrator, photoshop ]

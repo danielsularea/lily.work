@@ -64,8 +64,33 @@
 /*****************************************************************************/
 
 .work-detail {
-	height: 1000px;
-	padding-top: 100px;
+	padding-top: 250px;
+
+	.title {
+		font-family: 'swiss721-heavy';
+		font-size: 22px;
+		line-height: 24px;
+	}
+
+	.subtitle {
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	img {
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+
+	.quote {
+		margin-top: 25px;
+		margin-bottom: 25px;
+		font-family: 'Vollkorn';
+		font-size: 17px;
+		line-height: 23px;
+		color: #888;
+		font-style: italic;
+	}
 }
 
 /*****************************************************************************/
@@ -111,6 +136,22 @@
 
 	.lc-contact {
 		margin-top: 80px;
+	}
+}
+
+@media (max-width: 767px) {
+	.about {
+		padding-top: 50px;
+	}
+
+	.about .lc-info {
+		border: none;
+	}
+
+	.about .lc-info .body {
+		padding-right: 0;
+		font-size: 16px;
+		line-height: 22px;
 	}
 }
 
@@ -187,6 +228,11 @@
 				font-family: @font-heavy;
 				font-size: 12px;
 				text-transform: uppercase;
+			}
+
+			img {
+				margin-top: 25px;
+				margin-bottom: 25px;
 			}
 
 			.img-aside-left {

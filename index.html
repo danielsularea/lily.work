@@ -10,7 +10,7 @@ id: works
 			{% capture mod %}{{ forloop.index | modulo: 6 }}{% endcapture %}
 			{% case mod %}
 				{% when '1' %}
-					<a href="">
+					<a href="{{ site.url }}/works/{{ work.url }}">
 						<div class="lc-photo tall uk-width-1-2 uk-float-left uk-vertical-align" style="background:url({{ site.url }}/assets/img/{{ work.img }}) no-repeat center center;">
 							<div class="lc-overlay uk-vertical-align-middle">
 								<span class="title">{{ work.title }}</span><br>
@@ -25,7 +25,7 @@ id: works
 					</a>
 				{% when '2' %}
 					<div class="uk-width-1-2 uk-float-left">
-						<a href="">
+						<a href="{{ site.url }}/works/{{ work.url }}">
 							<div class="lc-photo short uk-width-1-1 uk-vertical-align" style="background:url({{ site.url }}/assets/img/{{ work.img }}) no-repeat center center;">
 								<div class="lc-overlay uk-vertical-align-middle">
 									<span class="title">{{ work.title }}</span><br>
@@ -42,7 +42,7 @@ id: works
 					</div>
 					{% endif %}
 				{% when '3' %}
-						<a href="">
+						<a href="{{ site.url }}/works/{{ work.url }}">
 							<div class="lc-photo short uk-width-1-1 uk-vertical-align" style="background:url({{ site.url }}/assets/img/{{ work.img }}) no-repeat center center;">
 								<div class="lc-overlay uk-vertical-align-middle">
 									<span class="title">{{ work.title }}</span><br>
@@ -59,11 +59,11 @@ id: works
 				{% when '4' %}
 					{% if forloop.rindex == 2 %}
 					<div class="uk-width-1-1 uk-float-left">
-						<a href="">
+						<a href="{{ site.url }}/works/{{ work.url }}">
 							<div class="lc-photo short uk-width-1-2 uk-vertical-align uk-float-left" style="background:url({{ site.url }}/assets/img/{{ work.img }}) no-repeat center center;">
 					{% else %}
 					<div class="uk-width-1-2 uk-float-left">
-						<a href="">
+						<a href="{{ site.url }}/works/{{ work.url }}">
 							<div class="lc-photo short uk-width-1-1 uk-vertical-align" style="background:url({{ site.url }}/assets/img/{{ work.img }}) no-repeat center center;">
 					{% endif %}
 								<div class="lc-overlay uk-vertical-align-middle">
@@ -82,10 +82,10 @@ id: works
 					{% endif %}
 				{% when '5' %}
 					{% if forloop.last %}
-					<a href="">
+					<a href="{{ site.url }}/works/{{ work.url }}">
 							<div class="lc-photo short uk-width-1-2 uk-vertical-align uk-float-left" style="background:url({{ site.url }}/assets/img/{{ work.img}}) no-repeat center center;">
 					{% else %}
-					<a href="">
+					<a href="{{ site.url }}/works/{{ work.url }}">
 							<div class="lc-photo short uk-width-1-1 uk-vertical-align" style="background:url({{ site.url }}/assets/img/{{ work.img}}) no-repeat center center;">
 					{% endif %}
 								<div class="lc-overlay uk-vertical-align-middle">
@@ -101,7 +101,7 @@ id: works
 						</a>
 					</div>
 				{% when '0' %}
-					<a href="">
+					<a href="{{ site.url }}/works/{{ work.url }}">
 						<div class="lc-photo tall uk-width-1-2 uk-float-left uk-vertical-align" style="background:url({{ site.url }}/assets/img/{{ work.img }}) no-repeat center center;">
 							<div class="lc-overlay uk-vertical-align-middle">
 								<span class="title">{{ work.title }}</span><br>
