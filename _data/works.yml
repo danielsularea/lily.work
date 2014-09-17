@@ -1,6 +1,6 @@
 - title: Fiberspark
   url: fiberspark.html
-  tags: [ identity, website design ]
+  tags: [ branding ]
   website: 
   img: fiberspark/dual-screen.jpg
   skills: [ photoshop ]
@@ -12,7 +12,7 @@
   skills: [ photoshop ]
 - title: Ellaspark
   url: ellaspark.html
-  tags: [ frontend development, identity ]
+  tags: [ frontend development, branding ]
   website: www.ellaspark.com
   img: ellaspark/card-front-mockup.jpg
   skills: [ jquery ]
