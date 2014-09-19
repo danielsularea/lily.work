@@ -1,4 +1,6 @@
 $( document ).ready(function() {
+  jQuery.scrollDepth();
+  
 	$(window).scroll(function () {
 	  if ($(document).scrollTop() < 150) {
 	    $('.lc-nav').removeClass('lc-tiny-nav');
