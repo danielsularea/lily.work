@@ -4,12 +4,12 @@
   website: 
   img: fiberspark/dual-screen.jpg
   skills: [ photoshop ]
-- title: Dreamcatcher
-  url: dreamcatcher.html
-  tags: [ branding ]
-  website: 
-  img: dreamcatcher/cards.jpg
-  skills: [ photoshop ]
+# - title: Dreamcatcher
+#   url: dreamcatcher.html
+#   tags: [ branding ]
+#   website: 
+#   img: dreamcatcher/cards.jpg
+#   skills: [ photoshop ]
 - title: Ellaspark
   url: ellaspark.html
   tags: [ frontend development, branding ]
@@ -18,7 +18,7 @@
   skills: [ jquery ]
 - title: Hello World
   url: hello-world.html
-  tags: [ frontend & backend development ]
+  tags: [ full stack development ]
   website: www.helloworld.lillian-chen.com
   img: helloworld/landing1-mockup.jpg
   skills: [ php ]
@@ -30,13 +30,13 @@
   skills: [ jquery ]
 - title: Life Changing Labs
   url: life-changing-labs.html
-  tags: [ frontend & backend development ]
+  tags: [ full stack development ]
   website: www.lifechanginglabs.com
   img: lifechanginglabs/landing-mockup.jpg
   skills: [ jquery, jekyll ]
 - title: Cornell Business Review
   url: cornell-business-review.html
-  tags: [ print design, branding ]
+  tags: [ print, branding ]
   website: 
   img: cbr/mockup.jpg
 #   skills: [ indesign, photoshop ]
