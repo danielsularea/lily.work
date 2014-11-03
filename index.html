@@ -6,134 +6,24 @@ id: works
 
 <div class="works">
 	<div class="lc-gallery uk-width-9-10 uk-width-medium-4-5 uk-width-large-4-5 uk-container-center">
-		<div class="uk-hidden-small">
-			{% for work in site.data.works reversed %}
-				{% capture mod %}{{ forloop.index | modulo: 6 }}{% endcapture %}
-				{% case mod %}
-					{% when '1' %}
-						<a href="{{ site.url }}/works/{{ work.url }}">
-							<div class="lc-photo tall uk-width-1-2 uk-float-left uk-vertical-align" style="background:url({{ site.url }}/assets/img/{{ work.img }}) no-repeat center center;">
-								<div class="lc-overlay uk-vertical-align-middle">
-									<span class="title">{{ work.title }}</span><br>
-									<span class="tags">
-										{% for tag in work.tags %}
-											{% if forloop.index > 1 %}/ {% endif %}
-											{{ tag }}
-										{% endfor %}
-									</span>
-								</div>
-							</div>
-						</a>
-					{% when '2' %}
-						<div class="uk-width-1-2 uk-float-left">
-							<a href="{{ site.url }}/works/{{ work.url }}">
-								<div class="lc-photo short uk-width-1-1 uk-vertical-align" style="background:url({{ site.url }}/assets/img/{{ work.img }}) no-repeat center center;">
-									<div class="lc-overlay uk-vertical-align-middle">
-										<span class="title">{{ work.title }}</span><br>
-										<span class="tags">
-											{% for tag in work.tags %}
-												{% if forloop.index > 1 %}/ {% endif %}
-												{{ tag }}
-											{% endfor %}
-										</span>
-									</div>
-								</div>
-							</a>
-						{% if forloop.last %}
-						</div>
-						{% endif %}
-					{% when '3' %}
-							<a href="{{ site.url }}/works/{{ work.url }}">
-								<div class="lc-photo short uk-width-1-1 uk-vertical-align" style="background:url({{ site.url }}/assets/img/{{ work.img }}) no-repeat center center;">
-									<div class="lc-overlay uk-vertical-align-middle">
-										<span class="title">{{ work.title }}</span><br>
-										<span class="tags">
-											{% for tag in work.tags %}
-												{% if forloop.index > 1 %}/ {% endif %}
-												{{ tag }}
-											{% endfor %}
-										</span>
-									</div>
-								</div>
-							</a>
-						</div>
-					{% when '4' %}
-						{% if forloop.rindex == 2 %}
-						<div class="uk-width-1-1 uk-float-left">
-							<a href="{{ site.url }}/works/{{ work.url }}">
-								<div class="lc-photo short uk-width-1-2 uk-vertical-align uk-float-left" style="background:url({{ site.url }}/assets/img/{{ work.img }}) no-repeat center center;">
-						{% else %}
-						<div class="uk-width-1-2 uk-float-left">
-							<a href="{{ site.url }}/works/{{ work.url }}">
-								<div class="lc-photo short uk-width-1-1 uk-vertical-align" style="background:url({{ site.url }}/assets/img/{{ work.img }}) no-repeat center center;">
-						{% endif %}
-									<div class="lc-overlay uk-vertical-align-middle">
-										<span class="title">{{ work.title }}</span><br>
-										<span class="tags">
-											{% for tag in work.tags %}
-												{% if forloop.index > 1 %}/ {% endif %}
-												{{ tag }}
-											{% endfor %}
-										</span>
-									</div>
-								</div>
-							</a>
-						{% if forloop.last %}
-						</div>
-						{% endif %}
-					{% when '5' %}
-						{% if forloop.last %}
-						<a href="{{ site.url }}/works/{{ work.url }}">
-								<div class="lc-photo short uk-width-1-2 uk-vertical-align uk-float-left" style="background:url({{ site.url }}/assets/img/{{ work.img}}) no-repeat center center;">
-						{% else %}
-						<a href="{{ site.url }}/works/{{ work.url }}">
-								<div class="lc-photo short uk-width-1-1 uk-vertical-align" style="background:url({{ site.url }}/assets/img/{{ work.img}}) no-repeat center center;">
-						{% endif %}
-									<div class="lc-overlay uk-vertical-align-middle">
-										<span class="title">{{ work.title }}</span><br>
-										<span class="tags">
-											{% for tag in work.tags %}
-												{% if forloop.index > 1 %}/ {% endif %}
-												{{ tag }}
-											{% endfor %}
-										</span>
-									</div>
-								</div>
-							</a>
-						</div>
-					{% when '0' %}
-						<a href="{{ site.url }}/works/{{ work.url }}">
-							<div class="lc-photo tall uk-width-1-2 uk-float-left uk-vertical-align" style="background:url({{ site.url }}/assets/img/{{ work.img }}) no-repeat center center;">
-								<div class="lc-overlay uk-vertical-align-middle">
-									<span class="title">{{ work.title }}</span><br>
-									<span class="tags">
-										{% for tag in work.tags %}
-											{% if forloop.index > 1 %}/ {% endif %}
-											{{ tag }}
-										{% endfor %}
-									</span>
-								</div>
-							</div>
-						</a>
-				{% endcase %}
-			{% endfor %}
-		</div>
-		<div class="uk-visible-small">
-			{% for work in site.data.works reversed %}
+		{% for work in site.data.works reversed %}
+			<div class="uk-width-1-2 uk-float-left">
 				<a href="{{ site.url }}/works/{{ work.url }}">
-					<div class="lc-photo short uk-width-1-1 uk-float-left uk-vertical-align" style="background:url({{ site.url }}/assets/img/{{ work.img }}) no-repeat center center;">
-						<div class="lc-overlay uk-vertical-align-middle">
-							<span class="title">{{ work.title }}</span><br>
-							<span class="tags">
-								{% for tag in work.tags %}
-									{% if forloop.index > 1 %}/ {% endif %}
-									{{ tag }}
-								{% endfor %}
-							</span>
-						</div>
+					<div class="lc-photo" style="background:url({{ site.url }}/assets/img/{{ work.img }}) no-repeat center center;">
 					</div>
 				</a>
-			{% endfor %}
-		</div>
+				<div class="lc-photo-caption uk-text-left">
+					<span class="title">{{ work.title }}</span><br>
+					<span class="tags">
+						{% for tag in work.tags %}
+							{% if forloop.index > 1 %}/ {% endif %}
+							{{ tag }}
+						{% endfor %}
+					</span>
+					<!-- <br> -->
+					<!-- <hr class="uk-width-4-5 uk-container-center"> -->
+				</div>
+			</div>
+		{% endfor %}
 	</div>
 </div>
