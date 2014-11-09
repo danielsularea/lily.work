@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Works
 id: works
 ---
@@ -21,17 +21,39 @@ id: works
 			I made this portfolio website as a project for my class. It displays my usual minimalistic approach but still conveys meaningful content.
 		</div>
 	</div>
-	<div class="uk-grid">
-		<img class="uk-width-1-2" src="{{ site.url }}/assets/img/helloworld/landing1.png" alt="">
-		<img class="uk-width-1-2" src="{{ site.url }}/assets/img/helloworld/landing2.png" alt="">
-		<img class="uk-width-1-2" src="{{ site.url }}/assets/img/helloworld/landing3.png" alt="">
-		<img class="uk-width-1-2" src="{{ site.url }}/assets/img/helloworld/about.png" alt="">
-		<img class="uk-width-1-2" src="{{ site.url }}/assets/img/helloworld/work.png" alt="">
-		<img class="uk-width-1-2" src="{{ site.url }}/assets/img/helloworld/work-detail.png" alt="">
+	<br><br><br>
+	<div class="uk-width-1-2 uk-container-center">
+		<div class="wallop-slider">
+		  <ul class="wallop-slider__list">
+		    <li class="wallop-slider__item wallop-slider__item--current">
+		      <img src="{{ site.url }}/assets/img/helloworld/landing1.png">
+		    </li>
+		    <li class="wallop-slider__item">
+		      <img src="{{ site.url }}/assets/img/helloworld/landing2.png">
+		    </li>
+		    <li class="wallop-slider__item">
+		      <img src="{{ site.url }}/assets/img/helloworld/landing3.png">
+		    </li>
+		    <li class="wallop-slider__item">
+		      <img src="{{ site.url }}/assets/img/helloworld/about.png">
+		    </li>
+		    <li class="wallop-slider__item">
+		      <img src="{{ site.url }}/assets/img/helloworld/work.png">
+		    </li>
+		    <li class="wallop-slider__item">
+		      <img src="{{ site.url }}/assets/img/helloworld/work-detail.png">
+		    </li>
+		  </ul>
+				<button class="wallop-slider__btn wallop-slider__btn--previous" disabled="disabled">Previous</button> / 
+			  <button class="wallop-slider__btn wallop-slider__btn--next">Next</button>
+		</div>
 	</div>
+
+	<script>
+	  // Create new instance of WallopSlider
+	  var slider = new WallopSlider('.wallop-slider');
+	</script>
+
 	<br><br>
 	<a class="uk-button uk-text-center" href="http://helloworld.lillian-chen.com" target="_blank">View live demo</a>
-	<div class="uk-width-1-1 uk-text-left">
-		<a href="{{ site.url }}/index.html"><i class="uk-icon-long-arrow-left"></i> back</a>
-	</div>
 </div>
