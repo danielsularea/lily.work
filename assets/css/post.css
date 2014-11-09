@@ -23,13 +23,6 @@ body .work-detail .subtitle {
   font-size: 16px;
   line-height: 24px;
 }
-html .work-detail .section-title,
-body .work-detail .section-title {
-  font-size: 13px;
-  line-height: 15px;
-  font-weight: 900;
-  text-transform: uppercase;
-}
 html .work-detail p,
 body .work-detail p {
   text-align: left;
@@ -43,8 +36,10 @@ body .work-detail img {
 }
 html .work-detail .header,
 body .work-detail .header {
-  font-family: 'swiss721-heavy';
-  font-size: 12px;
+  text-align: left;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 900;
   text-transform: uppercase;
 }
 html .work-detail .quote,
@@ -55,6 +50,12 @@ body .work-detail .quote {
   font-size: 17px;
   line-height: 23px;
   color: #888;
+  font-style: italic;
+}
+html .work-detail .fineprint,
+body .work-detail .fineprint {
+  font-family: 'Vollkorn';
+  font-size: 10px;
   font-style: italic;
 }
 html .work-detail .uk-button,
@@ -73,15 +74,6 @@ body .work-detail a {
 html .work-detail a:hover,
 body .work-detail a:hover {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 11%, #000000 11%, #000000 16%, rgba(0, 0, 0, 0) 16%);
-}
-html .work-detail .menu .header,
-body .work-detail .menu .header {
-  margin-bottom: 5px;
-  text-transform: uppercase;
-}
-html .work-detail .menu a,
-body .work-detail .menu a {
-  font-family: 'Vollkorn';
 }
 html .work-detail .wallop-slider,
 body .work-detail .wallop-slider {

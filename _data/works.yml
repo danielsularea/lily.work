@@ -32,7 +32,7 @@
   url: life-changing-labs.html
   tags: [ full stack development ]
   website: www.lifechanginglabs.com
-  img: lifechanginglabs/landing-mockup.jpg
+  img: lcl/landing-mockup.jpg
   skills: [ jquery, jekyll ]
 - title: Cornell Business Review
   url: cornell-business-review.html
