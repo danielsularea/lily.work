@@ -23,24 +23,25 @@ body .work-detail .subtitle {
   font-size: 16px;
   line-height: 24px;
 }
-html .work-detail p,
-body .work-detail p {
-  text-align: left;
-  font-family: 'Vollkorn';
-  font-size: 16px;
-}
-html .work-detail img,
-body .work-detail img {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
 html .work-detail .header,
 body .work-detail .header {
   text-align: left;
   font-size: 13px;
-  line-height: 15px;
+  line-height: 30px;
   font-weight: 900;
   text-transform: uppercase;
+}
+html .work-detail p,
+body .work-detail p {
+  text-align: left;
+  font-family: 'Vollkorn';
+  font-size: 17px;
+  line-height: 21px;
+}
+html .work-detail img,
+body .work-detail img {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 html .work-detail .quote,
 body .work-detail .quote {

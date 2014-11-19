@@ -70,21 +70,6 @@ body {
   font-size: 14px;
   color: #111;
 }
-html .construction,
-body .construction {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(255, 255, 255, 0.9);
-  z-index: 10000;
-}
-html .construction div,
-body .construction div {
-  font-family: "Vollkorn";
-  font-size: 20px;
-}
 html .lc-back-top,
 body .lc-back-top {
   position: fixed;
