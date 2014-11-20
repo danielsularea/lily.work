@@ -76,6 +76,22 @@ html .work-detail a:hover,
 body .work-detail a:hover {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 11%, #000000 11%, #000000 16%, rgba(0, 0, 0, 0) 16%);
 }
+html .work-detail .video_wrapper,
+body .work-detail .video_wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+html .work-detail .video_wrapper iframe,
+body .work-detail .video_wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 html .work-detail .wallop-slider,
 body .work-detail .wallop-slider {
   width: 100%;
