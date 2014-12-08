@@ -28,11 +28,6 @@
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-@media (min-width: 1224px) {
-  .lc-photo:hover {
-    opacity: 0.75;
-  }
-}
 @media (max-width: 767px) {
   .works .lc-gallery {
     padding-top: 100px;
