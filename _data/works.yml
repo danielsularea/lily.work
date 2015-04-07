@@ -12,31 +12,31 @@
 #   skills: [ photoshop ]
 - title: Ellaspark
   url: ellaspark.html
-  tags: [ frontend development, branding ]
+  tags: [ website development ]
   website: www.ellaspark.com
   img: ellaspark/card-front-mockup.jpg
   skills: [ jquery ]
 - title: Hello World
   url: hello-world.html
-  tags: [ full stack development ]
+  tags: [ website development ]
   website: www.helloworld.lillian-chen.com
   img: helloworld/landing1-mockup.jpg
   skills: [ php ]
 - title: Speare
   url: speare.html
-  tags: [ frontend development ]
+  tags: [ website development ]
   website: www.spea.re
   img: speare/analysis-mockup.jpg
   skills: [ jquery ]
 - title: Life Changing Labs
   url: life-changing-labs.html
-  tags: [ full stack development ]
+  tags: [ website development ]
   website: www.lifechanginglabs.com
   img: lcl/landing-mockup.jpg
   skills: [ jquery, jekyll ]
 - title: Cornell Business Review
   url: cornell-business-review.html
-  tags: [ print, branding ]
+  tags: [ print ]
   website: 
   img: cbr/mockup.jpg
 #   skills: [ indesign, photoshop ]
@@ -46,3 +46,8 @@
 #   website: 
 #   img: patho/gamemanual-mockup.jpg
 #   skills: [ illustrator, photoshop ]
+- title: WikiReader
+  url: wikireader.html
+  tags: [ chrome extension ]
+  website: 
+  img: wikireader/mockup.jpg
