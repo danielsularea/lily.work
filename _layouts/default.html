@@ -1,63 +1,65 @@
 <!DOCTYPE html>
 <html class="default">
-	<head>
-		<meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <title>Lillian Chen | {{ page.title }}</title>
-	  <link rel="icon" type="image/png" href="{{ site.url }}/assets/img/ico.png">
-	  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/assets/js/main.js"></script>
-	  <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/normalize.css">
-	  <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/uikit.css">
-	  <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
-	  <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/base.css">
-	  <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/main.css">
-	  <style type="text/css">
-      .lc-nav-content a#{{ page.id }}::after {
-				right: 0;
-				width: 100%;
-			}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lillian Chen | {{ page.title }}</title>
+    <meta name="author" content="Lillian Chen">
 
-			.lc-nav-content a#{{ page.id }}:hover::after {
-				width: 0;
-				right: 100%;
-			}
+    <link rel="icon" type="image/png" href="{{ site.url }}/assets/img/ico.png">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/uikit.css">
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/base.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/main.css">
+    <style type="text/css">
+      .lc-nav-content a#{{ page.id }}::after {
+        right: 0;
+        width: 100%;
+      }
+
+      .lc-nav-content a#{{ page.id }}:hover::after {
+        width: 0;
+        right: 100%;
+      }
     </style>
     <script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		  ga('create', 'UA-45574875-1', 'auto');
-		  ga('require', 'displayfeatures');
-		  ga('send', 'pageview');
-		</script>
-	</head>
+      ga('create', 'UA-45574875-1', 'auto');
+      ga('require', 'displayfeatures');
+      ga('send', 'pageview');
+    </script>
+  </head>
 
-	<body id="top" class="works uk-width-1-1 uk-text-center">
-		<!-- <div class="construction uk-width-1-1 uk-height-1-1 uk-vertical-align">
-			<div class="uk-vertical-align-middle">
-				Doing some awesome re-construction right now.<br>Come back soon!
-			</div>
-		</div> -->
-		<div class="lc-back-top hidden">
-			<a href="#top" data-uk-smooth-scroll>
-				<i class="uk-icon-long-arrow-up"></i>
-			</a>
-		</div>
-		<div class="lc-nav uk-width-9-10 uk-width-medium-4-5 uk-width-large-4-5 uk-text-center uk-vertical-align">
-			<div class="lc-nav-content uk-width-1-1 uk-vertical-align-middle uk-text-right">
-				<a href="{{ site.url }}/index.html"><img class="lc-nav-brand uk-float-left" src="{{ site.url }}/assets/img/signature.png"></a>
-				<a class="lc-nav-link" id="works" href="{{ site.url }}/index.html">Works</a>
-				<a class="lc-nav-link" id="about" href="{{ site.url }}/about">About</a>
-				<a class="lc-nav-link" id="blog" href="{{ site.url }}/blog">Blog</a>
-			</div>
-		</div>
-		{{ content }}
-		<div class="lc-border lc-border-left"></div>
+  <body id="top" class="works uk-width-1-1 uk-text-center">
+    <!-- <div class="construction uk-width-1-1 uk-height-1-1 uk-vertical-align">
+      <div class="uk-vertical-align-middle">
+        Doing some awesome re-construction right now.<br>Come back soon!
+      </div>
+    </div> -->
+    <div class="lc-back-top hidden">
+      <a href="#top" data-uk-smooth-scroll>
+        <i class="uk-icon-long-arrow-up"></i>
+      </a>
+    </div>
+    <div class="lc-nav uk-width-9-10 uk-width-medium-4-5 uk-width-large-4-5 uk-text-center uk-vertical-align">
+      <div class="lc-nav-content uk-width-1-1 uk-vertical-align-middle uk-text-right">
+        <a href="{{ site.url }}/index.html"><img class="lc-nav-brand uk-float-left" src="{{ site.url }}/assets/img/signature.png"></a>
+        <a class="lc-nav-link" id="works" href="{{ site.url }}/index.html">Works</a>
+        <a class="lc-nav-link" id="about" href="{{ site.url }}/about">About</a>
+        <a class="lc-nav-link" id="blog" href="{{ site.url }}/blog">Blog</a>
+      </div>
+    </div>
+    {{ content }}
+    <div class="lc-border lc-border-left"></div>
     <div class="lc-border lc-border-right"></div>
     <div class="lc-border lc-border-top"></div>
     <div class="lc-border lc-border-bottom"></div>
-	</body>
+  </body>
 </html>
