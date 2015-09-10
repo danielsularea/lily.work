@@ -1,0 +1,33 @@
+.project {
+  @extend .uk-width-1-1;
+  margin-top: 100px;
+  overflow: hidden;
+}
+
+.project__date {
+  @extend .times;
+  @extend %italic;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+}
+
+.project__title {
+  @extend .swiss;
+  @extend %bold;
+  border-bottom: 10px solid transparent;
+  font-size: 4rem;
+  line-height: 4rem;
+  letter-spacing: -1px;
+
+  @media-query($breakpoint-medium, min) {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+.project__anchor:hover {
+  .project__title {
+    border-bottom-color: $black;
+  }
+}

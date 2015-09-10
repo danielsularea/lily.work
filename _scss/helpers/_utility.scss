@@ -1,0 +1,12 @@
+.v-align {
+  @extend .uk-vertical-align;
+}
+
+.v-align--middle {
+  @extend .v-align;
+
+  > div {
+    @extend .uk-width-1-1;
+    @extend .uk-vertical-align-middle;
+  }
+}

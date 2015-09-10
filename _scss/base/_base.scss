@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+}
+
+html {
+  @extend %textface;
+  overflow-y: scroll;
+}
+
+body {
+  background-color: $white;
+  font-family: $sans-serif;
+  @extend %bold;
+  @extend %regular;
+  color: $black;
+}
+
+::selection {
+  background: #fefeca;
+  color: #444;
+}
+
+::-moz-selection {
+  background: #fefeca;
+  color: #444444;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1.2rem 0;
+
+  code {
+    font-size: inherit;
+  }
+}
+
+h1 {
+  @extend %display1;
+}
+
+h2 {
+  @extend %display2;
+}
+
+h3, h4, h5, h6 {
+  @extend %display3;
+}
+
+p {
+  @extend %textface;
+  margin: 0 0 1.2rem 0;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+
+  &:hover {
+    color: $black;
+    text-decoration: none;
+  }
+}
+
+a.anchor--strikethrough {
+  position: relative;
+}
+
+a.anchor--strikethrough::after {
+  content: '';
+  border-bottom: 5px solid #333;
+  position: absolute;
+  top: 35%;
+  width: 0;
+  right: 100%;
+  -webkit-transition: right .3s ease-in-out,width .3s ease-in-out;
+  -moz-transition: right .3s ease-in-out,width .3s ease-in-out;
+  -o-transition: right .3s ease-in-out,width .3s ease-in-out;
+  transition: right .3s ease-in-out,width .3s ease-in-out;
+  -webkit-transition-timing-function: cubic-bezier(0.19,1,.22,1);
+  -moz-transition-timing-function: cubic-bezier(0.19,1,.22,1);
+  -o-transition-timing-function: cubic-bezier(0.19,1,.22,1);
+  transition-timing-function: cubic-bezier(0.19,1,.22,1);
+}
+
+a.anchor--strikethrough:hover::after {
+  right: 0;
+  width: 100%;
+}
+
+em {
+  @extend %italic;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+code {
+  @extend %monospace;
+  display: inline-block;
+  border-radius: 4px;
+  padding: 0 4px;
+  background: $grey--light;
+  font-size: 0.833rem;
+  
+  p &,
+  li & {
+    line-height: 1.44rem;
+  }
+}

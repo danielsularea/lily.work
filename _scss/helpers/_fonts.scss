@@ -1,0 +1,133 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+
+@font-face { 
+    font-family: 'Swiss721';
+    src: url('../fonts/Swiss721BT-Medium.eot');
+    src: url('../fonts/Swiss721BT-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Swiss721BT-Medium.woff') format('woff'),
+         url('../fonts/Swiss721BT-Medium.ttf') format('truetype'),
+         url('../fonts/Swiss721BT-Medium.svg#webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { 
+    font-family: 'Swiss721';
+    src: url('../fonts/Swiss721BT-Heavy.eot');
+    src: url('../fonts/Swiss721BT-Heavy.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Swiss721BT-Heavy.woff') format('woff'),
+         url('../fonts/Swiss721BT-Heavy.ttf') format('truetype'),
+         url('../fonts/Swiss721BT-Heavy.svg#webfont') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+$sans-serif: sans-serif;
+$swiss: 'Swiss721', Helvetica, Arial, sans-serif;
+$times: Times New Roman, serif;
+
+// FONT FAMILIES
+.sans-serif {
+    font-family: $sans-serif;
+}
+
+.swiss {
+    font-family: $swiss;
+}
+
+.times {
+    font-family: $times;
+}
+
+// FONT STYLES
+
+%bold {
+    font-style: normal;
+    font-weight: 700;
+}
+
+%bolditalic {
+    font-style: italic;
+    font-weight: 700;
+}
+
+%regular {
+    font-style: normal;
+    font-weight: normal;
+}
+
+%italic {
+    font-style: italic;
+    font-weight: normal;
+}
+
+%monospace {
+    font-family: 'Droid Sans Mono', monospace;
+    font-style: normal;
+    font-weight: normal;
+}
+
+//MODULAR SCALE
+
+//Modular Scale 5:6 - Minor Third
+//16px @ 1:1.2
+//18px @ 1:1.2
+//http://modularscale.com/scale/?px1=16&px2=18&ra1=1.2&ra2=0
+
+
+%display1 {
+  font-size: 1.62rem;
+  line-height: 2.074rem;
+}
+
+%display2 {
+  font-size: 1.44rem;
+  line-height: 2.074rem;
+
+}
+
+%display3 {
+  font-size: 1rem;
+  line-height: 1.35rem;
+  
+  @include media-query($breakpoint-small, min) {
+    font-size: 1.125rem;
+  }
+  
+  @include media-query($breakpoint-xlarge, min) {
+    font-size: 1.2rem;
+    line-height: 1.44rem;
+  }
+}
+
+%textface {
+  font-size: 1rem;
+  line-height: 1.62rem;
+
+  @include media-query($breakpoint-large, min) {
+    font-size: 1.125rem;
+    line-height: 1.728rem;
+  }
+  
+  @include media-query($breakpoint-xlarge, min) {
+    font-size: 1.2rem;
+  }
+}
+
+%small {
+  font-size: 0.622rem;
+  line-height: 1.209rem;
+  
+  @include media-query($breakpoint-xlarge, min) {
+    font-size: 0.7rem;
+  }
+}
+
+%bigtosmall {
+  font-size: 1rem;
+  line-height: 1.62rem;
+  
+  @include media-query($breakpoint-small, min) {
+    font-size: 0.833rem;
+  }
+}

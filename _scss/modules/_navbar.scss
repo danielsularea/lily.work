@@ -1,0 +1,31 @@
+.navbar {
+  @extend .uk-width-1-1;
+  @extend %small;
+  position: fixed;
+  top: 0;
+  padding: 25px 0 50px;
+}
+
+.navbar__name {
+  @extend .swiss;
+  @extend .bold;
+}
+
+.navbar__location {
+  @extend .times;
+}
+
+.navbar__menu {
+  float: right;
+  margin: 0;
+  list-style: none;
+
+  li {
+    display: inline;
+    margin-left: 5px;
+
+    a {
+      @extend .anchor--strikethrough;
+    }
+  }
+}

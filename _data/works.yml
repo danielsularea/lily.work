@@ -1,0 +1,18 @@
+- title: Hello World
+  date: 2013
+  url: hello-world.html
+  tags: [ PHP ]
+  website: 
+  img: helloworld/init.jpg
+- title: Ellaspark
+  date: 2013/4
+  url: ellaspark.html
+  tags: [ Django, UIKit ]
+  website: 
+  img: ellaspark/init.jpg
+- title: Cornell Business Review
+  date: 2012/3/4
+  url: cornell-business-review.html
+  tags: [ Adobe InDesign, Adobe Photoshop ]
+  website: 
+  img: cbr/init.jpg

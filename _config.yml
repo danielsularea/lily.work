@@ -1,0 +1,17 @@
+# Site settings
+title: Lillian Chen
+description: > # this means to ignore newlines until "baseurl:"
+  Cornell University web developer
+baseurl: "" # the subpath of your site, e.g. /blog/
+# url: "http://lillian-chen.com/"
+
+# Contact
+email: 			    qc53@cornell.edu
+twitter_url:    https://twitter.com/alilybit
+github_url:     https://github.com/lilyc5459
+linkedin_url:   https://www.linkedin.com/in/lilyc5459
+
+# Build settings
+markdown: kramdown
+exclude: ['node_modules', 'gulpfile.js', 'package.json']
+include: ['_scss', '*.scss', '.htaccess']
