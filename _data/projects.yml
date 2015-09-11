@@ -1,36 +1,20 @@
-- title: Ellaspark
-  date: 2013/4
-  url: ellaspark.html
-  tags: [ Django ]
-  website: 
-  img: ellaspark/init.jpg
-- title: Life Changing Labs
+- title: Hello World
+  date: 2013
+  tags: [ PHP ]
+  website: http://helloworld.lillian-chen.com
+- title: Speare
   date: 2014
-  url: life-changing-labs.html
-  tags: [ Jekyll ]
-  website: www.lifechanginglabs.com
-  img: lcl/init.jpg
-# - title: Speare
-#   date: 2014
-#   url: speare.html
-#   tags: []
-#   website: http://www.spea.re
-#   img: speare/init.jpg
-- title: Cornell Business Review
-  date: 2012/3/4
-  url: cornell-business-review.html
-  tags: [ Adobe InDesign, Adobe Photoshop ]
-  website: 
-  img: cbr/init.jpg
-- title: WikiReader
+  tags: []
+  website: http://spea.re
+- title: Interactive Design Lab
+  date: 2014
+  tags: [ Wordpress ]
+  website: http://idl.lillian-chen.com
+- title: Entrepreneurship at Cornell
+  date: 2014
+  tags: [ Wordpress ]
+  website: http://elabstartup.com
+- title: Cholp
   date: 2015
-  url: wikireader.html
-  tags: [ Chrome extension ]
-  website: 
-  img: wikireader/init.jpg
-- title: StartupTree
-  date: 2015
-  url: startuptree.html
-  tags: [ Django, SASS, Gulp ]
-  website: 
-  img: startuptree/init.jpg
+  tags: [ Ruby on Rails, PayPal SDK ]
+  website: http://www.cholp.com

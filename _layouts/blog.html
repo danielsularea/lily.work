@@ -1,0 +1,17 @@
+---
+layout: default
+id: blog-detail
+---
+
+<div class="article--border container--medium">
+  {% if page.date != null %}
+    <div class="article__date">&mdash; {{ page.date | date: "%B %-d, %Y" }}</div>
+  {% endif %}
+
+  {% if page.title != null %}
+    <h1 class="article__title">{{ page.title }}</h1>
+  {% endif %}
+  <div class="article__body">
+    {{ content }}
+  </div>
+</div>

@@ -110,11 +110,21 @@
   }
 }
 
+.detail {
+  @extend .grid;
+
+  + .detail {
+    margin-top: 10px;
+  }
+}
+
 .detail__title {
   @extend .uk-width-1-10;
   @extend .swiss;
   @extend %small;
+  line-height: 1.7rem;
   text-align: right;
+  text-transform: capitalize;
 }
 
 .detail__info {

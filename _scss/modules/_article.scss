@@ -8,6 +8,18 @@
   padding-top: 2rem;
 }
 
+.article__title {
+  @extend .swiss;
+  @extend %bold;
+  margin-top: 0;
+}
+
+.article__date {
+  @extend .times;
+  // @extend %italic;
+  @extend %small;
+}
+
 .article__header--small {
   @extend .swiss;
   @extend %small;
@@ -21,6 +33,19 @@
   p {
     @extend %textface;
     margin: 0 0 1rem 0;
+  }
+
+  h2 {
+    @extend .article__header--small;
+    position: relative;
+    margin-bottom: 0;
+
+    // &::before {
+    //   content: '—';
+    //   position: absolute;
+    //   top: 0;
+    //   left: -20px;
+    // }
   }
 }
 

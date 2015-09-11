@@ -3,4 +3,68 @@ layout: default
 id: work-detail
 ---
 
-{{ content }}
+<div class="project">
+  <div class="project__detail">
+    <div>
+      <div class="detail">
+        <div class="detail__title">Title</div>
+        <div class="detail__info">{{ page.title }}</div>
+      </div>
+
+      {% if page.role or page.time %}
+        <div class="detail">
+          <div class="detail__title">
+            {% if page.role %}
+              Role
+            {% else %}
+              Date
+            {% endif %}
+          </div>
+          <div class="detail__info">
+            {% if page.role %}
+              {{ page.role }}
+              <br>
+            {% endif %}
+            {{ page.time }}
+          </div>
+        </div>
+      {% endif %}
+
+      {% for detail in page.details %}
+        <div class="detail">
+          <div class="detail__title">{{ detail[0] }}</div>
+          <div class="detail__info">{{ detail[1] }}</div>
+        </div>
+      {% endfor %}
+
+      {% if page.tags %}
+        <div class="detail">
+          <div class="detail__title">Skills</div>
+          <div class="detail__info">
+            {% for skill in page.tags %}
+              {{ skill }}{% if forloop.index != forloop.length %}, {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if page.links %}
+        <div class="detail">
+          <div class="detail__title">Links</div>
+          <div class="detail__info">
+            {% for link in page.links %}
+              <a href="{{ site.url }}{{ link[1] }}" target="_blank">{{ link[0] }}</a>
+              {% if forloop.index != forloop.length %}<br>{% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="project__images">
+    {% for img in page.detail_img %}
+      <img src="{{ site.url }}/assets/img/{{ page.slug }}/{{ img }}" />
+    {% endfor %}
+  </div>
+</div>

@@ -7,7 +7,7 @@ id: blog
 <div class="article--border container--small">
   <div class="article__header--small">&mdash; Blog</div>
   <div class="article__body">
-    {% for post in site.posts %}
+    {% for post in site.categories["blog"] %}
       <div class="blog__date">
         {{ post.date | date: "%m/%d/%y" }}
       </div>

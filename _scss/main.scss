@@ -11,12 +11,13 @@
 @import 'base/normalize';
 @import 'base/base';
 
-// Modules
-@import 'modules/syntax';
-@import 'modules/container';
-@import 'modules/grid';
+// Layout
+@import 'layout/container';
+@import 'layout/grid';
 
+// Modules
 @import 'modules/navbar';
 @import 'modules/projects';
 @import 'modules/blog';
 @import 'modules/article';
+@import 'modules/code';

@@ -4,8 +4,6 @@
   var c = obj.settings = {
     navbar:         '.navbar',
     project:        '#works .project',
-    project_left:   '#work-detail .project__images', 
-    project_right:  '#work-detail .project__detail'
   };
 
   var $navbar = $(c.navbar);
@@ -28,45 +26,49 @@
                               } 
                             };
 
-  var $project_left = $(c.project_left);
-  var $project_right = $(c.project_right);
-  var $project_right_inner = $(c.project_right + ' > div');
   var handleProjectScroll = obj.handleProjectScroll = function() {
-                              var plh = $project_left.outerHeight(),
-                                  prw = $project_right.outerWidth(),
-                                  wh = $(window).height(),
-                                  scrollbottom = $(window).scrollTop() + wh;
+                              var $inner = $('#work-detail .project__detail > div'),
+                                  $pl = $('#work-detail .project__images'),
+                                  $pr = $('#work-detail .project__detail');
 
-                              var prih = $project_right_inner.outerHeight();
-                              var offset = (100 + prih) - wh;
+                              var plh = $pl.outerHeight(),
+                                  prw = $pr.outerWidth(),
+                                  prih = $inner.outerHeight();
 
-                              $project_right.css('minHeight', plh);
+                              var wh = $(window).height(),
+                                  scrollbottom = $(window).scrollTop() + wh,
+                                  offset = (100 + prih) - wh;
+
+                              $pr.css('minHeight', plh);
 
                               if (prih > wh) {
                                 if (scrollbottom > (100 + prih)) {
-                                  $project_right_inner.css({'width': prw,
-                                                            'margin-top': 0-offset,
-                                                            'position': 'fixed'
-                                                          });
+                                  $inner.css({'width': prw,
+                                              'margin-top': 0-offset,
+                                              'position': 'fixed'
+                                            });
                                 } else {
-                                  $project_right_inner.css({'margin-top': 0,
-                                                            'position': 'absolute'
-                                                          });
+                                  $inner.css({'margin-top': 0,
+                                              'position': 'absolute'
+                                            });
                                 }
                               } else {
-                                $project_right_inner.css({'width': prw,
-                                                          'position': 'fixed'
-                                                        });
+                                $inner.css({'width': prw,
+                                            'position': 'fixed'
+                                          });
                               }
                             };
 
   obj.init                = function(){
-                              setProjectHeight();
-                              setActivePage();
-                              handleProjectScroll();
-
+                              _initialize();
                               _bindEvents();
                             };
+
+  function _initialize() {
+    setProjectHeight();
+    setActivePage();
+    handleProjectScroll();
+  }
 
   function _bindEvents() {
     $(window).on('resize', _handleWindowResize);
@@ -74,8 +76,8 @@
 
     // Make sure that all clicked links that link to your internal website
     // don't just reload the page but execute a History.pushState call
-    var siteUrl = 'http://'+(document.location.hostname||document.location.host);
-    $(document).delegate('a[href^="/"],a[href^="'+siteUrl+'"]', 'click', _handleDelegate);
+    // var siteUrl = 'http://'+(document.location.hostname||document.location.host);
+    $(document).delegate('a', 'click', _handleDelegate);
 
     // Catch all History stateChange events
     History.Adapter.bind(window, 'statechange', _handleRedirect);
@@ -83,6 +85,7 @@
 
   function _handleWindowResize(e) {
     setProjectHeight();
+    handleProjectScroll();
   }
 
   function _handleWindowScroll(e) {
@@ -90,8 +93,18 @@
   }
 
   function _handleDelegate(e) {
+    var siteUrl = document.location.hostname||document.location.host;
     e.preventDefault();
-    History.pushState({}, '', this.pathname);
+    
+    if (this.href.includes(siteUrl)) {
+      if (this.pathname.includes('pdf')) {
+        window.open(this.href);
+      } else {
+        History.pushState({}, '', this.pathname);
+      }
+    } else {
+      window.open(this.href);
+    }
   }
 
   function _handleRedirect(e) {
@@ -100,6 +113,7 @@
     // Load the new state's URL via an Ajax Call
     $.get(State.url, function(data){
         document.title = data.match(/<title>(.*?)<\/title>/)[1];
+        window.scrollTo(0,0);
         $('.content').parent().html($(data).find('.content'));
 
         // If you're using Google analytics, make sure the pageview is registered!
@@ -108,7 +122,7 @@
           'title': document.title
         });
 
-        obj.init();
+        _initialize();
     });
   }
 

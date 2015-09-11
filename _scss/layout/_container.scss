@@ -1,0 +1,20 @@
+%container {
+  @extend .uk-width-1-1;
+  @extend .uk-container-center;
+}
+
+.container {
+  @extend %container;
+  width: 93%;
+  max-width: 1400px;
+}
+
+.container--medium {
+  @extend %container;
+  @extend .uk-width-medium-1-2;
+}
+
+.container--small {
+  @extend %container;
+  @extend .uk-width-medium-1-3;
+}

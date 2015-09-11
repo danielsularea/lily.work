@@ -29,10 +29,6 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 1.2rem 0;
-
-  code {
-    font-size: inherit;
-  }
 }
 
 h1 {
@@ -103,18 +99,4 @@ img {
   display: block;
   height: auto;
   max-width: 100%;
-}
-
-code {
-  @extend %monospace;
-  display: inline-block;
-  border-radius: 4px;
-  padding: 0 4px;
-  background: $grey--light;
-  font-size: 0.833rem;
-  
-  p &,
-  li & {
-    line-height: 1.44rem;
-  }
 }

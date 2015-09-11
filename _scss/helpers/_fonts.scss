@@ -28,43 +28,43 @@ $times: Times New Roman, serif;
 
 // FONT FAMILIES
 .sans-serif {
-    font-family: $sans-serif;
+  font-family: $sans-serif;
 }
 
 .swiss {
-    font-family: $swiss;
+  font-family: $swiss;
 }
 
 .times {
-    font-family: $times;
+  font-family: $times;
 }
 
 // FONT STYLES
 
 %bold {
-    font-style: normal;
-    font-weight: 700;
+  font-style: normal;
+  font-weight: 700;
 }
 
 %bolditalic {
-    font-style: italic;
-    font-weight: 700;
+  font-style: italic;
+  font-weight: 700;
 }
 
 %regular {
-    font-style: normal;
-    font-weight: normal;
+  font-style: normal;
+  font-weight: normal;
 }
 
 %italic {
-    font-style: italic;
-    font-weight: normal;
+  font-style: italic;
+  font-weight: normal;
 }
 
 %monospace {
-    font-family: 'Droid Sans Mono', monospace;
-    font-style: normal;
-    font-weight: normal;
+  font-family: 'Droid Sans Mono', monospace;
+  font-style: normal;
+  font-weight: normal;
 }
 
 //MODULAR SCALE
