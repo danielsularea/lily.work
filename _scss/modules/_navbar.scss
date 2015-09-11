@@ -5,6 +5,11 @@
   top: 0;
   padding: 25px 0 50px;
   z-index: 1000;
+
+  a,
+  a:hover {
+    text-decoration: none;
+  }
 }
 
 .navbar__name {

@@ -86,4 +86,39 @@
   @extend .times;
 }
 
+.project__images {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 40%;
+  overflow: hidden;
 
+  img {
+    @extend .uk-width-1-1;
+  }
+}
+
+.project__detail {
+  @extend .uk-width-1-3;
+  position: relative;
+  float: right;
+
+  > div {
+    position: absolute;
+    margin-right: 0;
+    padding-bottom: 25px;
+  }
+}
+
+.detail__title {
+  @extend .uk-width-1-10;
+  @extend .swiss;
+  @extend %small;
+  text-align: right;
+}
+
+.detail__info {
+  @extend .uk-width-9-10;
+  @extend .times;
+  @extend %textface;
+}

@@ -4,32 +4,30 @@ title: Works
 id: works
 ---
 
-<div class="container">
-  {% for project in site.data.projects reversed %}
-    <a class="project__anchor" href="{{ site.url }}/works/{{ project.url }}">
-      <div class="project v-align--middle" style="background:url({{ site.url }}/assets/img/{{ project.img }}) no-repeat 75px center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
-        <div>
-          <div class="project__date">{{ project.date }}</div>
-          <span class="project__title">{{ project.title }}</span>
-        </div>
+{% for project in site.data.projects reversed %}
+  <a class="project__anchor" href="{{ site.url }}/works/{{ project.url }}">
+    <div class="project v-align--middle" style="background:url({{ site.url }}/assets/img/{{ project.img }}) no-repeat 75px center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+      <div>
+        <div class="project__date">{{ project.date }}</div>
+        <span class="project__title">{{ project.title }}</span>
       </div>
-    </a>
-  {% endfor %}
+    </div>
+  </a>
+{% endfor %}
 
-  <ul class="project--misc">
-    <li>And more...</li>
-    {% for project in site.data.projects--misc reversed %}
-      <li>
-        <div class="project--misc__date">{{ project.date }}</div>
-        <div class="project--misc__title">
-          <a href="{{ project.website }}" target="_blank">{{ project.title }}</a>
-        </div>
-        <div class="project--misc__tags">
-          {% for tag in project.tags %}
-            {{ tag }}{% if forloop.index != forloop.length %}, {% endif %}
-          {% endfor %}
-        </div>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+<ul class="project--misc">
+  <li>And more...</li>
+  {% for project in site.data.projects--misc reversed %}
+    <li>
+      <div class="project--misc__date">{{ project.date }}</div>
+      <div class="project--misc__title">
+        <a href="{{ project.website }}" target="_blank">{{ project.title }}</a>
+      </div>
+      <div class="project--misc__tags">
+        {% for tag in project.tags %}
+          {{ tag }}{% if forloop.index != forloop.length %}, {% endif %}
+        {% endfor %}
+      </div>
+    </li>
+  {% endfor %}
+</ul>

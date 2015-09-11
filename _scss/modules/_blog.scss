@@ -1,0 +1,17 @@
+.blog__date,
+.blog__title {
+  float: left;
+}
+
+.blog__date {
+  @extend .uk-width-1-6;
+  @extend .swiss;
+  @extend %small;
+  line-height: 1.62rem;
+}
+
+.blog__title {
+  @extend .uk-width-5-6;
+  @extend .times;
+  @extend %italic;
+}
