@@ -1,0 +1,34 @@
+.article {
+  margin-top: 100px;
+}
+
+.article--border {
+  @extend .article;
+  border-top: 1px solid $black;
+  padding-top: 2rem;
+}
+
+.article__header--small {
+  @extend .swiss;
+  @extend %small;
+  @extend %bold;
+  margin-bottom: 1rem;
+}
+
+.article__body {
+  @extend .times;
+
+  p {
+    @extend %textface;
+    margin: 0 0 1rem 0;
+  }
+}
+
+.article__body--small {
+  @extend .article__body;
+
+  p {
+    @extend .swiss;
+    @extend %small;
+  }
+}

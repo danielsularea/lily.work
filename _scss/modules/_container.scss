@@ -4,3 +4,9 @@
   width: 93%;
   max-width: 1400px;
 }
+
+.container--small {
+  @extend .uk-width-1-1;
+  @extend .uk-width-medium-1-3;
+  @extend .uk-container-center;
+}

@@ -31,3 +31,59 @@
     border-bottom-color: $black;
   }
 }
+
+.project--misc {
+  @extend .uk-width-1-1;
+  @extend %small;
+  display: block;
+  border-top: 1px solid $grey--light;
+  margin-top: 100px;
+  padding: 25px 0;
+  list-style: none;
+  text-align: left;
+
+  li {
+    @extend .uk-width-1-1;
+    @extend .uk-width-medium-1-2;
+    overflow: hidden;
+
+    &:first-child {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.project--misc__date,
+.project--misc__title,
+.project--misc__tags {
+  display: inline-block;
+  float: left;
+}
+
+.project--misc__date {
+  @extend .uk-width-1-10;
+  @extend .times;
+  @extend %italic;
+}
+
+.project--misc__title {
+  @extend .uk-width-2-5;
+
+  a {
+    @extend .swiss;
+    @extend %bold;
+    border-bottom: 2px solid $black;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.project--misc__tags {
+  @extend .uk-width-1-2;
+  @extend .times;
+}
+
+

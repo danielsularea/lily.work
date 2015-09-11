@@ -1,0 +1,20 @@
+- title: Hello World
+  date: 2013
+  tags: [ PHP ]
+  website: http://helloworld.lillian-chen.com
+- title: Speare
+  date: 2014
+  tags: []
+  website: http://spea.re
+- title: Interactive Design Lab
+  date: 2014
+  tags: [ Wordpress ]
+  website: http://idl.lillian-chen.com
+- title: Entrepreneurship at Cornell
+  date: 2014
+  tags: [ Wordpress ]
+  website: http://elabstartup.com
+- title: Cholp
+  date: 2015
+  tags: [ Ruby on Rails, PayPal SDK ]
+  website: http://www.cholp.com

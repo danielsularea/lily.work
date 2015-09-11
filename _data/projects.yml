@@ -1,0 +1,36 @@
+- title: Ellaspark
+  date: 2013/4
+  url: ellaspark.html
+  tags: [ Django ]
+  website: 
+  img: ellaspark/init.jpg
+- title: Life Changing Labs
+  date: 2014
+  url: life-changing-labs.html
+  tags: [ Jekyll ]
+  website: www.lifechanginglabs.com
+  img: lcl/init.jpg
+# - title: Speare
+#   date: 2014
+#   url: speare.html
+#   tags: []
+#   website: http://www.spea.re
+#   img: speare/init.jpg
+- title: Cornell Business Review
+  date: 2012/3/4
+  url: cornell-business-review.html
+  tags: [ Adobe InDesign, Adobe Photoshop ]
+  website: 
+  img: cbr/init.jpg
+- title: WikiReader
+  date: 2015
+  url: wikireader.html
+  tags: [ Chrome extension ]
+  website: 
+  img: wikireader/init.jpg
+- title: StartupTree
+  date: 2015
+  url: startuptree.html
+  tags: [ Django, SASS, Gulp ]
+  website: 
+  img: startuptree/init.jpg

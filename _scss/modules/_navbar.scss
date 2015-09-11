@@ -4,11 +4,12 @@
   position: fixed;
   top: 0;
   padding: 25px 0 50px;
+  z-index: 1000;
 }
 
 .navbar__name {
   @extend .swiss;
-  @extend .bold;
+  @extend %bold;
 }
 
 .navbar__location {
@@ -18,14 +19,11 @@
 .navbar__menu {
   float: right;
   margin: 0;
-  list-style: none;
 
-  li {
-    display: inline;
+  a {
+    @extend .anchor--strike;
+    @extend .times;
+    display: inline-block;
     margin-left: 5px;
-
-    a {
-      @extend .anchor--strikethrough;
-    }
   }
 }
