@@ -4,11 +4,14 @@
   var c = obj.settings = {
     navbar:         '.navbar',
     project:        '#works .project',
+    project_inner:  '#work-detail .project__detail > div',
+    project_left:   '#work-detail .project__images',
+    project_right:  '#work-detail .project__detail'
   };
 
   var $navbar = $(c.navbar);
   var nh = $navbar.outerHeight();
-  var setProjectHeight    = obj.setProjectHeight = function() {
+  var setDimensions       = obj.setDimensions = function() {
                               $(c.project).each(function() {
                                 $(this).css('height', $(window).height() - nh);
                               });
@@ -26,48 +29,15 @@
                               } 
                             };
 
-  var handleProjectScroll = obj.handleProjectScroll = function() {
-                              var inner = $('#work-detail .project__detail > div'),
-                                  pl = $('#work-detail .project__images'),
-                                  pr = $('#work-detail .project__detail');
-
-                              var plh = $(pl).outerHeight(),
-                                  prw = $(pr).outerWidth(),
-                                  prih = $(inner).outerHeight();
-
-                              var wh = $(window).height(),
-                                  scrollbottom = $(window).scrollTop() + wh,
-                                  offset = (100 + prih) - wh;
-
-                              $(pr).css('minHeight', plh);
-
-                              if ((prih + 100) > wh) {
-                                if (scrollbottom > (100 + prih)) {
-                                  $(inner).css({'width': prw,
-                                              'margin-top': 0-offset,
-                                              'position': 'fixed'
-                                            });
-                                } else {
-                                  $(inner).css({'margin-top': 0,
-                                              'position': 'absolute'
-                                            });
-                                }
-                              } else {
-                                $(inner).css({'width': prw,
-                                            'position': 'fixed'
-                                          });
-                              }
-                            };
-
   obj.init                = function(){
                               _initialize();
                               _bindEvents();
                             };
 
   function _initialize() {
-    setProjectHeight();
+    setDimensions();
     setActivePage();
-    handleProjectScroll();
+    _handleProjectScroll();
   }
 
   function _bindEvents() {
@@ -84,12 +54,11 @@
   }
 
   function _handleWindowResize(e) {
-    setProjectHeight();
-    handleProjectScroll();
+    setDimensions();
   }
 
   function _handleWindowScroll(e) {
-    handleProjectScroll();
+    _handleProjectScroll();
   }
 
   function _handleDelegate(e) {
@@ -112,20 +81,57 @@
 
     // Load the new state's URL via an Ajax Call
     $.get(State.url, function(data){
-        document.title = data.match(/<title>(.*?)<\/title>/)[1];
-        window.scrollTo(0,0);
-        $('.content').parent().html($(data).find('.content'));
+      document.title = data.match(/<title>(.*?)<\/title>/)[1];
+      window.scrollTo(0,0);
+      $('.content').parent().html($(data).find('.content'));
 
-        // If you're using Google analytics, make sure the pageview is registered!
-        ga('send', 'pageview', {
-          'page': State.url,
-          'title': document.title
-        });
+      // If you're using Google analytics, make sure the pageview is registered!
+      ga('send', 'pageview', {
+        'page': State.url,
+        'title': document.title
+      });
 
-        _initialize();
+      obj.init();
     });
   }
 
-  obj.init();
+  function _handleProjectScroll() {
+    var inner = $(c.project_inner),
+        pl = $(c.project_left),
+        pr = $(c.project_right);
+
+    var plh = $(pl).outerHeight(),
+        prw = $(pr).outerWidth(),
+        prih = $(inner).outerHeight();
+
+    var wh = $(window).height(),
+        scrollbottom = $(window).scrollTop() + wh,
+        offset = (100 + prih) - wh;
+
+    $(c.project_right).css('minHeight', $(c.project_left).outerHeight());
+
+    if ((prih + 100) > wh) {
+      if (scrollbottom > (100 + prih)) {
+        $(inner).css({'width': prw,
+                    'margin-top': 0-offset,
+                    'position': 'fixed'
+                  });
+      } else {
+        $(inner).css({'margin-top': 0,
+                    'position': 'absolute'
+                  });
+      }
+    } else {
+      $(inner).css({'width': prw,
+                  'position': 'fixed'
+                });
+    }
+  }
+
+  $(document).ready( function(){ 
+    obj.init(); 
+  });
+
+  return obj;
 
 }(jQuery, window.Main || {}));
