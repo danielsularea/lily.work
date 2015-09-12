@@ -27,33 +27,33 @@
                             };
 
   var handleProjectScroll = obj.handleProjectScroll = function() {
-                              var $inner = $('#work-detail .project__detail > div'),
-                                  $pl = $('#work-detail .project__images'),
-                                  $pr = $('#work-detail .project__detail');
+                              var inner = $('#work-detail .project__detail > div'),
+                                  pl = $('#work-detail .project__images'),
+                                  pr = $('#work-detail .project__detail');
 
-                              var plh = $pl.outerHeight(),
-                                  prw = $pr.outerWidth(),
-                                  prih = $inner.outerHeight();
+                              var plh = $(pl).outerHeight(),
+                                  prw = $(pr).outerWidth(),
+                                  prih = $(inner).outerHeight();
 
                               var wh = $(window).height(),
                                   scrollbottom = $(window).scrollTop() + wh,
                                   offset = (100 + prih) - wh;
 
-                              $pr.css('minHeight', plh);
+                              $(pr).css('minHeight', plh);
 
-                              if (prih > wh) {
+                              if ((prih + 100) > wh) {
                                 if (scrollbottom > (100 + prih)) {
-                                  $inner.css({'width': prw,
+                                  $(inner).css({'width': prw,
                                               'margin-top': 0-offset,
                                               'position': 'fixed'
                                             });
                                 } else {
-                                  $inner.css({'margin-top': 0,
+                                  $(inner).css({'margin-top': 0,
                                               'position': 'absolute'
                                             });
                                 }
                               } else {
-                                $inner.css({'width': prw,
+                                $(inner).css({'width': prw,
                                             'position': 'fixed'
                                           });
                               }

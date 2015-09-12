@@ -29,6 +29,7 @@
 
 .article__body {
   @extend .times;
+  padding-bottom: 100px;
 
   p {
     @extend %textface;

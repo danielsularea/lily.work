@@ -30,12 +30,12 @@ id: work-detail
         </div>
       {% endif %}
 
-      {% for detail in page.details %}
+      <!-- {% for detail in page.details %}
         <div class="detail">
           <div class="detail__title">{{ detail[0] }}</div>
           <div class="detail__info">{{ detail[1] }}</div>
         </div>
-      {% endfor %}
+      {% endfor %} -->
 
       {% if page.tags %}
         <div class="detail">
@@ -59,6 +59,14 @@ id: work-detail
           </div>
         </div>
       {% endif %}
+
+      <br>
+      
+      <div class="detail">
+        <div class="detail__body">
+          {{ content }}
+        </div>
+      </div>
     </div>
   </div>
 

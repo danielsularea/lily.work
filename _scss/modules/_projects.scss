@@ -99,14 +99,14 @@
 }
 
 .project__detail {
-  @extend .uk-width-1-3;
   position: relative;
   float: right;
+  width: 35%;
 
   > div {
     position: absolute;
     margin-right: 0;
-    padding-bottom: 25px;
+    padding-bottom: 50px;
   }
 }
 
@@ -114,7 +114,7 @@
   @extend .grid;
 
   + .detail {
-    margin-top: 10px;
+    margin-top: 0px;
   }
 }
 
@@ -122,7 +122,8 @@
   @extend .uk-width-1-10;
   @extend .swiss;
   @extend %small;
-  line-height: 1.7rem;
+  @extend %bold;
+  // line-height: 1.7rem;
   text-align: right;
   text-transform: capitalize;
 }
@@ -131,4 +132,37 @@
   @extend .uk-width-9-10;
   @extend .times;
   @extend %textface;
+  @extend %small;
+  @extend %italic;
+}
+
+.detail__body {
+  @extend .uk-width-1-1;
+  @extend .times;
+
+  p {
+    @extend %textface;
+    margin: 0 0 1rem 0;
+  }
+
+  h2 {
+    @extend .swiss;
+    @extend %small;
+    @extend %bold;
+    position: relative;
+    margin-bottom: 0;
+    margin-left: 20px;
+
+    &::before {
+      content: '—';
+      position: absolute;
+      top: 0;
+      left: -20px;
+    }
+  }
+
+  ul, ol {
+    margin: 0;
+    padding-left: 15px;
+  }
 }

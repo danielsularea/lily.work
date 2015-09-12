@@ -4,9 +4,9 @@ title: Works
 id: works
 ---
 
-{% for project in site.categories["works"] reversed %}
+{% for project in site.categories["works"] %}
   <a class="project__anchor" href="{{ site.url }}{{ project.url }}">
-    <div class="project v-align--middle" style="background:url({{ site.url }}/assets/img/{{ project.cover_img }}) no-repeat 75px center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+    <div class="project v-align--middle" style="background:url({{ site.url }}/assets/img/{{ project.slug }}/{{ project.cover_img }}) no-repeat 75px center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
       <div>
         <div class="project__date">{{ project.time }}</div>
         <span class="project__title">{{ project.title }}</span>
