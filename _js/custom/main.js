@@ -15,6 +15,8 @@
                               $(c.project).each(function() {
                                 $(this).css('height', $(window).height() - nh);
                               });
+
+                              // $(c.project_right).css('minHeight', $(c.project_left).outerHeight());
                             };
 
   var setActivePage       = obj.setActivePage = function() {
@@ -37,7 +39,6 @@
   function _initialize() {
     setDimensions();
     setActivePage();
-    _handleProjectScroll();
   }
 
   function _bindEvents() {
@@ -108,8 +109,6 @@
         scrollbottom = $(window).scrollTop() + wh,
         offset = (100 + prih) - wh;
 
-    $(c.project_right).css('minHeight', $(c.project_left).outerHeight());
-
     if ((prih + 100) > wh) {
       if (scrollbottom > (100 + prih)) {
         $(inner).css({'width': prw,
@@ -118,7 +117,7 @@
                   });
       } else {
         $(inner).css({'margin-top': 0,
-                    'position': 'absolute'
+                    'position': 'static'
                   });
       }
     } else {
