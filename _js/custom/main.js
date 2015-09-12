@@ -31,6 +31,12 @@
                               } 
                             };
 
+  var callPrism           = obj.callPrism = function() {
+                              if ($('code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code').length) {
+                                Prism.highlightAll();
+                              }
+                            };
+
   obj.init                = function(){
                               // setTimeout(function() {
                               //   $('body').addClass('loading');
@@ -43,6 +49,7 @@
   function _initialize() {
     setDimensions();
     setActivePage();
+    callPrism();
   }
 
   function _bindEvents() {
