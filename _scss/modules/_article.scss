@@ -50,6 +50,11 @@
   }
 }
 
+// ugly but fix later
+#about .article__body {
+  padding-bottom: 0;
+}
+
 .article__body--small {
   @extend .article__body;
 

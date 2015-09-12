@@ -32,6 +32,10 @@
                             };
 
   obj.init                = function(){
+                              // setTimeout(function() {
+                              //   $('body').addClass('loading');
+                              // }, 2000)
+
                               _initialize();
                               _bindEvents();
                             };
@@ -81,18 +85,30 @@
     var State = History.getState();
 
     // Load the new state's URL via an Ajax Call
-    $.get(State.url, function(data){
-      document.title = data.match(/<title>(.*?)<\/title>/)[1];
-      window.scrollTo(0,0);
-      $('.content').parent().html($(data).find('.content'));
+    $.ajax({
+      url: State.url,
+      beforeSend: function() {
+        $('body').addClass('loading');
+      },
+      success: function(data) {
+        setTimeout(function() {
+          document.title = data.match(/<title>(.*?)<\/title>/)[1];
+          window.scrollTo(0,0);
+          $('.content').parent().html($(data).find('.content'));
 
-      // If you're using Google analytics, make sure the pageview is registered!
-      ga('send', 'pageview', {
-        'page': State.url,
-        'title': document.title
-      });
+          ga('send', 'pageview', {
+            'page': State.url,
+            'title': document.title
+          });
 
-      obj.init();
+          obj.init();
+        }, 1600);
+      },
+      complete: function() {
+        setTimeout(function() {
+          $('body').removeClass('loading');
+        }, 1600);
+      }
     });
   }
 
