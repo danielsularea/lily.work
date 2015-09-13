@@ -56,13 +56,9 @@
     $(window).on('resize', _handleWindowResize);
     $(window).bind('scroll', _handleWindowScroll);
 
-    // Make sure that all clicked links that link to your internal website
-    // don't just reload the page but execute a History.pushState call
-    // var siteUrl = 'http://'+(document.location.hostname||document.location.host);
-    $(document).delegate('a', 'click', _handleDelegate);
-
-    // Catch all History stateChange events
-    History.Adapter.bind(window, 'statechange', _handleRedirect);
+    // Ajax handlers
+    // $(document).delegate('a', 'click', _handleDelegate);
+    // History.Adapter.bind(window, 'statechange', _handleRedirect);
   }
 
   function _handleWindowResize(e) {
@@ -92,31 +88,20 @@
     var State = History.getState();
 
     // Load the new state's URL via an Ajax Call
-    $.ajax({
-      url: State.url,
-      beforeSend: function() {
-        $('body').addClass('loading');
-      },
-      success: function(data) {
-        setTimeout(function() {
-          document.title = data.match(/<title>(.*?)<\/title>/)[1];
-          window.scrollTo(0,0);
-          $('.content').parent().html($(data).find('.content'));
+    // $.get(State.url, function(data) {
+    //   document.title = data.match(/<title>(.*?)<\/title>/)[1];
+    //   window.scrollTo(0,0);
+    //   $('.content').parent().html($(data).find('.content'));
 
-          ga('send', 'pageview', {
-            'page': State.url,
-            'title': document.title
-          });
+    //   ga('send', 'pageview', {
+    //     'page': State.url,
+    //     'title': document.title
+    //   });
 
-          obj.init();
-        }, 1600);
-      },
-      complete: function() {
-        setTimeout(function() {
-          $('body').removeClass('loading');
-        }, 1600);
-      }
-    });
+    //   obj.init();
+    // });
+
+    
   }
 
   function _handleProjectScroll() {

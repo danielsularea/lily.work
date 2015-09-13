@@ -14,7 +14,7 @@
 
 .navbar__name {
   @extend .swiss;
-  @extend %bold;
+  // @extend %bold;
 }
 
 .navbar__location {
