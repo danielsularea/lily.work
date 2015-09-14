@@ -1,22 +1,24 @@
 (function ($, MyObj, undefined) {
   var obj = MyObj;
 
-  var c = obj.settings = {
+  var conf = obj.settings = {
     navbar:         '.navbar',
     project:        '#works .project',
     project_inner:  '#work-detail .project__detail > div',
     project_left:   '#work-detail .project__images',
-    project_right:  '#work-detail .project__detail'
+    project_right:  '#work-detail .project__detail',
+    hasTransitions: false,
+    animating:      false
   };
 
-  var $navbar = $(c.navbar);
+  var $navbar = $(conf.navbar);
   var nh = $navbar.outerHeight();
   var setDimensions       = obj.setDimensions = function() {
-                              $(c.project).each(function() {
+                              $(conf.project).each(function() {
                                 $(this).css('height', $(window).height() - nh);
                               });
 
-                              // $(c.project_right).css('minHeight', $(c.project_left).outerHeight());
+                              // $(conf.project_right).css('minHeight', $(conf.project_left).outerHeight());
                             };
 
   var setActivePage       = obj.setActivePage = function() {
@@ -37,16 +39,17 @@
                               }
                             };
 
-  obj.init                = function(){
-                              // setTimeout(function() {
-                              //   $('body').addClass('loading');
-                              // }, 2000)
+  var transitionSupported = obj.transitionSupported = function() {
+                              conf.hasTransitions = $('html').hasClass('csstransitions');
+                            };
 
+  obj.init                = function(){
                               _initialize();
                               _bindEvents();
                             };
 
   function _initialize() {
+    transitionSupported();
     setDimensions();
     setActivePage();
     callPrism();
@@ -59,6 +62,10 @@
     // Ajax handlers
     // $(document).delegate('a', 'click', _handleDelegate);
     // History.Adapter.bind(window, 'statechange', _handleRedirect);
+
+    $(document).delegate('a', 'click', _handleDelegate);
+    // $(window).on('popstate', _handleStateChange);
+    History.Adapter.bind(window, 'statechange', _handleStateChange);
   }
 
   function _handleWindowResize(e) {
@@ -66,48 +73,72 @@
   }
 
   function _handleWindowScroll(e) {
+    if (conf.animating) e.preventDefault();
     _handleProjectScroll();
   }
 
   function _handleDelegate(e) {
     var siteUrl = document.location.hostname||document.location.host;
     e.preventDefault();
-    
+
     if (this.href.includes(siteUrl)) {
       if (this.pathname.includes('pdf')) {
         window.open(this.href);
       } else {
-        History.pushState({}, '', this.pathname);
+        if (!conf.animating) {
+          History.pushState({}, '', this.pathname);
+          _handleRedirect(this.href)
+        };
       }
     } else {
       window.open(this.href);
     }
   }
 
-  function _handleRedirect(e) {
+  function _handleRedirect(url) {
+    conf.animating = true;
+    $('body').addClass('loading');
+    $('.loading__bar').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
+      _loadContent(url);
+      $('.loading__bar').off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
+    });
+
+    if(!conf.hasTransitions) _loadContent(url);
+  }
+
+  function _loadContent(url) {
+    url = ('' == url) ? 'index.html' : url;
+    var section = $('.content').parent();
+      
+    section.load(url + ' .content', function(event){
+      // $('.content').parent().html(section);
+      var delay = (conf.hasTransitions) ? 1500 : 0;
+
+      setTimeout(function(){
+        $('body').removeClass('loading');
+
+        $('.loading__bar').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+          conf.animating = false;
+          $('.loading__bar').off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
+        });
+
+        if (!conf.hasTransitions) conf.animating = false;
+      }, delay);
+
+      $(window).scrollTop(0,0);
+      obj.init();
+    });
+  }
+
+  function _handleStateChange(e) {
     var State = History.getState();
-
-    // Load the new state's URL via an Ajax Call
-    // $.get(State.url, function(data) {
-    //   document.title = data.match(/<title>(.*?)<\/title>/)[1];
-    //   window.scrollTo(0,0);
-    //   $('.content').parent().html($(data).find('.content'));
-
-    //   ga('send', 'pageview', {
-    //     'page': State.url,
-    //     'title': document.title
-    //   });
-
-    //   obj.init();
-    // });
-
-    
+    if (!conf.animating) _handleRedirect(State.url);
   }
 
   function _handleProjectScroll() {
-    var inner = $(c.project_inner),
-        pl = $(c.project_left),
-        pr = $(c.project_right);
+    var inner = $(conf.project_inner),
+        pl = $(conf.project_left),
+        pr = $(conf.project_right);
 
     var plh = $(pl).outerHeight(),
         prw = $(pr).outerWidth(),
@@ -135,8 +166,8 @@
     }
   }
 
-  $(document).ready( function(){ 
-    obj.init(); 
+  $(document).ready(function() {
+    obj.init();
   });
 
   return obj;

@@ -8,14 +8,23 @@ body::before {
   position: fixed;
   left: 0;
 }
+
 body::before {
   top: 0;
   transform: translateY(-100%);
 }
+
 body::after {
   bottom: 0;
   transform: translateY(100%);
 }
+
+body.loading {
+  max-height: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
 body.loading::after,
 body.loading::before {
   transform: translateY(0);
@@ -42,9 +51,11 @@ body.loading::before {
   -moz-transition: opacity 0.4s 0.4s, visibility 0s 0.8s;
   transition: opacity 0.4s 0.4s, visibility 0s 0.8s;
 }
+
 .cd-about .loading__cover {
   background-color: #283040;
 }
+
 .loading .loading__cover {
   opacity: 1;
   visibility: visible;
@@ -80,12 +91,7 @@ body.loading::before {
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
-.cd-about .loading__bar {
-  background-color: #000000;
-}
-.cd-about .loading__bar::before {
-  background-color: #eeeeee;
-}
+
 .loading__bar::before {
   /* this is the progress bar inside the loading bar */
   content: '';
@@ -114,6 +120,7 @@ body.loading::before {
   -o-transform-origin: left center;
   transform-origin: left center;
 }
+
 .loading .loading__bar {
   visibility: visible;
   -webkit-transform: translateX(-50%) translateY(-50%) scaleX(0.3);
@@ -125,6 +132,7 @@ body.loading::before {
   -moz-transition: visibility 0s 0.3s, -moz-transform 0.4s 0.4s;
   transition: visibility 0s 0.3s, transform 0.4s 0.4s;
 }
+
 .loading .loading__bar::before {
   -webkit-transform: scaleX(1);
   -moz-transform: scaleX(1);
@@ -135,6 +143,7 @@ body.loading::before {
   -moz-transition: -moz-transform 0.8s 0.8s ease-in;
   transition: transform 0.8s 0.8s ease-in;
 }
+
 @media only screen and (min-width: 768px) {
   .loading__bar {
     width: calc(100% - 40px);
