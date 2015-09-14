@@ -7,6 +7,8 @@
     project_inner:  '#work-detail .project__detail > div',
     project_left:   '#work-detail .project__images',
     project_right:  '#work-detail .project__detail',
+    ajax_content:   '.content',
+    loading_bar:    '.loading__bar',
     hasTransitions: false,
     animating:      false
   };
@@ -64,7 +66,6 @@
     // History.Adapter.bind(window, 'statechange', _handleRedirect);
 
     $(document).delegate('a', 'click', _handleDelegate);
-    // $(window).on('popstate', _handleStateChange);
     History.Adapter.bind(window, 'statechange', _handleStateChange);
   }
 
@@ -87,8 +88,8 @@
       } else {
         if (!conf.animating) {
           History.pushState({}, '', this.pathname);
-          _handleRedirect(this.href)
-        };
+          _handleRedirect(this.href);
+        }
       }
     } else {
       window.open(this.href);
@@ -98,34 +99,34 @@
   function _handleRedirect(url) {
     conf.animating = true;
     $('body').addClass('loading');
-    $('.loading__bar').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
+    $(conf.loading_bar).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
       _loadContent(url);
-      $('.loading__bar').off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
+      $(conf.loading_bar).off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
     });
 
     if(!conf.hasTransitions) _loadContent(url);
   }
 
   function _loadContent(url) {
-    url = ('' == url) ? 'index.html' : url;
-    var section = $('.content').parent();
+    url = ('' === url) ? 'index.html' : url;
+    var section = $(conf.ajax_content).parent();
       
-    section.load(url + ' .content', function(event){
+    section.load(url + ' ' + conf.ajax_content, function(event){
       // $('.content').parent().html(section);
       var delay = (conf.hasTransitions) ? 1500 : 0;
 
-      setTimeout(function(){
+      setTimeout(function() {
+        $(window).scrollTop(0,0);
         $('body').removeClass('loading');
 
-        $('.loading__bar').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+        $(conf.loading_bar).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
           conf.animating = false;
-          $('.loading__bar').off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
+          $(conf.loading_bar).off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
         });
 
         if (!conf.hasTransitions) conf.animating = false;
       }, delay);
 
-      $(window).scrollTop(0,0);
       obj.init();
     });
   }

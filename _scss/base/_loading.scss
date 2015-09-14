@@ -52,16 +52,12 @@ body.loading::before {
   transition: opacity 0.4s 0.4s, visibility 0s 0.8s;
 }
 
-.cd-about .loading__cover {
-  background-color: #283040;
-}
-
 .loading .loading__cover {
   opacity: 1;
   visibility: visible;
-  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
-  -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
-  transition: opacity 0.3s 0s, visibility 0s 0s;
+  -webkit-transition: opacity 0s 0s, visibility 0s 0s;
+  -moz-transition: opacity 0s 0s, visibility 0s 0s;
+  transition: opacity 0s 0s, visibility 0s 0s;
 }
 
 .loading__bar {
