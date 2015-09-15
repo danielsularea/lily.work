@@ -1,14 +1,17 @@
 $project-height: 400px;
 .project {
   @extend .uk-width-1-1;
-  height: $project-height;
   margin-top: 100px;
   overflow: hidden;
 
+  &:before {
+    content: '#{$project-height}';
+    visibility: hidden;
+  }
+
   @include media-query($breakpoint-large, min) {
     &:before {
-      content: '#{$project-height}';
-      visibility: hidden;
+      content: 'js_#{$project-height}';
     }
   }
 }
@@ -104,11 +107,17 @@ $project-height: 400px;
 }
 
 .project__images {
-  position: absolute;
-  top: 100px;
-  left: 0;
-  right: 40%;
-  overflow: hidden;
+  position: static;
+  width: 100%;
+
+  @include media-query($breakpoint-medium, min) {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 40%;
+    width: auto;
+    overflow: hidden;
+  }
 
   img {
     @extend .uk-width-1-1;
@@ -116,9 +125,18 @@ $project-height: 400px;
 }
 
 .project__detail {
-  position: relative;
-  float: right;
-  width: 35%;
+  @extend .uk-width-1-1;
+
+  @include media-query($breakpoint-medium, min) {
+    position: relative;
+    float: right;
+    width: 35%;
+
+    &:before {
+      content: 'js_0px';
+      display: none;
+    }
+  }
 
   > div {
     position: static;
@@ -136,17 +154,21 @@ $project-height: 400px;
 }
 
 .detail__title {
-  @extend .uk-width-1-10;
+  @extend .uk-width-1-5;
+  @extend .uk-width-small-1-10;
+  @extend .uk-width-medium-1-5;
   @extend .swiss;
   @extend %small;
   @extend %bold;
   // line-height: 1.7rem;
-  text-align: right;
+  // text-align: right;
   text-transform: capitalize;
 }
 
 .detail__info {
-  @extend .uk-width-9-10;
+  @extend .uk-width-4-5;
+  @extend .uk-width-small-9-10;
+  @extend .uk-width-medium-4-5;
   @extend .times;
   @extend %textface;
   @extend %small;

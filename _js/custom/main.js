@@ -17,16 +17,16 @@
   var nh = $navbar.outerHeight();
   var setDimensions       = obj.setDimensions = function() {
                               $(conf.project).each(function() {
-                                var n = window.getComputedStyle(this, ':before').getPropertyValue('content').replace(/\"/g, '');
-                                console.log(n);
-                                if (n.length > 0) {
+                                var result = _getProjectBeforeContent(this);
+                                var flag = result[0];
+                                var h = result[1];
+
+                                if (flag) {
                                   $(this).css('height', $(window).height() - nh);
                                 } else {
-                                  $(this).css('height', n);
+                                  $(this).css('height', h);
                                 }
                               });
-
-                              // $(conf.project_right).css('minHeight', $(conf.project_left).outerHeight());
                             };
 
   var setActivePage       = obj.setActivePage = function() {
@@ -77,10 +77,10 @@
 
   function _handleWindowResize(e) {
     setDimensions();
+    _handleProjectScroll();
   }
 
   function _handleWindowScroll(e) {
-    if (conf.animating) e.preventDefault();
     _handleProjectScroll();
   }
 
@@ -146,7 +146,22 @@
     if (!conf.animating) _handleRedirect(State.url);
   }
 
+  function _getProjectBeforeContent(element) {
+    var str = window.getComputedStyle(element, ':before').getPropertyValue('content').replace(/\"/g, '');
+    var i = str.indexOf('_');
+    var flag = str.substring(0, i);
+    var h = str.substring(i+1);
+    if (flag.length > 0) {
+      return [true, h];
+    } else {
+      return [false, h];
+    }
+  }
+
   function _handleProjectScroll() {
+    var result = _getProjectBeforeContent(document.querySelector(conf.project_right));
+    var flag = result[0];
+
     var inner = $(conf.project_inner),
         pl = $(conf.project_left),
         pr = $(conf.project_right);
@@ -159,21 +174,28 @@
         scrollbottom = $(window).scrollTop() + wh,
         offset = (100 + prih) - wh;
 
-    if ((prih + 100) > wh) {
-      if (scrollbottom > (100 + prih)) {
-        $(inner).css({'width': prw,
-                    'margin-top': 0-offset,
-                    'position': 'fixed'
-                  });
+    if (flag) {
+      if ((prih + 100) > wh) {
+        if (scrollbottom > (100 + prih)) {
+          $(inner).css({'width': prw,
+                      'margin-top': 0-offset,
+                      'position': 'fixed'
+                    });
+        } else {
+          $(inner).css({'margin-top': 0,
+                      'position': 'static'
+                    });
+        }
       } else {
-        $(inner).css({'margin-top': 0,
-                    'position': 'static'
+        $(inner).css({'width': prw,
+                    'position': 'fixed'
                   });
       }
     } else {
-      $(inner).css({'width': prw,
-                  'position': 'fixed'
-                });
+      $(inner).css({'margin-top': 0,
+                    'position': 'static',
+                    'width': 'auto'
+                  });
     }
   }
 
