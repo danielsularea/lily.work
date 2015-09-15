@@ -110,6 +110,10 @@
   function _loadContent(url) {
     url = ('' === url) ? 'index.html' : url;
     var section = $(conf.ajax_content).parent();
+
+    $.get(url, function(data) {
+      document.title = data.match(/<title>(.*?)<\/title>/)[1];
+    });
       
     section.load(url + ' ' + conf.ajax_content, function(event){
       // $('.content').parent().html(section);

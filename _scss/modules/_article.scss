@@ -48,6 +48,14 @@
     //   left: -20px;
     // }
   }
+
+  ul, ol {
+    margin: 0;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
 }
 
 // ugly but fix later
@@ -62,4 +70,11 @@
     @extend .swiss;
     @extend %small;
   }
+}
+
+.article__postscript {
+  @extend .times;
+  @extend %italic;
+  @extend %small;
+  margin-top: 3rem;
 }
