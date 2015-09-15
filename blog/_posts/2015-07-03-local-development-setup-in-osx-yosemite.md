@@ -12,7 +12,7 @@ First let's reveal all the hidden files to make things easier to find. In Termin
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 </code></pre>
 
-Then save the file with `Ctrl + O` and then `Ctrl + X` to return to the command line.
+Then save the file with `Ctrl + O` and then `Ctrl + X` to return to the command line. You can now run `showFiles` to see hidden directories and `hideFiles` to hide them.
 
 ## Installations
 - Run `xcode-select --install` to install the XCode Command Line Tools.
