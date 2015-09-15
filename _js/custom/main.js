@@ -17,7 +17,13 @@
   var nh = $navbar.outerHeight();
   var setDimensions       = obj.setDimensions = function() {
                               $(conf.project).each(function() {
-                                $(this).css('height', $(window).height() - nh);
+                                var n = window.getComputedStyle(this, ':before').getPropertyValue('content').replace(/\"/g, '');
+                                console.log(n);
+                                if (n.length > 0) {
+                                  $(this).css('height', $(window).height() - nh);
+                                } else {
+                                  $(this).css('height', n);
+                                }
                               });
 
                               // $(conf.project_right).css('minHeight', $(conf.project_left).outerHeight());

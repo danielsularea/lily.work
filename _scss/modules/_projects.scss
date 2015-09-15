@@ -1,11 +1,14 @@
+$project-height: 400px;
 .project {
   @extend .uk-width-1-1;
+  height: $project-height;
   margin-top: 100px;
   overflow: hidden;
 
   @include media-query($breakpoint-large, min) {
-    &::before {
-      content: 'js-height';
+    &:before {
+      content: '#{$project-height}';
+      visibility: hidden;
     }
   }
 }
@@ -22,8 +25,8 @@
   @extend .swiss;
   @extend %bold;
   border-bottom: 10px solid transparent;
-  font-size: 4rem;
-  line-height: 4rem;
+  font-size: 3rem;
+  line-height: 3rem;
   letter-spacing: -1px;
 
   @media-query($breakpoint-medium, min) {
@@ -67,13 +70,17 @@
 }
 
 .project--misc__date {
-  @extend .uk-width-1-10;
+  @extend .uk-width-1-5;
+  @extend .uk-width-small-1-10;
   @extend .times;
   @extend %italic;
 }
 
 .project--misc__title {
-  @extend .uk-width-2-5;
+  @extend .uk-width-4-5;
+  @extend .uk-width-small-9-10;
+  @extend .uk-width-medium-1-2;
+  @extend .uk-width-large-2-5;
 
   a {
     @extend .swiss;
@@ -88,8 +95,12 @@
 }
 
 .project--misc__tags {
-  @extend .uk-width-1-2;
+  @extend .uk-width-4-5;
+  @extend .uk-width-small-9-10;
+  @extend .uk-width-medium-2-5;
+  @extend .uk-width-large-1-2;
   @extend .times;
+  float: right;
 }
 
 .project__images {
