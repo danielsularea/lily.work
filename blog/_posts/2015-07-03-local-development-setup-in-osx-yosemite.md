@@ -17,9 +17,11 @@ Then save the file with `Ctrl + O` and then `Ctrl + X` to return to the command 
 ## Installations
 - Run `xcode-select --install` to install the XCode Command Line Tools.
 - Then get [Homebrew][homebrew] with
+
 <pre class="line-numbers"><code class="language-none">ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></pre>
 - Next paste `brew install caskroom/cask/brew-cask` to install [Homebrew Cask][cask]
 - Cask install your applications. Click [here][cask-search] to search them. I typically go for
+
 <pre class="line-numbers"><code class="language-none">brew cask install google-chrome iterm2 alfred sublime-text spectacle caffeine java vuze spotify unrarx</code></pre>
 
 ## Sublime Text
@@ -32,6 +34,7 @@ Then save the file with `Ctrl + O` and then `Ctrl + X` to return to the command 
 
 ## PostgreSQL
 I use [PostgreSQL][postgresql] for both my rails and django projects so I won't be installed MySQL on my computer just yet. To get PostgreSQL, I run
+
 <pre class="line-numbers"><code class="language-none">brew install postgresql
 
 # Start postgresql at login
@@ -42,6 +45,7 @@ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist</code></pre
 
 ## Ruby on Rails
 OS X comes with ruby installed but let's get our own by first running `brew install rbenv ruby-build`. You may need to add `if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi` to your `.bash_profile` to be able to access the command directly. Then install ruby and rails with
+
 <pre class="line-numbers"><code class="language-none">rbenv install 2.2.3
 rbenv global 2.2.3
 gem install rails
@@ -49,11 +53,13 @@ rbenv rehash</code></pre>
 
 ## Django
 To avoid conflicts between packages for each project, let's install Django to work with virtual environments. To do so, run
+
 <pre class="line-numbers"><code class="language-none">brew install python
 pip install virtualenv virtualenvwrapper
 mkdir ~/.virtualenvs</code></pre>
 
 Then, yet again edit your `.bash_profile` file and add the following to get a shortcut to activate/deactivate your virtual environments.
+
 <pre class="line-numbers"><code class="language-none">export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 export PIP_VIRTUALENV_BASE=$WORKON_HOME

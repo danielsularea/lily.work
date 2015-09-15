@@ -56,6 +56,11 @@
       margin-bottom: 0.5rem;
     }
   }
+
+  p + pre {
+    margin-top: -10px;
+    margin-bottom: 16px;
+  }
 }
 
 // ugly but fix later
