@@ -11,10 +11,15 @@
 
 .container--medium {
   @extend %container;
-  @extend .uk-width-medium-1-2;
+  @extend .uk-width-1-1;
+  @extend .uk-width-medium-2-3;
+  @extend .uk-width-large-1-2;
 }
 
 .container--small {
   @extend %container;
-  @extend .uk-width-medium-1-3;
+  @extend .uk-width-1-1;
+  @extend .uk-width-small-2-3;
+  @extend .uk-width-medium-1-2;
+  @extend .uk-width-large-2-5;
 }

@@ -4,14 +4,25 @@
 }
 
 .blog__date {
-  @extend .uk-width-1-6;
+  @extend .uk-width-1-1;
+  @extend .uk-width-medium-1-6;
   @extend .swiss;
   @extend %small;
-  line-height: 1.62rem;
+  line-height: 0.5rem;
+
+  @include media-query($breakpoint-medium, min) {
+    line-height: 1.62rem;
+  }
 }
 
 .blog__title {
-  @extend .uk-width-5-6;
+  @extend .uk-width-1-1;
+  @extend .uk-width-medium-5-6;
   @extend .times;
   @extend %italic;
+  margin-bottom: 15px;
+
+  @include media-query($breakpoint-medium, min) {
+    margin: 0;
+  }
 }

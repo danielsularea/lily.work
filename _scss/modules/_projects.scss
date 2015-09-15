@@ -2,6 +2,12 @@
   @extend .uk-width-1-1;
   margin-top: 100px;
   overflow: hidden;
+
+  @include media-query($breakpoint-large, min) {
+    &::before {
+      content: 'js-height';
+    }
+  }
 }
 
 .project__date {
