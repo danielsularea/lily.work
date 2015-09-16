@@ -45,19 +45,19 @@ body.loading::before {
   height: 100%;
   width: 100%;
   opacity: 0;
-  visibility: hidden;
+  display: none;
   background-color: #ffffff;
-  -webkit-transition: opacity 0.4s 0.4s, visibility 0s 0.8s;
-  -moz-transition: opacity 0.4s 0.4s, visibility 0s 0.8s;
-  transition: opacity 0.4s 0.4s, visibility 0s 0.8s;
+  -webkit-transition: opacity 0.4s 0.4s, display 0s 0.8s;
+  -moz-transition: opacity 0.4s 0.4s, display 0s 0.8s;
+  transition: opacity 0.4s 0.4s, display 0s 0.8s;
 }
 
 .loading .loading__cover {
   opacity: 1;
-  visibility: visible;
-  -webkit-transition: opacity 0s 0s, visibility 0s 0s;
-  -moz-transition: opacity 0s 0s, visibility 0s 0s;
-  transition: opacity 0s 0s, visibility 0s 0s;
+  display: block;
+  -webkit-transition: opacity 0s 0s, display 0s 0s;
+  -moz-transition: opacity 0s 0s, display 0s 0s;
+  transition: opacity 0s 0s, display 0s 0s;
 }
 
 .loading__bar {

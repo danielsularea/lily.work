@@ -69,7 +69,7 @@
 
     // Ajax handlers
     // $(document).delegate('a', 'click', _handleDelegate);
-    $('a').on('click', _handleDelegate);
+    $('a').on('click touchstart', _handleDelegate);
     History.Adapter.bind(window, 'statechange', _handleStateChange);
   }
 
