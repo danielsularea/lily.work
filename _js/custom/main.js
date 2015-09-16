@@ -69,9 +69,7 @@
 
     // Ajax handlers
     // $(document).delegate('a', 'click', _handleDelegate);
-    // History.Adapter.bind(window, 'statechange', _handleRedirect);
-
-    $(document).delegate('a', 'click', _handleDelegate);
+    $('a').on('click', _handleDelegate);
     History.Adapter.bind(window, 'statechange', _handleStateChange);
   }
 
