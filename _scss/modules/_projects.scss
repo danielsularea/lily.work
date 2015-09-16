@@ -1,7 +1,7 @@
-$project-height: 400px;
+$project-height: 250px;
 .project {
   @extend .uk-width-1-1;
-  margin-top: 100px;
+  margin-top: 50px;
   overflow: hidden;
 
   &:before {
@@ -9,11 +9,23 @@ $project-height: 400px;
     visibility: hidden;
   }
 
+  .project__anchor:first-child & {
+    margin-top: 100px;
+  }
+
+  @include media-query($breakpoint-medium, min) {
+    margin-top: 100px;
+  }
+
   @include media-query($breakpoint-large, min) {
     &:before {
       content: 'js_#{$project-height}';
     }
   }
+}
+
+#works .project {
+  height: $project-height;
 }
 
 .project__date {
@@ -28,19 +40,22 @@ $project-height: 400px;
   @extend .swiss;
   @extend %bold;
   border-bottom: 10px solid transparent;
-  font-size: 3rem;
-  line-height: 3rem;
+  font-size: 2rem;
+  line-height: 2rem;
   letter-spacing: -1px;
 
-  @media-query($breakpoint-medium, min) {
+  @include media-query($breakpoint-medium, min) {
     font-size: 3rem;
     line-height: 3rem;
   }
-}
 
-.project__anchor:hover {
-  .project__title {
-    border-bottom-color: $black;
+  @include media-query($breakpoint-large, min) {
+    font-size: 4rem;
+    line-height: 4rem;
+
+    .project__anchor:hover & {
+      border-bottom-color: $black;
+    }
   }
 }
 

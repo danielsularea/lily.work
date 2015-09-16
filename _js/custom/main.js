@@ -16,17 +16,19 @@
   var $navbar = $(conf.navbar);
   var nh = $navbar.outerHeight();
   var setDimensions       = obj.setDimensions = function() {
-                              $(conf.project).each(function() {
-                                var result = _getProjectBeforeContent(this);
-                                var flag = result[0];
-                                var h = result[1];
+                              if ($(conf.project).length) {
+                                var flags          = _getProjectBeforeContent(conf.project),
+                                    trigger_js     = flags[0],
+                                    default_height = flags[1];
 
-                                if (flag) {
-                                  $(this).css('height', $(window).height() - nh);
-                                } else {
-                                  $(this).css('height', h);
-                                }
-                              });
+                                $(conf.project).each(function() {
+                                  if (trigger_js) {
+                                    $(this).css('height', $(window).height() - nh);
+                                  } else {
+                                    $(this).css('height', default_height);
+                                  }
+                                });
+                              }
                             };
 
   var setActivePage       = obj.setActivePage = function() {
@@ -53,7 +55,7 @@
 
   obj.init                = function(){
                               _initialize();
-                              _bindEvents();
+                              if ( !Modernizr.touch ) _bindEvents();        
                             };
 
   function _initialize() {
@@ -68,8 +70,7 @@
     $(window).bind('scroll', _handleWindowScroll);
 
     // Ajax handlers
-    // $(document).delegate('a', 'click', _handleDelegate);
-    $('a').on('click touchstart', _handleDelegate);
+    $(document).on('click touchstart', 'a', _handleDelegate);
     History.Adapter.bind(window, 'statechange', _handleStateChange);
   }
 
@@ -145,55 +146,60 @@
   }
 
   function _getProjectBeforeContent(element) {
-    var str = window.getComputedStyle(element, ':before').getPropertyValue('content').replace(/\"/g, '');
-    var i = str.indexOf('_');
-    var flag = str.substring(0, i);
-    var h = str.substring(i+1);
-    if (flag.length > 0) {
-      return [true, h];
+    var str            = window.getComputedStyle(document.querySelector(element), ':before')
+                               .getPropertyValue('content')
+                               .replace(/\"/g, ''),
+        i              = str.indexOf('_'),
+        trigger_js     = str.substring(0, i),
+        default_height = str.substring(i+1);
+
+    if (trigger_js.length > 0) {
+      return [true, default_height];
     } else {
-      return [false, h];
+      return [false, default_height];
     }
   }
 
   function _handleProjectScroll() {
-    var result = _getProjectBeforeContent(document.querySelector(conf.project_right));
-    var flag = result[0];
+    if ($(conf.project_right).length) {
+      var flags      = _getProjectBeforeContent(conf.project_right),
+          trigger_js = flags[0];
 
-    var inner = $(conf.project_inner),
-        pl = $(conf.project_left),
-        pr = $(conf.project_right);
+      var inner        = $(conf.project_inner),
+          pl           = $(conf.project_left),
+          pr           = $(conf.project_right);
 
-    var plh = $(pl).outerHeight(),
-        prw = $(pr).outerWidth(),
-        prih = $(inner).outerHeight();
+      var plh          = $(pl).outerHeight(),
+          prw          = $(pr).outerWidth(),
+          prih         = $(inner).outerHeight();
 
-    var wh = $(window).height(),
-        scrollbottom = $(window).scrollTop() + wh,
-        offset = (100 + prih) - wh;
+      var wh           = $(window).height(),
+          scrollbottom = $(window).scrollTop() + wh,
+          offset       = (100 + prih) - wh;
 
-    if (flag) {
-      if ((prih + 100) > wh) {
-        if (scrollbottom > (100 + prih)) {
-          $(inner).css({'width': prw,
-                      'margin-top': 0-offset,
-                      'position': 'fixed'
-                    });
+      if (trigger_js) {
+        if ((prih + 100) > wh) {
+          if (scrollbottom > (100 + prih)) {
+            $(inner).css({'width': prw,
+                        'margin-top': 0-offset,
+                        'position': 'fixed'
+                      });
+          } else {
+            $(inner).css({'margin-top': 0,
+                        'position': 'static'
+                      });
+          }
         } else {
-          $(inner).css({'margin-top': 0,
-                      'position': 'static'
+          $(inner).css({'width': prw,
+                      'position': 'fixed'
                     });
         }
       } else {
-        $(inner).css({'width': prw,
-                    'position': 'fixed'
-                  });
+        $(inner).css({'margin-top': 0,
+                      'position': 'static',
+                      'width': 'auto'
+                    });
       }
-    } else {
-      $(inner).css({'margin-top': 0,
-                    'position': 'static',
-                    'width': 'auto'
-                  });
     }
   }
 

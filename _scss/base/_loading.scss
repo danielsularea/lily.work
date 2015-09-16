@@ -1,79 +1,97 @@
 // Credit: http://codyhouse.co/gem/animated-page-transition/
 
-body::after,
-body::before {
-  content: "";
-  height: 50vh;
-  width: 100%;
-  position: fixed;
-  left: 0;
-}
+// body::after,
+// body::before {
+//   /* these are the 2 half blocks which cover the content once the animation is triggered */
+//   content: '';
+//   height: 50vh;
+//   width: 100%;
+//   position: fixed;
+//   left: 0;
+//   background-color: #ffffff;
+//   z-index: 2;
+//   /* Force Hardware Acceleration */
+//   -webkit-backface-visibility: hidden;
+//   backface-visibility: hidden;
+//   -webkit-transform: translateZ(0);
+//   -moz-transform: translateZ(0);
+//   -ms-transform: translateZ(0);
+//   -o-transform: translateZ(0);
+//   transform: translateZ(0);
+//   -webkit-transition: -webkit-transform 0.4s 0.4s;
+//   -moz-transition: -moz-transform 0.4s 0.4s;
+//   transition: transform 0.4s 0.4s;
+// }
 
-body::before {
-  top: 0;
-  transform: translateY(-100%);
-}
+// body::before {
+//   top: 0;
+//   -webkit-transform: translateY(-100%);
+//   -moz-transform: translateY(-100%);
+//   -ms-transform: translateY(-100%);
+//   -o-transform: translateY(-100%);
+//   transform: translateY(-100%);
+// }
 
-body::after {
-  bottom: 0;
-  transform: translateY(100%);
-}
-
-body.loading {
-  max-height: 100%;
-  max-height: 100vh;
-  overflow: hidden;
-}
+// body::after {
+//   bottom: 0;
+//   -webkit-transform: translateY(100%);
+//   -moz-transform: translateY(100%);
+//   -ms-transform: translateY(100%);
+//   -o-transform: translateY(100%);
+//   transform: translateY(100%);
+// }
 
 body.loading::after,
 body.loading::before {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
   transform: translateY(0);
+  -webkit-transition: -webkit-transform 0.4s 0s;
+  -moz-transition: -moz-transform 0.4s 0s;
+  transition: transform 0.4s 0s;
 }
 
 .loading__cover {
-  /* layer that covers the content when the animation is triggered */
   position: fixed;
   left: 0;
   top: 0;
-  bottom: auto;
-  right: auto;
+  right: 0;
+  bottom: 0;
   -webkit-transform: translateX(0) translateY(0);
   -moz-transform: translateX(0) translateY(0);
   -ms-transform: translateX(0) translateY(0);
   -o-transform: translateX(0) translateY(0);
   transform: translateX(0) translateY(0);
-  height: 100%;
-  width: 100%;
   opacity: 0;
-  display: none;
-  background-color: #ffffff;
-  -webkit-transition: opacity 0.4s 0.4s, display 0s 0.8s;
-  -moz-transition: opacity 0.4s 0.4s, display 0s 0.8s;
-  transition: opacity 0.4s 0.4s, display 0s 0.8s;
+  visibility: hidden;
+  background-color: #FFFFFF;
+  -webkit-transition: opacity 0.4s 0.4s, visibility 0s 0.8s;
+  -moz-transition: opacity 0.4s 0.4s, visibility 0s 0.8s;
+  transition: opacity 0.4s 0.4s, visibility 0s 0.8s;
 }
 
 .loading .loading__cover {
   opacity: 1;
-  display: block;
-  -webkit-transition: opacity 0s 0s, display 0s 0s;
-  -moz-transition: opacity 0s 0s, display 0s 0s;
-  transition: opacity 0s 0s, display 0s 0s;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
 }
 
 .loading__bar {
-  /* this is the loding bar - visible while switching from one page to the following one */
   position: fixed;
   z-index: 3;
   left: 50%;
   top: 50%;
   height: 2px;
   width: 90%;
-  background-color: #eeeeee;
+  background-color: #EEEEEE;
   visibility: hidden;
   -webkit-transition: visibility 0s 0.4s, -webkit-transform 0.4s 0s ease-in;
   -moz-transition: visibility 0s 0.4s, -moz-transform 0.4s 0s ease-in;
   transition: visibility 0s 0.4s, transform 0.4s 0s ease-in;
-  /* Force Hardware Acceleration */
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transform: translateZ(0);
@@ -96,7 +114,7 @@ body.loading::before {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: #283040;
+  background-color: #000000;
   /* Force Hardware Acceleration */
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
