@@ -1,9 +1,9 @@
 ---
 layout: blog
-title:  Caveats of Using Ajax Content in Jekyll
+title:  Notes on Using Ajax Content in Jekyll
 ---
 
-I recently rehauled my portfolio and as part of doing so, I explored how to incorporate ajax calls when loading my content. Almost immediately, I found [Jekyll-AJAX][jekyll-ajax], which was surprisingly easy to understand and set up. However, I did run into some unexpected caveats upon trying to adapt the library for my own usage.
+I recently rehauled my portfolio and as part of doing so, I explored how to incorporate ajax calls when loading my content. Almost immediately, I found [Jekyll-AJAX][jekyll-ajax], which was very easy to understand and set up. However, I did run into some things that may help to keep in mind.
 
 ## &mdash; The `.content` container cannot be an immediate child to `body`.
 Because otherwise, `$(data).find('.content')` returns empty and `.content` wouldn't receive anything.

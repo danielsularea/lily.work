@@ -3,7 +3,7 @@ layout: blog
 title:  Local Development Setup in OS X Yosemite
 ---
 
-I purchased a new Macbook and found myself in the very tasking process of setting everything back the way it used to be so I've decided to document what I do for a general setup for future purposes and anyone else who may be in the same situation.
+I purchased a new Macbook and found myself in the very tasking process of setting everything back the way it used to be so I've decided to document what I do for a general setup.
 
 ## Hidden Files
 First let's reveal all the hidden files to make things easier to find. In Terminal, enter `sudo nano ~/.bash_profile`. Then, paste these two lines into the file:
@@ -22,7 +22,7 @@ Then save the file with `Ctrl + O` and then `Ctrl + X` to return to the command 
 - Next paste `brew install caskroom/cask/brew-cask` to install [Homebrew Cask][cask]
 - Cask install your applications. Click [here][cask-search] to search them. I typically go for
 
-<pre class="line-numbers"><code class="language-none">brew cask install google-chrome iterm2 alfred sublime-text spectacle caffeine java vuze spotify unrarx</code></pre>
+<pre class="line-numbers"><code class="language-none">brew cask install google-chrome iterm2 alfred sublime-text spectacle caffeine java spotify unrarx</code></pre>
 
 ## Sublime Text
 - Set up Package Control for the version of Sublime Text you have using the Python snippet found [here][package-control].
@@ -77,9 +77,9 @@ Although this article was fairly long, it really only takes at most an hour to f
 
 <div class="article__postscript">
 Sources<br />
-- http://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/<br />
-- https://gorails.com/setup/osx/10.10-yosemite<br />
-- http://www.rubycoloredglasses.com/2015/02/setup-environment-for-django-development/
+- [http://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/][http://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/]<br />
+- [https://gorails.com/setup/osx/10.10-yosemite][https://gorails.com/setup/osx/10.10-yosemite]<br />
+- [http://www.rubycoloredglasses.com/2015/02/setup-environment-for-django-development/][http://www.rubycoloredglasses.com/2015/02/setup-environment-for-django-development/]
 </div>
 
 [homebrew]: http://brew.sh/
