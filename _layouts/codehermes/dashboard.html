@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+  {% include codehermes/head.html %}
+
+  <body>
+
+    <div class="grid--collapse uk-height-1-1">
+      {% include codehermes/sidenav.html %}
+
+      <div class="dashboard">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include codehermes/scripts.html %}
+  </body>
+
+</html>
