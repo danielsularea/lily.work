@@ -22,7 +22,7 @@ As a senior in Computer Science, I have had many courses in which the professor 
 In order to facilitate student understanding and make it easier for professors to grasp exactly where students are struggling, CodeHermes syncs with the professor's Github repository. It then detects the language of each file, parses out block and inline comments, and allows students to submit live questions according to individual lines of code.
 
 ## The approach
-We decided to implement CodeHermes in Java with Spring MVC and JSP. While my partners set up Amazon AWS, I began to define the feature functionalities and sketched out the wireframes. From there, I did some [rapid prototyping][prototype] in Jekyll, where I explored the interactive elements.
+We decided to implement CodeHermes in Java with Spring MVC and JSP. While my partners set up Amazon AWS, I began to define the feature functionalities and sketched out the wireframes. From there, I did some [rapid prototyping][prototype] in Jekyll, where I explored the interactive elements. After some tinkering, I moved on to implementing in JSP.
 
 ## Instructor portal
 The user is directed to the instructor portal immediately after logging in through Github. Inline and block comments are extracted from the repository files and displayed in a more digestable way. At the end of each line is also a counter, which increments as students submit questions. This aids instructors in understanding where students are especially having trouble (for example, when a section of code has an unusually high amount of questions). These questions are also live updated to the instructor, which smooth scrolls to and highlights the corresponding line upon hovering each one.
