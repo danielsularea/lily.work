@@ -55,7 +55,7 @@
 
   obj.init                = function(){
                               _initialize();
-                              if ( !Modernizr.touch ) _bindEvents();        
+                              if ( !Modernizr.touch ) _bindEvents();
                             };
 
   function _initialize() {
@@ -70,8 +70,8 @@
     $(window).bind('scroll', _handleWindowScroll);
 
     // Ajax handlers
-    $(document).on('click touchstart', 'a', _handleDelegate);
-    History.Adapter.bind(window, 'statechange', _handleStateChange);
+    // $(document).on('click touchstart', 'a', _handleDelegate);
+    // History.Adapter.bind(window, 'statechange', _handleStateChange);
   }
 
   function _handleWindowResize(e) {
