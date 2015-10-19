@@ -77,9 +77,9 @@ Although this article was fairly long, it really only takes at most an hour to f
 
 <div class="article__postscript">
 Sources<br />
-- [http://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/][http://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/]<br />
-- [https://gorails.com/setup/osx/10.10-yosemite][https://gorails.com/setup/osx/10.10-yosemite]<br />
-- [http://www.rubycoloredglasses.com/2015/02/setup-environment-for-django-development/][http://www.rubycoloredglasses.com/2015/02/setup-environment-for-django-development/]
+- <a href="http://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/">http://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/</a><br />
+- <a href="https://gorails.com/setup/osx/10.10-yosemite">https://gorails.com/setup/osx/10.10-yosemite</a><br />
+- <a href="http://www.rubycoloredglasses.com/2015/02/setup-environment-for-django-development/">http://www.rubycoloredglasses.com/2015/02/setup-environment-for-django-development/</a>
 </div>
 
 [homebrew]: http://brew.sh/
