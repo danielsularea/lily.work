@@ -13,4 +13,4 @@ links:
   Demo: "http://lifechanginglabs.lillian-chen.com"
 ---
 
-After working with many of its portfolio companies, I was asked to overhaul a website for Life Changing Labs.
+Life Changing Labs is a startup network which currently supports almost a dozen startups with 40+ students year round including highly dedicated engineers, designers, MBAs, JDs, and PhDs. By providing early first-hand experience at creating value from the ground up, LCL fosters the startup mentality within its talented members. After working with many of its portfolio companies, I was asked to design and develop a statis website to establish a better online presence.
