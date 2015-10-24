@@ -3,7 +3,7 @@ layout: work
 title: Ellaspark
 slug: ellaspark
 
-role: Frontend Developer
+role: Frontend Developer, Product Designer
 time: 2013/4
 tags: [ Django ]
 
