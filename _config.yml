@@ -3,7 +3,7 @@ title: Lillian Chen
 description: > # this means to ignore newlines until "baseurl:"
   Cornell University web developer
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://lillian-chen.com/"
+# url: "http://lillian-chen.com/"
 permalink: none
 
 # Contact
