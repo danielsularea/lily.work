@@ -1,0 +1,9 @@
+.badge {
+  @extend .uk-badge;
+  @extend %regular;
+  padding-top: 1px;
+  background-color: $grey--light;
+  font-family: $swiss;
+  font-style: normal;
+  color: $grey--medium;
+}

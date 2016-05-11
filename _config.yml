@@ -6,6 +6,9 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 # url: "http://lillian-chen.com/"
 permalink: none
 
+# Blog
+future: true
+
 # Contact
 email: 			    qc53@cornell.edu
 twitter_url:    https://twitter.com/alilybit
