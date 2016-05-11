@@ -2,7 +2,7 @@
 layout: work
 bin: work-detail
 title: Cornell Business Review
-slug: cbr
+belt: cbr
 
 role: Design Editor
 time: 2012/3/4

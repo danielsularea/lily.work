@@ -2,7 +2,7 @@
 layout: work
 bin: work-detail
 title: WikiReader
-slug: wikireader
+belt: wikireader
 
 time: 2015
 tags: [ Chrome extensions ]

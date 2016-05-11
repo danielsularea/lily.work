@@ -4,7 +4,7 @@ bin: work-detail
 published: false
 
 title: StartupTree
-slug: startuptree
+belt: startuptree
 
 role: Frontend Developer
 time: 2015

@@ -2,7 +2,7 @@
 layout: work
 bin: work-detail
 title: CodeHermes
-slug: codehermes
+belt: codehermes
 
 role: Frontend Developer, Product Designer
 time: 2015

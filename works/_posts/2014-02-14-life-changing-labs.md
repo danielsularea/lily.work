@@ -2,7 +2,7 @@
 layout: work
 bin: work-detail
 title: Life Changing Labs
-slug: lcl
+belt: lcl
 
 role: Frontend Developer
 time: 2013

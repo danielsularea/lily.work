@@ -2,7 +2,7 @@
 layout: work
 bin: work-detail
 title: Ellaspark
-slug: ellaspark
+belt: ellaspark
 
 role: Frontend Developer, Product Designer
 time: 2013/4
