@@ -1,5 +1,6 @@
 ---
 layout: work
+bin: work-detail
 published: false
 
 title: StartupTree

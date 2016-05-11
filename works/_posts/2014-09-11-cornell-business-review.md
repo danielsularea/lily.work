@@ -1,5 +1,6 @@
 ---
 layout: work
+bin: work-detail
 title: Cornell Business Review
 slug: cbr
 

@@ -1,5 +1,6 @@
 ---
 layout: work
+bin: work-detail
 title: Life Changing Labs
 slug: lcl
 

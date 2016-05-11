@@ -40,7 +40,7 @@
                                 });
 
                                 $('a#' + id).addClass('active');
-                              } 
+                              }
                             };
 
   var callPrism           = obj.callPrism = function() {
