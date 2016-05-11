@@ -117,6 +117,8 @@
     @extend %regular;
     color: $grey--medium;
     text-decoration: none;
+    -webkit-transition: color 200ms;
+    transition: color 200ms;
 
     &:hover,
     &:active {
