@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: travel
 title:  Caribbeans - St. Maarten, St. Thomas, Princess Cays
 ---
 

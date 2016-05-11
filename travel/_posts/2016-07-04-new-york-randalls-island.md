@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: travel
 title:  New York - Randall's Island
 ---
 

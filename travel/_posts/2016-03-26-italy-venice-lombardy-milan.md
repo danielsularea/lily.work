@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: travel
 title:  Italy - Milan, Lombardy, Venice
 ---
 

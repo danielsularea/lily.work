@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: travel
 title:  Croatia - Plitvice, Split, Zadar
 ---
 
