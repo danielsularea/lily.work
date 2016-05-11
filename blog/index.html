@@ -6,8 +6,22 @@ bin: blog
 
 <div class="article--border container--small">
   <div class="article__header--small">&mdash; Blog</div>
-  <div class="article__body">
+  <div class="article__toc">
     {% for post in site.categories["blog"] %}
+      <div class="blog__date">
+        {{ post.date | date: "%m/%d/%y" }}
+      </div>
+      <div class="blog__title">
+        <a href="{{ post.url }}">
+          {{ post.title }}
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="article__header--small">&mdash; Travel</div>
+  <div class="article__toc">
+    {% for post in site.categories["travel"] %}
       <div class="blog__date">
         {{ post.date | date: "%m/%d/%y" }}
       </div>

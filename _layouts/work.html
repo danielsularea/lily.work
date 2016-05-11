@@ -64,6 +64,38 @@ layout: default
       <div class="detail">
         <div class="detail__body">
           {{ content }}
+
+          {% for post in site.categories["works"] %}
+            {% if post.url == page.url %}
+              {% assign post_index0 = forloop.index0 %}
+              {% assign post_index1 = forloop.index %}
+            {% endif %}
+          {% endfor %}
+
+          {% for post in site.categories["works"] %}
+            {% if post_index0 == forloop.index %}
+              {% assign next_post = post %}
+            {% endif %}
+            {% if post_index1 == forloop.index0 %}
+              {% assign prev_post = post %}
+            {% endif %}
+          {% endfor %}
+
+          {% if prev_post or next_post %}
+            <hr>
+          {% endif %}
+
+          {% if prev_post %}
+            <div class="article__previous">
+              <a href="{{ prev_post.url }}"><i class="uk-icon-hand-o-left"></i> {{ prev_post.title }}</a>
+            </div>
+          {% endif %}
+
+          {% if next_post %}
+            <div class="article__next">
+              <a href="{{ next_post.url }}">{{ next_post.title }} <i class="uk-icon-hand-o-right"></i></a>
+            </div>
+          {% endif %}
         </div>
       </div>
     </div>

@@ -24,12 +24,13 @@
   @extend .swiss;
   @extend %small;
   @extend %bold;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .article__body {
   @extend .times;
   padding-bottom: 100px;
+  overflow: hidden;
 
   p {
     @extend %textface;
@@ -79,6 +80,11 @@
   }
 }
 
+.article__toc {
+  @extend .article__body;
+  padding-bottom: 20px;
+}
+
 // ugly but fix later
 #about .article__body {
   padding-bottom: 0;
@@ -98,4 +104,32 @@
   @extend %italic;
   @extend %small;
   margin-top: 3rem;
+}
+
+.article__previous,
+.article__next {
+  width: 50%;
+  overflow: hidden;
+
+  a {
+    @extend .swiss;
+    @extend %small;
+    @extend %regular;
+    color: $grey--medium;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+      color: $black;
+    }
+  }
+}
+
+.article__previous {
+  float: left;
+}
+
+.article__next {
+  float: right;
+  text-align: right;
 }
