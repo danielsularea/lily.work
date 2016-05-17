@@ -9,6 +9,14 @@
   max-width: 1400px;
 }
 
+.container--large {
+  @extend .container;
+
+  @include media-query($breakpoint-xxlarge, min) {
+    max-width: 90%;
+  }
+}
+
 .container--medium {
   @extend %container;
   @extend .uk-width-1-1;

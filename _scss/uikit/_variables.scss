@@ -15,7 +15,8 @@
 $breakpoint-small:                               480px !default;
 $breakpoint-medium:                              768px !default;
 $breakpoint-large:                               960px !default;
-$breakpoint-xlarge:                              1220px !default;
+$breakpoint-xlarge:                              1224px !default;
+$breakpoint-xxlarge:                             1824px !default;
 
 $breakpoint-mini-max:                            ($breakpoint-small - 1) !default;
 $breakpoint-small-max:                           ($breakpoint-medium - 1) !default;
