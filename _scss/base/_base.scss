@@ -82,12 +82,12 @@ a.anchor--strike {
     }
   }
 
-  // &.active:hover {
-  //   &::after {
-  //     right: 100%;
-  //     width: 0;
-  //   }
-  // }
+  &.active:hover {
+    &::after {
+      right: 100%;
+      width: 0;
+    }
+  }
 }
 
 em {
