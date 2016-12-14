@@ -10,7 +10,7 @@ tags: [ Chrome extensions ]
 cover_img: init.jpg
 detail_img: [ img1.jpg, img2.png, img3.jpg ]
 links:
-  Download: "https://www.dropbox.com/s/hsiy3xyewzrtb2k/wikiReader.crx?dl=0"
+  Download: "https://chrome.google.com/webstore/detail/wikireader-wikipedia-simp/jmhkjngkhknhjmanjmaljpaigdinhdcf"
 ---
 
 A chrome extension to simplify the Wikipedia experience for users who concentrate solely on retrieving information.
