@@ -1,7 +1,11 @@
-- title: Hello World
+# - title: Hello World
+#   date: 2013
+#   tags: [ PHP ]
+#   website: http://helloworld.lillian-chen.com
+- title: Life Changing Labs
   date: 2013
-  tags: [ PHP ]
-  website: http://helloworld.lillian-chen.com
+  tags: [ Jekyll ]
+  website: http://lillian-chen.com/lcl
 - title: Speare
   date: 2014
   tags: []
