@@ -1,7 +1,9 @@
-# Site settings
 title: Lillian Chen
-description: > # this means to ignore newlines until "baseurl:"
-  Cornell University web developer
+author: Lillian Chen
+description: >
+  Lily is currently a developer at IBM Watson Health based in Cambridge, Massachusetts. 
+  She recently graduated from Cornell studying computer science.
+keywords: developer,cornell,ibm,web,front-end,backend,design,jquery,node,rails,ruby,django,HTML,CSS,javascript
 baseurl: "" # the subpath of your site, e.g. /blog/
 # url: "http://lillian-chen.com/"
 permalink: none
@@ -16,6 +18,8 @@ github_url:     https://github.com/lilyc5459
 linkedin_url:   https://www.linkedin.com/in/lilyc5459
 
 # Build settings
+sass:
+  style: compressed
 markdown: kramdown
 exclude: ['node_modules', 'gulpfile.js', 'package.json']
 include: ['_scss', '*.scss', '.htaccess']
