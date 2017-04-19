@@ -5,7 +5,7 @@ title: Cornell Business Review
 belt: cbr
 
 role: Design Editor
-time: 2012/3/4
+time: 2012-2014
 tags: [ Adobe InDesign, Adobe Photoshop ]
 
 cover_img: init.jpg

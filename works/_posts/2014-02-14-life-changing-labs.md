@@ -1,4 +1,6 @@
 ---
+published: false
+
 layout: work
 bin: work-detail
 title: Life Changing Labs

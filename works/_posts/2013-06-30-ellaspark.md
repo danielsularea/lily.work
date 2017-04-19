@@ -5,7 +5,7 @@ title: Ellaspark
 belt: ellaspark
 
 role: Frontend Developer, Product Designer
-time: 2013/4
+time: 2013-2014
 tags: [ Django ]
 
 cover_img: init.jpg

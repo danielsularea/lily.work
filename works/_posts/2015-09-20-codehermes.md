@@ -12,7 +12,7 @@ cover_img: init.jpg
 detail_img: [ img1.jpg, wireframe1.jpg, wireframe2.jpg, img2.jpg, img3.jpg ]
 links:
   DevPost: "http://devpost.com/software/codehermes-nq0uwd"
-  Rapid prototype: "http://lillian-chen.com/codehermes/"
+  Prototype: "http://lillian-chen.com/codehermes/"
 ---
 
 I attended my first hackathon at the 2015 [Big Red Hacks][brh] and was given 36 hours to develop something from scratch. I worked with two incredible backend developers and created CodeHermes, a new way for educators to discuss code in lecture.
