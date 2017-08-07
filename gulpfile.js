@@ -1,20 +1,22 @@
-var gulp = require('gulp');
+'use strict';
 
-var cache           = require('gulp-cache');
-var clean           = require('gulp-clean');
-var concat          = require('gulp-concat');
-var imagemin        = require('gulp-imagemin');
-var jshint          = require('gulp-jshint');
-var minifycss       = require('gulp-minify-css');
-var plumber         = require('gulp-plumber');
-var rename          = require('gulp-rename');
-var sass            = require('gulp-sass');
-var stylish         = require('jshint-stylish');
-var uglify          = require('gulp-uglify');
-var declare         = require('gulp-declare');
-var shell           = require('gulp-shell');
+var gulp        = require('gulp');
+var shell       = require('gulp-shell');
+var util        = require('gulp-util');
+var plumber     = require('gulp-plumber');
+var rename      = require('gulp-rename');
+var concat      = require('gulp-concat');
+var uglify      = require('gulp-uglify');
+var watch       = require('gulp-watch');
 
-gulp.task('style', function(){
+var browserSync = require('browser-sync').create();
+
+var sass        = require('gulp-sass');
+var sourcemaps  = require('gulp-sourcemaps');
+var jshint      = require('gulp-jshint');
+var stylish     = require('jshint-stylish');
+
+gulp.task('style', () => {
   return gulp.src('_scss/*.scss')
     .pipe(plumber({
       errorHandler: function (err) {
@@ -22,12 +24,15 @@ gulp.task('style', function(){
         this.emit('end');
       }
     }))
+    .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('assets/css'));
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('dist/css'))
+    // .pipe(browserSync.stream());
 });
 
-gulp.task('script-lib', function(){
+gulp.task('script-lib', () => {
   return gulp.src('_js/lib/*.js')
     .pipe(plumber({
       errorHandler: function (err) {
@@ -35,13 +40,12 @@ gulp.task('script-lib', function(){
         this.emit('end');
       }
     }))
-    .pipe(concat('lib.js'))
-    .pipe(rename('lib.min.js'))
+    .pipe(concat('lib.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('assets/js'));
+    .pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('script-custom', function(){
+gulp.task('script-custom', () => {
   return gulp.src('_js/custom/*.js')
     .pipe(plumber({
       errorHandler: function (err) {
@@ -53,16 +57,27 @@ gulp.task('script-custom', function(){
     .pipe(jshint.reporter(stylish))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
-    .pipe(gulp.dest('assets/js'));
+    .pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('script', ['script-lib', 'script-custom'], function(){});
+gulp.task('build', shell.task(['bundle exec jekyll build']));
 
-gulp.task('watch', function(){
+gulp.task('reload', ['build'], () => {
+    browserSync.reload();
+});
+
+gulp.task('script', ['script-lib', 'script-custom'], () => {});
+
+gulp.task('serve', ['style', 'script', 'build'], () => {
+  browserSync.init({
+      server: {baseDir: '_site/'}
+  });
+});
+
+gulp.task('watch', () => {
   gulp.watch('_scss/**/*.scss', ['style']);
   gulp.watch('_js/**/*.js', ['script']);
+  gulp.watch(['**/*.html', '_data/*', '_includes/**/*', '_js/**/*', '_layouts/*', '_scss/**/*'], ['reload']);
 });
 
-gulp.task('default', ['style', 'script', 'watch'], function(){
-  console.log('waiting...');
-});
+gulp.task('default', ['serve', 'watch'], () => {});

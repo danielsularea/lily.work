@@ -1,33 +1,5 @@
 ---
 layout: default
-title: Works
-bin: works
 ---
 
-{% for project in site.categories["works"] %}
-  <a class="project__anchor" href="{{ site.url }}{{ project.url }}">
-    <div class="project v-align--middle" style="background:url({{ site.url }}/assets/img/{{ project.belt }}/{{ project.cover_img }}) no-repeat 75px center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
-      <div>
-        <div class="project__date">{{ project.time }}</div>
-        <span class="project__title">{{ project.title }}</span>
-      </div>
-    </div>
-  </a>
-{% endfor %}
-
-<ul class="project--misc">
-  <li>And more...</li>
-  {% for project in site.data.other-works reversed %}
-    <li>
-      <div class="project--misc__date">{{ project.date }}</div>
-      <div class="project--misc__title">
-        <a href="{{ project.website }}" target="_blank">{{ project.title }}</a>
-      </div>
-      <div class="project--misc__tags">
-        {% for tag in project.tags %}
-          {{ tag }}{% if forloop.index != forloop.length %}, {% endif %}
-        {% endfor %}
-      </div>
-    </li>
-  {% endfor %}
-</ul>
+Hello world

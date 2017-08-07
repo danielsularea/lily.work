@@ -1,4 +1,4 @@
-title: Lillian Chen
+title: Lillian Chen - Front End Developer
 author: Lillian Chen
 description: >
   Lily is currently a developer at IBM Watson Health based in Cambridge, Massachusetts. 
@@ -8,14 +8,12 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 # url: "http://lillian-chen.com/"
 permalink: none
 
-# Blog
-future: true
-
 # Contact
-email: 			    qc53@cornell.edu
-twitter_url:    https://twitter.com/alilybit
-github_url:     https://github.com/lilyc5459
-linkedin_url:   https://www.linkedin.com/in/lilyc5459
+email: 			    iam@lillian-chen.com
+twitter_url:    https://twitter.com/lllychen
+twitter_handle: "@lllychen"
+github_url:     https://github.com/lllychen
+linkedin_url:   https://www.linkedin.com/in/lllychen
 
 # Build settings
 sass:
