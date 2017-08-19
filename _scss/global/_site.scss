@@ -1,0 +1,29 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  height: auto;
+  overflow: auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $g--site-font-family;
+  font-size: $g--site-font-size;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: $g--site-selection-bg;
+  color: $g--site-selection-color;
+}
+
+::-moz-selection {
+  background: $g--site-selection-bg;
+  color: $g--site-selection-color;
+}
