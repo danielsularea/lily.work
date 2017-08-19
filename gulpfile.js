@@ -9,7 +9,7 @@ var concat      = require('gulp-concat');
 var uglify      = require('gulp-uglify');
 var watch       = require('gulp-watch');
 
-var browserSync = require('browser-sync').create();
+// var browserSync = require('browser-sync').create();
 
 var sass        = require('gulp-sass');
 var sourcemaps  = require('gulp-sourcemaps');
@@ -28,7 +28,7 @@ gulp.task('style', () => {
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(rename({suffix: '.min'}))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('assets/css'))
     // .pipe(browserSync.stream());
 });
 
@@ -42,7 +42,7 @@ gulp.task('script-lib', () => {
     }))
     .pipe(concat('lib.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/js'));
+    .pipe(gulp.dest('assets/js'));
 });
 
 gulp.task('script-custom', () => {
@@ -57,27 +57,27 @@ gulp.task('script-custom', () => {
     .pipe(jshint.reporter(stylish))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/js'));
+    .pipe(gulp.dest('assets/js'));
 });
 
-gulp.task('build', shell.task(['bundle exec jekyll build']));
+// gulp.task('build', shell.task(['bundle exec jekyll build']));
 
-gulp.task('reload', ['build'], () => {
-    browserSync.reload();
-});
+// gulp.task('reload', ['build'], () => {
+//     browserSync.reload();
+// });
 
 gulp.task('script', ['script-lib', 'script-custom'], () => {});
 
-gulp.task('serve', ['style', 'script', 'build'], () => {
-  browserSync.init({
-      server: {baseDir: '_site/'}
-  });
-});
+// gulp.task('serve', ['style', 'script', 'build'], () => {
+//   browserSync.init({
+//       server: {baseDir: '_site/'}
+//   });
+// });
 
 gulp.task('watch', () => {
   gulp.watch('_scss/**/*.scss', ['style']);
   gulp.watch('_js/**/*.js', ['script']);
-  gulp.watch(['**/*.html', '_data/*', '_includes/**/*', '_js/**/*', '_layouts/*', '_scss/**/*'], ['reload']);
+  // gulp.watch(['**/*.html', '_data/*', '_includes/**/*', '_js/**/*', '_layouts/*', '_scss/**/*'], ['reload']);
 });
 
-gulp.task('default', ['serve', 'watch'], () => {});
+gulp.task('default', ['style', 'script', 'watch'], () => {});

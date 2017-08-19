@@ -28,6 +28,10 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 </head>
 <body>
-  {{ content }}
+  <div class="g--grid-fixed">
+    <div class="row">
+      {{ content }}
+    </div>
+  </div>
 </body>
 </html>
