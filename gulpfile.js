@@ -67,7 +67,7 @@ gulp.task('script-custom', () => {
 
 gulp.task('script', ['script-lib', 'script-custom'], () => {});
 
-gulp.task('build', shell.task(['jekyll build --watch --drafts --incremental --config config/shared/_config.yml']));
+gulp.task('build', shell.task(['jekyll build --watch']));
 
 gulp.task('serve', () => {
   browserSync.init({
