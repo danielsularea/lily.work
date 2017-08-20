@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+  {% include header.html %}
+  
+  <main class="m--blogpost m--content g--grid-fixed" role="main" aria-labelledby="page-title">
+    <section class="g--grid_row" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="g--grid_col-7">
+        <header class="m--blogpost_meta">
+          <time class="m--blogpost_date" datetime="{{ page.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>
+          <h1 id="page-title" class="m--blogpost_title" itemprop="name headline">{{ page.title }}</h1>
+        </header>
+        <article class="m--content_copy" itemprop="articleBody">
+          {{ content }}
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

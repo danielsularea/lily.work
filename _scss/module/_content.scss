@@ -1,19 +1,18 @@
 .m--content {
-  padding-top: $m--header-height + 20px;
+  position: relative;
+  padding-top: $m--header-height + 30px;
+  padding-bottom: 100px;
 }
 
-.m--content_titlewrap {
-  margin-top: 20px;
-  border-bottom: 1px solid $g--color-black;
-
-  &:first-child {
-    margin-top: 0;
+.m--content_copy {
+  h2 {
+    margin: 40px 0 20px;
+    font-weight: 400;
   }
-}
 
-.m--content_title {
-  padding: 20px 0;
-  line-height: 1.2;
-  font-family: $g--font-serif;
-  font-size: 1.75rem;
+  p {
+    line-height: 1.875;
+    font-size: 1rem;
+    color: $g--color-gray4;
+  }
 }

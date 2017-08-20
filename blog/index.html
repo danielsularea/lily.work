@@ -4,11 +4,11 @@ title: Blog
 ---
 
 {% assign postsByYear = site.categories["blog"] | group_by_exp:"post", "post.date | date: '%Y'"  %}
-{% for curPost in postsByYear %}
-  <div class="m--content_titlewrap">
-    <h2 class="m--content_title">{{ curPost.name }}</h2>
-  </div>
-  <div class="m--bloglist">
+<div class="m--bloglist">
+  {% for curPost in postsByYear %}
+    <div class="m--bloglist_yearwrap">
+      <h2 class="m--bloglist_year">{{ curPost.name }}</h2>
+    </div>
     {% for post in curPost.items %}
       <a href="{{ post.url }}" class="m--bloglist_anchor" title="{{ post.title }}" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="m--bloglist_item g--grid_row">
@@ -23,5 +23,5 @@ title: Blog
         </div>
       </a>
     {% endfor %}
-  </div>
-{% endfor %}
+  {% endfor %}
+</div>
