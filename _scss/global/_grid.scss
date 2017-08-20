@@ -38,7 +38,7 @@
 // Row
 //
 // Rows contain and clear the floats of your columns.
-.g--row {
+.g--grid_row {
   @include clearfix();
   margin-left: ceil(($g--grid-gutter-width / -2));
   margin-right: floor(($g--grid-gutter-width / -2));
@@ -46,7 +46,7 @@
 
 // Column
 @for $i from 1 through $g--grid-columns {
-  .g--col-#{$i}, .g--col-xs-#{$i}, .g--col-sm-#{$i}, .g--col-md-#{$i}, .g--col-lg-#{$i} {
+  .g--grid_col-#{$i}, .g--grid_col-xs-#{$i}, .g--grid_col-sm-#{$i}, .g--grid_col-md-#{$i}, .g--grid_col-lg-#{$i} {
     position: relative;
     min-height: 1px; // prevent cols from collapsing when empty
     padding-left:  ceil(($g--grid-gutter-width / 2)); // inner gutter via padding
@@ -55,14 +55,14 @@
     float: left;
   }
 
-  .g--col-#{$i}, .g--col-xs-#{$i} {
+  .g--grid_col-#{$i}, .g--grid_col-xs-#{$i} {
     max-width: percentage(($i / $g--grid-columns));
   }
 }
 
 @media (min-width: map-get($g--grid-breakpoints, sm)) {
   @for $i from 1 through $g--grid-columns {
-    .g--col-sm-#{$i} {
+    .g--grid_col-sm-#{$i} {
         max-width: percentage(($i / $g--grid-columns));
     }
   }
@@ -70,7 +70,7 @@
 
 @media (min-width: map-get($g--grid-breakpoints, md)) {
   @for $i from 1 through $g--grid-columns {
-    .g--col-md-#{$i} {
+    .g--grid_col-md-#{$i} {
         max-width: percentage(($i / $g--grid-columns));
     }
   }
@@ -78,7 +78,7 @@
 
 @media (min-width: map-get($g--grid-breakpoints, lg)) {
   @for $i from 1 through $g--grid-columns {
-    .g--col-lg-#{$i} {
+    .g--grid_col-lg-#{$i} {
         max-width: percentage(($i / $g--grid-columns));
     }
   }

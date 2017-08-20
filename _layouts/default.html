@@ -1,37 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>{{ site.title }}</title>
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
-  <meta name="description" content="{{ site.description }}"/>
-  <meta name="keywords" content="{{ site.keywords }}">
-  <meta name="author" content="{{ site.author }}">
-
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="{{ site.title }}" />
-  <meta property="og:description" content="{{ site.description }}" />
-  <meta property="og:url" content="{{ site.url }}" />
-  <meta property="og:site_name" content="{{ site.title }}" />
-  <meta property="og:image" content="" />
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:description" content="{{ site.description }}"/>
-  <meta name="twitter:title" content="{{ site.title }}"/>
-  <meta name="twitter:site" content="{{ site.twitter_handle }}"/>
-  <meta name="twitter:image" content=""/>
-  <meta name="twitter:creator" content="{{ site.twitter_handle }}"/>
-
-  <link rel="icon" href="{{ site.url }}/assets/img/ico.png" />
-  <link rel="stylesheet" type="text/css" href="../assets/css/main.min.css">
-
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-</head>
+{% include head.html %}
 <body>
-  <div class="g--grid-fixed">
-    <div class="row">
-      {{ content }}
-    </div>
-  </div>
+  {% include header.html %}
+  
+  {{ content }}
 </body>
 </html>

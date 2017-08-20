@@ -1,0 +1,19 @@
+.a--skip-to-content {
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  background-color: $g--color-white;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  visibility: visible;
+  white-space: nowrap;
+
+  &:focus {
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: initial;
+  }
+}
