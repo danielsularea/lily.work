@@ -13,6 +13,11 @@
   p {
     line-height: 1.875;
     font-size: 1rem;
-    color: $g--color-gray4;
+    color: $g--color-gray5;
+  }
+
+  pre {
+    padding: 0.5em;
+    background-color: $g--color-gray1;
   }
 }

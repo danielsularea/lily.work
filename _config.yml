@@ -19,5 +19,6 @@ linkedin_url:   https://www.linkedin.com/in/lllychen
 sass:
   style: compressed
 markdown: kramdown
+highlighter: rouge
 exclude: ['node_modules', 'gulpfile.js', 'package.json']
 include: ['_scss', '*.scss', '.htaccess']
