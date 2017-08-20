@@ -17,7 +17,35 @@
   }
 
   pre {
-    padding: 0.5em;
+    padding: 10px;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    hyphens: none;
+    tab-size: 4;
+    overflow-x: scroll;
+  }
+
+  code {
+    padding: 0 5px;
+
+    pre > & {
+      padding: 0;
+    }
+  }
+
+  code,
+  pre {
+    font-family: $g--font-mono;
     background-color: $g--color-gray1;
+  }
+
+  ul {
+    li {
+      margin-bottom: 5px;
+      line-height: 1.875;
+      font-size: 1rem;
+      color: $g--color-gray5;
+    }
   }
 }

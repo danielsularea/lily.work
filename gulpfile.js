@@ -1,20 +1,21 @@
 'use strict';
 
-var gulp        = require('gulp');
-var shell       = require('gulp-shell');
-var util        = require('gulp-util');
-var plumber     = require('gulp-plumber');
-var rename      = require('gulp-rename');
-var concat      = require('gulp-concat');
-var uglify      = require('gulp-uglify');
-var watch       = require('gulp-watch');
+var gulp          = require('gulp');
+var shell         = require('gulp-shell');
+var util          = require('gulp-util');
+var plumber       = require('gulp-plumber');
+var rename        = require('gulp-rename');
+var concat        = require('gulp-concat');
+var uglify        = require('gulp-uglify');
+var watch         = require('gulp-watch');
 
-// var browserSync = require('browser-sync').create();
+var browserSync   = require('browser-sync').create();
 
-var sass        = require('gulp-sass');
-var sourcemaps  = require('gulp-sourcemaps');
-var jshint      = require('gulp-jshint');
-var stylish     = require('jshint-stylish');
+var sass          = require('gulp-sass');
+var autoprefixer  = require('gulp-autoprefixer');
+var sourcemaps    = require('gulp-sourcemaps');
+var jshint        = require('gulp-jshint');
+var stylish       = require('jshint-stylish');
 
 gulp.task('style', () => {
   return gulp.src('_scss/*.scss')
@@ -26,6 +27,10 @@ gulp.task('style', () => {
     }))
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 5 versions'],
+      cascade: false
+    }))
     .pipe(rename({suffix: '.min'}))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('assets/css'))
@@ -60,24 +65,22 @@ gulp.task('script-custom', () => {
     .pipe(gulp.dest('assets/js'));
 });
 
-// gulp.task('build', shell.task(['bundle exec jekyll build']));
-
-// gulp.task('reload', ['build'], () => {
-//     browserSync.reload();
-// });
-
 gulp.task('script', ['script-lib', 'script-custom'], () => {});
 
-// gulp.task('serve', ['style', 'script', 'build'], () => {
-//   browserSync.init({
-//       server: {baseDir: '_site/'}
-//   });
-// });
+gulp.task('build', shell.task(['jekyll build --watch --drafts --incremental --config config/shared/_config.yml']));
 
-gulp.task('watch', () => {
+gulp.task('serve', () => {
+  browserSync.init({
+    server: {
+      baseDir: '_site/'
+    },
+    port: 4000
+  });
+
   gulp.watch('_scss/**/*.scss', ['style']);
-  gulp.watch('_js/**/*.js', ['script']);
-  // gulp.watch(['**/*.html', '_data/*', '_includes/**/*', '_js/**/*', '_layouts/*', '_scss/**/*'], ['reload']);
+  gulp.watch('_js/custom/**/*.js', ['script-custom']);
+  gulp.watch('_js/lib/**/*.js', ['script-lib']);
+  gulp.watch('_site/**/*.*').on('change', browserSync.reload);
 });
 
-gulp.task('default', ['style', 'script', 'watch'], () => {});
+gulp.task('default', ['style', 'script', 'build', 'serve'], () => {});

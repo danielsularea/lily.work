@@ -2,12 +2,12 @@
   "name": "portfolio",
   "version": "5.0.1",
   "author": "Lillian Chen",
-  "description": "Lily is currently a developer at IBM Watson Health based in Cambridge, Massachusetts. 
-  She recently graduated from Cornell studying computer science.",
+  "description": "Lily is currently a developer at IBM Watson Health based in Cambridge, Massachusetts.",
   "repository": "https://github.com/lllychen/lllychen.github.io",
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-jshint": "^2.0.4",
     "gulp-plumber": "^1.1.0",
