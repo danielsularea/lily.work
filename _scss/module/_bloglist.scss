@@ -7,10 +7,32 @@
   line-height: $m--bloglist-item-height;
 }
 
+.m--bloglist_date,
+.m--bloglist_title {
+  color: $g--color-gray3;
+  transition: color 250ms;
+
+  .m--bloglist_anchor:hover &,
+  .m--bloglist_anchor:focus & {
+    color: $g--color-black;
+  }
+}
+
 .m--bloglist_date {
+  display: block;
+  border-bottom: 1px solid transparent; // for consistent height
   font-family: $g--font-mono;
 }
 
 .m--bloglist_title {
   border-bottom: 1px solid $g--color-black;
+}
+
+.m--bloglist_read {
+  @include noselect();
+  color: $g--color-white;
+
+  .m--bloglist_anchor:visited & {
+    color: $g--color-gray2;
+  }
 }

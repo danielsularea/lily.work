@@ -10,13 +10,15 @@ title: Blog
   </div>
   <div class="m--bloglist">
     {% for post in curPost.items %}
-      <a href="{{ post.url }}" title="{{ post.title }}">
+      <a href="{{ post.url }}" class="m--bloglist_anchor" title="{{ post.title }}" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="m--bloglist_item g--grid_row">
           <div class="g--grid_col-2 g--grid_col-lg-1">
-            <div class="m--bloglist_date">{{ post.date | date: "%m.%d" }}</div>
+            <time class="m--bloglist_date" datetime="{{ post.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ post.date | date: "%m.%d" }}</time>
           </div>
           <div class="g--grid_col-10 g--grid_col-lg-11">
-            <div class="m--bloglist_title">{{ post.title }}</div>
+            <div class="m--bloglist_title">
+              {{ post.title }}<span class="m--bloglist_read" aria-hidden="true"> ✓</span>
+            </div>
           </div>
         </div>
       </a>
