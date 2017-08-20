@@ -1,0 +1,16 @@
+.m--bloglist_item {
+  height: $m--bloglist-item-height;
+}
+
+.m--bloglist_date,
+.m--bloglist_title {
+  line-height: $m--bloglist-item-height;
+}
+
+.m--bloglist_date {
+  font-family: $g--font-mono;
+}
+
+.m--bloglist_title {
+  border-bottom: 1px solid $g--color-black;
+}

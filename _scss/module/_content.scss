@@ -1,0 +1,19 @@
+.m--content {
+  padding-top: $m--header-height + 20px;
+}
+
+.m--content_titlewrap {
+  margin-top: 20px;
+  border-bottom: 1px solid $g--color-black;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.m--content_title {
+  padding: 20px 0;
+  line-height: 1.2;
+  font-family: $g--font-serif;
+  font-size: 1.75rem;
+}

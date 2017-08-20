@@ -1,12 +1,11 @@
-// a {
-//   color: $g--color-black;
-//   // text-decoration: underline;
+a {
+  color: inherit;
+  text-decoration: none;
 
-//   &:hover,
-//   &:visited {
-//     color: $g--color-black;
-//   }
-// }
+  &:hover {
+    color: inherit;
+  }
+}
 
 a.g--anchor-strike {
   position: relative;
