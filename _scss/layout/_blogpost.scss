@@ -1,0 +1,22 @@
+.l--blogpost {
+  // padding-top: $m--header-height + 50px;
+  // padding-top: 43vh;
+}
+
+.l--blogpost_meta {
+  // margin-bottom: 50px;
+}
+
+.l--blogpost_title {
+  line-height: 1.2;
+  font-family: $g--font-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+.l--blogpost_date {
+  display: block;
+  margin-bottom: 5px;
+  font-family: $g--font-mono;
+  color: $g--color-gray5;
+}

@@ -1,6 +1,6 @@
 .m--content {
   position: relative;
-  padding-top: $m--header-height + 30px;
+  padding-top: $m--header-height + 50px;
   padding-bottom: 100px;
 }
 
@@ -10,14 +10,42 @@
     font-weight: 400;
   }
 
+  a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: underline;
+    transition: color 200ms;
+
+    &:hover,
+    &:focus {
+      background-color: $g--site-selection-bg;
+      color: $g--color-black;
+    }
+
+    // external link
+    &[target="_blank"] {
+      transition: margin 250ms;
+
+      &:hover {
+        margin-right: 20px;
+
+        span:after {
+          content: '\2197';
+          position: absolute;
+          color: $g--color-gray3;
+        }
+      }
+    }
+  }
+
   p {
     line-height: 1.875;
     font-size: 1rem;
     color: $g--color-gray5;
 
     &:first-child {
-      // margin-top: -30px;
-      line-height: 2;
+      margin-top: 0;
+      line-height: 1.8;
       font-size: 1.2rem;
       color: $g--color-black;
     }

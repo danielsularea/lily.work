@@ -18,7 +18,11 @@
 @import 'global/anchor';
 
 // Module
+@import 'module/container';
 @import 'module/header';
 @import 'module/content';
-@import 'module/bloglist';
-@import 'module/blogpost';
+
+// Layout
+@import 'layout/about';
+@import 'layout/bloglist';
+@import 'layout/blogpost';
