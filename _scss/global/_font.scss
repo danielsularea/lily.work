@@ -2,9 +2,9 @@
   font-family: 'Lyon Display';
   src: url('#{$g--font-url}/Lyon-Display/LyonDisplay-Bold.eot');
   src: url('#{$g--font-url}/Lyon-Display/LyonDisplay-Bold.eot?#iefix') format('embedded-opentype'),
-      url('#{$g--font-url}/Lyon-Display/LyonDisplay-Bold.woff') format('woff'),
-      url('#{$g--font-url}/Lyon-Display/LyonDisplay-Bold.ttf') format('truetype');
-  font-weight: 700;
+      url('#{$g--font-url}/Lyon-Display/LyonDisplay-Bold.woff2') format('woff2'),
+      url('#{$g--font-url}/Lyon-Display/LyonDisplay-Bold.woff') format('woff');
+  font-weight: 400;
   font-style: normal;
 }
 
