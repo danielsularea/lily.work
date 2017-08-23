@@ -89,13 +89,6 @@ Now, you should be able to run `mkvirtualenv test` to create a new python virtua
 ## Summary
 Although this article was fairly long, it really only takes at most an hour to finish. I definitely have multiple Terminal sessions going at once when they don't have any dependency conflicts. I have also had a lot of trouble  configuring Apache manually so I kind of cop out by using [MAMP][mamp] but I'll keep working out the kinks before I post any instructions.
 
-<div class="article__postscript">
-Sources<br />
-- <a href="http://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/">http://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/</a><br />
-- <a href="https://gorails.com/setup/osx/10.10-yosemite">https://gorails.com/setup/osx/10.10-yosemite</a><br />
-- <a href="http://www.rubycoloredglasses.com/2015/02/setup-environment-for-django-development/">http://www.rubycoloredglasses.com/2015/02/setup-environment-for-django-development/</a>
-</div>
-
 [homebrew]: http://brew.sh/
 [cask]: http://caskroom.io/
 [cask-search]: http://caskroom.io/search

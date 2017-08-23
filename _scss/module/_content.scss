@@ -14,6 +14,18 @@
     line-height: 1.875;
     font-size: 1rem;
     color: $g--color-gray5;
+
+    &:first-child {
+      // margin-top: -30px;
+      line-height: 2;
+      font-size: 1.2rem;
+      color: $g--color-black;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
   }
 
   pre {
@@ -28,16 +40,17 @@
 
   code {
     padding: 0 5px;
+  }
 
-    pre > & {
-      padding: 0;
-    }
+  pre code {
+    padding: 0;
   }
 
   code,
   pre {
     font-family: $g--font-mono;
     background-color: $g--color-gray1;
+    color: $g--color-black;
   }
 
   ul {
