@@ -28,6 +28,13 @@
     max-height: 100%;
   }
 
+  code,
+  pre {
+    font-family: $g--font-mono;
+    background-color: $g--color-gray1;
+    color: $g--color-black;
+  }
+
   pre {
     padding: 10px;
     direction: ltr;
@@ -44,13 +51,6 @@
 
   pre code {
     padding: 0;
-  }
-
-  code,
-  pre {
-    font-family: $g--font-mono;
-    background-color: $g--color-gray1;
-    color: $g--color-black;
   }
 
   ul {
