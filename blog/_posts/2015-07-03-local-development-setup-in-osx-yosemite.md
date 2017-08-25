@@ -17,29 +17,29 @@ Then save the file with `Ctrl + O` and then `Ctrl + X` to return to the command 
 
 ## Installations
 - Run `xcode-select --install` to install the XCode Command Line Tools.
-- Then get [Homebrew][homebrew] with
+- Then get [Homebrew][homebrew]{:target="_blank"} with
 
 ``` shell
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-- Next paste `brew install caskroom/cask/brew-cask` to install [Homebrew Cask][cask]
-- Cask install your applications. Click [here][cask-search] to search them. I typically go for
+- Next paste `brew install caskroom/cask/brew-cask` to install [Homebrew Cask][cask]{:target="_blank"}
+- Cask install your applications. Click [here][cask-search]{:target="_blank"} to search them. I typically go for
 
 ``` shell
 brew cask install google-chrome iterm2 alfred sublime-text spectacle caffeine java spotify unrarx
 ```
 
 ## Sublime Text
-- Set up Package Control for the version of Sublime Text you have using the Python snippet found [here][package-control].
-- [Spacegray Theme][spacegray]: `Cmd + Shift + P`, choose `Package Control: Install Package`, and then find `Theme - Spacegray`.
-- I do a lot of writing in LaTeX so I like to compile my files right in Sublime Text. To do so, first [install BasicTeX][basictex]. You don't need the full MacTeX and I generally don't like to install it because it's such a huge file. However, it does have a lot of packages you may need for templates and such.
+- Set up Package Control for the version of Sublime Text you have using the Python snippet found [here][package-control]{:target="_blank"}.
+- [Spacegray Theme][spacegray]{:target="_blank"}: `Cmd + Shift + P`, choose `Package Control: Install Package`, and then find `Theme - Spacegray`.
+- I do a lot of writing in LaTeX so I like to compile my files right in Sublime Text. To do so, first [install BasicTeX][basictex]{:target="_blank"}. You don't need the full MacTeX and I generally don't like to install it because it's such a huge file. However, it does have a lot of packages you may need for templates and such.
 - Test if the `tlmgr` command works in your Terminal with `which tlmgr`, which should return the path that the bin file belongs to. However, if it does not, you may need to add it to your $PATH.
 - Update `tlmgr` with `sudo tlmgr update —self` if needed.
 - Install `latexmk` with `sudo tlmgr install latexmk`. (This is how you'd install any packages from MacTeX that isn't already in BasicTeX)
 
 ## PostgreSQL
-I use [PostgreSQL][postgresql] for both my rails and django projects so I won't be installed MySQL on my computer just yet. To get PostgreSQL, I run
+I use [PostgreSQL][postgresql]{:target="_blank"} for both my rails and django projects so I won't be installed MySQL on my computer just yet. To get PostgreSQL, I run
 
 ``` shell
 brew install postgresql
@@ -82,12 +82,12 @@ alias workoff='deactivate'
 Now, you should be able to run `mkvirtualenv test` to create a new python virtual environment named "test" and use `workon test` to activate it. Once you're in the proper virtualenv, run `pip install django psycopg2` to get Django and have it to be able to interact with PostgreSQL.
 
 ## Extra Steps
-- [Set up SSH key for Git.][git-ssh]
-- If you decide to use [PostgreSQL.app][postgresql-app] instead, don't cask install it. Since cask aliases and actually stores the applications elsewhere, PostgreSQL.app don't run until you drag and drop it into the Applications folder anyways. Also, you will need to add `export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin` to `.bash_profile` to use its tools.
-- [Install Node.js][node] to get things like Grunt or Gulp later.
+- [Set up SSH key for Git.][git-ssh]{:target="_blank"}
+- If you decide to use [PostgreSQL.app][postgresql-app]{:target="_blank"} instead, don't cask install it. Since cask aliases and actually stores the applications elsewhere, PostgreSQL.app don't run until you drag and drop it into the Applications folder anyways. Also, you will need to add `export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin` to `.bash_profile` to use its tools.
+- [Install Node.js][node]{:target="_blank"} to get things like Grunt or Gulp later.
 
 ## Summary
-Although this article was fairly long, it really only takes at most an hour to finish. I definitely have multiple Terminal sessions going at once when they don't have any dependency conflicts. I have also had a lot of trouble  configuring Apache manually so I kind of cop out by using [MAMP][mamp] but I'll keep working out the kinks before I post any instructions.
+Although this article was fairly long, it really only takes at most an hour to finish. I definitely have multiple Terminal sessions going at once when they don't have any dependency conflicts. I have also had a lot of trouble  configuring Apache manually so I kind of cop out by using [MAMP][mamp]{:target="_blank"} but I'll keep working out the kinks before I post any instructions.
 
 [homebrew]: http://brew.sh/
 [cask]: http://caskroom.io/

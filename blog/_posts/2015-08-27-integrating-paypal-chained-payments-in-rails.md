@@ -3,20 +3,20 @@ layout: blogpost
 title:  Integrating PayPal Chained Payments in Rails
 ---
 
-Recently, I've noticed a severe lack of tutorials on [PayPal API][paypal] integration. And even if I do end up finding one, it's very [outdated][railscast]. PayPal's documentation itself is alright, but not great, so here's my take.
+Recently, I've noticed a severe lack of tutorials on [PayPal API][paypal]{:target="_blank"} integration. And even if I do end up finding one, it's very [outdated][railscast]{:target="_blank"}. PayPal's documentation itself is alright, but not great, so here's my take.
 
 Disclaimer: I haven't actually deployed yet. All of this stuff is Sandbox mode for now. I'll update once I've successfully moved into production.
 
 ## Chained payment
-So Chained Payments is a type of [Adaptive Payment][adaptive], which is a Classic API, not REST. A chained payment itself is essentially a transaction where an amount of money can be split among multiple recipients. Unlike [Mass Payments][mass], however, this is more geared toward cases where there is one primary receiver (usually the developer), and at least one secondary receiver.
+So Chained Payments is a type of [Adaptive Payment][adaptive]{:target="_blank"}, which is a Classic API, not REST. A chained payment itself is essentially a transaction where an amount of money can be split among multiple recipients. Unlike [Mass Payments][mass]{:target="_blank"}, however, this is more geared toward cases where there is one primary receiver (usually the developer), and at least one secondary receiver.
 
 A good usage of this is if you are developing a marketplace and you want to take a cut of the transactions that happen between users on your platform. In this case, you would be the primary receiver so that the buyer only sees that they are paying you and the seller only sees that they are receiving money from you.
 
 ## API Credentials
-Firstly, you have to upgrade your PayPal account to a Business account. Once you've done that, follow the instruction [here][credentials] to create a set of Classic API credentials. I stuck with a signature set but certificate should work the same.
+Firstly, you have to upgrade your PayPal account to a Business account. Once you've done that, follow the instruction [here][credentials]{:target="_blank"} to create a set of Classic API credentials. I stuck with a signature set but certificate should work the same.
 
 ## SDK
-Of course, we could follow the [cURL instructions][curl] but I've found [Adaptive Payment SDK][sdk] to be far simplier to understand. Just add `gem 'paypal-sdk-adaptivepayments'` to your Gemfile and run `bundle`. This will do a basic set up in your directory, including building a `paypal.yml` file in your `config` folder. In that file, update it with your own API credentials. Since we're still testing in Sandbox, you'll need to be using `APP-80W284485P519543T` for your `app_id`. Once your application is approved by PayPal in the [developer portal][developer], you can get a unique `app_id` to use for production use.
+Of course, we could follow the [cURL instructions][curl]{:target="_blank"} but I've found [Adaptive Payment SDK][sdk]{:target="_blank"} to be far simplier to understand. Just add `gem 'paypal-sdk-adaptivepayments'` to your Gemfile and run `bundle`. This will do a basic set up in your directory, including building a `paypal.yml` file in your `config` folder. In that file, update it with your own API credentials. Since we're still testing in Sandbox, you'll need to be using `APP-80W284485P519543T` for your `app_id`. Once your application is approved by PayPal in the [developer portal][developer]{:target="_blank"}, you can get a unique `app_id` to use for production use.
 
 ## Example
 That's honestly it for the setup. We can then start creating a very simple chained payment. Below, all we do is take a 5% commission from a transaction between the buyer and seller.

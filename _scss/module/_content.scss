@@ -5,37 +5,13 @@
 }
 
 .m--content_copy {
+  > *:first-child {
+    margin-top: 0;
+  }
+
   h2 {
     margin: 40px 0 20px;
     font-weight: 400;
-  }
-
-  a {
-    display: inline-block;
-    color: inherit;
-    text-decoration: underline;
-    transition: color 200ms;
-
-    &:hover,
-    &:focus {
-      background-color: $g--site-selection-bg;
-      color: $g--color-black;
-    }
-
-    // external link
-    &[target="_blank"] {
-      transition: margin 250ms;
-
-      &:hover {
-        margin-right: 20px;
-
-        span:after {
-          content: '\2197';
-          position: absolute;
-          color: $g--color-gray3;
-        }
-      }
-    }
   }
 
   p {
@@ -44,7 +20,6 @@
     color: $g--color-gray5;
 
     &:first-child {
-      margin-top: 0;
       line-height: 1.8;
       font-size: 1.2rem;
       color: $g--color-black;
@@ -74,6 +49,7 @@
   }
 
   code {
+    display: inline-block;
     padding: 0 5px;
   }
 

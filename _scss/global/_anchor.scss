@@ -2,41 +2,70 @@ a {
   text-decoration: none;
 }
 
-a.g--anchor-strike {
-  position: relative;
-  text-decoration: none;
+.g--anchor-external,
+.g--anchorContainer-external a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: underline;
+  transition: color 200ms;
 
-  &::before {
-    content: '';
-    border-bottom: 6px solid $g--color-black;
-    position: absolute;
-    top: 33%;
-    width: 0;
-    right: 100%;
-    -webkit-transition: right .3s ease-in-out,width .3s ease-in-out;
-    -moz-transition: right .3s ease-in-out,width .3s ease-in-out;
-    -o-transition: right .3s ease-in-out,width .3s ease-in-out;
-    transition: right .3s ease-in-out,width .3s ease-in-out;
-    -webkit-transition-timing-function: cubic-bezier(0.19,1,.22,1);
-    -moz-transition-timing-function: cubic-bezier(0.19,1,.22,1);
-    -o-transition-timing-function: cubic-bezier(0.19,1,.22,1);
-    transition-timing-function: cubic-bezier(0.19,1,.22,1);
-    // z-index: -1;
+  &:hover,
+  &:focus {
+    background-color: $g--site-selection-bg;
+    color: $g--color-black;
   }
 
-  &.active {
-    text-decoration: none;
+  // external link
+  &[target="_blank"] {
+    transition: margin 250ms;
 
-    &::before {
-      right: 0;
-      width: 100%;
-    }
-  }
+    &:hover {
+      margin-right: 1em;
 
-  &.active:hover {
-    &::before {
-      right: 100%;
-      width: 0;
+      &:after {
+        content: '\2197';
+        position: absolute;
+        color: $g--color-gray3;
+      }
     }
   }
 }
+
+// a.g--anchor-strike {
+//   position: relative;
+//   text-decoration: none;
+
+//   &::before {
+//     content: '';
+//     border-bottom: 6px solid $g--color-black;
+//     position: absolute;
+//     top: 33%;
+//     width: 0;
+//     right: 100%;
+//     -webkit-transition: right .3s ease-in-out,width .3s ease-in-out;
+//     -moz-transition: right .3s ease-in-out,width .3s ease-in-out;
+//     -o-transition: right .3s ease-in-out,width .3s ease-in-out;
+//     transition: right .3s ease-in-out,width .3s ease-in-out;
+//     -webkit-transition-timing-function: cubic-bezier(0.19,1,.22,1);
+//     -moz-transition-timing-function: cubic-bezier(0.19,1,.22,1);
+//     -o-transition-timing-function: cubic-bezier(0.19,1,.22,1);
+//     transition-timing-function: cubic-bezier(0.19,1,.22,1);
+//     // z-index: -1;
+//   }
+
+//   &.active {
+//     text-decoration: none;
+
+//     &::before {
+//       right: 0;
+//       width: 100%;
+//     }
+//   }
+
+//   &.active:hover {
+//     &::before {
+//       right: 100%;
+//       width: 0;
+//     }
+//   }
+// }
