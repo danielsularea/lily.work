@@ -6,14 +6,14 @@
   
   <main class="l--blogpost m--content m--container g--grid-fixed g--anchorContainer-external" role="main" aria-labelledby="page-title">
     <section class="g--grid_row" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="g--grid_col-3">
+      <div class="g--grid_col-md-3">
         <header class="l--blogpost_meta">
           <time class="l--blogpost_date" datetime="{{ page.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
           <h1 id="page-title" class="l--blogpost_title" itemprop="name headline">{{ page.title }}</h1>
         </header>
       </div>
-      <div class="g--grid_col-1"></div>
-      <div class="g--grid_col-8">
+      <div class="g--grid_col-md-1"></div>
+      <div class="g--grid_col-md-8">
         <article class="m--content_copy" itemprop="articleBody">
           {{ content }}
         </article>
