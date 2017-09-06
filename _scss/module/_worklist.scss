@@ -1,0 +1,61 @@
+.m--worklist {
+  margin-top: 100px;
+}
+
+.m--worklist_label {
+  margin-bottom: 30px;
+  font-family: $g--font-mono;
+  font-size: 1rem;
+  color: $g--color-gray5;
+}
+
+ul.m--worklist_list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: block;
+    position: relative;
+    height: 100px;
+  }
+}
+
+.m--worklist_img {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-width: 65%;
+  max-height: 65%;
+  margin: auto;
+  overflow: auto;
+
+  .m--worklist_anchor:hover + & {
+    display: block;
+    z-index: 2000;
+  }
+}
+
+.m--worklist_anchor {
+  display: block;
+  position: absolute;
+  color: $g--color-black;
+  
+  &:hover {
+    z-index: 2001;
+  }
+}
+
+.m--worklist_title {
+  font-family: $g--font-serif;
+  font-size: 3.4rem;
+}
+
+.m--worklist_year {
+  vertical-align: top;
+  font-family: $g--font-mono;
+  font-size: 1rem;
+}

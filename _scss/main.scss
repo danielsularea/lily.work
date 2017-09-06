@@ -20,9 +20,11 @@
 // Module
 @import 'module/container';
 @import 'module/header';
+@import 'module/worklist';
 @import 'module/content';
 
 // Layout
+@import 'layout/home';
 @import 'layout/about';
 @import 'layout/bloglist';
 @import 'layout/blogpost';
