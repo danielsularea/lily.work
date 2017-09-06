@@ -7,6 +7,20 @@
   font-family: $g--font-mono;
   font-size: 1rem;
   color: $g--color-gray5;
+
+  span {
+    font-family: $g--font-sans-serif;
+    vertical-align: text-top;
+  }
+}
+
+.m--worklist_label,
+.m--worklist_anchor {
+  animation-name: fadeInUp;
+  animation-delay: 250ms;
+  animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
+  animation-duration: 0.6s;
+  animation-fill-mode: both;
 }
 
 ul.m--worklist_list {
@@ -17,7 +31,8 @@ ul.m--worklist_list {
   li {
     display: block;
     position: relative;
-    height: 100px;
+    height: 90px;
+
   }
 }
 
@@ -32,10 +47,13 @@ ul.m--worklist_list {
   max-height: 65%;
   margin: auto;
   overflow: auto;
+  z-index: 2000;
+  // opacity: 0;
+  // transition: opacity 250ms;
 
   .m--worklist_anchor:hover + & {
     display: block;
-    z-index: 2000;
+    // opacity: 1;
   }
 }
 
@@ -43,6 +61,7 @@ ul.m--worklist_list {
   display: block;
   position: absolute;
   color: $g--color-black;
+  cursor: pointer;
   
   &:hover {
     z-index: 2001;

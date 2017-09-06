@@ -1,0 +1,56 @@
+.m--paginate {
+  border-top: 2px solid $g--color-gray1;
+}
+
+.m--paginate_prev {
+  span {
+    padding-left: 15px;
+
+    &:before {
+      content: '\2190';
+      position: absolute;
+      left: 0;
+      margin-right: 5px;
+      transition: left 200ms;
+    }
+  }
+
+  &:hover span:before {
+    left: -10px;
+  }
+}
+
+.m--paginate_next {
+  text-align: right;
+
+  span {
+    padding-right: 15px;
+
+    &:after {
+      content: '\2192';
+      position: absolute;
+      right: 0;
+      margin-left: 5px;
+      transition: right 200ms;
+    }
+  }
+
+  &:hover span:after {
+    right: -10px;
+  }
+}
+
+.m--paginate_prev,
+.m--paginate_next {
+  display: block;
+  padding: 10px 0;
+  font-family: $g--font-mono;
+  color: $g--color-gray5;
+  text-decoration: none;
+
+  span {
+    position: relative;
+    display: block;
+    color: $g--color-gray3;
+  }
+}

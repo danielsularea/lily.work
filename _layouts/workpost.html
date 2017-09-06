@@ -5,27 +5,44 @@
   {% include header.html %}
   
   <main class="m--content m--container g--grid-fixed" role="main" aria-labelledby="page-title">
-    <section class="g--grid_row" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="g--grid_col-md-4">
-        <header class="m--blogheader js--blogheader">
-          <time class="m--blogheader_date" datetime="{{ page.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
-          <h1 id="page-title" class="m--blogheader_title" itemprop="name headline">{{ page.title }}</h1>
-        </header>
-      </div>
-      <div class="g--grid_col-md-8">
-        <article class="m--content_copy m--anchorwrap-external-hover" itemprop="articleBody">
+    <section itemscope itemtype="http://schema.org/workposting">
+      <header class="g--grid_row m--workheader js--workheader">
+        <div class="g--grid_col-9 js--workheader_titles">
+          <h1 id="page-title" class="m--workheader_title" itemprop="name headline">{{ page.title }}</h1>
+          <div class="m--workheader_subtitle">{{ page.subtitle }}</div>
+        </div>
+        <div class="g--grid_col-3">
+          <ul class="m--workheader_details m--anchorwrap-external-persist">
+            <!-- <li>
+              Year
+              <div class="m--workheader_details_value">{{ page.year }}</div>
+            </li> -->
+            <li>
+              Links
+              <div class="m--workheader_details_value">
+                {% for link in page.links %}
+                  <a href="{{ link[1] }}" target="_blank">{{ link[0] }}</a>
+                  {% if forloop.index != forloop.length %}<br>{% endif %}
+                {% endfor %}
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <article class="m--content_copy g--grid_row m--anchorwrap-external-hover" itemprop="articleBody">
+        <div class="g--grid_col-8">
           {{ content }}
-        </article>
-      </div>
+        </div>
+      </article>
     </section>
-    {% for post in site.categories["blog"] %}
+    {% for post in site.categories["work"] %}
       {% if post.url == page.url %}
         {% assign post_index0 = forloop.index0 %}
         {% assign post_index1 = forloop.index %}
       {% endif %}
     {% endfor %}
 
-    {% for post in site.categories["blog"] %}
+    {% for post in site.categories["work"] %}
       {% if post_index0 == forloop.index %}
         {% assign next_post = post %}
       {% endif %}

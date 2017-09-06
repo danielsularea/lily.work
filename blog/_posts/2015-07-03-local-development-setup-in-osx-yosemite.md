@@ -33,13 +33,13 @@ brew cask install google-chrome iterm2 alfred sublime-text spectacle caffeine ja
 ## Sublime Text
 - Set up Package Control for the version of Sublime Text you have using the Python snippet found [here][package-control]{:target="_blank"}.
 - [Spacegray Theme][spacegray]{:target="_blank"}: `Cmd + Shift + P`, choose `Package Control: Install Package`, and then find `Theme - Spacegray`.
-- I do a lot of writing in LaTeX so I like to compile my files right in Sublime Text. To do so, first [install BasicTeX][basictex]{:target="_blank"}. You don't need the full MacTeX and I generally don't like to install it because it's such a huge file. However, it does have a lot of packages you may need for templates and such.
-- Test if the `tlmgr` command works in your Terminal with `which tlmgr`, which should return the path that the bin file belongs to. However, if it does not, you may need to add it to your $PATH.
+- I do a lot of writing in LaTeX so I like to compile my files right in Sublime Text. To do so, first [install BasicTeX][basictex]{:target="_blank"}. You don't need the full MacTeX and I generally don't like to install it because it's such a huge file. That being said, MacTeX does have a lot of packages you may need for templates and such. To combat this, I install each additional package manually using `tlmgr`.
+- Test if the `tlmgr` command works in your Terminal with `which tlmgr`, which should return the path that the bin file belongs to. However, if it does not, you may need to add it to your `$PATH`.
 - Update `tlmgr` with `sudo tlmgr update —self` if needed.
 - Install `latexmk` with `sudo tlmgr install latexmk`. (This is how you'd install any packages from MacTeX that isn't already in BasicTeX)
 
 ## PostgreSQL
-I use [PostgreSQL][postgresql]{:target="_blank"} for both my rails and django projects so I won't be installed MySQL on my computer just yet. To get PostgreSQL, I run
+I use [PostgreSQL][postgresql]{:target="_blank"} for both my rails and django projects so I won't be installing MySQL on my computer just yet. To get PostgreSQL, I run
 
 ``` shell
 brew install postgresql

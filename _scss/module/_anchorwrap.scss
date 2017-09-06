@@ -1,0 +1,41 @@
+.m--anchorwrap-external-persist a,
+.m--anchorwrap-external-hover a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: underline;
+  transition: color 200ms;
+
+  &[target="_blank"]:after {
+    content: '\2197';
+    position: absolute;
+    margin-left: 0.1em;
+    font-family: $g--font-sans-serif;
+    color: $g--color-gray3;
+  }
+}
+
+.m--anchorwrap-external-persist a {
+  &[target="_blank"] {
+    position: relative;
+    margin-right: 1.1em;
+  }
+}
+
+.m--anchorwrap-external-hover a {
+  // external link
+  &[target="_blank"] {
+    transition: margin 250ms;
+
+    &:after {
+      display: none;
+    }
+
+    &:hover {
+      margin-right: 1.1em;
+
+      &:after {
+        display: inline-block;
+      }
+    }
+  }
+}

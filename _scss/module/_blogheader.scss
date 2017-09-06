@@ -1,18 +1,15 @@
-.l--blogpost {
+.m--blogheader {
+  position: fixed;
 }
 
-.l--blogpost_meta {
-  // margin-bottom: 50px;
-}
-
-.l--blogpost_title {
+.m--blogheader_title {
   line-height: 1.2;
   font-family: $g--font-serif;
   font-weight: 700;
   font-size: 2.4rem;
 }
 
-.l--blogpost_date {
+.m--blogheader_date {
   display: block;
   margin-bottom: 5px;
   font-family: $g--font-mono;

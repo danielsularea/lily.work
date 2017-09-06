@@ -6,7 +6,7 @@ title: Works
 <section class="l--home">
   <div class="g--grid_row">
     <div class="g--grid_col-md-5">
-      <div class="l--home_bio g--anchorContainer-external">
+      <div class="l--home_bio m--anchorwrap-external-hover">
         <div>
           Hello &mdash; I'm Lily.
         </div>
@@ -18,12 +18,12 @@ title: Works
     <div class="g--grid_col-12">
       <div class="m--worklist">
         <div class="m--worklist_label">
-          Latest Works
+          Latest Works <span>&darr;</span>
         </div>
         <ul class="m--worklist_list">
           {% for project in site.categories["work"] %}
             <li>
-              <a href="" class="m--worklist_anchor">
+              <a href="{{ project.url }}" class="m--worklist_anchor">
                 <span class="m--worklist_title">{{ project.title }}</span>
                 <span class="m--worklist_year">{{ project.year }}</span>
               </a>

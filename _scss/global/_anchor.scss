@@ -20,11 +20,13 @@ a {
     transition: margin 250ms;
 
     &:hover {
-      margin-right: 1em;
+      margin-right: 1.1em;
 
       &:after {
         content: '\2197';
         position: absolute;
+        margin-left: 0.1em;
+        font-family: $g--font-sans-serif;
         color: $g--color-gray3;
       }
     }
