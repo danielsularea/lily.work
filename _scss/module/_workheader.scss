@@ -1,6 +1,6 @@
 .m--workheader {
-  // position: relative;
   margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 .m--workheader_title,
@@ -9,6 +9,11 @@
   font-family: $g--font-serif;
   font-weight: 700;
   font-size: 5.2rem;
+  animation-name: fadeInUp;
+  animation-delay: 500ms;
+  animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
+  animation-duration: 0.6s;
+  animation-fill-mode: both;
 }
 
 .m--workheader_subtitle {
@@ -22,10 +27,15 @@
   color: $g--color-gray5;
 }
 
+.m--workheader_detailsWrap {
+  position: fixed;
+}
+
 .m--workheader_details {
   float: right;
   display: block;
   position: relative;
+  right: 0;
   margin: 0;
   border: 2px solid $g--color-black;
   padding: 10px;
@@ -44,37 +54,27 @@
     z-index: -1;
   }
 
-  li {
-    position: relative;
+  // li {
+    // position: relative;
 
-    &:not(:first-child) {
-      margin-top: 20px;
-    }
+    // &:not(:first-child) {
+    //   margin-top: 20px;
+    // }
 
-    &:not(:last-child) {
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: -7px;
-        left: 0;
-        width: 10px;
-        height: 1px;
-        background-color: $g--color-black;
-      }
-    }
-  }
+    // &:not(:last-child) {
+    //   &:after {
+    //     content: '';
+    //     position: absolute;
+    //     bottom: -7px;
+    //     left: 0;
+    //     width: 10px;
+    //     height: 1px;
+    //     background-color: $g--color-black;
+    //   }
+    // }
+  // }
 
   a {
     color: $g--color-gray5;
-
-    &:hover,
-    &:focus {
-      background-color: $g--site-selection-bg;
-      color: $g--color-black;
-    }
   }
-}
-
-.m--workheader_details_value {
-  color: $g--color-gray5;
 }

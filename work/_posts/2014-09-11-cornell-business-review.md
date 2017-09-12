@@ -6,7 +6,7 @@ year: 2012-14
 
 imgfolder: cbr
 cover_img: init.png
-detail_img: [ img1.jpg, img2.png, img3.jpg ]
+detail_img: []
 links:
   Volume IV, Issue 2: "/assets/docs/spring2014.pdf"
   Volume IV, Issue 1: "/assets/docs/fall2013.pdf"

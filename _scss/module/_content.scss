@@ -10,7 +10,7 @@
   }
 
   h2 {
-    margin: 40px 0 20px;
+    margin: 40px auto 20px;
     font-weight: 400;
   }
 
@@ -26,17 +26,17 @@
     }
   }
 
-  a {
-    &:hover,
-    &:focus {
-      background-color: $g--site-selection-bg;
-      color: $g--color-black;
-    }
-  }
+  // a {
+    // &:hover,
+    // &:focus {
+      // background-color: $g--site-selection-bg;
+      // color: $g--color-black;
+    // }
+  // }
 
   figure {
     position: relative;
-    margin: 1em 0;
+    margin: 1em auto;
   }
 
   figcaption {

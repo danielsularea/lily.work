@@ -9,12 +9,6 @@ a {
   text-decoration: underline;
   transition: color 200ms;
 
-  &:hover,
-  &:focus {
-    background-color: $g--site-selection-bg;
-    color: $g--color-black;
-  }
-
   // external link
   &[target="_blank"] {
     transition: margin 250ms;

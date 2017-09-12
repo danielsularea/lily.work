@@ -53,4 +53,9 @@
     display: block;
     color: $g--color-gray3;
   }
+
+  &:hover,
+  &:focus {
+    background: none;
+  }
 }

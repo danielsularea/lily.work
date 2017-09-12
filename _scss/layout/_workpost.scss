@@ -1,0 +1,19 @@
+.l--workpost {
+  figure {
+    margin-left: -20%;
+    margin-right: -20%;
+  }
+}
+
+.l--workpost_coverimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-width: 65%;
+  max-height: 65%;
+  margin: auto;
+  z-index: -1;
+  opacity: 0.5;
+}

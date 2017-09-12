@@ -20,12 +20,12 @@ body {
 
 ::selection {
   background: $g--site-selection-bg;
-  color: $g--site-selection-color;
+  // color: $g--site-selection-color;
 }
 
 ::-moz-selection {
   background: $g--site-selection-bg;
-  color: $g--site-selection-color;
+  // color: $g--site-selection-color;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -34,4 +34,10 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    background-color: $g--site-selection-bg;
+    color: $g--color-black;
+  }
 }

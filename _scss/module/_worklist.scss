@@ -62,7 +62,9 @@ ul.m--worklist_list {
   color: $g--color-black;
   cursor: pointer;
   
-  &:hover {
+  &:hover,
+  &:focus {
+    // background-color: $g--site-selection-bg;
     z-index: 2001;
   }
 }

@@ -4,35 +4,34 @@
 <body>
   {% include header.html %}
   
-  <main class="m--content m--container g--grid-fixed" role="main" aria-labelledby="page-title">
+  <img class="l--workpost_coverimg" src="{{ site.url }}/assets/img/{{ page.imgfolder }}/{{ page.cover_img }}" alt="">
+  <main class="l--workpost m--content m--container g--grid-fixed" role="main" aria-labelledby="page-title">
     <section itemscope itemtype="http://schema.org/workposting">
+      <div class="m--workheader_detailsWrap m--container">
+        <ul class="m--workheader_details m--anchorwrap-external-persist">
+          <li>
+            Links
+          </li>
+          {% for link in page.links %}
+            <li><a href="{{ link[1] }}" target="_blank">{{ link[0] }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
       <header class="g--grid_row m--workheader js--workheader">
-        <div class="g--grid_col-9 js--workheader_titles">
+        <div class="g--grid_col-md-9">
           <h1 id="page-title" class="m--workheader_title" itemprop="name headline">{{ page.title }}</h1>
           <div class="m--workheader_subtitle">{{ page.subtitle }}</div>
         </div>
-        <div class="g--grid_col-3">
-          <ul class="m--workheader_details m--anchorwrap-external-persist">
-            <!-- <li>
-              Year
-              <div class="m--workheader_details_value">{{ page.year }}</div>
-            </li> -->
-            <li>
-              Links
-              <div class="m--workheader_details_value">
-                {% for link in page.links %}
-                  <a href="{{ link[1] }}" target="_blank">{{ link[0] }}</a>
-                  {% if forloop.index != forloop.length %}<br>{% endif %}
-                {% endfor %}
-              </div>
-            </li>
-          </ul>
-        </div>
       </header>
       <article class="m--content_copy g--grid_row m--anchorwrap-external-hover" itemprop="articleBody">
-        <div class="g--grid_col-8">
+        <div class="g--grid_col-6 g--grid_push-3">
           {{ content }}
         </div>
+        <!-- <div class="g--grid_col-6">
+          {% for img in page.detail_img %}
+            <img src="{{ site.url }}/assets/img/{{ page.imgfolder }}/{{ img }}" />
+          {% endfor %}
+        </div> -->
       </article>
     </section>
     {% for post in site.categories["work"] %}

@@ -17,17 +17,18 @@
 @import 'global/site';
 @import 'global/grid';
 
-// Layout
-@import 'layout/home';
-@import 'layout/about';
-@import 'layout/bloglist';
-
 // Module
 @import 'module/container';
 @import 'module/header';
 @import 'module/workheader';
 @import 'module/blogheader';
-@import 'module/worklist';
-@import 'module/content';
 @import 'module/anchorwrap';
+@import 'module/content';
+@import 'module/worklist';
+@import 'module/bloglist';
 @import 'module/paginate';
+
+// Layout
+@import 'layout/home';
+@import 'layout/about';
+@import 'layout/workpost';
