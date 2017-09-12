@@ -3,13 +3,20 @@
   <div class="m--container">
     <div class="g--grid">
       <div class="g--grid_row">
-        <div class="g--grid_col-6">
+        <div class="g--grid_col-6 g--grid_col-md-3">
           <h1>
             <a href="{{ site.url }}/" class="m--header_title" rel="home" title="Home">
             Lillian Chen</a>
           </h1>
         </div>
-        <div class="g--grid_col-6">
+        <div class="g--grid_col-0 g--grid_col-md-6">
+          {% if page.categories[0] == "work" %}
+            <div class="m--header_pageTitle js--visiblePastFold">
+              {{ page.title }}
+            </div>
+          {% endif %}
+        </div>
+        <div class="g--grid_col-6 g--grid_col-md-3">
           <nav role="navigation" aria-label="Site Navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
             <ul class="m--header_menu" role="menu" aria-label="Site main menu">
               <li class="m--header_menu_item">

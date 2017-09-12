@@ -18,6 +18,10 @@ The Cornell Business Review is a magazine organization that strives to encourage
 ## The brand
 As a publication to invoke conversations on business ideas and concerns, the Cornell Business Review needed to reflect professionalism and trusted reputability. The logo must be suitable for both online and print usage. It also had to be timeless because a magazine is a physical item that will last years on the bookshelf.
 
+{% include figure.html
+  url="/assets/img/cbr/img1.jpg" 
+  alt="Fresh CBR logo" %}
+
 ## The magazine
 For the magazine, I completely redesigned the layout in order to be consistent with the brand that the Cornell Business Review is now defined by. It is effortlessly clean and professionally presented, making it easy to immediately digest but still result in a high visual impact.
 

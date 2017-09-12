@@ -5,6 +5,7 @@
   border-bottom: 1px solid $g--color-gray1;
   background-color: $g--color-white;
   z-index: 1000;
+  overflow: hidden;
 }
 
 .m--header_menu {
@@ -29,10 +30,18 @@
   color: $g--color-gray3;
 }
 
-.m--header_title {
-  &:hover,
-  &:focus {
-    color: $g--color-black;
+.m--header_pageTitle {
+  display: block;
+  margin-top: -$m--header-height;
+  text-align: center;
+  line-height: $m--header-height;
+  font-family: $g--font-serif;
+  font-size: 1.4rem;
+  color: $g--color-black;
+  transition: margin-top 250ms;
+
+  &.visible {
+    margin-top: 0;
   }
 }
 

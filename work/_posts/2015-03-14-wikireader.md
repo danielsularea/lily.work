@@ -24,7 +24,7 @@ Wikipedia.org has been one of the most timeless services on the web, offering va
 To minimalize loading delays, wikiReader works almost solely by overriding its existing CSS styles. Of course, this can cause enormous backlash if Wikipedia chooses to change its element ids and classes but I'm essentially counting on its earlier mentioned tendency to be rather constant. But yes, this still isn't the greatest practice so I will be looking into alternatives in the meantime.
 
 ## Reading experience
-I chose a more readable font ([Crimson Text][crimson]) alongside Wikipedia's original Open Sans. Not everything is shown below but additional changes included wider paddings in tables to allow some breathing room, more consistent thumbs, and cleaner lists.
+I chose a more readable font ([Crimson Text][crimson]{:target="_blank"}) alongside Wikipedia's original Open Sans. Not everything is shown below but additional changes included wider paddings in tables to allow some breathing room, more consistent thumbs, and cleaner lists.
 
 ## To Do
 - clean <a href="http://en.wikipedia.org/wiki/Main_Page" target="_blank">Main Page</a> as a quick daily news digest
