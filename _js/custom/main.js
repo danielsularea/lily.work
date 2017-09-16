@@ -21,6 +21,7 @@
     if (widthOfParent[0]) {
       var parent = widthOfParent[0].parentNode;
       widthOfParent[0].style.width = parent.offsetWidth + 'px';
+      // TODO: WIDTH EXCLUDE PADDING
     }
   };
 

@@ -24,14 +24,17 @@
         </div>
       </header>
       <article class="m--content_copy g--grid_row m--anchorwrap-external-hover" itemprop="articleBody">
-        <div class="g--grid_col-6 g--grid_push-3">
+        <div class="g--grid_col-6">
           {{ content }}
         </div>
-        <!-- <div class="g--grid_col-6">
+        <div class="g--grid_col-5 g--grid_push-1">
           {% for img in page.detail_img %}
-            <img src="{{ site.url }}/assets/img/{{ page.imgfolder }}/{{ img }}" />
+            {% capture imgurl %}{{ site.url }}/assets/img/{{ page.imgfolder }}/{{ img }}{% endcapture %}
+            {% include figure.html
+              url=imgurl 
+              alt="" %}
           {% endfor %}
-        </div> -->
+        </div>
       </article>
     </section>
     {% for post in site.categories["work"] %}

@@ -17,7 +17,7 @@ links:
 A chrome extension to simplify the Wikipedia experience for users who concentrate solely on retrieving information.
 
 ## Overview
-This was my first attempt at a Chrome extension, which was overall, an excellent experience. Google has nicely documented its javascript APIs, which were essentially all I needed for this simple extension which I managed to hack in just 2 days. Of course, it's not perfect and I try to fix any bugs I find whenever I can but I'm nevertheless proud.
+This was my first attempt at a Chrome extension, which was overall, an excellent experience. Google has nicely documented its javascript APIs, which were essentially all I needed for this simple extension that I managed to hack in just 2 days. Of course, it's not perfect and I try to fix any bugs but I'm nevertheless proud.
 
 Wikipedia.org has been one of the most timeless services on the web, offering vast amount of information to its users for free. However, at the same time, it has been one of the most unchanging platforms in terms of interface. For users who solely seek to gather information quickly, the old layout can be distracting. So in an effort to not only beautify presentation, I've also hidden the lesser used features such as switching languages (as this is a English only extension for now), editing, viewing edit history, and a few minor others.
 

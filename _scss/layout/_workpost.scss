@@ -1,7 +1,10 @@
 .l--workpost {
   figure {
-    margin-left: -25%;
-    margin-right: -25%;
+    z-index: -1;
+
+    &:first-child {
+      margin-top: 200px;
+    }
   }
 }
 

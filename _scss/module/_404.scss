@@ -1,0 +1,28 @@
+.notfound {
+  position: relative;
+  font-size: 2rem;
+
+  &:before,
+  &:after {
+    display: block;
+    content: '404';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .8;
+  }
+
+  &:after {
+    color: #f0f;
+    z-index: -2;
+    animation: glitch 12s cubic-bezier(.25, .46, .45, .94) reverse both infinite;
+  }
+
+  &:before {
+    color: #0ff;
+    z-index: -1;
+    animation: glitch 12s cubic-bezier(.25, .46, .45, .94) both infinite;
+  }
+}

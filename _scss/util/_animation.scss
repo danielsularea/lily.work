@@ -1,11 +1,4 @@
-/*!
- * animate.css -http://daneden.me/animate
- * Version - 3.5.2
- * Licensed under the MIT license - http://opensource.org/licenses/MIT
- *
- * Copyright (c) 2017 Daniel Eden
- */
-
+// http://daneden.me/animate
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -15,5 +8,33 @@
   to {
     opacity: 1;
     transform: none;
+  }
+}
+
+// https://ihatetomatoes.net/how-to-create-css-glitch-effect/
+@keyframes glitch {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-5px, 5px);
+    transform: translate(-5px, 5px);
+  }
+  40% {
+    -webkit-transform: translate(-5px, -5px);
+    transform: translate(-5px, -5px);
+  }
+  60% {
+    -webkit-transform: translate(5px, 5px);
+    transform: translate(5px, 5px);
+  }
+  80% {
+    -webkit-transform: translate(5px, -5px);
+    transform: translate(5px, -5px);
+  }
+  to {
+    -webkit-transform: translate(0);
+    transform: translate(0);
   }
 }
