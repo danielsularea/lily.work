@@ -8,7 +8,7 @@ tags: [ Chrome extensions ]
 
 imgfolder: wikireader
 cover_img: init.gif
-detail_img: [ img1.jpg, img2.png, img3.jpg ]
+detail_img: [ img3.jpg ]
 links:
   Download: "https://chrome.google.com/webstore/detail/wikireader-wikipedia-simp/jmhkjngkhknhjmanjmaljpaigdinhdcf"
 ---

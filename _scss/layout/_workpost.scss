@@ -8,6 +8,14 @@
   }
 }
 
+.l--workpost_header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .l--workpost_coverimg {
   position: absolute;
   top: 0;
@@ -19,4 +27,10 @@
   margin: auto;
   z-index: -1;
   opacity: 0.5;
+}
+
+.l--workpost_body {
+  position: absolute;
+  top: 100%;
+  margin-top: 2rem;
 }

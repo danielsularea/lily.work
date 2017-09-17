@@ -4,78 +4,80 @@
 <body>
   {% include header.html %}
   
-  <img class="l--workpost_coverimg" src="{{ site.url }}/assets/img/{{ page.imgfolder }}/{{ page.cover_img }}" alt="">
-  <main class="l--workpost m--content m--container g--grid-fixed" role="main" aria-labelledby="page-title">
+  <main class="l--workpost m--content g--grid-fixed" role="main" aria-labelledby="page-title">
     <section itemscope itemtype="http://schema.org/workposting">
-      <div class="m--workheader_detailsWrap m--container">
-        <ul class="m--workheader_details m--anchorwrap-external-persist">
-          <li>
-            Links
-          </li>
-          {% for link in page.links %}
-            <li><a href="{{ link[1] }}" target="_blank">{{ link[0] }}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
-      <header class="g--grid_row m--workheader js--workheader">
-        <div class="g--grid_col-md-9">
-          <h1 id="page-title" class="m--workheader_title" itemprop="name headline">{{ page.title }}</h1>
-          <div class="m--workheader_subtitle">{{ page.subtitle }}</div>
+      <!-- <ul class="m--anchorwrap-external-persist">
+        <li>
+          Links
+        </li>
+        {% for link in page.links %}
+          <li><a href="{{ link[1] }}" target="_blank">{{ link[0] }}</a></li>
+        {% endfor %}
+      </ul> -->
+      <header class="l--workpost_header m--workheader m--container">
+        <img class="l--workpost_coverimg" src="{{ site.url }}/assets/img/{{ page.imgfolder }}/{{ page.cover_img }}" alt="">
+        <div class="m--workheader_titles g--grid_row">
+          <div class="g--grid_col-md-9">
+            <h1 id="page-title" class="m--workheader_title" itemprop="name headline">{{ page.title }}</h1>
+            <div class="m--workheader_subtitle">{{ page.subtitle }}</div>
+          </div>
         </div>
       </header>
-      <article class="m--content_copy g--grid_row m--anchorwrap-external-hover" itemprop="articleBody">
-        <div class="g--grid_col-6">
-          {{ content }}
-        </div>
-        <div class="g--grid_col-5 g--grid_push-1">
-          {% for img in page.detail_img %}
-            {% capture imgurl %}{{ site.url }}/assets/img/{{ page.imgfolder }}/{{ img }}{% endcapture %}
-            {% include figure.html
-              url=imgurl 
-              alt="" %}
-          {% endfor %}
-        </div>
-      </article>
-    </section>
-    {% for post in site.categories["work"] %}
-      {% if post.url == page.url %}
-        {% assign post_index0 = forloop.index0 %}
-        {% assign post_index1 = forloop.index %}
-      {% endif %}
-    {% endfor %}
-
-    {% for post in site.categories["work"] %}
-      {% if post_index0 == forloop.index %}
-        {% assign next_post = post %}
-      {% endif %}
-      {% if post_index1 == forloop.index0 %}
-        {% assign prev_post = post %}
-      {% endif %}
-    {% endfor %}
-
-    {% if prev_post or next_post %}
-      <div class="g--grid_row">
-        <div class="m--paginate">
+      <div class="l--workpost_body m--container">
+        <article class="m--content_copy g--grid_row m--anchorwrap-external-hover" itemprop="articleBody">
           <div class="g--grid_col-6">
-            {% if prev_post %}
-              <a href="{{ prev_post.url }}" class="m--paginate_prev">
-                <span>Previous</span>
-                {{ prev_post.title }}
-              </a>
-            {% endif %}
+            {{ content }}
           </div>
+          <div class="g--grid_col-5 g--grid_push-1">
+            {% for img in page.detail_img %}
+              {% capture imgurl %}{{ site.url }}/assets/img/{{ page.imgfolder }}/{{ img }}{% endcapture %}
+              {% include figure.html
+                url=imgurl 
+                alt="" %}
+            {% endfor %}
+          </div>
+        </article>
+        {% for post in site.categories["work"] %}
+          {% if post.url == page.url %}
+            {% assign post_index0 = forloop.index0 %}
+            {% assign post_index1 = forloop.index %}
+          {% endif %}
+        {% endfor %}
 
-          <div class="g--grid_col-6">
-            {% if next_post %}
-              <a href="{{ next_post.url }}" class="m--paginate_next">
-                <span>Next</span>
-                {{ next_post.title }}
-              </a>
-            {% endif %}
+        {% for post in site.categories["work"] %}
+          {% if post_index0 == forloop.index %}
+            {% assign next_post = post %}
+          {% endif %}
+          {% if post_index1 == forloop.index0 %}
+            {% assign prev_post = post %}
+          {% endif %}
+        {% endfor %}
+
+        {% if prev_post or next_post %}
+          <div class="g--grid_row">
+            <div class="m--paginate">
+              <div class="g--grid_col-6">
+                {% if prev_post %}
+                  <a href="{{ prev_post.url }}" class="m--paginate_prev">
+                    <span>Previous</span>
+                    {{ prev_post.title }}
+                  </a>
+                {% endif %}
+              </div>
+
+              <div class="g--grid_col-6">
+                {% if next_post %}
+                  <a href="{{ next_post.url }}" class="m--paginate_next">
+                    <span>Next</span>
+                    {{ next_post.title }}
+                  </a>
+                {% endif %}
+              </div>
+            </div>
           </div>
-        </div>
+        {% endif %}
       </div>
-    {% endif %}
+    </section>
   </main>
 
   {% include scripts.html %}

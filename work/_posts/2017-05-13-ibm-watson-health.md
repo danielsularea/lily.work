@@ -1,7 +1,7 @@
 ---
 layout: workpost
 title: IBM Watson Health
-subtitle: Uncovers discrepancies
+subtitle: Helps save lives
 year: 2017
 
 imgfolder: ibm
@@ -10,3 +10,5 @@ detail_img: [ ]
 links:
   
 ---
+
+More detail available on request.

@@ -6,16 +6,15 @@
   var Classes = obj.settings = {
     workHeader:         'js--workheader',
     widthOfParent:      'js--widthOfParent',
-    visiblePastFold:    'js--visiblePastFold',
-    smoothScroll:       'js--smoothScroll',
+    pageTitlePastFold:  'js--pageTitlePastFold',
   };
 
   var _setDimensions = function() {
-    var workHeader = document.getElementsByClassName(Classes.workHeader);
-    if (workHeader[0]) {
-      var diff = window.innerHeight - workHeader[0].getBoundingClientRect().bottom;
-      workHeader[0].style.paddingTop = diff + 'px';
-    }
+    // var workHeader = document.getElementsByClassName(Classes.workHeader);
+    // if (workHeader[0]) {
+    //   var diff = window.innerHeight - workHeader[0].getBoundingClientRect().bottom;
+    //   workHeader[0].style.paddingTop = diff + 'px';
+    // }
 
     var widthOfParent = document.getElementsByClassName(Classes.widthOfParent);
     if (widthOfParent[0]) {
@@ -25,17 +24,17 @@
     }
   };
 
-  var _handleVisiblePastFoldScroll = function() {
-    var visiblePastFold = document.getElementsByClassName(Classes.visiblePastFold);
+  var _handlePageTitlePastFold = function() {
+    var pageTitle = document.getElementsByClassName(Classes.pageTitlePastFold);
 
-    if (!visiblePastFold[0]) { return };
+    if (!pageTitle[0]) { return; }
 
     if (document.body.scrollTop > window.innerHeight) {
-      _addClass(visiblePastFold[0], 'visible');
+      _addClass(pageTitle[0], 'visible');
       return;
     }
 
-    _removeClass(visiblePastFold[0], 'visible');
+    _removeClass(pageTitle[0], 'visible');
   };
 
   var _handleWindowResize = function() {
@@ -43,7 +42,7 @@
   };
 
   var _handleWindowScroll = function() {
-    _handleVisiblePastFoldScroll();
+    _handlePageTitlePastFold();
   };
 
   var _bindEvents = function() {

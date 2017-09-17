@@ -27,7 +27,7 @@
   font-weight: 400;
   font-size: 1rem;
   text-decoration: none;
-  color: $g--color-gray3;
+  color: $g--color-black;
 }
 
 .m--header_pageTitle {
@@ -49,33 +49,30 @@
   position: relative;
   text-decoration: none;
 
-  &::after {
+  &::before {
     content: '';
-    border-bottom: 7px solid #333;
+    border-bottom: 4px solid $g--color-blue;
     position: absolute;
-    top: 37%;
+    top: 50%;
     width: 0;
     right: 100%;
     transition: right .3s ease-in-out,
                 width .3s ease-in-out;
     transition-timing-function: cubic-bezier(0.19,1,.22,1);
-  }
-
-  &:hover {
-    color: $g--color-black;
+    // z-index: -1;
   }
 
   &.active {
     text-decoration: none;
 
-    &::after {
+    &::before {
       right: 0;
       width: 100%;
     }
   }
 
   &.active:hover {
-    &::after {
+    &::before {
       right: 100%;
       width: 0;
     }
