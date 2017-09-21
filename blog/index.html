@@ -3,25 +3,26 @@ layout: default
 title: Blog
 ---
 
-{% assign postsByYear = site.categories["blog"] | group_by_exp:"post", "post.date | date: '%Y'"  %}
+{% assign postsByYear = site.categories["blog"] | group_by_exp:"post", "post.date | date: '%y'"  %}
 <div class="l--bloglist">
   {% for curPost in postsByYear %}
-    <div class="l--bloglist_yearwrap">
-      <h2 class="l--bloglist_year">{{ curPost.name }}</h2>
-    </div>
-    {% for post in curPost.items %}
-      <a href="{{ post.url }}" class="l--bloglist_anchor" title="{{ post.title }}" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="l--bloglist_item g--grid_row">
-          <div class="g--grid_col-2 g--grid_col-lg-1">
-            <time class="l--bloglist_date" datetime="{{ post.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ post.date | date: "%b %d" }}</time>
-          </div>
-          <div class="g--grid_col-10 g--grid_col-lg-11">
-            <div class="l--bloglist_title">
-              {{ post.title }}<span class="l--bloglist_read" aria-hidden="true"> ✓</span>
+    <div class="l--bloglist_yearBorder"></div>
+    <div class="l--bloglist_year">'{{ curPost.name }}</div>
+    <div>
+      {% for post in curPost.items %}
+        <a href="{{ post.url }}" class="l--bloglist_anchor" title="{{ post.title }}" itemscope itemtype="http://schema.org/BlogPosting">
+          <div class="l--bloglist_item g--grid_row">
+            <div class="g--grid_col-1">
+              <time class="l--bloglist_date" datetime="{{ post.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ post.date | date: "%b %d" }}</time>
+            </div>
+            <div class="g--grid_col-11">
+              <div class="l--bloglist_title">
+                {{ post.title }}<span class="l--bloglist_read" aria-hidden="true"> ✓</span>
+              </div>
             </div>
           </div>
-        </div>
-      </a>
-    {% endfor %}
+        </a>
+      {% endfor %}
+    </div>
   {% endfor %}
 </div>

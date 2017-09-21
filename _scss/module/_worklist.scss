@@ -59,12 +59,14 @@ ul.m--worklist_list {
 .m--worklist_anchor {
   display: block;
   position: absolute;
+  left: -5px;
+  padding: 5px 5px 0;
   color: $g--color-black;
   cursor: pointer;
   
   &:hover,
   &:focus {
-    // background-color: $g--site-selection-bg;
+    
     z-index: 2001;
   }
 }

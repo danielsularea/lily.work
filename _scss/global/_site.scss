@@ -19,12 +19,12 @@ body {
 }
 
 ::selection {
-  background: $g--site-selection-bg;
+  background: $g--color-yellow;
   // color: $g--site-selection-color;
 }
 
 ::-moz-selection {
-  background: $g--site-selection-bg;
+  background: $g--color-yellow;
   // color: $g--site-selection-color;
 }
 
@@ -37,7 +37,7 @@ a {
 
   &:hover,
   &:focus {
-    background-color: $g--site-selection-bg;
+    background-color: $g--color-yellow;
     color: $g--color-black;
   }
 }

@@ -5,7 +5,7 @@
 
   var Classes = obj.settings = {
     workHeader:         'js--workheader',
-    widthOfParent:      'js--widthOfParent',
+    fixedBlogHeader:    'js--fixedBlogHeader',
     pageTitlePastFold:  'js--pageTitlePastFold',
   };
 
@@ -16,11 +16,19 @@
     //   workHeader[0].style.paddingTop = diff + 'px';
     // }
 
-    var widthOfParent = document.getElementsByClassName(Classes.widthOfParent);
-    if (widthOfParent[0]) {
-      var parent = widthOfParent[0].parentNode;
-      widthOfParent[0].style.width = parent.offsetWidth + 'px';
-      // TODO: WIDTH EXCLUDE PADDING
+    // var fixedBlogHeader = document.getElementsByClassName(Classes.fixedBlogHeader);
+    // if (fixedBlogHeader[0]) {
+    //   var parent = fixedBlogHeader[0].parentNode;
+    //   fixedBlogHeader[0].style.width = parent.offsetWidth + 'px';
+    //   // TODO: WIDTH EXCLUDE PADDING
+    // }
+
+    var fixedBlogHeader = document.getElementsByClassName(Classes.fixedBlogHeader);
+    if (fixedBlogHeader[0]) {
+      var thisEl = fixedBlogHeader[0],
+          parent = thisEl.parentNode;
+      thisEl.style.width = parent.offsetWidth + 'px';
+      thisEl.style.position = 'fixed';
     }
   };
 

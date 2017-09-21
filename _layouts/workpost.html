@@ -14,12 +14,12 @@
           <li><a href="{{ link[1] }}" target="_blank">{{ link[0] }}</a></li>
         {% endfor %}
       </ul> -->
-      <header class="l--workpost_header m--workheader m--container">
+      <header class="l--workpost_header m--container">
         <img class="l--workpost_coverimg" src="{{ site.url }}/assets/img/{{ page.imgfolder }}/{{ page.cover_img }}" alt="">
-        <div class="m--workheader_titles g--grid_row">
+        <div class="l--workpost_titles g--grid_row">
           <div class="g--grid_col-md-9">
-            <h1 id="page-title" class="m--workheader_title" itemprop="name headline">{{ page.title }}</h1>
-            <div class="m--workheader_subtitle">{{ page.subtitle }}</div>
+            <h1 id="page-title" class="l--workpost_title" itemprop="name headline">{{ page.title }}<span class="l--workpost_year">{{ page.year }}</span></h1>
+            <div class="l--workpost_subtitle">{{ page.subtitle }}</div>
           </div>
         </div>
       </header>

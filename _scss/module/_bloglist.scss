@@ -1,25 +1,38 @@
-.l--bloglist_yearwrap {
-  margin-top: 20px;
-  border-bottom: 1px solid $g--color-black;
+// .l--bloglist_yearwrap {
+//   margin-top: 20px;
+//   border-bottom: 1px solid $g--color-black;
 
-  &:first-of-type {
-    margin-top: 0;
-  }
+//   &:first-of-type {
+//     margin-top: 0;
+//   }
+// }
+
+// .l--bloglist_year {
+//   padding: 20px 0;
+//   line-height: 1.2;
+//   font-family: $g--font-serif;
+//   font-size: 1.75rem;
+
+//   &:first-of-type {
+//     padding-top: 0;
+//   }
+// }
+
+.l--bloglist_yearBorder {
+  border-top: 1px solid $g--color-black;
 }
 
 .l--bloglist_year {
-  padding: 20px 0;
-  line-height: 1.2;
-  font-family: $g--font-serif;
-  font-size: 1.75rem;
-
-  &:first-of-type {
-    padding-top: 0;
-  }
+  float: left;
+  width: 50px;
+  line-height: $l--bloglist-item-height;
+  font-family: $g--font-mono;
+  color: $g--color-blue;
 }
 
 .l--bloglist_item {
-  height: $l--bloglist-item-height;
+  display: block;
+  margin-left: 50px;
 }
 
 .l--bloglist_date,
@@ -35,6 +48,10 @@
   .l--bloglist_anchor:hover &,
   .l--bloglist_anchor:focus & {
     color: $g--color-black;
+  }
+
+  .l--bloglist_anchor:last-child & {
+    border: none;
   }
 }
 
