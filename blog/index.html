@@ -10,15 +10,13 @@ title: Blog
     <div class="l--bloglist_year">'{{ curPost.name }}</div>
     <div>
       {% for post in curPost.items %}
-        <a href="{{ post.url }}" class="l--bloglist_anchor" title="{{ post.title }}" itemscope itemtype="http://schema.org/BlogPosting">
-          <div class="l--bloglist_item g--grid_row">
-            <div class="g--grid_col-1">
-              <time class="l--bloglist_date" datetime="{{ post.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ post.date | date: "%b %d" }}</time>
-            </div>
-            <div class="g--grid_col-11">
-              <div class="l--bloglist_title">
-                {{ post.title }}<span class="l--bloglist_read" aria-hidden="true"> ✓</span>
-              </div>
+        <a href="{{ post.url }}" class="l--bloglist_anchor g--grid_row" title="{{ post.title }}" itemscope itemtype="http://schema.org/BlogPosting">
+          <div class="g--grid_col-1">
+            <time class="l--bloglist_date" datetime="{{ post.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ post.date | date: "%b %d" }}</time>
+          </div>
+          <div class="g--grid_col-11">
+            <div class="l--bloglist_title">
+              {{ post.title }}<span class="l--bloglist_read" aria-hidden="true"> ✓</span>
             </div>
           </div>
         </a>
