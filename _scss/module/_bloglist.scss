@@ -1,4 +1,4 @@
-// .l--bloglist_yearwrap {
+// .m--blogList_yearwrap {
 //   margin-top: 20px;
 //   border-bottom: 1px solid $g--color-black;
 
@@ -7,7 +7,7 @@
 //   }
 // }
 
-// .l--bloglist_year {
+// .m--blogList_year {
 //   padding: 20px 0;
 //   line-height: 1.2;
 //   font-family: $g--font-serif;
@@ -18,60 +18,66 @@
 //   }
 // }
 
-.l--bloglist_yearBorder {
+.m--blogList_header {
+  margin-bottom: 1rem;
+  font-family: $g--font-serif;
+  font-size: 1.6rem;
+}
+
+.m--blogList_yearBorder {
   border-top: 1px solid $g--color-black;
 }
 
-.l--bloglist_year {
+.m--blogList_year {
   float: left;
   width: 50px;
-  line-height: $l--bloglist-item-height;
+  line-height: $m--blogList-item-height;
   font-family: $g--font-mono;
   color: $g--color-blue;
 }
 
-.l--bloglist_anchor {
+.m--blogList_anchor {
   display: block;
   margin-left: 50px;
   margin-right: 0; // TODO: fix hacky thing
 }
 
-.l--bloglist_date,
-.l--bloglist_title {
-  line-height: $l--bloglist-item-height;
+.m--blogList_date,
+.m--blogList_title {
+  line-height: $m--blogList-item-height;
 }
 
-.l--bloglist_date,
-.l--bloglist_title {
+.m--blogList_date,
+.m--blogList_title {
   color: $g--color-gray4;
   // transition: color 250ms;
 
-  .l--bloglist_anchor:hover &,
-  .l--bloglist_anchor:focus & {
+  .m--blogList_anchor:hover &,
+  .m--blogList_anchor:focus & {
     color: $g--color-black;
   }
 
-  .l--bloglist_anchor:last-child & {
+  .m--blogList_anchor:last-child & {
     border: none;
   }
 }
 
-.l--bloglist_date {
+.m--blogList_date {
   display: block;
   border-bottom: 1px solid transparent; // for consistent height
   font-family: $g--font-mono;
 }
 
-.l--bloglist_title {
+.m--blogList_title {
   margin-right: -15px; // TODO: fix hacky thing
   border-bottom: 1px solid $g--color-black;
 }
 
-.l--bloglist_read {
-  @include noselect();
+.m--blogList_read {
+  @include noSelect();
   color: $g--color-white;
 
-  .l--bloglist_anchor:visited & {
+  .m--blogList_anchor:visited & {
     color: $g--color-gray3;
   }
 }

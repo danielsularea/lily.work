@@ -4,16 +4,16 @@
 <body>
   {% include header.html %}
   
-  <main class="m--content m--container g--grid-fixed" role="main" aria-labelledby="page-title">
+  <main id="main" class="g--grid-fixed" role="main" aria-labelledby="page-title">
     <section class="g--grid_row" itemscope itemtype="http://schema.org/BlogPosting">
       <div class="g--grid_col-md-4">
-        <header class="m--blogheader js--fixedBlogHeader">
-          <time class="m--blogheader_date" datetime="{{ page.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
-          <h1 id="page-title" class="m--blogheader_title" itemprop="name headline">{{ page.title }}</h1>
+        <header class="m--blogHeader js--fixedBlogHeader">
+          <time class="m--blogHeader_date" datetime="{{ page.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+          <h1 id="page-title" class="m--blogHeader_title" itemprop="name headline">{{ page.title }}</h1>
         </header>
       </div>
       <div class="g--grid_col-md-8">
-        <article class="m--content_copy m--anchorwrap-external-hover" itemprop="articleBody">
+        <article class="m--content m--anchorWrap-external-hover" itemprop="articleBody">
           {{ content }}
         </article>
       </div>

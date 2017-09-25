@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
 html {
   height: auto;
   overflow: auto;
@@ -12,8 +17,10 @@ html {
 body {
   margin: 0;
   padding: 0;
+  padding-top: $m--header-height + 3rem;
+  padding-bottom: 2rem;
   font-family: $g--site-font-family;
-  font-size: $g--site-font-size;
+  font-size: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

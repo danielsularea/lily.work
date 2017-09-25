@@ -6,7 +6,7 @@ year: 2012-14
 
 imgfolder: cbr
 cover_img: init.png
-detail_img: [ mockup2.png, mockup3.png, mockup4.png, mockup5.png, mockup6.png, mockup7.png ]
+detail_img: [ mockup3.png, mockup5.png, mockup6.png, mockup7.png ]
 links:
   Volume IV, Issue 2: "/assets/docs/spring2014.pdf"
   Volume IV, Issue 1: "/assets/docs/fall2013.pdf"

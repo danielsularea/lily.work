@@ -6,7 +6,7 @@ year: 2017
 
 imgfolder: ibm
 cover_img: ibm.gif
-detail_img: [ ibm.gif ]
+detail_img: [ ]
 links:
   
 ---

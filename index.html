@@ -6,7 +6,7 @@ title: Works
 <section class="l--home">
   <div class="g--grid_row">
     <div class="g--grid_col-md-5">
-      <div class="l--home_bio m--anchorwrap-external-hover">
+      <div class="l--home_bio m--anchorWrap-external-hover">
         <div>
           Hello &mdash; I'm Lily.
         </div>
@@ -16,18 +16,18 @@ title: Works
       </div>
     </div>
     <div class="g--grid_col-12">
-      <div class="m--worklist">
-        <div class="m--worklist_label">
+      <div class="m--workList">
+        <div class="m--workList_label">
           Latest Works <span>&darr;</span>
         </div>
-        <ul class="m--worklist_list">
+        <ul class="m--workList_list">
           {% for project in site.categories["work"] %}
             <li>
-              <a href="{{ project.url }}" class="m--worklist_anchor">
-                <span class="m--worklist_title">{{ project.title }}</span>
-                <span class="m--worklist_year">{{ project.year }}</span>
+              <a href="{{ project.url }}" class="m--workList_anchor">
+                <span class="m--workList_title">{{ project.title }}</span>
+                <span class="m--workList_year">{{ project.year }}</span>
               </a>
-              <img src="{{ site.url }}/assets/img/{{ project.imgfolder }}/{{ project.cover_img }}" class="m--worklist_img">
+              <img src="{{ site.url }}/assets/img/{{ project.imgfolder }}/{{ project.cover_img }}" class="m--workList_img">
             </li>
           {% endfor %}
         </ul>

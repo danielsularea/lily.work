@@ -1,4 +1,4 @@
-.a--skip-to-content {
+.a--pageTitle {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -9,11 +9,4 @@
   border: 0;
   visibility: visible;
   white-space: nowrap;
-
-  &:focus {
-    width: auto;
-    height: auto;
-    overflow: visible;
-    clip: initial;
-  }
 }

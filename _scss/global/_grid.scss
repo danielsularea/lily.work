@@ -45,8 +45,35 @@
 }
 
 // Column
+.g--grid_col-0,
+.g--grid_col-xs-0 {
+  display: none;
+}
+
+@media (min-width: map-get($g--grid-breakpoints, sm)) {
+  .g--grid_col-sm-0 {
+    display: none;
+  }
+}
+
+@media (min-width: map-get($g--grid-breakpoints, md)) {
+  .g--grid_col-md-0 {
+    display: none;
+  }
+}
+
+@media (min-width: map-get($g--grid-breakpoints, lg)) {
+  .g--grid_col-lg-0 {
+    display: none;
+  }
+}
+
 @for $i from 1 through $g--grid-columns {
-  .g--grid_col-#{$i}, .g--grid_col-xs-#{$i}, .g--grid_col-sm-#{$i}, .g--grid_col-md-#{$i}, .g--grid_col-lg-#{$i} {
+  .g--grid_col-#{$i},
+  .g--grid_col-xs-#{$i},
+  .g--grid_col-sm-#{$i},
+  .g--grid_col-md-#{$i},
+  .g--grid_col-lg-#{$i} {
     position: relative;
     min-height: 1px; // prevent cols from collapsing when empty
     padding-left:  ceil(($g--grid-gutter-width / 2)); // inner gutter via padding
@@ -55,15 +82,18 @@
     float: left;
   }
 
-  .g--grid_col-#{$i}, .g--grid_col-xs-#{$i} {
+  .g--grid_col-#{$i},
+  .g--grid_col-xs-#{$i} {
     max-width: percentage(($i / $g--grid-columns));
   }
 
-  .g--grid_push-#{$i}, .g--grid_push-xs-#{$i} {
+  .g--grid_push-#{$i},
+  .g--grid_push-xs-#{$i} {
     margin-left: percentage(($i / $g--grid-columns));
   }
 
-  .g--grid_pull-#{$i}, .g--grid_pull-xs-#{$i} {
+  .g--grid_pull-#{$i},
+  .g--grid_pull-xs-#{$i} {
     margin-left: percentage(($i / $g--grid-columns)) * -1;
   }
 }
@@ -71,6 +101,7 @@
 @media (min-width: map-get($g--grid-breakpoints, sm)) {
   @for $i from 1 through $g--grid-columns {
     .g--grid_col-sm-#{$i} {
+        display: block;
         max-width: percentage(($i / $g--grid-columns));
     }
 
@@ -87,6 +118,7 @@
 @media (min-width: map-get($g--grid-breakpoints, md)) {
   @for $i from 1 through $g--grid-columns {
     .g--grid_col-md-#{$i} {
+        display: block;
         max-width: percentage(($i / $g--grid-columns));
     }
 
@@ -103,6 +135,7 @@
 @media (min-width: map-get($g--grid-breakpoints, lg)) {
   @for $i from 1 through $g--grid-columns {
     .g--grid_col-lg-#{$i} {
+        display: block;
         max-width: percentage(($i / $g--grid-columns));
     }
 

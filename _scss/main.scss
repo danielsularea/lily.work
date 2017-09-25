@@ -5,12 +5,12 @@
 
 // Utility
 @import 'util/clearfix';
-@import 'util/noselect';
+@import 'util/noSelect';
 @import 'util/animation';
 
 // Accessibility
-@import 'a11y/skip-to-content';
-@import 'a11y/page-title';
+@import 'a11y/skipToContent';
+@import 'a11y/pageTitle';
 
 // Global
 @import 'global/font';
@@ -19,16 +19,21 @@
 
 // Module
 @import 'module/container';
-@import 'module/anchorwrap';
+@import 'module/anchorWrap';
 @import 'module/content';
 @import 'module/header';
-@import 'module/blogheader';
-@import 'module/worklist';
-@import 'module/bloglist';
 @import 'module/paginate';
-@import 'module/404';
+@import 'module/notFound';
+
+@import 'module/workList';
+@import 'module/workHeader';
+@import 'module/workLinks';
+
+@import 'module/blogList';
+@import 'module/blogHeader';
+
 
 // Layout
 @import 'layout/home';
 @import 'layout/about';
-@import 'layout/workpost';
+@import 'layout/workPost';

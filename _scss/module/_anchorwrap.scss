@@ -1,5 +1,5 @@
-.m--anchorwrap-external-persist a,
-.m--anchorwrap-external-hover a {
+.m--anchorWrap-external-persist a,
+.m--anchorWrap-external-hover a {
   display: inline-block;
   color: inherit;
   text-decoration: underline;
@@ -14,14 +14,14 @@
   }
 }
 
-.m--anchorwrap-external-persist a {
+.m--anchorWrap-external-persist a {
   &[target="_blank"] {
     position: relative;
     margin-right: 1.1em;
   }
 }
 
-.m--anchorwrap-external-hover a {
+.m--anchorWrap-external-hover a {
   // external link
   &[target="_blank"] {
     transition: margin 250ms;

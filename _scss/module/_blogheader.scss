@@ -1,18 +1,18 @@
-.m--blogheader {
+.m--blogHeader {
   // position: fixed;
   // padding-right: 20px;
 }
 
-.m--blogheader_title {
+.m--blogHeader_title {
   line-height: 1.2;
   font-family: $g--font-serif;
   font-weight: 700;
   font-size: 2.4rem;
 }
 
-.m--blogheader_date {
+.m--blogHeader_date {
   display: block;
   margin-bottom: 5px;
   font-family: $g--font-mono;
-  color: $g--color-gray5;
+  color: $g--color-blue;
 }

@@ -1,7 +1,7 @@
 ---
 layout: workpost
 title: Louie &amp; Fry
-subtitle: Get creative with<br/>Jekyll Themes
+subtitle: Get creative with Jekyll Themes
 year: 2017
 
 imgfolder: louiefry

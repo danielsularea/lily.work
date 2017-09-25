@@ -4,25 +4,15 @@
   var obj = mainObj;
 
   var Classes = obj.settings = {
-    workHeader:         'js--workheader',
     fixedBlogHeader:    'js--fixedBlogHeader',
     pageTitlePastFold:  'js--pageTitlePastFold',
   };
 
+  var _initBarba = function() {
+
+  };
+
   var _setDimensions = function() {
-    // var workHeader = document.getElementsByClassName(Classes.workHeader);
-    // if (workHeader[0]) {
-    //   var diff = window.innerHeight - workHeader[0].getBoundingClientRect().bottom;
-    //   workHeader[0].style.paddingTop = diff + 'px';
-    // }
-
-    // var fixedBlogHeader = document.getElementsByClassName(Classes.fixedBlogHeader);
-    // if (fixedBlogHeader[0]) {
-    //   var parent = fixedBlogHeader[0].parentNode;
-    //   fixedBlogHeader[0].style.width = parent.offsetWidth + 'px';
-    //   // TODO: WIDTH EXCLUDE PADDING
-    // }
-
     var fixedBlogHeader = document.getElementsByClassName(Classes.fixedBlogHeader);
     if (fixedBlogHeader[0]) {
       var thisEl = fixedBlogHeader[0],
@@ -33,16 +23,18 @@
   };
 
   var _handlePageTitlePastFold = function() {
-    var pageTitle = document.getElementsByClassName(Classes.pageTitlePastFold);
+    var pageTitleArr = document.getElementsByClassName(Classes.pageTitlePastFold);
 
-    if (!pageTitle[0]) { return; }
+    if (!pageTitleArr[0]) { return; }
+
+    var pageTitle = pageTitleArr[0];
 
     if (document.body.scrollTop > window.innerHeight) {
-      _addClass(pageTitle[0], 'visible');
+      pageTitle.classList.add('visible');
       return;
     }
 
-    _removeClass(pageTitle[0], 'visible');
+    pageTitle.classList.remove('visible');
   };
 
   var _handleWindowResize = function() {
@@ -54,37 +46,16 @@
   };
 
   var _bindEvents = function() {
-    window.addEventListener("resize", _handleWindowResize);
-    window.addEventListener("scroll", _handleWindowScroll);
-  };
+    document.addEventListener('DOMContentLoaded', function(e) {
+      Barba.Pjax.start();
+    });
 
-  var _hasClass = function(el, cl) {
-    return el.className.match(new RegExp('(\\s|^)' + cl + '(\\s|$)'));
-  };
-
-  var _addClass = function(el, cl) {
-    if (!_hasClass(el, cl)) {
-      el.className += ' ' + cl;
-    }
-  };
-
-  var _removeClass = function(el, cl) {
-    if (_hasClass(el, cl)) {
-      var reg = new RegExp('(\\s|^)' + cl + '(\\s|$)');
-      el.className = el.className.replace(reg, ' ');
-    }
-  };
-
-  var _toggleClass = function(el, cl) {
-    if (!_hasClass(el, cl)) {
-      _addClass(el, cl);
-      return;
-    }
-
-    _removeClass(el, cl);
+    document.addEventListener("resize", _handleWindowResize);
+    document.addEventListener("scroll", _handleWindowScroll);
   };
 
   obj._init = function() {
+    _initBarba();
     _setDimensions();
     _bindEvents();
   };
