@@ -1,6 +1,5 @@
 .m--blogHeader {
-  // position: fixed;
-  // padding-right: 20px;
+  padding-right: 1rem;
 }
 
 .m--blogHeader_title {
@@ -15,4 +14,13 @@
   margin-bottom: 5px;
   font-family: $g--font-mono;
   color: $g--color-blue;
+}
+
+.m--blogHeader_title,
+.m--blogHeader_date {
+  animation-name: fadeInUp;
+  animation-delay: 500ms;
+  animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
+  animation-duration: 0.6s;
+  animation-fill-mode: both;
 }

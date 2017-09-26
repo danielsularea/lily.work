@@ -4,59 +4,63 @@
 <body>
   {% include header.html %}
   
-  <main id="main" class="g--grid-fixed" role="main" aria-labelledby="page-title">
-    <section class="g--grid_row" itemscope itemtype="http://schema.org/BlogPosting">
-      <div class="g--grid_col-md-4">
-        <header class="m--blogHeader js--fixedBlogHeader">
-          <time class="m--blogHeader_date" datetime="{{ page.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
-          <h1 id="page-title" class="m--blogHeader_title" itemprop="name headline">{{ page.title }}</h1>
-        </header>
-      </div>
-      <div class="g--grid_col-md-8">
-        <article class="m--content m--anchorWrap-external-hover" itemprop="articleBody">
-          {{ content }}
-        </article>
-      </div>
-    </section>
-    {% for post in site.categories["blog"] %}
-      {% if post.url == page.url %}
-        {% assign post_index0 = forloop.index0 %}
-        {% assign post_index1 = forloop.index %}
-      {% endif %}
-    {% endfor %}
-
-    {% for post in site.categories["blog"] %}
-      {% if post_index0 == forloop.index %}
-        {% assign next_post = post %}
-      {% endif %}
-      {% if post_index1 == forloop.index0 %}
-        {% assign prev_post = post %}
-      {% endif %}
-    {% endfor %}
-
-    {% if prev_post or next_post %}
-      <div class="g--grid_row">
-        <div class="m--paginate">
-          <div class="g--grid_col-6">
-            {% if prev_post %}
-              <a href="{{ prev_post.url }}" class="m--paginate_prev">
-                <span>Previous</span>
-                {{ prev_post.title }}
-              </a>
-            {% endif %}
+  <main id="barba-wrapper" role="main" aria-labelledby="page-title">
+    <section class="barba-container g--grid-fixed" itemscope itemtype="http://schema.org/BlogPosting" data-namespace="default">
+      <div data-transition="fade">
+        <div class="g--grid_row">
+          <div class="g--grid_col-md-4">
+            <header class="m--blogHeader js--fixedBlogHeader">
+              <time class="m--blogHeader_date" datetime="{{ page.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+              <h1 id="page-title" class="m--blogHeader_title" itemprop="name headline">{{ page.title }}</h1>
+            </header>
           </div>
-
-          <div class="g--grid_col-6">
-            {% if next_post %}
-              <a href="{{ next_post.url }}" class="m--paginate_next">
-                <span>Next</span>
-                {{ next_post.title }}
-              </a>
-            {% endif %}
+          <div class="g--grid_col-md-8">
+            <article class="m--content m--anchorWrap-external-hover" itemprop="articleBody">
+              {{ content }}
+            </article>
           </div>
         </div>
+        {% for post in site.categories["blog"] %}
+          {% if post.url == page.url %}
+            {% assign post_index0 = forloop.index0 %}
+            {% assign post_index1 = forloop.index %}
+          {% endif %}
+        {% endfor %}
+
+        {% for post in site.categories["blog"] %}
+          {% if post_index0 == forloop.index %}
+            {% assign next_post = post %}
+          {% endif %}
+          {% if post_index1 == forloop.index0 %}
+            {% assign prev_post = post %}
+          {% endif %}
+        {% endfor %}
+
+        {% if prev_post or next_post %}
+          <div class="g--grid_row">
+            <div class="m--paginate">
+              <div class="g--grid_col-6">
+                {% if prev_post %}
+                  <a href="{{ prev_post.url }}" class="m--paginate_prev">
+                    <span>Previous</span>
+                    {{ prev_post.title }}
+                  </a>
+                {% endif %}
+              </div>
+
+              <div class="g--grid_col-6">
+                {% if next_post %}
+                  <a href="{{ next_post.url }}" class="m--paginate_next">
+                    <span>Next</span>
+                    {{ next_post.title }}
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
       </div>
-    {% endif %}
+    </section>
   </main>
 
   {% include scripts.html %}

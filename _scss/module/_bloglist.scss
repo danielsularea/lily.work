@@ -29,17 +29,30 @@
 }
 
 .m--blogList_year {
-  float: left;
-  width: 50px;
   line-height: $m--blogList-item-height;
   font-family: $g--font-mono;
   color: $g--color-blue;
+
+  @media (min-width: map-get($g--grid-breakpoints, sm)) {
+    float: left;
+    width: 3rem;
+  }
+
+  @media (min-width: map-get($g--grid-breakpoints, md)) {
+    width: 4rem;
+  }
 }
 
 .m--blogList_anchor {
   display: block;
-  margin-left: 50px;
-  margin-right: 0; // TODO: fix hacky thing
+  
+  @media (min-width: map-get($g--grid-breakpoints, sm)) {
+    margin-left: 3rem;
+  }
+
+  @media (min-width: map-get($g--grid-breakpoints, md)) {
+    margin-left: 4rem;
+  }
 }
 
 .m--blogList_date,
@@ -63,13 +76,18 @@
 }
 
 .m--blogList_date {
+  float: left;
+  width: 4.5rem;
   display: block;
   border-bottom: 1px solid transparent; // for consistent height
   font-family: $g--font-mono;
+
+  @media (min-width: map-get($g--grid-breakpoints, md)) {
+    width: 5.5rem;
+  }
 }
 
 .m--blogList_title {
-  margin-right: -15px; // TODO: fix hacky thing
   border-bottom: 1px solid $g--color-black;
 }
 

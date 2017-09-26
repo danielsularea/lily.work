@@ -4,69 +4,71 @@
 <body>
   {% include header.html %}
   
-  <main id="main" class="l--workPost g--grid-fixed" role="main" aria-labelledby="page-title">
-    <section itemscope itemtype="http://schema.org/workposting">
-      <div class="g--grid_row">
-        <header class="m--workHeader g--grid_col-12">
-          <div class="m--workHeader_year">{{ page.year }}</div>
-          <h1 id="page-title" itemprop="name headline">
-            <div class="m--workHeader_title">{{ page.title }}</div>
-            <div class="m--workHeader_subtitle">{{ page.subtitle }}</div>
-          </h1>
-          <img class="m--workHeader_img" src="{{ site.url }}/assets/img/{{ page.imgfolder }}/{{ page.cover_img }}" alt="">
-        </header>
-        <article class="m--content g--grid_col-10 g--grid_col-lg-6 m--anchorWrap-external-hover" itemprop="articleBody">
-          {{ content }}
-        </article>
-        {% for img in page.detail_img %}
-          {% capture imgurl %}{{ site.url }}/assets/img/{{ page.imgfolder }}/{{ img }}{% endcapture %}
-          <div class="l--workPost_img g--grid_col-12 g--grid_col-md-6">
-            {% include figure.html
-              url=imgurl 
-              alt="" %}
-          </div>
-        {% endfor %}
-      </div>
-
-      {% for post in site.categories["work"] %}
-        {% if post.url == page.url %}
-          {% assign post_index0 = forloop.index0 %}
-          {% assign post_index1 = forloop.index %}
-        {% endif %}
-      {% endfor %}
-
-      {% for post in site.categories["work"] %}
-        {% if post_index0 == forloop.index %}
-          {% assign next_post = post %}
-        {% endif %}
-        {% if post_index1 == forloop.index0 %}
-          {% assign prev_post = post %}
-        {% endif %}
-      {% endfor %}
-
-      {% if prev_post or next_post %}
+  <main id="barba-wrapper" class="l--workPost" role="main" aria-labelledby="page-title">
+    <section class="barba-container g--grid-fixed" itemscope itemtype="http://schema.org/workposting" data-namespace="default">
+      <div data-transition="fade" data-pageTitle="{% if page.categories[0] == 'work' %}{{ page.title }}{% endif %}">
         <div class="g--grid_row">
-          <div class="m--paginate">
-            <div class="g--grid_col-6">
-              {% if prev_post %}
-                <a href="{{ prev_post.url }}" class="m--paginate_prev">
-                  <span>Previous</span>
-                  {{ prev_post.title }}
-                </a>
-              {% endif %}
+          <header class="m--workHeader g--grid_col-12">
+            <div class="m--workHeader_year">{{ page.year }}</div>
+            <h1 id="page-title" itemprop="name headline">
+              <div class="m--workHeader_title">{{ page.title }}</div>
+              <div class="m--workHeader_subtitle">{{ page.subtitle }}</div>
+            </h1>
+            <img class="m--workHeader_img" src="{{ site.url }}/assets/img/{{ page.imgfolder }}/{{ page.cover_img }}" alt="">
+          </header>
+          <article class="m--content g--grid_col-10 g--grid_col-lg-6 m--anchorWrap-external-hover" itemprop="articleBody">
+            {{ content }}
+          </article>
+          {% for img in page.detail_img %}
+            {% capture imgurl %}{{ site.url }}/assets/img/{{ page.imgfolder }}/{{ img }}{% endcapture %}
+            <div class="l--workPost_img g--grid_col-12 g--grid_col-md-6">
+              {% include figure.html
+                url=imgurl 
+                alt="" %}
             </div>
+          {% endfor %}
+        </div>
 
-            <div class="g--grid_col-6">
-              {% if next_post %}
-                <a href="{{ next_post.url }}" class="m--paginate_next">
-                  <span>Next</span>
-                  {{ next_post.title }}
-                </a>
-              {% endif %}
+        {% for post in site.categories["work"] %}
+          {% if post.url == page.url %}
+            {% assign post_index0 = forloop.index0 %}
+            {% assign post_index1 = forloop.index %}
+          {% endif %}
+        {% endfor %}
+
+        {% for post in site.categories["work"] %}
+          {% if post_index0 == forloop.index %}
+            {% assign next_post = post %}
+          {% endif %}
+          {% if post_index1 == forloop.index0 %}
+            {% assign prev_post = post %}
+          {% endif %}
+        {% endfor %}
+
+        {% if prev_post or next_post %}
+          <div class="g--grid_row">
+            <div class="m--paginate">
+              <div class="g--grid_col-6">
+                {% if prev_post %}
+                  <a href="{{ prev_post.url }}" class="m--paginate_prev">
+                    <span>Previous</span>
+                    {{ prev_post.title }}
+                  </a>
+                {% endif %}
+              </div>
+
+              <div class="g--grid_col-6">
+                {% if next_post %}
+                  <a href="{{ next_post.url }}" class="m--paginate_next">
+                    <span>Next</span>
+                    {{ next_post.title }}
+                  </a>
+                {% endif %}
+              </div>
             </div>
           </div>
-        </div>
-      {% endif %}
+        {% endif %}
+      </div>
     </section>
   </main>
 

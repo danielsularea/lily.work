@@ -21,6 +21,7 @@
 // Set the grid width, and override it for fixed navbars in media queries.
 .g--grid-fixed {
   @extend .g--grid;
+  width: 90%;
 
   @media (min-width: map-get($g--grid-breakpoints, sm)) {
     width: map-get($g--grid-max-widths, sm);
@@ -32,6 +33,10 @@
 
   @media (min-width: map-get($g--grid-breakpoints, lg)) {
     width: map-get($g--grid-max-widths, lg);
+  }
+
+  @media (min-width: map-get($g--grid-breakpoints, xl)) {
+    width: map-get($g--grid-max-widths, xl);
   }
 }
 
@@ -68,12 +73,19 @@
   }
 }
 
+@media (min-width: map-get($g--grid-breakpoints, xl)) {
+  .g--grid_col-xl-0 {
+    display: none;
+  }
+}
+
 @for $i from 1 through $g--grid-columns {
   .g--grid_col-#{$i},
   .g--grid_col-xs-#{$i},
   .g--grid_col-sm-#{$i},
   .g--grid_col-md-#{$i},
-  .g--grid_col-lg-#{$i} {
+  .g--grid_col-lg-#{$i},
+  .g--grid_col-xl-#{$i} {
     position: relative;
     min-height: 1px; // prevent cols from collapsing when empty
     padding-left:  ceil(($g--grid-gutter-width / 2)); // inner gutter via padding
@@ -144,6 +156,23 @@
     }
 
     .g--grid_pull-lg-#{$i} {
+      margin-left: percentage(($i / $g--grid-columns)) * -1;
+    }
+  }
+}
+
+@media (min-width: map-get($g--grid-breakpoints, xl)) {
+  @for $i from 1 through $g--grid-columns {
+    .g--grid_col-xl-#{$i} {
+        display: block;
+        max-width: percentage(($i / $g--grid-columns));
+    }
+
+    .g--grid_push-xl-#{$i} {
+      margin-left: percentage(($i / $g--grid-columns));
+    }
+
+    .g--grid_pull-xl-#{$i} {
       margin-left: percentage(($i / $g--grid-columns)) * -1;
     }
   }

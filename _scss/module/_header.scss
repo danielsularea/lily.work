@@ -9,8 +9,15 @@
   overflow: hidden;
 }
 
-.m--header_menu {
+.m--header_left {
+  float: left;
+}
+
+.m--header_right {
   float: right;
+}
+
+.m--header_menu {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -32,17 +39,21 @@
 }
 
 .m--header_pageTitle {
+  position: absolute;
   display: block;
-  margin-top: -$m--header-height;
+  top: -$m--header-height;
+  left: 0;
+  right: 0;
   text-align: center;
   line-height: $m--header-height;
   font-family: $g--font-serif;
   font-size: 1.4rem;
   color: $g--color-black;
-  transition: margin-top 250ms;
+  transition: top 250ms;
+  z-index: -1;
 
   &.visible {
-    margin-top: 0;
+    top: 0;
   }
 }
 

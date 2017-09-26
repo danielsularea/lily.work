@@ -17,7 +17,7 @@
 .m--workList_label,
 .m--workList_anchor {
   animation-name: fadeInUp;
-  animation-delay: 250ms;
+  animation-delay: 500ms;
   animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
   animation-duration: 0.6s;
   animation-fill-mode: both;
@@ -30,19 +30,13 @@ ul.m--workList_list {
 
   li {
     display: block;
-  }
-
-  @media (min-width: map-get($g--grid-breakpoints, md)) {
-    li {
-      position: relative;
-      height: 5.625rem;
-    }
+    margin-bottom: 2rem;
   }
 }
 
 .m--workList_img {
-  margin-bottom: 3rem;
-  width: 100%;
+  margin: auto;
+  max-width: 100%;
 
   @media (min-width: map-get($g--grid-breakpoints, md)) {
     display: none;
@@ -53,7 +47,6 @@ ul.m--workList_list {
     right: 0;
     max-width: 65%;
     max-height: 65%;
-    margin: auto;
     z-index: 2000;
 
     .m--workList_anchor:hover + & {
@@ -63,13 +56,13 @@ ul.m--workList_list {
 }
 
 .m--workList_anchor {
-  display: block;
+  display: inline-block;
   padding: 5px 5px 0;
   color: $g--color-black;
   cursor: pointer;
 
   @media (min-width: map-get($g--grid-breakpoints, md)) {
-    position: absolute;
+    position: relative;
     left: -5px;
 
     &:hover,
