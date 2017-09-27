@@ -28,6 +28,16 @@
   border-top: 1px solid $g--color-black;
 }
 
+.m--blogList_year,
+.m--blogList_date,
+.m--blogList_title {
+  line-height: $m--blogList-item-height / 2;
+
+  @media (min-width: map-get($g--grid-breakpoints, sm)) {
+    line-height: $m--blogList-item-height;
+  }
+}
+
 .m--blogList_year {
   line-height: $m--blogList-item-height;
   font-family: $g--font-mono;
@@ -53,11 +63,6 @@
   @media (min-width: map-get($g--grid-breakpoints, md)) {
     margin-left: 4rem;
   }
-}
-
-.m--blogList_date,
-.m--blogList_title {
-  line-height: $m--blogList-item-height;
 }
 
 .m--blogList_date,
@@ -88,6 +93,7 @@
 }
 
 .m--blogList_title {
+  margin-left: 4.5rem;
   border-bottom: 1px solid $g--color-black;
 }
 
