@@ -115,7 +115,6 @@
     _initBarba();
     _setDimensions();
     _bindEvents();
-    // mediumZoom('.js--zoom');
   };
 
   obj._init();

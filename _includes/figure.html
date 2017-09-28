@@ -1,9 +1,4 @@
 <figure>
-  <a href="#{{ include.id }}">
-    <img src="{{ include.url }}" alt="{{ include.alt }}"/>
-    {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
-  </a>
-  <a class="lightbox" id="{{ include.id }}" href="#_">
-    <img src="{{ include.url }}" alt="{{ include.alt }}"/>
-  </a>
+  <img src="{{ include.url }}" alt="{{ include.alt }}"/>
+  {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
 </figure>

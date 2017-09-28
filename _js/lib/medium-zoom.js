@@ -5,5 +5,945 @@
  * https://github.com/francoischalifour/medium-zoom
  * Licensed under MIT
  */
-!function(t,e){"object"==typeof exports&&"object"==typeof module?module.exports=e():"function"==typeof define&&define.amd?define("mediumZoom",[],e):"object"==typeof exports?exports.mediumZoom=e():t.mediumZoom=e()}(this,function(){return function(t){function e(r){if(n[r])return n[r].exports;var o=n[r]={i:r,l:!1,exports:{}};return t[r].call(o.exports,o,o.exports,e),o.l=!0,o.exports}var n={};return e.m=t,e.c=n,e.d=function(t,n,r){e.o(t,n)||Object.defineProperty(t,n,{configurable:!1,enumerable:!0,get:r})},e.n=function(t){var n=t&&t.__esModule?function(){return t.default}:function(){return t};return e.d(n,"a",n),n},e.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},e.p="",e(e.s=0)}([function(t,e,n){"use strict";function r(t){if(Array.isArray(t)){for(var e=0,n=Array(t.length);e<t.length;e++)n[e]=t[e];return n}return Array.from(t)}var o=Object.assign||function(t){for(var e=1;e<arguments.length;e++){var n=arguments[e];for(var r in n)Object.prototype.hasOwnProperty.call(n,r)&&(t[r]=n[r])}return t},i=function(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},i=e.margin,a=void 0===i?0:i,s=e.background,c=void 0===s?"#fff":s,u=e.scrollOffset,f=void 0===u?48:u,d=e.metaClick,l=void 0===d||d;n(1);var p=["IMG"],m=[27,81],v=function(t){return p.includes(t.tagName)},h=function(t){return t.naturalWidth!==t.width},y=function(t){return NodeList.prototype.isPrototypeOf(t)||HTMLCollection.prototype.isPrototypeOf(t)},g=function(t){return t&&1===t.nodeType},b=function(){if(S){var t=new Event("show");S.dispatchEvent(t),N=document.documentElement.scrollTop||document.body.scrollTop,B=!0,document.body.appendChild(M),requestAnimationFrame(function(){document.body.classList.add("medium-zoom--open")}),S.classList.add("medium-zoom-image--open"),S.addEventListener("transitionend",O),A()}},w=function(){if(S){var t=new Event("hide");S.dispatchEvent(t),setTimeout(function(){S&&(B=!0,document.body.classList.remove("medium-zoom--open"),S.style.transform="none",S.addEventListener("transitionend",j))},150)}},E=function(t){S?w():(S=t?t.target:T[0],b())},L=function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};return R=o({},R,t),R.background&&(M.style.backgroundColor=R.background),R},x=function(t,e){T.forEach(function(n){n.addEventListener(t,e)})},k=function(){var t=function t(){var e=new Event("detach");T.forEach(function(t){t.classList.remove("medium-zoom-image"),t.removeEventListener("click",C),t.dispatchEvent(e)}),S&&S.removeEventListener("transitionend",t)};S?(w(),S.addEventListener("transitionend",t)):t()},C=function(t){if((t.metaKey||t.ctrlKey)&&R.metaClick)return window.open(t.target.getAttribute("data-original")||t.target.parentNode.href||t.target.src,"_blank");t.preventDefault(),E(t)},O=function t(){B=!1,S.removeEventListener("transitionend",t);var e=new Event("shown");S.dispatchEvent(e)},j=function t(){if(S){document.body.removeChild(M),S.classList.remove("medium-zoom-image--open"),B=!1,S.removeEventListener("transitionend",t);var e=new Event("hidden");S.dispatchEvent(e),S=null}},z=function(){if(!B&&S){var t=document.documentElement.scrollTop||document.body.scrollTop;Math.abs(N-t)>R.scrollOffset&&w()}},U=function(t){m.includes(t.keyCode||t.which)&&w()},A=function(){if(S){var t=window.innerWidth,e=window.innerHeight,n=t-2*R.margin,r=e-2*R.margin,o=S,i=o.width,a=o.height,s=o.naturalWidth,c=void 0===s?1/0:s,u=o.naturalHeight,f=void 0===u?1/0:u,d=S.getBoundingClientRect(),l=d.top,p=d.left,m=Math.abs(t/2-(p+i/2))<=10,v=Math.min(c,n)/i,h=Math.min(f,r)/a,y=Math.min(v,h)||1,g=m?0:((n-i)/2-p+R.margin)/y,b=((r-a)/2-l+R.margin)/y;S.style.transform="scale("+y+") translate3d("+g+"px, "+b+"px, 0)"}},R={margin:a,background:c,scrollOffset:f,metaClick:l};t instanceof Object&&(R=o({},R,t));var T=function(){try{return Array.isArray(t)?t.filter(v):y(t)?[].concat(r(t)).filter(v):g(t)?[t].filter(v):"string"==typeof t?[].concat(r(document.querySelectorAll(t))).filter(v):[].concat(r(document.querySelectorAll(p.map(function(t){return t.toLowerCase()}).join(",")))).filter(h)}catch(t){throw new TypeError("The provided selector is invalid.\nExpects a CSS selector, a Node element, a NodeList, an HTMLCollection or an array.\nSee: https://github.com/francoischalifour/medium-zoom")}}(),M=function(){var t=document.createElement("div");return t.classList.add("medium-zoom-overlay"),t.style.backgroundColor=R.background,t}(),S=null,N=0,B=!1;return T.forEach(function(t){t.classList.add("medium-zoom-image"),t.addEventListener("click",C)}),M.addEventListener("click",w),document.addEventListener("scroll",z),document.addEventListener("keyup",U),window.addEventListener("resize",w),{show:E,hide:w,toggle:E,update:L,addEventListeners:x,detach:k,images:T,options:R}};t.exports=i},function(t,e,n){var r=n(2);"string"==typeof r&&(r=[[t.i,r,""]]);var o={};o.transform=void 0;n(4)(r,o);r.locals&&(t.exports=r.locals)},function(t,e,n){e=t.exports=n(3)(void 0),e.push([t.i,".medium-zoom-overlay {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  opacity: 0;\n  -webkit-transition: opacity 300ms;\n  transition: opacity 300ms;\n  will-change: opacity;\n}\n\n.medium-zoom--open .medium-zoom-overlay {\n  cursor: pointer;\n  cursor: -webkit-zoom-out;\n  cursor: zoom-out;\n  opacity: 1;\n}\n\n.medium-zoom-image {\n  cursor: pointer;\n  cursor: -webkit-zoom-in;\n  cursor: zoom-in;\n  -webkit-transition: all 300ms;\n  transition: all 300ms;\n}\n\n.medium-zoom-image--open {\n  position: relative;\n  z-index: 999;\n  cursor: pointer;\n  cursor: -webkit-zoom-out;\n  cursor: zoom-out;\n  will-change: transform;\n}\n",""])},function(t,e,n){"use strict";function r(t,e){var n=t[1]||"",r=t[3];if(!r)return n;if(e&&"function"==typeof btoa){var i=o(r);return[n].concat(r.sources.map(function(t){return"/*# sourceURL="+r.sourceRoot+t+" */"})).concat([i]).join("\n")}return[n].join("\n")}function o(t){return"/*# sourceMappingURL=data:application/json;charset=utf-8;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(t))))+" */"}t.exports=function(t){var e=[];return e.toString=function(){return this.map(function(e){var n=r(e,t);return e[2]?"@media "+e[2]+"{"+n+"}":n}).join("")},e.i=function(t,n){"string"==typeof t&&(t=[[null,t,""]]);for(var r={},o=0;o<this.length;o++){var i=this[o][0];"number"==typeof i&&(r[i]=!0)}for(o=0;o<t.length;o++){var a=t[o];"number"==typeof a[0]&&r[a[0]]||(n&&!a[2]?a[2]=n:n&&(a[2]="("+a[2]+") and ("+n+")"),e.push(a))}},e}},function(t,e,n){function r(t,e){for(var n=0;n<t.length;n++){var r=t[n],o=m[r.id];if(o){o.refs++;for(var i=0;i<o.parts.length;i++)o.parts[i](r.parts[i]);for(;i<r.parts.length;i++)o.parts.push(f(r.parts[i],e))}else{for(var a=[],i=0;i<r.parts.length;i++)a.push(f(r.parts[i],e));m[r.id]={id:r.id,refs:1,parts:a}}}}function o(t,e){for(var n=[],r={},o=0;o<t.length;o++){var i=t[o],a=e.base?i[0]+e.base:i[0],s=i[1],c=i[2],u=i[3],f={css:s,media:c,sourceMap:u};r[a]?r[a].parts.push(f):n.push(r[a]={id:a,parts:[f]})}return n}function i(t,e){var n=h(t.insertInto);if(!n)throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");var r=b[b.length-1];if("top"===t.insertAt)r?r.nextSibling?n.insertBefore(e,r.nextSibling):n.appendChild(e):n.insertBefore(e,n.firstChild),b.push(e);else{if("bottom"!==t.insertAt)throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");n.appendChild(e)}}function a(t){if(null===t.parentNode)return!1;t.parentNode.removeChild(t);var e=b.indexOf(t);e>=0&&b.splice(e,1)}function s(t){var e=document.createElement("style");return t.attrs.type="text/css",u(e,t.attrs),i(t,e),e}function c(t){var e=document.createElement("link");return t.attrs.type="text/css",t.attrs.rel="stylesheet",u(e,t.attrs),i(t,e),e}function u(t,e){Object.keys(e).forEach(function(n){t.setAttribute(n,e[n])})}function f(t,e){var n,r,o,i;if(e.transform&&t.css){if(!(i=e.transform(t.css)))return function(){};t.css=i}if(e.singleton){var u=g++;n=y||(y=s(e)),r=d.bind(null,n,u,!1),o=d.bind(null,n,u,!0)}else t.sourceMap&&"function"==typeof URL&&"function"==typeof URL.createObjectURL&&"function"==typeof URL.revokeObjectURL&&"function"==typeof Blob&&"function"==typeof btoa?(n=c(e),r=p.bind(null,n,e),o=function(){a(n),n.href&&URL.revokeObjectURL(n.href)}):(n=s(e),r=l.bind(null,n),o=function(){a(n)});return r(t),function(e){if(e){if(e.css===t.css&&e.media===t.media&&e.sourceMap===t.sourceMap)return;r(t=e)}else o()}}function d(t,e,n,r){var o=n?"":r.css;if(t.styleSheet)t.styleSheet.cssText=E(e,o);else{var i=document.createTextNode(o),a=t.childNodes;a[e]&&t.removeChild(a[e]),a.length?t.insertBefore(i,a[e]):t.appendChild(i)}}function l(t,e){var n=e.css,r=e.media;if(r&&t.setAttribute("media",r),t.styleSheet)t.styleSheet.cssText=n;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(n))}}function p(t,e,n){var r=n.css,o=n.sourceMap,i=void 0===e.convertToAbsoluteUrls&&o;(e.convertToAbsoluteUrls||i)&&(r=w(r)),o&&(r+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(o))))+" */");var a=new Blob([r],{type:"text/css"}),s=t.href;t.href=URL.createObjectURL(a),s&&URL.revokeObjectURL(s)}var m={},v=function(t){var e;return function(){return void 0===e&&(e=t.apply(this,arguments)),e}}(function(){return window&&document&&document.all&&!window.atob}),h=function(t){var e={};return function(n){return void 0===e[n]&&(e[n]=t.call(this,n)),e[n]}}(function(t){return document.querySelector(t)}),y=null,g=0,b=[],w=n(5);t.exports=function(t,e){if("undefined"!=typeof DEBUG&&DEBUG&&"object"!=typeof document)throw new Error("The style-loader cannot be used in a non-browser environment");e=e||{},e.attrs="object"==typeof e.attrs?e.attrs:{},e.singleton||(e.singleton=v()),e.insertInto||(e.insertInto="head"),e.insertAt||(e.insertAt="bottom");var n=o(t,e);return r(n,e),function(t){for(var i=[],a=0;a<n.length;a++){var s=n[a],c=m[s.id];c.refs--,i.push(c)}if(t){r(o(t,e),e)}for(var a=0;a<i.length;a++){var c=i[a];if(0===c.refs){for(var u=0;u<c.parts.length;u++)c.parts[u]();delete m[c.id]}}}};var E=function(){var t=[];return function(e,n){return t[e]=n,t.filter(Boolean).join("\n")}}()},function(t,e,n){"use strict";t.exports=function(t){var e="undefined"!=typeof window&&window.location;if(!e)throw new Error("fixUrls requires window.location");if(!t||"string"!=typeof t)return t;var n=e.protocol+"//"+e.host,r=n+e.pathname.replace(/\/[^\/]*$/,"/");return t.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi,function(t,e){var o=e.trim().replace(/^"(.*)"$/,function(t,e){return e}).replace(/^'(.*)'$/,function(t,e){return e});if(/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/)/i.test(o))return t;var i;return i=0===o.indexOf("//")?o:0===o.indexOf("/")?n+o:r+o.replace(/^\.\//,""),"url("+JSON.stringify(i)+")"})}}])});
-//# sourceMappingURL=medium-zoom.min.js.map
+(function webpackUniversalModuleDefinition(root, factory) {
+  if(typeof exports === 'object' && typeof module === 'object')
+    module.exports = factory();
+  else if(typeof define === 'function' && define.amd)
+    define("mediumZoom", [], factory);
+  else if(typeof exports === 'object')
+    exports["mediumZoom"] = factory();
+  else
+    root["mediumZoom"] = factory();
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
+/******/  // The module cache
+/******/  var installedModules = {};
+/******/
+/******/  // The require function
+/******/  function __webpack_require__(moduleId) {
+/******/
+/******/    // Check if module is in cache
+/******/    if(installedModules[moduleId]) {
+/******/      return installedModules[moduleId].exports;
+/******/    }
+/******/    // Create a new module (and put it into the cache)
+/******/    var module = installedModules[moduleId] = {
+/******/      i: moduleId,
+/******/      l: false,
+/******/      exports: {}
+/******/    };
+/******/
+/******/    // Execute the module function
+/******/    modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/    // Flag the module as loaded
+/******/    module.l = true;
+/******/
+/******/    // Return the exports of the module
+/******/    return module.exports;
+/******/  }
+/******/
+/******/
+/******/  // expose the modules object (__webpack_modules__)
+/******/  __webpack_require__.m = modules;
+/******/
+/******/  // expose the module cache
+/******/  __webpack_require__.c = installedModules;
+/******/
+/******/  // define getter function for harmony exports
+/******/  __webpack_require__.d = function(exports, name, getter) {
+/******/    if(!__webpack_require__.o(exports, name)) {
+/******/      Object.defineProperty(exports, name, {
+/******/        configurable: false,
+/******/        enumerable: true,
+/******/        get: getter
+/******/      });
+/******/    }
+/******/  };
+/******/
+/******/  // getDefaultExport function for compatibility with non-harmony modules
+/******/  __webpack_require__.n = function(module) {
+/******/    var getter = module && module.__esModule ?
+/******/      function getDefault() { return module['default']; } :
+/******/      function getModuleExports() { return module; };
+/******/    __webpack_require__.d(getter, 'a', getter);
+/******/    return getter;
+/******/  };
+/******/
+/******/  // Object.prototype.hasOwnProperty.call
+/******/  __webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/  // __webpack_public_path__
+/******/  __webpack_require__.p = "";
+/******/
+/******/  // Load entry module and return exports
+/******/  return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+/**
+ * Adds a zoom effect on a selection of images when clicked.
+ *
+ * @param {(string|Object[])} [selector] The images to apply the zoom to
+ * @param {number} [options.margin=0] Space outside the zoomed image
+ * @param {string} [options.background="#fff"] The color of the overlay
+ * @param {number} [options.scrollOffset=48] Number of pixels to scroll to dismiss the zoom
+ * @param {boolean} [options.metaClick=true] Enables the action on meta click
+ */
+var mediumZoom = function mediumZoom(selector) {
+  var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+      _ref$margin = _ref.margin,
+      margin = _ref$margin === undefined ? 0 : _ref$margin,
+      _ref$background = _ref.background,
+      background = _ref$background === undefined ? '#fff' : _ref$background,
+      _ref$scrollOffset = _ref.scrollOffset,
+      scrollOffset = _ref$scrollOffset === undefined ? 48 : _ref$scrollOffset,
+      _ref$metaClick = _ref.metaClick,
+      metaClick = _ref$metaClick === undefined ? true : _ref$metaClick;
+
+  __webpack_require__(1);
+
+  var SUPPORTED_FORMATS = ['IMG'];
+  var KEY_ESC = 27;
+  var KEY_Q = 81;
+  var CANCEL_KEYS = [KEY_ESC, KEY_Q];
+
+  var isSupported = function isSupported(img) {
+    return SUPPORTED_FORMATS.includes(img.tagName);
+  };
+  var isScaled = function isScaled(img) {
+    return img.naturalWidth !== img.width;
+  };
+  var isListOrCollection = function isListOrCollection(selector) {
+    return NodeList.prototype.isPrototypeOf(selector) || HTMLCollection.prototype.isPrototypeOf(selector);
+  };
+  var isNode = function isNode(selector) {
+    return selector && selector.nodeType === 1;
+  };
+
+  var getImages = function getImages() {
+    try {
+      return Array.isArray(selector) ? selector.filter(isSupported) : isListOrCollection(selector) ? [].concat(_toConsumableArray(selector)).filter(isSupported) : isNode(selector) ? [selector].filter(isSupported) : typeof selector === 'string' ? [].concat(_toConsumableArray(document.querySelectorAll(selector))).filter(isSupported) : [].concat(_toConsumableArray(document.querySelectorAll(SUPPORTED_FORMATS.map(function (attr) {
+        return attr.toLowerCase();
+      }).join(',')))).filter(isScaled);
+    } catch (err) {
+      throw new TypeError('The provided selector is invalid.\n' + 'Expects a CSS selector, a Node element, a NodeList, an HTMLCollection or an array.\n' + 'See: https://github.com/francoischalifour/medium-zoom');
+    }
+  };
+
+  var createOverlay = function createOverlay() {
+    var overlay = document.createElement('div');
+    overlay.classList.add('medium-zoom-overlay');
+    overlay.style.backgroundColor = options.background;
+
+    return overlay;
+  };
+
+  var zoom = function zoom() {
+    if (!target) return;
+
+    var event = new Event('show');
+    target.dispatchEvent(event);
+
+    scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    isAnimating = true;
+
+    document.body.appendChild(overlay);
+
+    requestAnimationFrame(function () {
+      document.body.classList.add('medium-zoom--open');
+    });
+
+    target.classList.add('medium-zoom-image--open');
+
+    target.addEventListener('transitionend', onZoomEnd);
+
+    animateTarget();
+  };
+
+  var zoomOut = function zoomOut() {
+    if (!target) return;
+
+    var event = new Event('hide');
+    target.dispatchEvent(event);
+
+    setTimeout(function () {
+      if (!target) return;
+
+      isAnimating = true;
+      document.body.classList.remove('medium-zoom--open');
+      target.style.transform = 'none';
+
+      target.addEventListener('transitionend', onZoomOutEnd);
+    }, 150);
+  };
+
+  var triggerZoom = function triggerZoom(event) {
+    if (!target) {
+      target = event ? event.target : images[0];
+      zoom();
+    } else {
+      zoomOut();
+    }
+  };
+
+  var update = function update() {
+    var newOptions = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    options = _extends({}, options, newOptions);
+
+    if (options.background) {
+      overlay.style.backgroundColor = options.background;
+    }
+
+    return options;
+  };
+
+  var addEventListeners = function addEventListeners(type, listener) {
+    images.forEach(function (image) {
+      image.addEventListener(type, listener);
+    });
+  };
+
+  var detach = function detach() {
+    var doDetach = function doDetach() {
+      var event = new Event('detach');
+
+      images.forEach(function (image) {
+        image.classList.remove('medium-zoom-image');
+        image.removeEventListener('click', onClick);
+        image.dispatchEvent(event);
+      });
+
+      if (target) {
+        target.removeEventListener('transitionend', doDetach);
+      }
+    };
+
+    if (!target) {
+      doDetach();
+    } else {
+      zoomOut();
+      target.addEventListener('transitionend', doDetach);
+    }
+  };
+
+  var onClick = function onClick(event) {
+    if (event.metaKey || event.ctrlKey) {
+      if (options.metaClick) {
+        return window.open(event.target.getAttribute('data-original') || event.target.parentNode.href || event.target.src, '_blank');
+      }
+    }
+
+    event.preventDefault();
+
+    triggerZoom(event);
+  };
+
+  var onZoomEnd = function onZoomEnd() {
+    isAnimating = false;
+    target.removeEventListener('transitionend', onZoomEnd);
+
+    var event = new Event('shown');
+    target.dispatchEvent(event);
+  };
+
+  var onZoomOutEnd = function onZoomOutEnd() {
+    if (!target) return;
+
+    document.body.removeChild(overlay);
+    target.classList.remove('medium-zoom-image--open');
+
+    isAnimating = false;
+    target.removeEventListener('transitionend', onZoomOutEnd);
+
+    var event = new Event('hidden');
+    target.dispatchEvent(event);
+
+    target = null;
+  };
+
+  var onScroll = function onScroll() {
+    if (isAnimating || !target) return;
+
+    var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+    if (Math.abs(scrollTop - currentScroll) > options.scrollOffset) {
+      zoomOut();
+    }
+  };
+
+  var onDismiss = function onDismiss(event) {
+    if (CANCEL_KEYS.includes(event.keyCode || event.which)) {
+      zoomOut();
+    }
+  };
+
+  var animateTarget = function animateTarget() {
+    if (!target) return;
+
+    var windowWidth = window.innerWidth;
+    var windowHeight = window.innerHeight;
+
+    var viewportWidth = windowWidth - options.margin * 2;
+    var viewportHeight = windowHeight - options.margin * 2;
+
+    var _target = target,
+        width = _target.width,
+        height = _target.height,
+        _target$naturalWidth = _target.naturalWidth,
+        naturalWidth = _target$naturalWidth === undefined ? +Infinity : _target$naturalWidth,
+        _target$naturalHeight = _target.naturalHeight,
+        naturalHeight = _target$naturalHeight === undefined ? +Infinity : _target$naturalHeight;
+
+    var _target$getBoundingCl = target.getBoundingClientRect(),
+        top = _target$getBoundingCl.top,
+        left = _target$getBoundingCl.left;
+
+    var isCenterAligned = Math.abs(windowWidth / 2 - (left + width / 2)) <= 10;
+
+    var scaleX = Math.min(naturalWidth, viewportWidth) / width;
+    var scaleY = Math.min(naturalHeight, viewportHeight) / height;
+    var scale = Math.min(scaleX, scaleY) || 1;
+    var translateX = isCenterAligned ? 0 : (-left + (viewportWidth - width) / 2 + options.margin) / scale;
+    var translateY = (-top + (viewportHeight - height) / 2 + options.margin) / scale;
+
+    target.style.transform = 'scale(' + scale + ') translate3d(' + translateX + 'px, ' + translateY + 'px, 0)';
+  };
+
+  var options = {
+    margin: margin,
+    background: background,
+    scrollOffset: scrollOffset,
+    metaClick: metaClick
+  };
+
+  if (selector instanceof Object) {
+    options = _extends({}, options, selector);
+  }
+
+  var images = getImages(selector);
+  var overlay = createOverlay();
+
+  var target = null;
+  var scrollTop = 0;
+  var isAnimating = false;
+
+  images.forEach(function (elem) {
+    elem.classList.add('medium-zoom-image');
+    elem.addEventListener('click', onClick);
+  });
+  overlay.addEventListener('click', zoomOut);
+  document.addEventListener('scroll', onScroll);
+  document.addEventListener('keyup', onDismiss);
+  window.addEventListener('resize', zoomOut);
+
+  return {
+    show: triggerZoom,
+    hide: zoomOut,
+    toggle: triggerZoom,
+    update: update,
+    addEventListeners: addEventListeners,
+    detach: detach,
+    images: images,
+    options: options
+  };
+};
+
+module.exports = mediumZoom;
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(2);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(4)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+  // When the styles change, update the <style> tags
+  if(!content.locals) {
+    module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/postcss-loader/lib/index.js??ref--1-2!./medium-zoom.css", function() {
+      var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/postcss-loader/lib/index.js??ref--1-2!./medium-zoom.css");
+      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+      update(newContent);
+    });
+  }
+  // When the module is disposed, remove the <style> tags
+  module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".medium-zoom-overlay {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  opacity: 0;\n  -webkit-transition: opacity 300ms;\n  transition: opacity 300ms;\n  will-change: opacity;\n}\n\n.medium-zoom--open .medium-zoom-overlay {\n  cursor: pointer;\n  cursor: -webkit-zoom-out;\n  cursor: zoom-out;\n  opacity: 1;\n}\n\n.medium-zoom-image {\n  cursor: pointer;\n  cursor: -webkit-zoom-in;\n  cursor: zoom-in;\n  -webkit-transition: all 300ms;\n  transition: all 300ms;\n}\n\n.medium-zoom-image--open {\n  position: relative;\n  z-index: 999;\n  cursor: pointer;\n  cursor: -webkit-zoom-out;\n  cursor: zoom-out;\n  will-change: transform;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function (useSourceMap) {
+  var list = [];
+
+  // return the list of modules as css string
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item, useSourceMap);
+      if (item[2]) {
+        return "@media " + item[2] + "{" + content + "}";
+      } else {
+        return content;
+      }
+    }).join("");
+  };
+
+  // import a list of modules into the list
+  list.i = function (modules, mediaQuery) {
+    if (typeof modules === "string") modules = [[null, modules, ""]];
+    var alreadyImportedModules = {};
+    for (var i = 0; i < this.length; i++) {
+      var id = this[i][0];
+      if (typeof id === "number") alreadyImportedModules[id] = true;
+    }
+    for (i = 0; i < modules.length; i++) {
+      var item = modules[i];
+      // skip already imported module
+      // this implementation is not 100% perfect for weird media query combinations
+      //  when a module is imported multiple times with different media queries.
+      //  I hope this will never occur (Hey this way we have smaller bundles)
+      if (typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+        if (mediaQuery && !item[2]) {
+          item[2] = mediaQuery;
+        } else if (mediaQuery) {
+          item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+        }
+        list.push(item);
+      }
+    }
+  };
+  return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+  var content = item[1] || '';
+  var cssMapping = item[3];
+  if (!cssMapping) {
+    return content;
+  }
+
+  if (useSourceMap && typeof btoa === 'function') {
+    var sourceMapping = toComment(cssMapping);
+    var sourceURLs = cssMapping.sources.map(function (source) {
+      return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';
+    });
+
+    return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+  }
+
+  return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+  // eslint-disable-next-line no-undef
+  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+  var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+  return '/*# ' + data + ' */';
+}
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+
+var stylesInDom = {};
+
+var memoize = function (fn) {
+  var memo;
+
+  return function () {
+    if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+    return memo;
+  };
+};
+
+var isOldIE = memoize(function () {
+  // Test for IE <= 9 as proposed by Browserhacks
+  // @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+  // Tests for existence of standard globals is to allow style-loader
+  // to operate correctly into non-standard environments
+  // @see https://github.com/webpack-contrib/style-loader/issues/177
+  return window && document && document.all && !window.atob;
+});
+
+var getElement = (function (fn) {
+  var memo = {};
+
+  return function(selector) {
+    if (typeof memo[selector] === "undefined") {
+      memo[selector] = fn.call(this, selector);
+    }
+
+    return memo[selector]
+  };
+})(function (target) {
+  return document.querySelector(target)
+});
+
+var singleton = null;
+var singletonCounter = 0;
+var stylesInsertedAtTop = [];
+
+var fixUrls = __webpack_require__(5);
+
+module.exports = function(list, options) {
+  if (typeof DEBUG !== "undefined" && DEBUG) {
+    if (typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+  }
+
+  options = options || {};
+
+  options.attrs = typeof options.attrs === "object" ? options.attrs : {};
+
+  // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+  // tags it will allow on a page
+  if (!options.singleton) options.singleton = isOldIE();
+
+  // By default, add <style> tags to the <head> element
+  if (!options.insertInto) options.insertInto = "head";
+
+  // By default, add <style> tags to the bottom of the target
+  if (!options.insertAt) options.insertAt = "bottom";
+
+  var styles = listToStyles(list, options);
+
+  addStylesToDom(styles, options);
+
+  return function update (newList) {
+    var mayRemove = [];
+
+    for (var i = 0; i < styles.length; i++) {
+      var item = styles[i];
+      var domStyle = stylesInDom[item.id];
+
+      domStyle.refs--;
+      mayRemove.push(domStyle);
+    }
+
+    if(newList) {
+      var newStyles = listToStyles(newList, options);
+      addStylesToDom(newStyles, options);
+    }
+
+    for (var i = 0; i < mayRemove.length; i++) {
+      var domStyle = mayRemove[i];
+
+      if(domStyle.refs === 0) {
+        for (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();
+
+        delete stylesInDom[domStyle.id];
+      }
+    }
+  };
+};
+
+function addStylesToDom (styles, options) {
+  for (var i = 0; i < styles.length; i++) {
+    var item = styles[i];
+    var domStyle = stylesInDom[item.id];
+
+    if(domStyle) {
+      domStyle.refs++;
+
+      for(var j = 0; j < domStyle.parts.length; j++) {
+        domStyle.parts[j](item.parts[j]);
+      }
+
+      for(; j < item.parts.length; j++) {
+        domStyle.parts.push(addStyle(item.parts[j], options));
+      }
+    } else {
+      var parts = [];
+
+      for(var j = 0; j < item.parts.length; j++) {
+        parts.push(addStyle(item.parts[j], options));
+      }
+
+      stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+    }
+  }
+}
+
+function listToStyles (list, options) {
+  var styles = [];
+  var newStyles = {};
+
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i];
+    var id = options.base ? item[0] + options.base : item[0];
+    var css = item[1];
+    var media = item[2];
+    var sourceMap = item[3];
+    var part = {css: css, media: media, sourceMap: sourceMap};
+
+    if(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});
+    else newStyles[id].parts.push(part);
+  }
+
+  return styles;
+}
+
+function insertStyleElement (options, style) {
+  var target = getElement(options.insertInto)
+
+  if (!target) {
+    throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");
+  }
+
+  var lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];
+
+  if (options.insertAt === "top") {
+    if (!lastStyleElementInsertedAtTop) {
+      target.insertBefore(style, target.firstChild);
+    } else if (lastStyleElementInsertedAtTop.nextSibling) {
+      target.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);
+    } else {
+      target.appendChild(style);
+    }
+    stylesInsertedAtTop.push(style);
+  } else if (options.insertAt === "bottom") {
+    target.appendChild(style);
+  } else {
+    throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
+  }
+}
+
+function removeStyleElement (style) {
+  if (style.parentNode === null) return false;
+  style.parentNode.removeChild(style);
+
+  var idx = stylesInsertedAtTop.indexOf(style);
+  if(idx >= 0) {
+    stylesInsertedAtTop.splice(idx, 1);
+  }
+}
+
+function createStyleElement (options) {
+  var style = document.createElement("style");
+
+  options.attrs.type = "text/css";
+
+  addAttrs(style, options.attrs);
+  insertStyleElement(options, style);
+
+  return style;
+}
+
+function createLinkElement (options) {
+  var link = document.createElement("link");
+
+  options.attrs.type = "text/css";
+  options.attrs.rel = "stylesheet";
+
+  addAttrs(link, options.attrs);
+  insertStyleElement(options, link);
+
+  return link;
+}
+
+function addAttrs (el, attrs) {
+  Object.keys(attrs).forEach(function (key) {
+    el.setAttribute(key, attrs[key]);
+  });
+}
+
+function addStyle (obj, options) {
+  var style, update, remove, result;
+
+  // If a transform function was defined, run it on the css
+  if (options.transform && obj.css) {
+      result = options.transform(obj.css);
+
+      if (result) {
+        // If transform returns a value, use that instead of the original css.
+        // This allows running runtime transformations on the css.
+        obj.css = result;
+      } else {
+        // If the transform function returns a falsy value, don't add this css.
+        // This allows conditional loading of css
+        return function() {
+          // noop
+        };
+      }
+  }
+
+  if (options.singleton) {
+    var styleIndex = singletonCounter++;
+
+    style = singleton || (singleton = createStyleElement(options));
+
+    update = applyToSingletonTag.bind(null, style, styleIndex, false);
+    remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+
+  } else if (
+    obj.sourceMap &&
+    typeof URL === "function" &&
+    typeof URL.createObjectURL === "function" &&
+    typeof URL.revokeObjectURL === "function" &&
+    typeof Blob === "function" &&
+    typeof btoa === "function"
+  ) {
+    style = createLinkElement(options);
+    update = updateLink.bind(null, style, options);
+    remove = function () {
+      removeStyleElement(style);
+
+      if(style.href) URL.revokeObjectURL(style.href);
+    };
+  } else {
+    style = createStyleElement(options);
+    update = applyToTag.bind(null, style);
+    remove = function () {
+      removeStyleElement(style);
+    };
+  }
+
+  update(obj);
+
+  return function updateStyle (newObj) {
+    if (newObj) {
+      if (
+        newObj.css === obj.css &&
+        newObj.media === obj.media &&
+        newObj.sourceMap === obj.sourceMap
+      ) {
+        return;
+      }
+
+      update(obj = newObj);
+    } else {
+      remove();
+    }
+  };
+}
+
+var replaceText = (function () {
+  var textStore = [];
+
+  return function (index, replacement) {
+    textStore[index] = replacement;
+
+    return textStore.filter(Boolean).join('\n');
+  };
+})();
+
+function applyToSingletonTag (style, index, remove, obj) {
+  var css = remove ? "" : obj.css;
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = replaceText(index, css);
+  } else {
+    var cssNode = document.createTextNode(css);
+    var childNodes = style.childNodes;
+
+    if (childNodes[index]) style.removeChild(childNodes[index]);
+
+    if (childNodes.length) {
+      style.insertBefore(cssNode, childNodes[index]);
+    } else {
+      style.appendChild(cssNode);
+    }
+  }
+}
+
+function applyToTag (style, obj) {
+  var css = obj.css;
+  var media = obj.media;
+
+  if(media) {
+    style.setAttribute("media", media)
+  }
+
+  if(style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    while(style.firstChild) {
+      style.removeChild(style.firstChild);
+    }
+
+    style.appendChild(document.createTextNode(css));
+  }
+}
+
+function updateLink (link, options, obj) {
+  var css = obj.css;
+  var sourceMap = obj.sourceMap;
+
+  /*
+    If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
+    and there is no publicPath defined then lets turn convertToAbsoluteUrls
+    on by default.  Otherwise default to the convertToAbsoluteUrls option
+    directly
+  */
+  var autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;
+
+  if (options.convertToAbsoluteUrls || autoFixUrls) {
+    css = fixUrls(css);
+  }
+
+  if (sourceMap) {
+    // http://stackoverflow.com/a/26603875
+    css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+  }
+
+  var blob = new Blob([css], { type: "text/css" });
+
+  var oldSrc = link.href;
+
+  link.href = URL.createObjectURL(blob);
+
+  if(oldSrc) URL.revokeObjectURL(oldSrc);
+}
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * When source maps are enabled, `style-loader` uses a link element with a data-uri to
+ * embed the css on the page. This breaks all relative urls because now they are relative to a
+ * bundle instead of the current page.
+ *
+ * One solution is to only use full urls, but that may be impossible.
+ *
+ * Instead, this function "fixes" the relative urls to be absolute according to the current page location.
+ *
+ * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.
+ *
+ */
+
+module.exports = function (css) {
+  // get current location
+  var location = typeof window !== "undefined" && window.location;
+
+  if (!location) {
+    throw new Error("fixUrls requires window.location");
+  }
+
+  // blank or null?
+  if (!css || typeof css !== "string") {
+    return css;
+  }
+
+  var baseUrl = location.protocol + "//" + location.host;
+  var currentDir = baseUrl + location.pathname.replace(/\/[^\/]*$/, "/");
+
+  // convert each url(...)
+  /*
+ This regular expression is just a way to recursively match brackets within
+ a string.
+   /url\s*\(  = Match on the word "url" with any whitespace after it and then a parens
+    (  = Start a capturing group
+      (?:  = Start a non-capturing group
+          [^)(]  = Match anything that isn't a parentheses
+          |  = OR
+          \(  = Match a start parentheses
+              (?:  = Start another non-capturing groups
+                  [^)(]+  = Match anything that isn't a parentheses
+                  |  = OR
+                  \(  = Match a start parentheses
+                      [^)(]*  = Match anything that isn't a parentheses
+                  \)  = Match a end parentheses
+              )  = End Group
+              *\) = Match anything and then a close parens
+          )  = Close non-capturing group
+          *  = Match anything
+       )  = Close capturing group
+  \)  = Match a close parens
+   /gi  = Get all matches, not the first.  Be case insensitive.
+  */
+  var fixedCss = css.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi, function (fullMatch, origUrl) {
+    // strip quotes (if they exist)
+    var unquotedOrigUrl = origUrl.trim().replace(/^"(.*)"$/, function (o, $1) {
+      return $1;
+    }).replace(/^'(.*)'$/, function (o, $1) {
+      return $1;
+    });
+
+    // already a full url? no change
+    if (/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/)/i.test(unquotedOrigUrl)) {
+      return fullMatch;
+    }
+
+    // convert the url to a full url
+    var newUrl;
+
+    if (unquotedOrigUrl.indexOf("//") === 0) {
+      //TODO: should we add protocol?
+      newUrl = unquotedOrigUrl;
+    } else if (unquotedOrigUrl.indexOf("/") === 0) {
+      // path should be relative to the base url
+      newUrl = baseUrl + unquotedOrigUrl; // already starts with '/'
+    } else {
+      // path should be relative to current directory
+      newUrl = currentDir + unquotedOrigUrl.replace(/^\.\//, ""); // Strip leading './'
+    }
+
+    // send back the fixed url(...)
+    return "url(" + JSON.stringify(newUrl) + ")";
+  });
+
+  // send back the fixed css
+  return fixedCss;
+};
+
+/***/ })
+/******/ ]);
+});
+//# sourceMappingURL=medium-zoom.js.map
