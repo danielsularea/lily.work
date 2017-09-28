@@ -8,7 +8,7 @@ tags: [ JS, Jekyll, Hackathon ]
 
 imgfolder: codehermes
 cover_img: init.gif
-detail_img: [ sketch1.jpg, sketch2.jpg, img2.jpg, img3.jpg ]
+detail_img: [ img1.png, img2.png, img3.png, img4.png ]
 links:
   DevPost: "http://devpost.com/software/codehermes-nq0uwd"
   Prototype: "http://lillian-chen.com/codehermes/"
@@ -23,6 +23,16 @@ In order to facilitate student understanding and make it easier for professors t
 
 ## The approach
 We decided to implement CodeHermes in Java with Spring MVC and JSP. While my partners set up Amazon AWS, I began to define the feature functionalities and sketched out the wireframes.
+
+{% include figure.html 
+  url="/assets/img/codehermes/sketch1.jpg"
+  alt="Codehermes landing sketch"
+  caption="Instructor login via Github. Students receive a link." %}
+
+{% include figure.html 
+  url="/assets/img/codehermes/sketch2.jpg"
+  alt="Codehermes instructor portal"
+  caption="Instructor portal, with realtime questions associated with each line number" %}
 
 From there, I did some [rapid prototyping][prototype]{:target="_blank"} in Jekyll, where I explored the interactive elements. After some tinkering, I moved on to implementing in JSP.
 

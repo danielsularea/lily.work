@@ -5,7 +5,7 @@ title: Works
 
 <section class="l--home">
   <div class="g--grid_row">
-    <div class="g--grid_col-md-5">
+    <div class="g--grid_col-12 g--grid_col-sm-8 g--grid_col-lg-5">
       <div class="l--home_bio m--anchorWrap-external-hover">
         <div>
           Hello &mdash; I'm Lily.
@@ -26,6 +26,7 @@ title: Works
               <a href="{{ project.url }}" class="m--workList_anchor">
                 <span class="m--workList_title">{{ project.title }}</span>
                 <span class="m--workList_year">{{ project.year }}</span>
+                <img src="{{ site.url }}/assets/img/{{ project.imgfolder }}/{{ project.cover_img }}">
               </a>
               <img src="{{ site.url }}/assets/img/{{ project.imgfolder }}/{{ project.cover_img }}" class="m--workList_img">
             </li>

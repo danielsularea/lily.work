@@ -2,6 +2,7 @@
   'use strict';
 
   var obj = mainObj;
+  var desktopWidth;
 
   var Classes = obj.settings = {
     fixedBlogHeader:    'js--fixedBlogHeader',
@@ -18,16 +19,7 @@
       insertPageTitle: document.getElementsByClassName('js--insertPageTitle'),
       pageTitleData: document.querySelector('[data-pageTitle]'),
       headerMenu: document.getElementsByClassName('m--header_menu'),
-      onEnter: function () {
-        // if (insertPageTitle[0] && pageTitleData[0]) {
-        //   var pageTitleHtml = '';
-        //   pageTitleHtml += '<div class="m--header_pageTitle js--pageTitlePastFold">';
-        //   pageTitleHtml += pageTitleData[0].dataset.pageTitle;
-        //   pageTitleHtml += '</div>';
-
-        //   this.insertPageTitle[0].insertAdjacentHTML('afterbegin', pageTitleHtml);
-        // }
-      },
+      onEnter: function () {},
       onEnterCompleted: function () {
         var headerItems = document.getElementsByClassName('m--header_menu_anchor'),
             pathname = window.location.pathname.replace('index.html', ''),
@@ -44,7 +36,6 @@
           }
         }
       },
-
       onLeave: function () {},
       onLeaveCompleted: function () {}
     });
@@ -61,12 +52,31 @@
   };
 
   var _setDimensions = function() {
+    var b = window.getComputedStyle(
+      document.querySelector('body'), ':before'
+    ).getPropertyValue('content')
+    .replace('px','')
+    .replace('"', '');
+
+    desktopWidth = parseInt(b, 10);
+
+    _setFixedBlogHeader();
+  };
+
+  var _setFixedBlogHeader = function() {
     var fixedBlogHeader = document.getElementsByClassName(Classes.fixedBlogHeader);
+
     if (fixedBlogHeader[0]) {
       var thisEl = fixedBlogHeader[0],
           parent = thisEl.parentNode;
-      thisEl.style.width = parent.offsetWidth + 'px';
-      thisEl.style.position = 'fixed';
+
+      if (window.innerWidth >= desktopWidth) {
+        thisEl.style.width = parent.offsetWidth + 'px';
+        thisEl.style.position = 'fixed';
+      } else {
+        thisEl.style.width = 'auto';
+        thisEl.style.position = 'static';
+      }
     }
   };
 
@@ -89,15 +99,15 @@
   };
 
   var _handleWindowResize = function() {
-
+    _setDimensions();
   };
 
   var _handleWindowScroll = function() {
-    _handlePageTitlePastFold();
+    // _handlePageTitlePastFold();
   };
 
   var _bindEvents = function() {
-    document.addEventListener("resize", _handleWindowResize);
+    window.addEventListener("resize", _handleWindowResize);
     document.addEventListener("scroll", _handleWindowScroll);
   };
 
@@ -105,6 +115,7 @@
     _initBarba();
     _setDimensions();
     _bindEvents();
+    // mediumZoom('.js--zoom');
   };
 
   obj._init();

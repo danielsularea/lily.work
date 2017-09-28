@@ -7,6 +7,14 @@
 html, body {
   width: 100%;
   height: 100%;
+
+  &:before {
+    content: '#{map-get($g--grid-breakpoints, lg)}';
+    display: none;
+    position: absolute;
+    left: -1000px;
+    top: -1000px;
+  }
 }
 
 html {
@@ -47,4 +55,8 @@ a {
     background-color: $g--color-yellow;
     color: $g--color-black;
   }
+}
+
+ul {
+  padding-left: 1rem;
 }

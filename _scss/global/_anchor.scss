@@ -1,31 +1,33 @@
-a {
-  text-decoration: none;
-}
+// a {
+//   text-decoration: none;
+// }
 
-.g--anchor-external,
-.g--anchorContainer-external a {
-  display: inline-block;
-  color: inherit;
-  text-decoration: underline;
-  transition: color 200ms;
+// @media (min-width: map-get($g--grid-breakpoints, md)) {
+//   .g--anchor-external,
+//   .g--anchorContainer-external a {
+//     display: inline-block;
+//     color: inherit;
+//     text-decoration: underline;
+//     transition: color 200ms;
 
-  // external link
-  &[target="_blank"] {
-    transition: margin 250ms;
+//     // external link
+//     &[target="_blank"] {
+//       transition: margin 250ms;
 
-    &:hover {
-      margin-right: 1.1em;
+//       &:hover {
+//         margin-right: 1.1em;
 
-      &:after {
-        content: '\2197';
-        position: absolute;
-        margin-left: 0.1em;
-        font-family: $g--font-sans-serif;
-        color: $g--color-gray3;
-      }
-    }
-  }
-}
+//         &:after {
+//           content: '\2197';
+//           position: absolute;
+//           margin-left: 0.1em;
+//           font-family: $g--font-sans-serif;
+//           color: $g--color-gray3;
+//         }
+//       }
+//     }
+//   }
+// }
 
 // a.g--anchor-strike {
 //   position: relative;

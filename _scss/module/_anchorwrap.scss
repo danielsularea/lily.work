@@ -7,8 +7,6 @@
 
   &[target="_blank"]:after {
     content: '\2197';
-    position: absolute;
-    margin-left: 0.1em;
     font-family: $g--font-sans-serif;
     color: $g--color-gray3;
   }
@@ -21,20 +19,24 @@
   }
 }
 
-.m--anchorWrap-external-hover a {
-  // external link
-  &[target="_blank"] {
-    transition: margin 250ms;
-
-    &:after {
-      display: none;
-    }
-
-    &:hover {
-      margin-right: 1.1em;
+@media (min-width: map-get($g--grid-breakpoints, md)) {
+  .m--anchorWrap-external-hover a {
+    // external link
+    &[target="_blank"] {
+      transition: margin 250ms;
 
       &:after {
-        display: inline-block;
+        display: none;
+        position: absolute;
+        margin-left: 0.1em;
+      }
+
+      &:hover {
+        margin-right: 1.1em;
+
+        &:after {
+          display: inline-block;
+        }
       }
     }
   }

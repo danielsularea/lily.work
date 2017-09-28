@@ -8,7 +8,7 @@ tags: [ Chrome extensions ]
 
 imgfolder: wikireader
 cover_img: init.gif
-detail_img: [ img3.jpg ]
+detail_img: [ img1.png, img2.png, img3.png, img4.png, img5.png, img6.png ]
 links:
   Download: "https://chrome.google.com/webstore/detail/wikireader-wikipedia-simp/jmhkjngkhknhjmanjmaljpaigdinhdcf"
 ---
@@ -20,6 +20,16 @@ A chrome extension to simplify the Wikipedia experience for users who concentrat
 This was my first attempt at a Chrome extension, which was overall, an excellent experience. Google has nicely documented its javascript APIs, which were essentially all I needed for this simple extension that I managed to hack in just 2 days. Of course, it's not perfect and I try to fix any bugs but I'm nevertheless proud.
 
 Wikipedia.org has been one of the most timeless services on the web, offering vast amount of information to its users for free. However, at the same time, it has been one of the most unchanging platforms in terms of interface. For users who solely seek to gather information quickly, the old layout can be distracting. So in an effort to not only beautify presentation, I've also hidden the lesser used features such as switching languages (as this is a English only extension for now), editing, viewing edit history, and a few minor others.
+
+{% include figure.html 
+  url="/assets/img/wikireader/old.png"
+  alt="Wikipedia without WikiReader"
+  caption="Without WikiReader" %}
+
+{% include figure.html 
+  url="/assets/img/wikireader/new.png"
+  alt="Wikipedia With WikiReader"
+  caption="With WikiReader" %}
 
 To minimalize loading delays, wikiReader works almost solely by overriding its existing CSS styles. Of course, this can cause enormous backlash if Wikipedia chooses to change its element ids and classes but I'm essentially counting on its earlier mentioned tendency to be rather constant. But yes, this still isn't the greatest practice so I will be looking into alternatives in the meantime.
 

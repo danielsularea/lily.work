@@ -5,43 +5,52 @@
 .m--paginate_prev {
   margin-left: -15px;
   padding-left: 15px;
+  text-align: center;
 
-  span {
-    padding-left: 15px;
+  @media (min-width: map-get($g--grid-breakpoints, md)) {
+    text-align: left;
 
-    &:before {
-      content: '\2190';
-      position: absolute;
-      left: 0;
-      margin-right: 5px;
-      transition: left 200ms;
+    span {
+      padding-left: 15px;
+
+      &:before {
+        content: '\2190';
+        position: absolute;
+        left: 0;
+        margin-right: 5px;
+        transition: left 200ms;
+      }
     }
-  }
 
-  &:hover span:before {
-    left: -10px;
+    &:hover span:before {
+      left: -10px;
+    }
   }
 }
 
 .m--paginate_next {
   margin-right: -15px;
   padding-right: 15px;
-  text-align: right;
+  text-align: center;
 
-  span {
-    padding-right: 15px;
+  @media (min-width: map-get($g--grid-breakpoints, md)) {
+    text-align: right;
 
-    &:after {
-      content: '\2192';
-      position: absolute;
-      right: 0;
-      margin-left: 5px;
-      transition: right 200ms;
+    span {
+      padding-right: 15px;
+
+      &:after {
+        content: '\2192';
+        position: absolute;
+        right: 0;
+        margin-left: 5px;
+        transition: right 200ms;
+      }
     }
-  }
 
-  &:hover span:after {
-    right: -10px;
+    &:hover span:after {
+      right: -10px;
+    }
   }
 }
 

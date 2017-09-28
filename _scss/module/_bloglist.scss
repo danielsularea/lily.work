@@ -81,11 +81,14 @@
 }
 
 .m--blogList_date {
-  float: left;
-  width: 4.5rem;
   display: block;
   border-bottom: 1px solid transparent; // for consistent height
   font-family: $g--font-mono;
+
+  @media (min-width: map-get($g--grid-breakpoints, sm)) {
+    float: left;
+    width: 4.5rem;
+  }
 
   @media (min-width: map-get($g--grid-breakpoints, md)) {
     width: 5.5rem;
@@ -93,8 +96,11 @@
 }
 
 .m--blogList_title {
-  margin-left: 4.5rem;
   border-bottom: 1px solid $g--color-black;
+
+  @media (min-width: map-get($g--grid-breakpoints, sm)) {
+    margin-left: 4.5rem;
+  }
 }
 
 .m--blogList_read {
