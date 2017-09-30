@@ -14,30 +14,30 @@
 // --------------------------------------------------
 // Font
 // --------------------------------------------------
-$g--font-url:                   '../fonts';
-$g--font-serif:                 'Lyon Display', Georgia, serif;
-$g--font-sans-serif:            'Graphik', Helvetica Neue, Helvetica, Arial, sans-serif;
-$g--font-mono:                  'GT Pressura Mono', monospace;
+$v--font-url:                   '../fonts';
+$v--font-serif:                 'Lyon Display', Georgia, serif;
+$v--font-sans-serif:            'Graphik', Helvetica Neue, Helvetica, Arial, sans-serif;
+$v--font-mono:                  'GT Pressura Mono', monospace;
 
 // Color
-$g--color-white:                #ffffff;
-$g--color-black:                #333333;
-$g--color-blue:                 #0000ff;
-$g--color-yellow:               #fefeca;
-$g--color-gray1:                #f6f6f6;
-$g--color-gray2:                #dddddd;
-$g--color-gray3:                #a2a2a2;
-$g--color-gray4:                #6f6f6f;
-$g--color-gray5:                #555d6d;
+$v--color-white:                #ffffff;
+$v--color-black:                #333333;
+$v--color-blue:                 #0000ff;
+$v--color-yellow:               #fefeca;
+$v--color-gray1:                #f6f6f6;
+$v--color-gray2:                #dddddd;
+$v--color-gray3:                #a2a2a2;
+$v--color-gray4:                #6f6f6f;
+$v--color-gray5:                #555d6d;
 
 // Site
 // --------------------------------------------------
-$g--site-font-family:           $g--font-sans-serif;
+$v--site-font-family:           $v--font-sans-serif;
 
 // Grid
 // --------------------------------------------------
-$g--grid-columns:               12;
-$g--grid-breakpoints: (
+$v--grid-columns:               12;
+$v--grid-breakpoints: (
   xs: 0,
   sm: 576px,
   md: 768px,
@@ -45,20 +45,20 @@ $g--grid-breakpoints: (
   xl: 1400px
 );
 
-$g--grid-max-widths: (
+$v--grid-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 900px,
   xl: 1200px
 );
 
-$g--grid-gutter-width:          30px;
-$g--grid-gutter-widths: (
-  xs: $g--grid-gutter-width,
-  sm: $g--grid-gutter-width,
-  md: $g--grid-gutter-width,
-  lg: $g--grid-gutter-width,
-  xl: $g--grid-gutter-width
+$v--grid-gutter-width:          0;
+$v--grid-gutter-widths: (
+  xs: $v--grid-gutter-width,
+  sm: $v--grid-gutter-width,
+  md: $v--grid-gutter-width,
+  lg: $v--grid-gutter-width,
+  xl: $v--grid-gutter-width
 );
 
 // --------------------------------------------------
@@ -66,11 +66,16 @@ $g--grid-gutter-widths: (
 // --------------------------------------------------
 // Header
 // --------------------------------------------------
-$m--header-height:              5rem;
+$v--header-height:              5rem;
+$v--header-height-small:        3rem;
+
+// Worklist
+// --------------------------------------------------
+$v--workList_anchor-padding:    0.4rem;
 
 // Bloglist
 // --------------------------------------------------
-$m--blogList-item-height:       60px;
+$v--blogList_item-height:       3rem;
 
 // --------------------------------------------------
 // Layout

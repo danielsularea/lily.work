@@ -8,11 +8,11 @@
   position: relative;
   right: 3px;
   margin: 0;
-  border: 2px solid $g--color-black;
+  border: 2px solid $v--color-black;
   padding: 10px;
   list-style: none;
-  font-family: $g--font-mono;
-  background-color: $g--color-white;
+  font-family: $v--font-mono;
+  background-color: $v--color-white;
 
   &:after {
     content: '';
@@ -21,7 +21,7 @@
     left: 5px;
     right: -5px;
     bottom: -5px;
-    background-color: $g--color-black;
+    background-color: $v--color-black;
     z-index: -1;
   }
 }

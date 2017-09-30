@@ -4,14 +4,18 @@
 <body>
   {% include header.html %}
   
-  <main id="barba-wrapper" role="main" aria-labelledby="page-title">
-    <div class="barba-container g--grid-fixed" data-namespace="default">
-      <div data-transition="fade">
-        <h1 id="page-title" class="a--pageTitle" rel="bookmark">
-          {{ page.title }}
-        </h1>
-        {{ content }}
-      </div>
+  <main id="main" role="main" aria-labelledby="page-title">
+    <div id="barba-wrapper">
+      <article class="barba-container g--grid-fixed" data-namespace="default" itemscope>
+        <div data-transition="fade">
+          <h1 id="page-title" class="a--pageTitle" rel="bookmark" itemprop="name">
+            {{ page.title }}
+          </h1>
+          <section>
+            {{ content }}
+          </section>
+        </div>
+      </article>
     </div>
   </main>
 

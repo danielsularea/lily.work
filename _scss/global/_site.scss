@@ -10,7 +10,7 @@ html, body {
   overflow-x: hidden;
 
   &:before {
-    content: '#{map-get($g--grid-breakpoints, lg)}';
+    content: '#{map-get($v--grid-breakpoints, lg)}';
     display: none;
     position: absolute;
     left: -1000px;
@@ -26,22 +26,25 @@ html {
 body {
   margin: 0;
   padding: 0;
-  padding-top: $m--header-height + 3rem;
   padding-bottom: 2rem;
-  font-family: $g--site-font-family;
+  font-family: $v--site-font-family;
   font-size: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background: $g--color-yellow;
-  // color: $g--site-selection-color;
+  background: $v--color-yellow;
+  // color: $v--site-selection-color;
 }
 
 ::-moz-selection {
-  background: $g--color-yellow;
-  // color: $g--site-selection-color;
+  background: $v--color-yellow;
+  // color: $v--site-selection-color;
+}
+
+main {
+  padding-top: $v--header-height + 3rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -51,10 +54,10 @@ h1, h2, h3, h4, h5, h6 {
 a {
   text-decoration: none;
 
-  &:hover,
-  &:focus {
-    background-color: $g--color-yellow;
-    color: $g--color-black;
+  &:focus,
+  .pointerevents &:hover {
+    background-color: $v--color-yellow;
+    color: $v--color-black;
   }
 }
 

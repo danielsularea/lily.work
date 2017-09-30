@@ -16,9 +16,6 @@
 
     var Default = Barba.BaseView.extend({
       namespace: 'default',
-      insertPageTitle: document.getElementsByClassName('js--insertPageTitle'),
-      pageTitleData: document.querySelector('[data-pageTitle]'),
-      headerMenu: document.getElementsByClassName('m--header_menu'),
       onEnter: function () {},
       onEnterCompleted: function () {
         var headerItems = document.getElementsByClassName('m--header_menu_anchor'),
@@ -60,7 +57,9 @@
 
     desktopWidth = parseInt(b, 10);
 
-    _setFixedBlogHeader();
+    if (!Modernizr.touch) {
+      _setFixedBlogHeader();
+    }
   };
 
   var _setFixedBlogHeader = function() {

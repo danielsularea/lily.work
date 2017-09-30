@@ -1,5 +1,5 @@
 .m--paginate {
-  border-top: 2px solid $g--color-gray1;
+  border-top: 2px solid $v--color-gray1;
 }
 
 .m--paginate_prev {
@@ -7,7 +7,7 @@
   padding-left: 15px;
   text-align: center;
 
-  @media (min-width: map-get($g--grid-breakpoints, md)) {
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
     text-align: left;
 
     span {
@@ -33,7 +33,7 @@
   padding-right: 15px;
   text-align: center;
 
-  @media (min-width: map-get($g--grid-breakpoints, md)) {
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
     text-align: right;
 
     span {
@@ -59,14 +59,14 @@
   display: block;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-family: $g--font-mono;
-  color: $g--color-gray5;
+  font-family: $v--font-mono;
+  color: $v--color-gray5;
   text-decoration: none;
 
   span {
     position: relative;
     display: block;
-    color: $g--color-gray3;
+    color: $v--color-gray3;
   }
 
   // &:hover,

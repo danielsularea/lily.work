@@ -6,13 +6,9 @@ title: Works
 <section class="l--home">
   <div class="g--grid_row">
     <div class="g--grid_col-12 g--grid_col-sm-8 g--grid_col-lg-5">
-      <div class="l--home_bio m--anchorWrap-external-hover">
-        <div>
-          Hello &mdash; I'm Lily.
-        </div>
-        <div>
-          I'm a developer working on healthcare applications at <a href="http://ibm.com" target="_blank">IBM</a>
-        </div>
+      <div class="l--home_bio m--anchorWrap m--anchorWrap-external-hover">
+        Hello &mdash; I'm Lily.<br />
+        I'm a developer working on healthcare applications at <a href="http://ibm.com" target="_blank">IBM</a>
       </div>
     </div>
     <div class="g--grid_col-12">
@@ -23,10 +19,10 @@ title: Works
         <ul class="m--workList_list">
           {% for project in site.categories["work"] %}
             <li>
-              <a href="{{ project.url }}" class="m--workList_anchor">
-                <span class="m--workList_title">{{ project.title }}</span>
-                <span class="m--workList_year">{{ project.year }}</span>
-                <img src="{{ site.url }}/assets/img/{{ project.imgfolder }}/{{ project.cover_img }}">
+              <a href="{{ project.url }}" class="m--workList_anchor" itemscope itemtype="http://schema.org/BlogPosting" alt="{{ project.title }}" title="{{ project.title }}">
+                <span class="m--workList_title" itemprop="name headline">{{ project.title }}</span>
+                <span class="m--workList_year" itemprop="datePublished">{{ project.year }}</span>
+                <img src="{{ site.url }}/assets/img/{{ project.imgfolder }}/{{ project.cover_img }}" itemprop="image">
               </a>
               <img src="{{ site.url }}/assets/img/{{ project.imgfolder }}/{{ project.cover_img }}" class="m--workList_img">
             </li>

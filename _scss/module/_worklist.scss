@@ -3,13 +3,13 @@
 }
 
 .m--workList_label {
-  margin-bottom: 30px;
-  font-family: $g--font-mono;
+  margin-bottom: 1rem;
+  font-family: $v--font-mono;
   font-size: 1rem;
-  color: $g--color-gray5;
+  color: $v--color-gray5;
 
   span {
-    font-family: $g--font-sans-serif;
+    font-family: $v--font-sans-serif;
     vertical-align: text-top;
   }
 }
@@ -31,42 +31,26 @@ ul.m--workList_list {
   li {
     display: block;
     margin-bottom: 2rem;
-  }
-}
 
-.m--workList_img {
-  display: none;
-
-  @media (min-width: map-get($g--grid-breakpoints, md)) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    max-width: 65%;
-    max-height: 65%;
-    margin: auto;
-    z-index: 2000;
-
-    .m--workList_anchor:hover + & {
-      display: block;
+    @media (min-width: map-get($v--grid-breakpoints, md)) {
+      margin-bottom: 1.4rem;
     }
   }
 }
 
 .m--workList_anchor {
   display: inline-block;
-  padding: 5px 5px 0;
-  color: $g--color-black;
+  padding: $v--workList_anchor-padding $v--workList_anchor-padding 0;
+  color: $v--color-black;
   cursor: pointer;
 
   img {
     max-width: 100%;
   }
 
-  @media (min-width: map-get($g--grid-breakpoints, md)) {
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
     position: relative;
-    left: -5px;
+    left: -$v--workList_anchor-padding;
 
     &:hover,
     &:focus {
@@ -80,21 +64,45 @@ ul.m--workList_list {
 }
 
 .m--workList_title {
-  font-family: $g--font-serif;
+  font-family: $v--font-serif;
   font-size: 2rem;
 
-  @media (min-width: map-get($g--grid-breakpoints, md)) {
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
+    font-size: 2.8rem;
+  }
+
+  @media (min-width: map-get($v--grid-breakpoints, lg)) {
     font-size: 3.4rem;
   }
 }
 
 .m--workList_year {
   vertical-align: top;
-  font-family: $g--font-mono;
+  font-family: $v--font-mono;
   font-size: 1rem;
-  color: $g--color-blue;
+  color: $v--color-blue;
 
-  @media (min-width: map-get($g--grid-breakpoints, md)) {
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
     font-size: 1.2rem;
+  }
+}
+
+.m--workList_img {
+  display: none;
+
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-width: 65%;
+    max-height: 65%;
+    margin: auto;
+    z-index: 2000;
+
+    .m--workList_anchor:hover + & {
+      display: block;
+    }
   }
 }

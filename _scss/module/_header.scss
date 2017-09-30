@@ -1,10 +1,16 @@
+$v--header-height-detected: $v--header-height-small !default;
+
+// @media (min-width: map-get($v--grid-breakpoints, md)) {
+  $v--header-height-detected: $v--header-height;
+// }
+
 .m--header {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
-  height: $m--header-height;
-  border-bottom: 1px solid $g--color-gray1;
-  background-color: $g--color-white;
+  height: $v--header-height-detected;
+  // border-bottom: 1px solid $v--color-gray1;
+  background-color: $v--color-white;
   z-index: 100;
   overflow: hidden;
 }
@@ -30,25 +36,30 @@
 
 .m--header_title,
 .m--header_menu_anchor {
-  line-height: $m--header-height;
-  font-family: $g--font-mono;
+  line-height: $v--header-height-detected;
+  font-family: $v--font-mono;
   font-weight: 400;
   font-size: 1rem;
   text-decoration: none;
-  color: $g--color-black;
+  color: $v--color-gray4;
+  transition: color 250ms;
+
+  .pointerevents &:hover {
+    color: $v--color-black;
+  }
 }
 
 .m--header_pageTitle {
   position: absolute;
   display: block;
-  top: -$m--header-height;
+  top: -$v--header-height-detected;
   left: 0;
   right: 0;
   text-align: center;
-  line-height: $m--header-height;
-  font-family: $g--font-serif;
+  line-height: $v--header-height-detected;
+  font-family: $v--font-serif;
   font-size: 1.4rem;
-  color: $g--color-black;
+  color: $v--color-black;
   transition: top 250ms;
   z-index: -1;
 
@@ -63,7 +74,7 @@
 
   &::before {
     content: '';
-    border-bottom: 4px solid $g--color-blue;
+    border-bottom: 4px solid $v--color-blue;
     position: absolute;
     top: 50%;
     width: 0;

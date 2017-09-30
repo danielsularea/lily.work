@@ -1,25 +1,32 @@
-.m--anchorWrap-external-persist a,
-.m--anchorWrap-external-hover a {
-  display: inline-block;
-  color: inherit;
+.m--anchorWrap a {
+  color: $v--color-gray5;
   text-decoration: underline;
   transition: color 200ms;
 
-  &[target="_blank"]:after {
-    content: '\2197';
-    font-family: $g--font-sans-serif;
-    color: $g--color-gray3;
+  &:hover {
+    color: $v--color-black;
   }
 }
 
-.m--anchorWrap-external-persist a {
-  &[target="_blank"] {
-    position: relative;
-    margin-right: 1.1em;
-  }
-}
+@media (min-width: map-get($v--grid-breakpoints, md)) {
+  .m--anchorWrap-external-persist a,
+  .m--anchorWrap-external-hover a {
+    display: inline-block;
 
-@media (min-width: map-get($g--grid-breakpoints, md)) {
+    &[target="_blank"]:after {
+      content: '\2197';
+      font-family: $v--font-sans-serif;
+      color: $v--color-gray3;
+    }
+  }
+
+  .m--anchorWrap-external-persist a {
+    &[target="_blank"] {
+      position: relative;
+      margin-right: 1.1em;
+    }
+  }
+
   .m--anchorWrap-external-hover a {
     // external link
     &[target="_blank"] {

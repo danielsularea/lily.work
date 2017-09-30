@@ -5,11 +5,11 @@
 
 .m--blogHeader_title {
   line-height: 1.2;
-  font-family: $g--font-serif;
+  font-family: $v--font-serif;
   font-weight: 700;
   font-size: 2rem;
 
-  @media (min-width: map-get($g--grid-breakpoints, md)) {
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
     font-size: 2.4rem;
   }
 }
@@ -17,8 +17,8 @@
 .m--blogHeader_date {
   display: block;
   margin-bottom: 5px;
-  font-family: $g--font-mono;
-  color: $g--color-blue;
+  font-family: $v--font-mono;
+  color: $v--color-blue;
 }
 
 .m--blogHeader_title,

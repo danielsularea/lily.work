@@ -5,7 +5,6 @@ title: Blog
 
 {% assign postsByYear = site.categories["blog"] | group_by_exp:"post", "post.date | date: '%y'"  %}
 <div class="m--blogList">
-  <h2 class="m--blogList_header">Blog</h2>
   {% for curPost in postsByYear %}
     <div class="m--blogList_yearBorder"></div>
     <div class="m--blogList_year">'{{ curPost.name }}</div>
