@@ -1,46 +1,23 @@
 .m--workList {
-  margin-top: 6rem;
-}
-
-.m--workList_label {
-  margin-bottom: 1rem;
-  font-family: $v--font-mono;
-  font-size: 1rem;
-  color: $v--color-gray5;
-
-  span {
-    font-family: $v--font-sans-serif;
-    vertical-align: text-top;
-  }
-}
-
-.m--workList_label,
-.m--workList_anchor {
-  animation-name: fadeInUp;
-  animation-delay: 500ms;
-  animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
-  animation-duration: 0.6s;
-  animation-fill-mode: both;
-}
-
-ul.m--workList_list {
+  display: block;
   margin: 0;
   padding: 0;
   list-style: none;
 
   li {
     display: block;
-    margin-bottom: 2rem;
+    margin-bottom: 1.4rem;
 
     @media (min-width: map-get($v--grid-breakpoints, md)) {
-      margin-bottom: 1.4rem;
+      margin-bottom: 2rem;
     }
   }
 }
 
 .m--workList_anchor {
+  @include u--animation-fadeInUp;
   display: inline-block;
-  padding: $v--workList_anchor-padding $v--workList_anchor-padding 0;
+  // padding: $v--workList_anchor-padding $v--workList_anchor-padding 0;
   color: $v--color-black;
   cursor: pointer;
 
@@ -50,7 +27,7 @@ ul.m--workList_list {
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
     position: relative;
-    left: -$v--workList_anchor-padding;
+    // left: -$v--workList_anchor-padding;
 
     &:hover,
     &:focus {
@@ -65,7 +42,7 @@ ul.m--workList_list {
 
 .m--workList_title {
   font-family: $v--font-serif;
-  font-size: 2rem;
+  font-size: 1.9rem;
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
     font-size: 2.8rem;

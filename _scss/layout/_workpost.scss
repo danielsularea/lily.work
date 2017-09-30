@@ -2,7 +2,13 @@
 
 }
 
-.l--workPost_img {
+.l--workPost_content {
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
+    padding-right: 2rem;
+  }
+}
+
+.l--workPost_images {
   // &:first-of-type {
   //   margin-top: 10rem;
   // }

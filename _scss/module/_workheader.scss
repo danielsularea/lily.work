@@ -11,11 +11,7 @@
 .m--workHeader_subtitle,
 .m--workHeader_year,
 .m--workHeader_img {
-  animation-name: fadeInUp;
-  animation-delay: 500ms;
-  animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
-  animation-duration: 0.6s;
-  animation-fill-mode: both;
+  @include u--animation-fadeInUp;
 }
 
 .m--workHeader_title,

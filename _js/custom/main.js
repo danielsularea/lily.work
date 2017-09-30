@@ -57,9 +57,7 @@
 
     desktopWidth = parseInt(b, 10);
 
-    if (!Modernizr.touch) {
-      _setFixedBlogHeader();
-    }
+    _setFixedBlogHeader();
   };
 
   var _setFixedBlogHeader = function() {
@@ -111,8 +109,11 @@
   };
 
   obj._init = function() {
-    _initBarba();
-    _setDimensions();
+    if (!('ontouchstart' in document.documentElement)) {
+      _initBarba();
+      _setDimensions();
+    }
+
     _bindEvents();
   };
 

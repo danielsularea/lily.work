@@ -1,6 +1,22 @@
 .l--home_bio {
-  margin-top: 2rem;
   line-height: 1.8;
   font-size: 1.4rem;
   color: $v--color-gray5;
+}
+
+.l--home_pointer {
+  display: inline-block;
+  position: relative;
+  margin: 1.5rem 0 4rem;
+  font-family: $v--font-mono;
+  font-size: 1rem;
+  color: $v--color-gray5;
+
+  &:after {
+    content: '\2193';
+    position: absolute;
+    top: 0;
+    right: -1rem;
+    font-family: $v--font-sans-serif;
+  }
 }
