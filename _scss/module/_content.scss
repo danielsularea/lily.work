@@ -59,6 +59,7 @@
   code,
   pre {
     font-family: $v--font-mono;
+    font-size: inherit;
     background-color: $v--color-gray1;
     color: $v--color-black;
   }

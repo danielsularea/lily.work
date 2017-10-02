@@ -1,6 +1,6 @@
 ---
 layout: blogpost
-title:  Local Development Setup in OS X Yosemite
+title:  Local Development Setup for OS X Yosemite
 ---
 
 I purchased a new Macbook and found myself in the very tasking process of setting everything back the way it used to be so I've decided to document what I do for a general setup.

@@ -109,11 +109,8 @@
   };
 
   obj._init = function() {
-    if (!('ontouchstart' in document.documentElement)) {
-      _initBarba();
-      _setDimensions();
-    }
-
+    // _initBarba();
+    _setDimensions();
     _bindEvents();
   };
 

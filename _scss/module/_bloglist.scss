@@ -18,10 +18,14 @@
 //   }
 // }
 
-.m--blogList_header {
-  margin-bottom: 1rem;
-  font-family: $v--font-serif;
-  font-size: 1.6rem;
+// .m--blogList_header {
+//   margin-bottom: 1rem;
+//   font-family: $v--font-serif;
+//   font-size: 1.6rem;
+// }
+
+.m--blogList {
+  border-bottom: 1px solid $v--color-black;
 }
 
 .m--blogList_yearBorder {
@@ -57,6 +61,7 @@
   display: block;
   
   @media (min-width: map-get($v--grid-breakpoints, sm)) {
+    padding: 0;
     margin-left: 3rem;
   }
 
@@ -107,7 +112,14 @@
   @include noSelect();
   color: $v--color-white;
 
-  .m--blogList_anchor:visited & {
-    color: $v--color-gray3;
+  // silly I know...but transparent doesn't work
+  .m--blogList_anchor:hover & {
+    color: $v--color-yellow;
+  }
+
+  @media (min-width: map-get($v--grid-breakpoints, sm)) {
+    .m--blogList_anchor:visited & {
+      color: $v--color-gray3;
+    }
   }
 }
