@@ -14,7 +14,7 @@ links:
   Prototype: "http://lillian-chen.com/codehermes/"
 ---
 
-I attended my first hackathon at the 2015 [Big Red Hacks][brh]{:target="_blank"} and was given 36 hours to develop something from scratch. I worked with two incredible backend developers and created CodeHermes, a new way for educators to discuss code.
+I attended my first hackathon at the 2015 [Big Red Hacks][brh]{:target="_blank"} and was given 36 hours to develop something from scratch. Along with two incredible backend developers, we created CodeHermes, a new way for educators to discuss code.
 
 ## The idea
 As a senior in Computer Science, I have had many courses in which the professor needs to project large chunks of code on the screen to students during lecture. This becomes less frequent in higher level courses but in introductory ones that are mainly dedicated to teaching syntax and algorithms, students who are new to programming may feel overwhelmed by the unfamiliar format.
