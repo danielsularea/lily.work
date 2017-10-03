@@ -5,27 +5,23 @@
   {% include header.html %}
   
   <main id="main" role="main" aria-labelledby="page-title">
-    <div id="barba-wrapper">
-      <article class="barba-container g--grid-fixed" data-namespace="default" itemscope itemtype="http://schema.org/BlogPosting">
-        <div data-transition="fade">
-          <div class="g--grid_row">
-            <div class="g--grid_col-lg-4">
-              <header class="m--blogHeader js--fixedBlogHeader">
-                <time class="m--blogHeader_date" datetime="{{ page.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
-                <h1 id="page-title" class="m--blogHeader_title" itemprop="name headline">{{ page.title }}</h1>
-              </header>
-            </div>
-            <div class="g--grid_col-lg-8">
-              <section class="m--content m--anchorWrap m--anchorWrap-external-hover" itemprop="articleBody">
-                {{ content }}
-              </section>
-            </div>
-          </div>
-          
-          {% include paginate.html category="blog" %}
+    <article class="g--grid-fixed" data-namespace="default" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="g--grid_row">
+        <div class="g--grid_col-lg-4">
+          <header class="m--blogHeader js--fixedBlogHeader">
+            <time class="m--blogHeader_date" datetime="{{ page.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+            <h1 id="page-title" class="m--blogHeader_title" itemprop="name headline">{{ page.title }}</h1>
+          </header>
         </div>
-      </article>
-    </div>
+        <div class="g--grid_col-lg-8">
+          <section class="m--content m--anchorWrap m--anchorWrap-external-hover" itemprop="articleBody">
+            {{ content }}
+          </section>
+        </div>
+      </div>
+      
+      {% include paginate.html category="blog" %}
+    </article>
   </main>
 
   {% include scripts.html %}

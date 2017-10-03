@@ -5,35 +5,31 @@
   {% include header.html %}
   
   <main id="main" class="l--workPost" role="main" aria-labelledby="page-title">
-    <div id="barba-wrapper">
-      <article class="barba-container g--grid-fixed" data-namespace="default" itemscope itemtype="http://schema.org/WorkPosting">
-        <div data-transition="fade">
-          <div class="g--grid_row">
-            <header class="m--workHeader g--grid_col-12">
-              <div class="m--workHeader_year" itemprop="datePublished">{{ page.year }}</div>
-              <h1 id="page-title">
-                <div class="m--workHeader_title" itemprop="name headline">{{ page.title }}</div>
-                <div class="m--workHeader_subtitle">{{ page.subtitle }}</div>
-              </h1>
-              <img class="m--workHeader_img" src="{{ site.url }}/assets/img/{{ page.imgfolder }}/{{ page.cover_img }}" alt="{{ page.title }}" itemprop="image">
-            </header>
-            <section class="l--workPost_content m--content g--grid_col-12 g--grid_col-md-10 g--grid_col-lg-6 m--anchorWrap m--anchorWrap-external-hover" itemprop="articleBody">
-              {{ content }}
-            </section>
-            {% for img in page.detail_img %}
-              {% capture imgurl %}{{ site.url }}/assets/img/{{ page.imgfolder }}/{{ img }}{% endcapture %}
-              <div class="l--workPost_images g--grid_col-12 g--grid_col-md-6">
-                {% include figure.html
-                  url=imgurl 
-                  alt="" %}
-              </div>
-            {% endfor %}
+    <article class="g--grid-fixed" data-namespace="default" itemscope itemtype="http://schema.org/WorkPosting">
+      <div class="g--grid_row">
+        <header class="m--workHeader g--grid_col-12">
+          <div class="m--workHeader_year" itemprop="datePublished">{{ page.year }}</div>
+          <h1 id="page-title">
+            <div class="m--workHeader_title" itemprop="name headline">{{ page.title }}</div>
+            <div class="m--workHeader_subtitle">{{ page.subtitle }}</div>
+          </h1>
+          <img class="m--workHeader_img" src="{{ site.url }}/assets/img/{{ page.imgfolder }}/{{ page.cover_img }}" alt="{{ page.title }}" itemprop="image">
+        </header>
+        <section class="l--workPost_content m--content g--grid_col-12 g--grid_col-md-10 g--grid_col-lg-6 m--anchorWrap m--anchorWrap-external-hover" itemprop="articleBody">
+          {{ content }}
+        </section>
+        {% for img in page.detail_img %}
+          {% capture imgurl %}{{ site.url }}/assets/img/{{ page.imgfolder }}/{{ img }}{% endcapture %}
+          <div class="l--workPost_images g--grid_col-12 g--grid_col-md-6">
+            {% include figure.html
+              url=imgurl 
+              alt="" %}
           </div>
+        {% endfor %}
+      </div>
 
-          {% include paginate.html category="work" %}
-        </div>
-      </article>
-    </div>
+      {% include paginate.html category="work" %}
+    </article>
   </main>
 
   {% include scripts.html %}
