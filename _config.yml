@@ -5,11 +5,11 @@ description: >
   She recently graduated from Cornell studying computer science.
 keywords: developer,cornell,ibm,web,front-end,backend,design,jquery,node,rails,ruby,django,HTML,CSS,javascript
 baseurl: "" # the subpath of your site, e.g. /blog/
-# url: "http://lillian-chen.com/"
+# url: "http://lily.work/"
 permalink: none
 
 # Contact
-email: 			    iam@lillian-chen.com
+email: 			    lilyc5459@gmail.com
 twitter_url:    https://twitter.com/lllychen
 twitter_handle: "@lllychen"
 github_url:     https://github.com/lllychen

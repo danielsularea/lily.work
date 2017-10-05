@@ -16,6 +16,8 @@ links:
 
 A chrome extension to simplify the Wikipedia experience for users who concentrate solely on retrieving information.
 
+[Download WikiReader.](https://chrome.google.com/webstore/detail/wikireader-wikipedia-simp/jmhkjngkhknhjmanjmaljpaigdinhdcf){:target="_blank"}
+
 ## Overview
 This was my first attempt at a Chrome extension, which was overall, an excellent experience. Google has nicely documented its javascript APIs, which were essentially all I needed for this simple extension that I managed to hack in just 2 days. Of course, it's not perfect and I try to fix any bugs but I'm nevertheless proud.
 
