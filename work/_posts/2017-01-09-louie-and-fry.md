@@ -20,7 +20,7 @@ Disclaimer that because this was a creative exercise, I left behind consideratio
 
 Despite that though, I did have some users install my gem theme anyways and send me great feedback. They were much appreciated.
 
-[Get Louie](http://lily.work/louie/){:target="_blank"}\\
-[Get Fry](http://lily.work/fry/){:target="_blank"}
+[See Louie](http://lily.work/louie/){:target="_blank"}\\
+[See Fry](http://lily.work/fry/){:target="_blank"}
 
 [version]: https://jekyllrb.com/news/2016/07/26/jekyll-3-2-0-released/
