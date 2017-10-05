@@ -8,8 +8,8 @@ imgfolder: louiefry
 cover_img: init3.gif
 detail_img: [ louie1.png, louie2.png, louie3.png, fry1.png, fry2.png, fry3.png, fry4.png ]
 links:
-  Louie: "http://lillian-chen.com/louie/"
-  Fry: "http://lillian-chen.com/fry/"
+  Louie: "http://lily.work/louie/"
+  Fry: "http://lily.work/fry/"
 ---
 
 Louie and Fry were personal experiments with Jekyll ruby-based themes and unconventional web design.
