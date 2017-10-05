@@ -48,15 +48,17 @@
     });
   };
 
-  var _setDimensions = function() {
+  var _setDesktopWidth = function() {
     var b = window.getComputedStyle(
-      document.querySelector('body'), ':before'
-    ).getPropertyValue('content')
-    .replace('px','')
-    .replace('"', '');
+              document.querySelector('body'), ':before'
+            ).getPropertyValue('content')
+            .replace('px','')
+            .replace('"', '');
 
     desktopWidth = parseInt(b, 10);
+  };
 
+  var _setDimensions = function() {
     _setFixedBlogHeader();
   };
 
@@ -96,6 +98,7 @@
   };
 
   var _handleWindowResize = function() {
+    _setDesktopWidth();
     _setDimensions();
   };
 
@@ -110,7 +113,9 @@
 
   obj._init = function() {
     // _initBarba();
+    _setDesktopWidth();
     _setDimensions();
+    mediumZoom(document.querySelectorAll('[data-action="zoom"]'));
     _bindEvents();
   };
 

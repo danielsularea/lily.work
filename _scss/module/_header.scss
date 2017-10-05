@@ -49,6 +49,11 @@ $v--header-height-detected: $v--header-height-small !default;
   }
 }
 
+.m--header_titleAccent {
+  font-size: 1.2rem;
+  color: $v--color-blue;
+}
+
 .m--header_pageTitle {
   position: absolute;
   display: block;
