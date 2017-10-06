@@ -1,26 +1,20 @@
-$v--header-height-detected: $v--header-height-small !default;
-
-// @media (min-width: map-get($v--grid-breakpoints, md)) {
-  $v--header-height-detected: $v--header-height;
-// }
-
 .m--header {
+  @include clearfix();
   position: absolute;
   top: 0;
   width: 100%;
-  height: $v--header-height-detected;
-  // border-bottom: 1px solid $v--color-gray1;
+  height: $v--header-height / 1.5;
   background-color: $v--color-white;
-  z-index: 100;
-  overflow: hidden;
-}
+  z-index: 10;
 
-.m--header_left {
-  float: left;
-}
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
+    height: $v--header-height;
+  }
 
-.m--header_right {
-  float: right;
+  .pointerevents & {
+    position: fixed;
+    border-bottom: 1px solid $v--color-gray1;
+  }
 }
 
 .m--header_menu {
@@ -31,12 +25,21 @@ $v--header-height-detected: $v--header-height-small !default;
 
 .m--header_menu_item {
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 1rem;
+}
+
+.m--header_title,
+.m--header_menu_anchor,
+.m--header_pageTitle {
+  line-height: $v--header-height / 1.5;
+
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
+    line-height: $v--header-height;
+  }
 }
 
 .m--header_title,
 .m--header_menu_anchor {
-  line-height: $v--header-height-detected;
   font-family: $v--font-mono;
   font-weight: 400;
   font-size: 1rem;
@@ -55,21 +58,24 @@ $v--header-height-detected: $v--header-height-small !default;
 }
 
 .m--header_pageTitle {
-  position: absolute;
-  display: block;
-  top: -$v--header-height-detected;
-  left: 0;
-  right: 0;
+  display: none;
   text-align: center;
-  line-height: $v--header-height-detected;
   font-family: $v--font-serif;
   font-size: 1.4rem;
   color: $v--color-black;
   transition: top 250ms;
   z-index: -1;
 
-  &.visible {
-    top: 0;
+  @media (min-width: map-get($v--grid-breakpoints, sm)) {
+    position: absolute;
+    display: block;
+    top: -$v--header-height;
+    left: 0;
+    right: 0;
+
+    &.visible {
+      top: 0;
+    }
   }
 }
 
@@ -79,15 +85,14 @@ $v--header-height-detected: $v--header-height-small !default;
 
   &::before {
     content: '';
-    border-bottom: 4px solid $v--color-blue;
+    border-bottom: 0.3rem solid $v--color-blue;
     position: absolute;
-    top: 50%;
+    top: 48%;
     width: 0;
     right: 100%;
     transition: right .3s ease-in-out,
                 width .3s ease-in-out;
     transition-timing-function: cubic-bezier(0.19,1,.22,1);
-    // z-index: -1;
   }
 
   &.active {

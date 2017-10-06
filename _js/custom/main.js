@@ -2,11 +2,12 @@
   'use strict';
 
   var obj = mainObj;
-  var desktopWidth;
+  var MaxMobileWidth;
 
-  var Classes = obj.settings = {
+  var Selectors = obj.settings = {
     fixedBlogHeader:    'js--fixedBlogHeader',
     pageTitlePastFold:  'js--pageTitlePastFold',
+    zoomImages:         '[data-action="zoom"]',
   };
 
   var _initBarba = function() {
@@ -14,30 +15,30 @@
       return Transition;
     };
 
-    var Default = Barba.BaseView.extend({
-      namespace: 'default',
-      onEnter: function () {},
-      onEnterCompleted: function () {
-        var headerItems = document.getElementsByClassName('m--header_menu_anchor'),
-            pathname = window.location.pathname.replace('index.html', ''),
-            pathArr = pathname.split('/'),
-            activeAttr = pathArr[1] ? pathArr[1] : 'works';
+    // var Default = Barba.BaseView.extend({
+    //   namespace: 'default',
+    //   onEnter: function () {},
+    //   onEnterCompleted: function () {
+    //     var headerItems = document.getElementsByClassName('m--header_menu_anchor'),
+    //         pathname = window.location.pathname.replace('index.html', ''),
+    //         pathArr = pathname.split('/'),
+    //         activeAttr = pathArr[1] ? pathArr[1] : 'works';
 
-        for (var i = 0; i < headerItems.length; i++) {
-          var curAttr = headerItems[i].dataset.headeritem;
+    //     for (var i = 0; i < headerItems.length; i++) {
+    //       var curAttr = headerItems[i].dataset.headeritem;
 
-          if (!pathArr[2] && curAttr === activeAttr) {
-            headerItems[i].classList.add('active');
-          } else {
-            headerItems[i].classList.remove('active');
-          }
-        }
-      },
-      onLeave: function () {},
-      onLeaveCompleted: function () {}
-    });
+    //       if (!pathArr[2] && curAttr === activeAttr) {
+    //         headerItems[i].classList.add('active');
+    //       } else {
+    //         headerItems[i].classList.remove('active');
+    //       }
+    //     }
+    //   },
+    //   onLeave: function () {},
+    //   onLeaveCompleted: function () {}
+    // });
 
-    Default.init();
+    // Default.init();
 
     document.addEventListener('DOMContentLoaded', function(e) {
       Barba.Pjax.start();
@@ -45,17 +46,22 @@
 
     Barba.Dispatcher.on('transitionCompleted', function (currentStatus, oldStatus, container) {
       _setDimensions();
+      _initMediumZoom();
     });
   };
 
-  var _setDesktopWidth = function() {
+  var _initMediumZoom = function() {
+    mediumZoom(document.querySelectorAll(Selectors.zoomImages));
+  };
+
+  var _setMaxMobileWidth = function() {
     var b = window.getComputedStyle(
               document.querySelector('body'), ':before'
             ).getPropertyValue('content')
             .replace('px','')
             .replace('"', '');
 
-    desktopWidth = parseInt(b, 10);
+    MaxMobileWidth = parseInt(b, 10);
   };
 
   var _setDimensions = function() {
@@ -63,13 +69,13 @@
   };
 
   var _setFixedBlogHeader = function() {
-    var fixedBlogHeader = document.getElementsByClassName(Classes.fixedBlogHeader);
+    var fixedBlogHeader = document.getElementsByClassName(Selectors.fixedBlogHeader);
 
     if (fixedBlogHeader[0]) {
       var thisEl = fixedBlogHeader[0],
           parent = thisEl.parentNode;
 
-      if (window.innerWidth >= desktopWidth) {
+      if (window.innerWidth >= MaxMobileWidth) {
         thisEl.style.width = parent.offsetWidth + 'px';
         thisEl.style.position = 'fixed';
       } else {
@@ -80,7 +86,7 @@
   };
 
   var _handlePageTitlePastFold = function() {
-    var pageTitleArr = document.getElementsByClassName(Classes.pageTitlePastFold);
+    var pageTitleArr = document.getElementsByClassName(Selectors.pageTitlePastFold);
 
     if (!pageTitleArr[0]) {
       console.log('page title not found!');
@@ -89,7 +95,7 @@
 
     var pageTitle = pageTitleArr[0];
 
-    if (document.body.scrollTop > window.innerHeight) {
+    if (window.pageYOffset >= window.innerHeight) {
       pageTitle.classList.add('visible');
       return;
     }
@@ -98,12 +104,12 @@
   };
 
   var _handleWindowResize = function() {
-    _setDesktopWidth();
+    _setMaxMobileWidth();
     _setDimensions();
   };
 
   var _handleWindowScroll = function() {
-    // _handlePageTitlePastFold();
+    _handlePageTitlePastFold();
   };
 
   var _bindEvents = function() {
@@ -112,10 +118,10 @@
   };
 
   obj._init = function() {
-    // _initBarba();
-    _setDesktopWidth();
+    _initBarba();
+    _setMaxMobileWidth();
     _setDimensions();
-    mediumZoom(document.querySelectorAll('[data-action="zoom"]'));
+    _initMediumZoom();
     _bindEvents();
   };
 

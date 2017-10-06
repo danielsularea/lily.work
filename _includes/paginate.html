@@ -17,7 +17,7 @@
 {% if prev_post or next_post %}
   <div class="g--grid_row">
     <div class="m--paginate">
-      <div class="g--grid_col-md-6">
+      <div class="g--grid_col-md-5">
         {% if prev_post %}
           <a href="{{ prev_post.url }}" class="m--paginate_prev">
             <span>Previous</span>
@@ -26,7 +26,11 @@
         {% endif %}
       </div>
 
-      <div class="g--grid_col-md-6">
+      <div class="g--grid_col-0 g--grid_col-md-2">
+        <a href="{{ site.url }}/{% if page.categories[0] == 'blog' %}blog{% endif %}" class="m--paginate_all">Back to Index</a>
+      </div>
+
+      <div class="g--grid_col-md-5">
         {% if next_post %}
           <a href="{{ next_post.url }}" class="m--paginate_next">
             <span>Next</span>

@@ -2,18 +2,24 @@
 <html lang="en">
 {% include head.html %}
 <body>
-  {% include header.html %}
-  
-  <main id="main" role="main" aria-labelledby="page-title">
-    <article class="g--grid-fixed" data-namespace="default" itemscope>
-      <h1 id="page-title" class="a--pageTitle" rel="bookmark" itemprop="name headline">
-        {{ page.title }}
-      </h1>
-      <section>
-        {{ content }}
-      </section>
-    </article>
-  </main>
+  <div id="barba-wrapper">
+    <div class="barba-container">
+      <div data-transition="fade">
+        {% include header.html %}
+    
+        <main id="main" role="main" aria-labelledby="page-title">
+          <article class="g--grid-fixed" data-namespace="default" itemscope>
+            <h1 id="page-title" class="a--pageTitle" rel="bookmark" itemprop="name headline">
+              {{ page.title }}
+            </h1>
+            <section>
+              {{ content }}
+            </section>
+          </article>
+        </main>
+      </div>
+    </div>
+  </div>
 
   {% include scripts.html %}
 </body>

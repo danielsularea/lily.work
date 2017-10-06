@@ -402,7 +402,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, ".medium-zoom-overlay {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  opacity: 0;\n  -webkit-transition: opacity 300ms;\n  transition: opacity 300ms;\n  will-change: opacity;\n}\n\n.medium-zoom--open .medium-zoom-overlay {\n  cursor: pointer;\n  cursor: -webkit-zoom-out;\n  cursor: zoom-out;\n  opacity: 1;\n}\n\n.medium-zoom-image {\n  cursor: pointer;\n  cursor: -webkit-zoom-in;\n  cursor: zoom-in;\n  -webkit-transition: all 300ms;\n  transition: all 300ms;\n}\n\n.medium-zoom-image--open {\n  position: relative;\n  z-index: 999;\n  cursor: pointer;\n  cursor: -webkit-zoom-out;\n  cursor: zoom-out;\n  will-change: transform;\n}\n", ""]);
+exports.push([module.i, ".medium-zoom-overlay {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  opacity: 0;\n  -webkit-transition: opacity 300ms;\n  transition: opacity 300ms;\n  will-change: opacity;\n}\n\n.medium-zoom--open .medium-zoom-overlay {\n  cursor: pointer;\n  cursor: -webkit-zoom-out;\n  cursor: zoom-out;\n  opacity: 0.5;\n  z-index: 998;\n}\n\n.medium-zoom-image {\n  cursor: pointer;\n  cursor: -webkit-zoom-in;\n  cursor: zoom-in;\n  -webkit-transition: all 300ms;\n  transition: all 300ms;\n}\n\n.medium-zoom-image--open {\n  position: relative;\n  z-index: 999;\n  cursor: pointer;\n  cursor: -webkit-zoom-out;\n  cursor: zoom-out;\n  will-change: transform;\n}\n", ""]);
 
 // exports
 

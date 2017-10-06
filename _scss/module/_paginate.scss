@@ -1,66 +1,14 @@
 .m--paginate {
   border-top: 2px solid $v--color-gray1;
-}
-
-.m--paginate_prev {
-  margin-left: -15px;
-  padding-left: 15px;
-  text-align: center;
-
-  @media (min-width: map-get($v--grid-breakpoints, md)) {
-    text-align: left;
-
-    span {
-      padding-left: 15px;
-
-      &:before {
-        content: '\2190';
-        position: absolute;
-        left: 0;
-        margin-right: 5px;
-        transition: left 200ms;
-      }
-    }
-
-    &:hover span:before {
-      left: -10px;
-    }
-  }
-}
-
-.m--paginate_next {
-  margin-right: -15px;
-  padding-right: 15px;
-  text-align: center;
-
-  @media (min-width: map-get($v--grid-breakpoints, md)) {
-    text-align: right;
-
-    span {
-      padding-right: 15px;
-
-      &:after {
-        content: '\2192';
-        position: absolute;
-        right: 0;
-        margin-left: 5px;
-        transition: right 200ms;
-      }
-    }
-
-    &:hover span:after {
-      right: -10px;
-    }
-  }
+  font-family: $v--font-mono;
 }
 
 .m--paginate_prev,
 .m--paginate_next {
   display: block;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 0.6rem;
   background-color: $v--color-white;
-  font-family: $v--font-mono;
+  text-align: center;
   color: $v--color-gray5;
   text-decoration: none;
 
@@ -74,4 +22,60 @@
   // &:focus {
   //   background: none;
   // }
+}
+
+.m--paginate_prev {
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
+    margin-left: -1rem;
+    padding-left: 1rem;
+    text-align: left;
+
+    span {
+      padding-left: 1rem;
+
+      &:before {
+        content: '\2190';
+        position: absolute;
+        left: 0;
+        margin-right: 0.4rem;
+        transition: left 200ms;
+      }
+    }
+
+    &:hover span:before {
+      left: -0.6rem;
+    }
+  }
+}
+
+.m--paginate_next {
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
+    margin-right: -1rem;
+    padding-right: 1rem;
+    text-align: right;
+
+    span {
+      padding-right: 1rem;
+
+      &:after {
+        content: '\2192';
+        position: absolute;
+        right: 0;
+        margin-left: 0.4rem;
+        transition: right 200ms;
+      }
+    }
+
+    &:hover span:after {
+      right: -0.6rem;
+    }
+  }
+}
+
+.m--paginate_all {
+  display: block;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  color: $v--color-gray3;
 }

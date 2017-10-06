@@ -11,17 +11,17 @@
     left: 0;
     height: 100%;
     width: 100%;
-    opacity: .8;
+    opacity: 0.8;
   }
 
   &:after {
-    @include u--animation-glitch;
+    animation: glitch 12s cubic-bezier(.25, .46, .45, .94) reverse both infinite;
     color: #f0f;
     z-index: -2;
   }
 
   &:before {
-    @include u--animation-glitch;
+    animation: glitch 12s cubic-bezier(.25, .46, .45, .94) both infinite;
     color: #0ff;
     z-index: -1;
   }

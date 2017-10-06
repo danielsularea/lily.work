@@ -1,6 +1,11 @@
 <header class="m--header" role="banner">
-  <div class="g--grid-fixed js--insertPageTitle">
-    <div class="m--header_left">
+  <div class="g--grid-fixed">
+    {% if page.categories[0] == "work" %}
+      <div class="m--header_pageTitle js--pageTitlePastFold">
+        {{ page.title }}
+      </div>
+    {% endif %}
+    <div class="u--float-left">
       <a href="#main" class="a--skipToContent" tabindex="0" role="button">Skip to main content</a>
       <h1>
         <a href="{{ site.url }}/" class="m--header_title" rel="home" title="Home">
@@ -8,7 +13,7 @@
         </a>
       </h1>
     </div>
-    <nav class="m--header_right" role="navigation" aria-label="Site Navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <nav class="u--float-right" role="navigation" aria-label="Site Navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
       <ul class="m--header_menu" role="menu" aria-label="Site main menu">
         <li class="m--header_menu_item">
           <a href="{{ site.url }}/" class="m--header_menu_anchor{% if page.url == '/' %} active{% endif %}" title="Works" itemprop="url" data-headeritem="works">Works</a>

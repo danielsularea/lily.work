@@ -4,9 +4,10 @@
 @import 'vendor/pygments';
 
 // Utility
-@import 'util/clearfix';
-@import 'util/noSelect';
 @import 'util/animation';
+@import 'util/clearfix';
+@import 'util/float';
+@import 'util/noSelect';
 
 // Accessibility
 @import 'a11y/skipToContent';
