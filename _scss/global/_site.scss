@@ -55,7 +55,7 @@ a {
   text-decoration: none;
 
   &:focus,
-  .pointerevents &:hover {
+  .no-touchevents &:hover {
     background-color: $v--color-yellow;
     color: $v--color-black;
   }
