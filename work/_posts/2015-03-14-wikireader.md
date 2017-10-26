@@ -2,6 +2,7 @@
 layout: workpost
 title: WikiReader
 subtitle: Simplifies the Wikipedia experience
+type: Recreational
 year: 2015
 
 tags: [ Chrome extensions ]

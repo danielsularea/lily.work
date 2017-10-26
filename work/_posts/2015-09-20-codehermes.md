@@ -2,6 +2,7 @@
 layout: workpost
 title: CodeHermes
 subtitle: Empowers educators to discuss code
+type: Recreational
 year: 2015
 
 tags: [ JS, Jekyll, Hackathon ]

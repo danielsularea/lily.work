@@ -2,6 +2,7 @@
 layout: workpost
 title: Cornell Business Review
 subtitle: Joins the conversation
+type: Commercial
 year: 2012-14
 
 imgfolder: cbr

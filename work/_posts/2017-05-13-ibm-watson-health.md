@@ -1,7 +1,8 @@
 ---
 layout: workpost
 title: IBM Clinical Review
-subtitle: Brings cognitive to medical imaging
+subtitle: improves the medical record
+type: Commercial
 year: 2017
 
 imgfolder: ibm
