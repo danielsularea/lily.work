@@ -1,36 +1,56 @@
 .m--workHeader {
   margin: 0 0 2rem;
-  text-align: center;
+  text-align: left;
+
+  @media (min-width: map-get($v--grid-breakpoints, sm)) {
+    text-align: center;
+  }
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
     margin: 0.5rem 0 6rem;
   }
 }
 
-.m--workHeader_title,
-.m--workHeader_subtitle,
-.m--workHeader_year,
+.m--workHeader_titles,
+.m--workHeader_meta,
 .m--workHeader_img {
   @include u--animation-fadeInUp;
 }
 
-.m--workHeader_title,
-.m--workHeader_subtitle {
-  line-height: 1.1;
+.m--workHeader_titles {
+  line-height: 1.125em;
   font-family: $v--font-serif;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.8rem;
+
+  @media (min-width: map-get($v--grid-breakpoints, sm)) {
+    line-height: 1.1em;
+    font-size: 1.9rem;
+  }
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
     font-size: 3.4rem;
   }
 }
 
+.m--workHeader_title,
 .m--workHeader_subtitle {
+  display: inline;
+
+  @media (min-width: map-get($v--grid-breakpoints, sm)) {
+    display: block;
+  }
+}
+
+.m--workHeader_title {
   color: $v--color-blue;
 }
 
-.m--workHeader_year {
+.m--workHeader_subtitle {
+  text-transform: lowercase;
+}
+
+.m--workHeader_meta {
   margin-bottom: 0.5rem;
   font-family: $v--font-mono;
   font-weight: normal;

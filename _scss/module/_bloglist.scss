@@ -35,7 +35,6 @@
   display: block;
   
   @media (min-width: map-get($v--grid-breakpoints, sm)) {
-    padding: 0;
     margin-left: 3rem;
   }
 
@@ -61,12 +60,14 @@
 
 .m--blogList_date {
   display: block;
+  padding-top: 0.5rem;
   border-bottom: 1px solid transparent; // for consistent height
   font-family: $v--font-mono;
 
   @media (min-width: map-get($v--grid-breakpoints, sm)) {
     float: left;
     width: 4.5rem;
+    padding-top: 0;
   }
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
@@ -75,10 +76,12 @@
 }
 
 .m--blogList_title {
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid $v--color-black;
 
   @media (min-width: map-get($v--grid-breakpoints, sm)) {
     margin-left: 5.5rem;
+    padding-bottom: 0;
   }
 }
 

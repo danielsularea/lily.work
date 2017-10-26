@@ -1,5 +1,5 @@
 .l--home_bio {
-  line-height: 1.8;
+  line-height: 1.6;
   font-size: 1.4rem;
   color: $v--color-gray5;
 }
@@ -7,10 +7,14 @@
 .l--home_pointer {
   display: inline-block;
   position: relative;
-  margin: 1.5rem 0 4rem;
+  margin: 2.5rem 0 1rem;
   font-family: $v--font-mono;
   font-size: 1rem;
   color: $v--color-gray5;
+
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
+    margin: 4rem 0 2rem;
+  }
 
   &:after {
     content: '\2193';

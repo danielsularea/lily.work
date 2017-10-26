@@ -10,7 +10,7 @@
   }
 
   h2 {
-    margin: 2.5rem auto 1.25rem;
+    margin: 2.5rem auto 1.2rem;
     font-weight: 400;
     line-height: 1.6em;
     font-size: 1.25rem;
@@ -58,9 +58,17 @@
   code,
   pre {
     font-family: $v--font-mono;
-    font-size: inherit;
+    font-family: 1rem;
     background-color: $v--color-gray1;
     color: $v--color-black;
+
+    .touchevents & {
+      font-size: 0.6rem;
+    }
+
+    @media (min-width: map-get($v--grid-breakpoints, sm)) {
+      font-size: 1rem;
+    }
   }
 
   pre {

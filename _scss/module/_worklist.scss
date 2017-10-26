@@ -7,10 +7,6 @@
   li {
     display: block;
     margin-bottom: 1.4rem;
-
-    @media (min-width: map-get($v--grid-breakpoints, md)) {
-      margin-bottom: 2rem;
-    }
   }
 }
 
@@ -41,6 +37,7 @@
 }
 
 .m--workList_title {
+  line-height: 1.2em;
   font-family: $v--font-serif;
   font-size: 1.9rem;
 
