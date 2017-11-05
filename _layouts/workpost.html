@@ -14,9 +14,10 @@
                 <div class="m--workHeader_meta" itemprop="datePublished">{{ page.type }} / {{ page.year }}</div>
                 <h1 id="page-title" class="m--workHeader_titles">
                   <div class="m--workHeader_title" itemprop="name headline">{{ page.title }}</div>
-                  <div class="m--workHeader_subtitle">{{ page.subtitle }}</div>
+                  <!-- <div class="m--workHeader_subtitle">{{ page.subtitle }}</div> -->
                 </h1>
                 <img class="m--workHeader_img" src="{{ site.url }}/assets/img/{{ page.imgfolder }}/{{ page.cover_img }}" alt="{{ page.title }}" itemprop="image">
+                <div class="m--workHeader_arrow">&#8595;</div>
               </header>
               <section class="l--workPost_content m--content m--anchorWrap m--anchorWrap-external-hover g--grid_col-12 g--grid_col-md-10 g--grid_col-lg-6" itemprop="articleBody">
                 {{ content }}

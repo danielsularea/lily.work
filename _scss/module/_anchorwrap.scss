@@ -1,11 +1,11 @@
 .m--anchorWrap a {
-  color: $v--color-gray4;
+  color: $v--color-black;
   text-decoration: underline;
   transition: color 200ms;
 
-  &:hover {
-    color: $v--color-black;
-  }
+  // &:hover {
+  //   color: $v--color-black;
+  // }
 }
 
 @media (min-width: map-get($v--grid-breakpoints, md)) {

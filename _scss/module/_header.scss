@@ -11,7 +11,7 @@
     height: $v--header-height;
   }
 
-  .no-touchevents & {
+  .no-touchevents &.scrolled {
     position: fixed;
     border-bottom: 1px solid $v--color-gray1;
   }
@@ -94,9 +94,9 @@
   .no-touchevents & {
     &::before {
       content: '';
-      border-bottom: 0.3rem solid $v--color-blue;
+      border-bottom: 0.1rem solid $v--color-blue;
       position: absolute;
-      top: 48%;
+      top: 50%;
       width: 0;
       right: 100%;
       transition: right .3s ease-in-out,

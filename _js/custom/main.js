@@ -5,6 +5,7 @@
   var MaxMobileWidth;
 
   var Selectors = obj.settings = {
+    headerScroll:       'js--headerScroll',
     fixedBlogHeader:    'js--fixedBlogHeader',
     pageTitlePastFold:  'js--pageTitlePastFold',
     zoomImages:         '[data-action="zoom"]',
@@ -85,11 +86,26 @@
     }
   };
 
+  var _handleHeaderScroll = function() {
+    var headerArr = document.getElementsByClassName(Selectors.headerScroll);
+
+    if (!headerArr[0]) { return; }
+
+    var header = headerArr[0];
+
+    if (window.pageYOffset > 0) {
+      header.classList.add('scrolled');
+      return;
+    }
+
+    header.classList.remove('scrolled');
+  };
+
   var _handlePageTitlePastFold = function() {
     var pageTitleArr = document.getElementsByClassName(Selectors.pageTitlePastFold);
 
     if (!pageTitleArr[0]) {
-      console.log('page title not found!');
+      // console.log('page title not found!');
       return;
     }
 
@@ -109,6 +125,7 @@
   };
 
   var _handleWindowScroll = function() {
+    _handleHeaderScroll();
     _handlePageTitlePastFold();
   };
 
