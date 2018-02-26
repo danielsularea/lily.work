@@ -5,7 +5,7 @@ year: 2018
 company: IBM
 
 summary: >
-  Women worldwide depend on periodic mammography to detect breast cancer. But with an alarming shortage of radiologists, we find a way to bridge the gap.
+  Women worldwide depend on periodic screening mammograms to detect breast cancer. But with an alarming shortage of radiologists to read them, we find a way to bridge the gap.
 
 imgfolder: ibm
 cover_img: ibm.gif
