@@ -1,9 +1,7 @@
 ---
-layout: workpost
+layout: blogpost
 title: Cornell Business Review
-subtitle: Joins the conversation
-type: Commercial
-year: 2012-14
+published: false
 
 imgfolder: cbr
 cover_img: init.png

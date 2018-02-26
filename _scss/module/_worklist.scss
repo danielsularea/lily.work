@@ -6,12 +6,17 @@
 
   li {
     display: block;
-    margin-bottom: 1.4rem;
+    margin: 1.5rem 0;
+  }
+
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
+    li {
+      margin: 3rem 0;
+    }
   }
 }
 
 .m--workList_anchor {
-  @include u--animation-fadeInUp;
   display: inline-block;
   // padding: $v--workList_anchor-padding $v--workList_anchor-padding 0;
   color: $v--color-black;
@@ -30,6 +35,13 @@
       z-index: 2001;
     }
 
+    &:after {
+    content: '\2192';
+    margin-left: 0.5rem;
+    line-height: 1.2em;
+    font-size: 1.9rem;
+  }
+
     img {
       display: none;
     }
@@ -40,13 +52,14 @@
   line-height: 1.2em;
   font-family: $v--font-serif;
   font-size: 1.9rem;
+  text-decoration: underline;
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
     font-size: 2.8rem;
   }
 
   @media (min-width: map-get($v--grid-breakpoints, lg)) {
-    font-size: 3.4rem;
+    font-size: 2.8rem;
   }
 }
 
@@ -57,7 +70,7 @@
   color: $v--color-blue;
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 

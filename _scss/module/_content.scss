@@ -62,13 +62,13 @@
     background-color: $v--color-gray1;
     color: $v--color-black;
 
-    .touchevents & {
-      font-size: 0.6rem;
-    }
+    // .touchevents & {
+    //   font-size: 0.6rem;
+    // }
 
-    @media (min-width: map-get($v--grid-breakpoints, sm)) {
-      font-size: 1rem;
-    }
+    // @media (min-width: map-get($v--grid-breakpoints, sm)) {
+    //   font-size: 1rem;
+    // }
   }
 
   pre {

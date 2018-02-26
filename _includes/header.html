@@ -7,22 +7,21 @@
     {% endif %}
     <div class="u--float-left">
       <a href="#main" class="a--skipToContent" tabindex="0" role="button">Skip to main content</a>
-      <h1>
-        <a href="{{ site.url }}/" class="m--header_title" rel="home" title="Home">
-          Lillian Chen
-        </a>
-      </h1>
+      {% if page.url != '/' %}
+        <h1>
+          <a href="{{ site.url }}/" class="m--header_title" rel="home" title="Home">
+            Lily Chen
+          </a>
+        </h1>
+      {% endif %}
     </div>
     <nav class="u--float-right" role="navigation" aria-label="Site Navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
       <ul class="m--header_menu" role="menu" aria-label="Site main menu">
         <li class="m--header_menu_item">
-          <a href="{{ site.url }}/" class="m--header_menu_anchor{% if page.url == '/' %} active{% endif %}" title="Works" itemprop="url" data-headeritem="works">Works</a>
+          <a href="{{ site.url }}/" class="m--header_menu_anchor{% if page.url == '/' %} active{% endif %}" title="Works" itemprop="url" data-headeritem="works">Work</a>
         </li>
         <li class="m--header_menu_item">
           <a href="{{ site.url }}/blog" class="m--header_menu_anchor{% if page.url == '/blog/' %} active{% endif %}" title="Blog" itemprop="url" data-headeritem="blog">Blog</a>
-        </li>
-        <li class="m--header_menu_item">
-          <a href="{{ site.url }}/about" class="m--header_menu_anchor{% if page.url == '/about/' %} active{% endif %}" title="About" itemprop="url" data-headeritem="about">About</a>
         </li>
       </ul>
     </nav>

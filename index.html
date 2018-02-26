@@ -4,30 +4,45 @@ title: Works
 ---
 
 <section class="l--home">
-  <div class="g--grid_row">
-    <div class="g--grid_col-12 g--grid_col-sm-8 g--grid_col-lg-5">
-      <div class="l--home_bio m--anchorWrap m--anchorWrap-external-hover">
-        Hello &mdash; I'm Lily.<br />
-        I am currently developing<br />
-        healthcare applications at <a href="http://ibm.com" target="_blank">IBM</a>
-      </div>
-      <small class="l--home_pointer">
-        Selected Works
-      </small>
-    </div>
-    <div class="g--grid_col-12">
-      <ul class="m--workList">
-        {% for project in site.categories["work"] %}
-          <li>
-            <a href="{{ project.url }}" class="m--workList_anchor" itemscope itemtype="http://schema.org/BlogPosting" alt="{{ project.title }}" title="{{ project.title }}">
-              <span class="m--workList_title" itemprop="name headline">{{ project.title }}</span>
-              <span class="m--workList_year" itemprop="datePublished">{{ project.year }}</span>
-              <img src="{{ site.url }}/assets/img/{{ project.imgfolder }}/{{ project.cover_img }}" itemprop="image">
-            </a>
-            <img src="{{ site.url }}/assets/img/{{ project.imgfolder }}/{{ project.cover_img }}" class="m--workList_img" aria-hidden="true">
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
+  <p class="m--anchorWrap m--anchorWrap-external-hover">
+    Lily is a product designer and developer at <a href="https://www.ibm.com/watson/health/" target="_blank">IBM Watson Health</a> based in Cambridge, MA. She recently graduated from <a href="http://www.cs.cornell.edu" target="_blank">Cornell</a> where she studied computer science and worked in a ton of startups.
+  </p>
+  <p>See her most recent work:</p>
+  
+  <ul class="m--workList">
+    {% for project in site.categories["work"] %}
+      <li>
+        <a href="{{ project.url }}" class="m--workList_anchor" itemscope itemtype="http://schema.org/BlogPosting" alt="{{ project.title }}" title="{{ project.title }}">
+          <span class="m--workList_title" itemprop="name headline">{{ project.title }}</span>
+          <span class="m--workList_year" itemprop="datePublished">{{ project.company }}</span>
+          <img src="{{ site.url }}/assets/img/{{ project.imgfolder }}/{{ project.cover_img }}" itemprop="image">
+        </a>
+        <img src="{{ site.url }}/assets/img/{{ project.imgfolder }}/{{ project.cover_img }}" class="m--workList_img" aria-hidden="true">
+        <p>{{ project.summary }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+  <h2>Experience</h2>
+  <p>
+    IBM Watson Health<br />
+    Product Designer and Developer<br />
+    2016-Present
+  </p>
+  <p>
+    Blue State Digital<br />
+    Product Development Intern<br />
+    2015
+  </p>
+  <p>
+    About 7-ish startups<br />
+    Various<br />
+    2013-2016
+  </p>
+
+  <h2>Contact</h2>
+  <p class="m--anchorWrap m--anchorWrap-external-hover">
+    <a href="http://github.com/lllychen" target="_blank"><span>Github</span></a><br />
+    <a href="http://www.linkedin.com/in/lllychen/" target="_blank"><span>LinkedIn</span></a><br />
+    <a href="http://twitter.com/lllychen" target="_blank"><span>Twitter</span></a>
+  </p>
 </section>
