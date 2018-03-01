@@ -1,6 +1,6 @@
 ---
 layout: workpost
-title: American Cancer Society Partnership
+title: American Cancer Society Project
 year: 2017
 company: IBM
 
