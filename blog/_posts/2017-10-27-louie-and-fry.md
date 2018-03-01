@@ -1,6 +1,6 @@
 ---
 layout: blogpost
-title: Jekyll Ruby-Based Themes and Unconventional Web Design
+title: Playing with Jekyll Ruby-Based Themes
 
 imgfolder: louiefry
 cover_img: init3.gif

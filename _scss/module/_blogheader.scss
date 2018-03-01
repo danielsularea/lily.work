@@ -1,6 +1,10 @@
 .m--blogHeader {
   margin-bottom: 2rem;
-  padding-right: 1rem;
+  padding-right: 0;
+
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
+    padding-right: 2rem;
+  }
 }
 
 .m--blogHeader_title {

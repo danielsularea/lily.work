@@ -5,20 +5,20 @@ title: Works
 
 <section class="l--home">
   <p class="m--anchorWrap m--anchorWrap-external-hover">
-    Lily is a product designer and developer at <a href="https://www.ibm.com/watson/health/" target="_blank">IBM Watson Health</a> based in Cambridge, MA. She recently graduated from <a href="http://www.cs.cornell.edu" target="_blank">Cornell</a> where she studied computer science and worked in a ton of startups.
+    Lily is a product designer and developer at <a href="https://www.ibm.com/watson/health/" target="_blank">IBM Watson Health</a>. She recently graduated from <a href="http://www.cs.cornell.edu" target="_blank">Cornell</a> where she studied computer science and worked in a ton of startups.
   </p>
   <p>See her most recent work:</p>
-  
+  <!-- <h2>Selected Work</h2> -->
   <ul class="m--workList">
     {% for project in site.categories["work"] %}
       <li>
         <a href="{{ project.url }}" class="m--workList_anchor" itemscope itemtype="http://schema.org/BlogPosting" alt="{{ project.title }}" title="{{ project.title }}">
           <span class="m--workList_title" itemprop="name headline">{{ project.title }}</span>
-          <span class="m--workList_year" itemprop="datePublished">{{ project.company }}</span>
+          <span class="m--workList_company" itemprop="datePublished">{{ project.company }}</span>
           <img src="{{ site.url }}/assets/img/{{ project.imgfolder }}/{{ project.cover_img }}" itemprop="image">
         </a>
         <img src="{{ site.url }}/assets/img/{{ project.imgfolder }}/{{ project.cover_img }}" class="m--workList_img" aria-hidden="true">
-        <p>{{ project.summary }}</p>
+        <p class="m--workList_summary">{{ project.summary }}</p>
       </li>
     {% endfor %}
   </ul>

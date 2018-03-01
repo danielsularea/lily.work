@@ -47,7 +47,7 @@ main {
   padding-top: $v--header-height;
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
-    padding-top: $v--header-height + 3rem;
+    padding-top: $v--header-height + 4.5rem;
   }
 }
 

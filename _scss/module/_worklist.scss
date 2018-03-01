@@ -2,16 +2,18 @@
   display: block;
   margin: 0;
   padding: 0;
-  margin-bottom: 7rem;
+  margin-bottom: 0;
   list-style: none;
+
+  @media (min-width: map-get($v--grid-breakpoints, lg)) {
+    margin-left: 2.5rem;
+  }
 
   li {
     display: block;
     margin: 1.5rem 0;
-  }
 
-  @media (min-width: map-get($v--grid-breakpoints, md)) {
-    li {
+    @media (min-width: map-get($v--grid-breakpoints, md)) {
       margin: 3rem 0;
     }
   }
@@ -54,6 +56,10 @@
   font-family: $v--font-serif;
   font-size: 1.9rem;
   text-decoration: underline;
+  text-shadow: 2px 2px $v--color-white,
+               2px -2px $v--color-white,
+               -2px 2px $v--color-white,
+               -2px -2px $v--color-white;
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
     font-size: 2.8rem;
@@ -62,9 +68,16 @@
   @media (min-width: map-get($v--grid-breakpoints, lg)) {
     font-size: 2.8rem;
   }
+
+  .m--workList_anchor:hover & {
+    text-shadow: 2px 2px $v--color-yellow,
+                 2px -2px $v--color-yellow,
+                 -2px 2px $v--color-yellow,
+                 -2px -2px $v--color-yellow;
+  }
 }
 
-.m--workList_year {
+.m--workList_company {
   vertical-align: top;
   font-family: $v--font-mono;
   font-size: 1rem;

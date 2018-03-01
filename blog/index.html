@@ -11,9 +11,9 @@ title: Blog
     <div>
       {% for post in curPost.items %}
         <a href="{{ post.url }}" class="m--blogList_anchor" title="{{ post.title }}" itemscope itemtype="http://schema.org/BlogPosting">
-          <time class="m--blogList_date" datetime="{{ post.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ post.date | date: "%b %d" }}</time>
+          <time class="m--blogList_date" datetime="{{ post.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ post.date | date: "%b %d" }}<span class="m--blogList_dateYear">, {{ post.date | date: "%Y" }}</span></time>
           <div class="m--blogList_title">
-            {{ post.title }}<span class="m--blogList_read" aria-hidden="true"> ✓</span>
+            {{ post.title }}<span class="m--blogList_read" aria-hidden="true">✓</span>
           </div>
         </a>
       {% endfor %}

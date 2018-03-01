@@ -1,3 +1,8 @@
+.m--blogList_header {
+  font-family: $v--font-serif;
+  font-size: 2rem;
+}
+
 .m--blogList {
   border-bottom: 1px solid $v--color-black;
 }
@@ -17,11 +22,13 @@
 }
 
 .m--blogList_year {
+  display: none;
   line-height: $v--blogList_item-height;
   font-family: $v--font-mono;
   color: $v--color-blue;
 
   @media (min-width: map-get($v--grid-breakpoints, sm)) {
+    display: block;
     float: left;
     width: 3rem;
   }
@@ -60,18 +67,24 @@
 
 .m--blogList_date {
   display: block;
-  padding-top: 0.5rem;
+  padding: 0.5rem 0;
   border-bottom: 1px solid transparent; // for consistent height
   font-family: $v--font-mono;
 
   @media (min-width: map-get($v--grid-breakpoints, sm)) {
     float: left;
     width: 4.5rem;
-    padding-top: 0;
+    padding: 0;
   }
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
     width: 5.5rem;
+  }
+}
+
+.m--blogList_dateYear {
+  @media (min-width: map-get($v--grid-breakpoints, sm)) {
+    display: none;
   }
 }
 
@@ -87,6 +100,7 @@
 
 .m--blogList_read {
   @include noSelect();
+  margin-left: 4px;
   color: $v--color-white;
 
   // silly I know...but transparent doesn't work
@@ -94,9 +108,7 @@
     color: $v--color-yellow;
   }
 
-  @media (min-width: map-get($v--grid-breakpoints, sm)) {
-    .m--blogList_anchor:visited & {
-      color: $v--color-gray3;
-    }
+  .m--blogList_anchor:visited & {
+    color: $v--color-gray3;
   }
 }
