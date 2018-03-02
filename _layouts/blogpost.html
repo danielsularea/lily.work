@@ -10,13 +10,11 @@
         <main id="main" role="main" aria-labelledby="page-title">
           <article class="g--grid-fixed" data-namespace="default" itemscope itemtype="http://schema.org/BlogPosting">
             <div class="g--grid_row">
-              <div class="g--grid_col-lg-4">
-                <header class="m--blogHeader js--fixedSidebar">
+              <div class="g--grid_col-lg-6 g--grid_push-lg-3">
+                <header class="m--blogHeader">
                   <time class="m--blogHeader_date" datetime="{{ page.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
                   <h1 id="page-title" class="m--blogHeader_title" itemprop="name headline">{{ page.title }}</h1>
                 </header>
-              </div>
-              <div class="g--grid_col-lg-8">
                 <section class="m--content m--anchorWrap m--anchorWrap-external-hover" itemprop="articleBody">
                   {{ content }}
                 </section>

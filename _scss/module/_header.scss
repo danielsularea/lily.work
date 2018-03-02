@@ -3,12 +3,12 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: $v--header-height / 1.5;
+  height: $v--header-height;
   background-color: $v--color-white;
   z-index: 10;
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
-    height: $v--header-height;
+    height: $v--header-height-md;
   }
 
   .no-touchevents &.scrolled {
@@ -35,10 +35,10 @@
 .m--header_title,
 .m--header_menu_anchor,
 .m--header_pageTitle {
-  line-height: $v--header-height / 1.5;
+  line-height: $v--header-height;
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
-    line-height: $v--header-height;
+    line-height: $v--header-height-md;
   }
 }
 

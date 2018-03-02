@@ -1,4 +1,9 @@
 .l--home {
+  margin-top: -$v--main-marginTop;
+
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
+    margin-top: -$v--main-marginTop-md;
+  }
 
   h2 {
     margin-top: 3rem;
@@ -36,17 +41,39 @@
 }
 
 .l--home_bio {
-  margin-bottom: 1rem;
+  position: relative;
+  height: 50vh;
+  min-height: 300px;
 
-  p {
-    animation-name: fadeInUp;
-    animation-delay: 600ms;
-    animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
-    animation-duration: 500ms;
-    animation-fill-mode: both;
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
+    height: 100vh;
   }
 }
 
-.l--home_portrait {
-  text-align: center;
+.l--home_bio-bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+.l--home_bio_arrow {
+  position: relative;
+
+  &:after {
+    content: '\2193';
+    position: absolute;
+    margin-top: -0.2rem;
+    margin-left: 0.4rem;
+  }
+}
+
+@media (min-width: map-get($v--grid-breakpoints, md)) {
+  .l--home_portrait {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../img/me.jpg') no-repeat center center fixed;
+    background-size: 15%;
+  }
 }

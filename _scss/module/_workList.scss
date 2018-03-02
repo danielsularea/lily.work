@@ -2,11 +2,11 @@
   display: block;
   margin: 0;
   padding: 0;
-  margin-bottom: 0;
   counter-reset: items;
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
     margin-left: 2.3rem;
+    margin-bottom: 5rem;
   }
 
   @media (min-width: map-get($v--grid-breakpoints, lg)) {
@@ -82,24 +82,24 @@
   font-family: $v--font-serif;
   font-size: 1.9rem;
   text-decoration: underline;
-  text-shadow: 2px 2px $v--color-white,
+
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
+    font-size: 2.4rem;
+    text-shadow: 2px 2px $v--color-white,
                2px -2px $v--color-white,
                -2px 2px $v--color-white,
                -2px -2px $v--color-white;
 
-  @media (min-width: map-get($v--grid-breakpoints, md)) {
-    font-size: 2.4rem;
+    .m--workList_anchor:hover & {
+      text-shadow: 2px 2px $v--color-yellow,
+                   2px -2px $v--color-yellow,
+                   -2px 2px $v--color-yellow,
+                   -2px -2px $v--color-yellow;
+    }
   }
 
   @media (min-width: map-get($v--grid-breakpoints, lg)) {
     font-size: 2.8rem;
-  }
-
-  .m--workList_anchor:hover & {
-    text-shadow: 2px 2px $v--color-yellow,
-                 2px -2px $v--color-yellow,
-                 -2px 2px $v--color-yellow,
-                 -2px -2px $v--color-yellow;
   }
 }
 
@@ -123,8 +123,8 @@
     left: 0;
     bottom: 0;
     right: 0;
-    max-width: 65%;
-    max-height: 65%;
+    max-width: 50%;
+    max-height: 80%;
     margin: auto;
     z-index: 2000;
 

@@ -66,8 +66,13 @@ $v--grid-gutter-widths: (
 // --------------------------------------------------
 // Header
 // --------------------------------------------------
-$v--header-height:              3.5rem;
-$v--header-height-small:        3rem;
+$v--header-height:              2.3rem;
+$v--header-height-md:           3.5rem;
+
+// Main
+// --------------------------------------------------
+$v--main-marginTop:             $v--header-height + 2rem;
+$v--main-marginTop-md:          $v--header-height-md + 4rem;
 
 // Worklist
 // --------------------------------------------------

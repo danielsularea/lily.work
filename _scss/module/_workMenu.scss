@@ -6,7 +6,11 @@
   line-height: 1.2;
   font-family: $v--font-serif;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+
+  @media (min-width: map-get($v--grid-breakpoints, xl)) {
+    font-size: 1.8rem;
+  }
 }
 
 .m--workMenu_list {

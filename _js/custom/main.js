@@ -6,8 +6,9 @@
 
   var Selectors = obj.settings = {
     headerScroll:       'js--headerScroll',
-    pushToFold:         'js--pushToFold',
-    pushToFoldEl:       'js--pushToFoldEl',
+    portrait:           'l--home_portrait',
+    // pushToFold:         'js--pushToFold',
+    // pushToFoldEl:       'js--pushToFoldEl',
     fixedSidebar:       'js--fixedSidebar',
     // pageTitlePastFold:  'js--pageTitlePastFold',
     zoomImages:         '[data-action="zoom"]',
@@ -67,24 +68,24 @@
     MaxMobileWidth = parseInt(b, 10);
   };
 
-  var _setPushToFold = function() {
-    var pushToFold = document.getElementsByClassName(Selectors.pushToFold),
-        pushToFoldEl = document.getElementsByClassName(Selectors.pushToFoldEl);
+  // var _setPushToFold = function() {
+  //   var pushToFold = document.getElementsByClassName(Selectors.pushToFold),
+  //       pushToFoldEl = document.getElementsByClassName(Selectors.pushToFoldEl);
 
-    if (pushToFold[0] && pushToFoldEl[0]) {
-      var height = pushToFold[0].offsetHeight,
-          style = getComputedStyle(pushToFold[0]);
+  //   if (pushToFold[0] && pushToFoldEl[0]) {
+  //     var height = pushToFold[0].offsetHeight,
+  //         style = getComputedStyle(pushToFold[0]);
 
-      height += parseInt(style.marginTop) + parseInt(style.marginBottom);
+  //     height += parseInt(style.marginTop) + parseInt(style.marginBottom);
 
-      var pushAmount = window.innerHeight - height;
+  //     var pushAmount = window.innerHeight - height;
       
-      pushToFoldEl[0].style.marginTop = pushAmount + 'px';
-    }
-  };
+  //     pushToFoldEl[0].style.marginTop = pushAmount + 'px';
+  //   }
+  // };
 
   var _setDimensions = function() {
-    _setPushToFold();
+    // _setPushToFold();
   };
 
   var _handleHeaderScroll = function() {
@@ -103,6 +104,15 @@
 
     header.classList.remove('scrolled');
   };
+
+  // var _handlePortraitScroll = function() {
+  //   var thisEl = document.getElementsByClassName(Selectors.portrait)[0],
+  //       scrollTop = window.pageYOffset;
+
+  //   scrollTop = (scrollTop <= 0) 1 : scrollTop;
+
+  //   thisEl.style.opacity = 1 - (scrollTop / 200);
+  // };
 
   var _handleSidebarScroll = function() {
     var fixedSidebar = document.getElementsByClassName(Selectors.fixedSidebar);
@@ -160,6 +170,7 @@
   var _handleWindowScroll = function() {
     _handleHeaderScroll();
     _handleSidebarScroll();
+    // _handlePortraitScroll();
     // _handlePageTitlePastFold();
   };
 

@@ -1,14 +1,16 @@
 ---
 layout: workpost
-title: Breast Care Advisor
-year: 2018
+title: Clinical Review
+year: 2017
 company: IBM
 
-summary: >
-  Women worldwide depend on periodic screening mammograms to detect breast cancer. But with an alarming shortage of radiologists to read them, we find a way to bridge the gap.
+published: false
 
-imgfolder: bca
-cover_img: temp.jpg
+summary: >
+  We use AI to reduce gaps of care and incorrect billing.
+
+imgfolder: ibm
+cover_img: ibm.gif
 
 ---
 
