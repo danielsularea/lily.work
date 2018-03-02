@@ -4,10 +4,12 @@ title: Works
 ---
 
 <section class="l--home">
-  <p class="m--anchorWrap m--anchorWrap-external-hover">
-    Lily is a product designer and developer at <a href="https://www.ibm.com/watson/health/" target="_blank">IBM Watson Health</a>. She graduated from <a href="http://www.cs.cornell.edu" target="_blank">Cornell</a> where she studied computer science and worked in a ton of startups.
-  </p>
-  <p>See her most recent work:</p>
+  <div class="l--home_bio js--pushToFold">
+    <p class="m--anchorWrap m--anchorWrap-external-hover">
+      Lily is a product designer and developer at <a href="https://www.ibm.com/watson/health/" target="_blank">IBM Watson Health</a>
+    </p>
+    <p>See her most recent work &darr;</p>
+  </div>
   <!-- <h2>Selected Work</h2> -->
   <ol class="m--workList">
     {% for project in site.categories["work"] %}
@@ -22,6 +24,7 @@ title: Works
       </li>
     {% endfor %}
   </ol>
+
   <h2>Experience</h2>
   <p>
     IBM Watson Health<br />
@@ -37,6 +40,13 @@ title: Works
     About 7-ish startups<br />
     Various<br />
     2013-2016
+  </p>
+
+  <h2>Academic</h2>
+  <p>
+    Cornell University<br />
+    Computer Science<br />
+    Class of 2016
   </p>
 
   <h2>Contact</h2>

@@ -12,24 +12,41 @@
             <div class="g--grid_row">
               <header class="m--workHeader g--grid_col-12">
                 <div class="m--workHeader_meta" itemprop="datePublished">{{ page.company }} / {{ page.year }}</div>
-                <h1 id="page-title" class="m--workHeader_titles">
-                  <div class="m--workHeader_title" itemprop="name headline">{{ page.title }}</div>
-                  <!-- <div class="m--workHeader_subtitle">{{ page.subtitle }}</div> -->
+                <h1 id="page-title" class="m--workHeader_title" itemprop="name headline">
+                  {{ page.title }}
                 </h1>
                 <img class="m--workHeader_img" src="{{ site.url }}/assets/img/{{ page.imgfolder }}/{{ page.cover_img }}" alt="{{ page.title }}" itemprop="image">
                 <div class="m--workHeader_arrow">&#8595;</div>
               </header>
-              <section class="l--workPost_content m--content m--anchorWrap m--anchorWrap-external-hover g--grid_col-12 g--grid_col-md-10 g--grid_col-lg-6" itemprop="articleBody">
+            </div>
+            <div class="g--grid_row">
+              <div class="g--grid_col-12 g--grid_col-md-2 g--grid_col-lg-3">
+                <div class="m--workMenu js--fixedSidebar" data-fixedat="100">
+                  <div class="m--workMenu_title">
+                    {{ page.title }}
+                  </div>
+                  <ul class="m--workMenu_list">
+                    <li class="active">
+                      <a href="#background">Background</a>
+                    </li>
+                    <li>
+                      <a href="#personas">Personas</a>
+                    </li>
+                    <li>
+                      <a href="#concept-testing">Concept Testing</a>
+                    </li>
+                    <li>
+                      <a href="#design">Design</a>
+                    </li>
+                    <li>
+                      <a href="#acknowledgements">Acknowledgements</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <section id="background" class="l--workPost_content m--content m--anchorWrap m--anchorWrap-external-hover g--grid_col-12 g--grid_col-md-10 g--grid_col-lg-6" itemprop="articleBody">
                 {{ content }}
               </section>
-              {% for img in page.detail_img %}
-                {% capture imgurl %}{{ site.url }}/assets/img/{{ page.imgfolder }}/{{ img }}{% endcapture %}
-                <div class="l--workPost_images g--grid_col-12 g--grid_col-md-6">
-                  {% include figure.html
-                    url=imgurl 
-                    alt="" %}
-                </div>
-              {% endfor %}
             </div>
 
             {% include paginate.html category="work" %}

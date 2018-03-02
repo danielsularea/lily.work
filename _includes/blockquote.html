@@ -1,0 +1,9 @@
+<blockquote>
+  <p>{{ include.quote }}</p>
+  {% if include.author or include.paper %}
+    <cite>
+      {% if include.author %}<div>{{ include.author }}</div>{% endif %}
+      {% if include.paper %}<div>{{ include.paper }}</div>{% endif %}
+    </cite>
+  {% endif %}
+</blockquote>

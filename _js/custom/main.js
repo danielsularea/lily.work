@@ -6,8 +6,10 @@
 
   var Selectors = obj.settings = {
     headerScroll:       'js--headerScroll',
-    fixedBlogHeader:    'js--fixedBlogHeader',
-    pageTitlePastFold:  'js--pageTitlePastFold',
+    pushToFold:         'js--pushToFold',
+    pushToFoldEl:       'js--pushToFoldEl',
+    fixedSidebar:       'js--fixedSidebar',
+    // pageTitlePastFold:  'js--pageTitlePastFold',
     zoomImages:         '[data-action="zoom"]',
   };
 
@@ -65,25 +67,24 @@
     MaxMobileWidth = parseInt(b, 10);
   };
 
-  var _setDimensions = function() {
-    _setFixedBlogHeader();
+  var _setPushToFold = function() {
+    var pushToFold = document.getElementsByClassName(Selectors.pushToFold),
+        pushToFoldEl = document.getElementsByClassName(Selectors.pushToFoldEl);
+
+    if (pushToFold[0] && pushToFoldEl[0]) {
+      var height = pushToFold[0].offsetHeight,
+          style = getComputedStyle(pushToFold[0]);
+
+      height += parseInt(style.marginTop) + parseInt(style.marginBottom);
+
+      var pushAmount = window.innerHeight - height;
+      
+      pushToFoldEl[0].style.marginTop = pushAmount + 'px';
+    }
   };
 
-  var _setFixedBlogHeader = function() {
-    var fixedBlogHeader = document.getElementsByClassName(Selectors.fixedBlogHeader);
-
-    if (fixedBlogHeader[0]) {
-      var thisEl = fixedBlogHeader[0],
-          parent = thisEl.parentNode;
-
-      if (window.innerWidth >= MaxMobileWidth) {
-        thisEl.style.width = parent.offsetWidth + 'px';
-        thisEl.style.position = 'fixed';
-      } else {
-        thisEl.style.width = 'auto';
-        thisEl.style.position = 'static';
-      }
-    }
+  var _setDimensions = function() {
+    _setPushToFold();
   };
 
   var _handleHeaderScroll = function() {
@@ -91,9 +92,11 @@
 
     if (!headerArr[0]) { return; }
 
-    var header = headerArr[0];
+    var header = headerArr[0],
+        scrollTop = window.pageYOffset || 
+                    document.documentElement.scrollTop;
 
-    if (window.pageYOffset > 0) {
+    if (scrollTop > 0) {
       header.classList.add('scrolled');
       return;
     }
@@ -101,23 +104,53 @@
     header.classList.remove('scrolled');
   };
 
-  var _handlePageTitlePastFold = function() {
-    var pageTitleArr = document.getElementsByClassName(Selectors.pageTitlePastFold);
+  var _handleSidebarScroll = function() {
+    var fixedSidebar = document.getElementsByClassName(Selectors.fixedSidebar);
 
-    if (!pageTitleArr[0]) {
-      // console.log('page title not found!');
-      return;
+    if (fixedSidebar[0]) {
+      var thisEl = fixedSidebar[0],
+          parent = thisEl.parentNode,
+          parentTop = parent.offsetTop,
+          fixedAt = thisEl.dataset.fixedat,
+          scrollTop = window.pageYOffset || 
+                      document.documentElement.scrollTop;
+
+      var addFixed = (
+        (!fixedAt || ((parentTop - scrollTop) <= fixedAt)) &&
+        (window.innerWidth >= MaxMobileWidth)
+      ) ? true : false ;
+
+      if (addFixed) {
+        thisEl.style.width = parent.offsetWidth + 'px';
+        thisEl.style.position = 'fixed';
+
+        if (fixedAt) {
+          thisEl.style.top = fixedAt + 'px';
+        }
+      } else {
+        thisEl.style.width = 'auto';
+        thisEl.style.position = 'static';
+      }
     }
-
-    var pageTitle = pageTitleArr[0];
-
-    if (window.pageYOffset >= window.innerHeight) {
-      pageTitle.classList.add('visible');
-      return;
-    }
-
-    pageTitle.classList.remove('visible');
   };
+
+  // var _handlePageTitlePastFold = function() {
+  //   var pageTitleArr = document.getElementsByClassName(Selectors.pageTitlePastFold);
+
+  //   if (!pageTitleArr[0]) {
+  //     // console.log('page title not found!');
+  //     return;
+  //   }
+
+  //   var pageTitle = pageTitleArr[0];
+
+  //   if ((window.pageYOffset || document.documentElement.scrollTop) >= window.innerHeight) {
+  //     pageTitle.classList.add('visible');
+  //     return;
+  //   }
+
+  //   pageTitle.classList.remove('visible');
+  // };
 
   var _handleWindowResize = function() {
     _setMaxMobileWidth();
@@ -126,7 +159,8 @@
 
   var _handleWindowScroll = function() {
     _handleHeaderScroll();
-    _handlePageTitlePastFold();
+    _handleSidebarScroll();
+    // _handlePageTitlePastFold();
   };
 
   var _bindEvents = function() {

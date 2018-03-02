@@ -20,7 +20,7 @@
     }
   }
 
-  p {
+  > p {
     line-height: 1.875;
     font-size: 1rem;
     color: $v--color-gray5;
@@ -55,6 +55,40 @@
   img {
     max-width: 100%;
     max-height: 100%;
+  }
+
+  blockquote {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    > p {
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      font-size: 2rem;
+    }
+
+    cite {
+      position: relative;
+      display: block;
+      font-family: $v--font-mono;
+      font-style: normal;
+      color: $v--color-gray4;
+
+      &:before {
+        content: '\2014';
+        position: absolute;
+        left: 0;
+        color: $v--color-blue;
+      }
+
+      > div {
+        margin-left: 1.2rem;
+
+        &:first-child {
+          color: $v--color-blue;
+        }
+      }
+    }
   }
 
   code,

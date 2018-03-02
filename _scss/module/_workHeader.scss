@@ -11,15 +11,7 @@
   }
 }
 
-.m--workHeader_arrow {
-  animation-name: fadeInUp;
-  animation-delay: 600ms;
-  animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
-  animation-duration: 500ms;
-  animation-fill-mode: both;
-}
-
-.m--workHeader_titles {
+.m--workHeader_title {
   line-height: 1.125em;
   font-family: $v--font-serif;
   font-weight: 700;
@@ -33,23 +25,6 @@
   @media (min-width: map-get($v--grid-breakpoints, md)) {
     font-size: 3.4rem;
   }
-}
-
-.m--workHeader_title,
-.m--workHeader_subtitle {
-  display: inline;
-
-  @media (min-width: map-get($v--grid-breakpoints, sm)) {
-    display: block;
-  }
-}
-
-.m--workHeader_title {
-  // color: $v--color-blue;
-}
-
-.m--workHeader_subtitle {
-  text-transform: lowercase;
 }
 
 .m--workHeader_meta {
@@ -72,7 +47,7 @@
 
 .m--workHeader_arrow {
   display: none;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   font-size: 1.5rem;
   color: $v--color-gray5;
 
@@ -81,54 +56,12 @@
   }
 }
 
-// .m--workheader_detailsWrap {
-//   position: fixed;
-// }
-
-// .m--workheader_details {
-//   float: right;
-//   display: block;
-//   position: relative;
-//   right: 3px;
-//   margin: 0;
-//   border: 2px solid $v--color-black;
-//   padding: 10px;
-//   list-style: none;
-//   font-family: $v--font-mono;
-//   background-color: $v--color-white;
-
-//   &:after {
-//     content: '';
-//     position: absolute;
-//     top: 5px;
-//     left: 5px;
-//     right: -5px;
-//     bottom: -5px;
-//     background-color: $v--color-black;
-//     z-index: -1;
-//   }
-
-//   // li {
-//     // position: relative;
-
-//     // &:not(:first-child) {
-//     //   margin-top: 20px;
-//     // }
-
-//     // &:not(:last-child) {
-//     //   &:after {
-//     //     content: '';
-//     //     position: absolute;
-//     //     bottom: -7px;
-//     //     left: 0;
-//     //     width: 10px;
-//     //     height: 1px;
-//     //     background-color: $v--color-black;
-//     //   }
-//     // }
-//   // }
-
-//   a {
-//     color: $v--color-gray5;
-//   }
-// }
+.m--workHeader_title,
+.m--workHeader_meta,
+.m--workHeader_arrow {
+  animation-name: fadeInUp;
+  animation-delay: 600ms;
+  animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}

@@ -47,6 +47,7 @@
 .m--workList_anchor {
   display: inline-block;
   // padding: $v--workList_anchor-padding $v--workList_anchor-padding 0;
+  padding-right: 3px;
   color: $v--color-black;
   cursor: pointer;
 
@@ -63,12 +64,12 @@
       z-index: 2001;
     }
 
-    &:after {
-    content: '\2192';
-    margin-left: 0.5rem;
-    line-height: 1.2em;
-    font-size: 1.9rem;
-  }
+    // &:after {
+    //   content: '\2192';
+    //   margin-left: 0.5rem;
+    //   line-height: 1.2em;
+    //   font-size: 1.9rem;
+    // }
 
     img {
       display: none;

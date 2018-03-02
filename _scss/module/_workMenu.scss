@@ -1,0 +1,37 @@
+.m--workMenu {
+  padding-right: 2rem;
+}
+
+.m--workMenu_title {
+  line-height: 1.2;
+  font-family: $v--font-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.m--workMenu_list {
+  padding: 0;
+  list-style: none;
+
+  li {
+    line-height: 1.5;
+    font-size: 1rem;
+
+    &.active {
+      &:after {
+        content: '\2022';
+        font-family: $v--font-sans-serif;
+        color: $v--color-blue;
+      }
+
+      a {
+        color: $v--color-black;
+      }
+    }
+  }
+
+  a {
+    font-family: $v--font-mono;
+    color: $v--color-gray2;
+  }
+}
