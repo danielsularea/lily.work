@@ -6,12 +6,49 @@
 
   var Selectors = obj.settings = {
     headerScroll:       'js--headerScroll',
-    portrait:           'l--home_portrait',
-    fixedSidebar:       'js--fixedSidebar',
-    workMenu:           'm--workMenu',
-    // pageTitlePastFold:  'js--pageTitlePastFold',
+    // portrait:           'l--home_portrait',
+    workMenuFixed:      'js--workMenuFixed',
+    workMenuClick:      'js--workMenuClick',
+    workMenuScrollBy:   'js--workMenuScrollBy',
     zoomImages:         '[data-action="zoom"]',
   };
+
+  // ---------------------------------
+  // HELPER FUNCTIONS
+  // ---------------------------------
+
+  // extended from https://stackoverflow.com/a/31987330
+  var _scrollTo = function(to, duration) {
+    var scrollEl = document.documentElement,
+        maxBottom = scrollEl.offsetHeight - window.innerHeight;
+
+    if (to >= maxBottom) {
+      to = maxBottom;
+    } else if (to <= 0) {
+      to = 0;
+    }
+
+    var difference = to - window.scrollY,
+        perTick = difference / duration * 10;
+
+    setTimeout(function() {
+      window.scrollTo(window.scrollX, window.scrollY + perTick);
+      if (window.scrollY === to) return;
+      _scrollTo(to, duration - 10);
+    }, 10);
+  };
+
+  // get Y position of element from top of page
+  var _getYPos = function(element) {
+    if (!element) return;
+
+    return element.getBoundingClientRect().top - 
+           document.body.getBoundingClientRect().top;
+  };
+
+  // ---------------------------------
+  // SET UP FUNCTIONS
+  // ---------------------------------
 
   var _initBarba = function() {
     Barba.Pjax.getTransition = function() {
@@ -71,6 +108,11 @@
     
   };
 
+  // ---------------------------------
+  // EVENT LISTENERS
+  // ---------------------------------
+
+  // fix header when scrolling, plus additional styles
   var _handleHeaderScroll = function() {
     var headerArr = document.getElementsByClassName(Selectors.headerScroll);
 
@@ -81,11 +123,11 @@
                     document.documentElement.scrollTop;
 
     if (scrollTop > 0) {
-      header.classList.add('scrolled');
+      header.classList.add('fixed');
       return;
     }
 
-    header.classList.remove('scrolled');
+    header.classList.remove('fixed');
   };
 
   // var _handlePortraitScroll = function() {
@@ -97,53 +139,56 @@
   //   thisEl.style.opacity = 1 - (scrollTop / 200);
   // };
 
-  var _handleSidebarScroll = function() {
-    var fixedSidebar = document.getElementsByClassName(Selectors.fixedSidebar);
+  // fix workMenu when scrolling past its parent
+  var _handleWorkMenuFixed = function() {
+    var el = document.getElementsByClassName(Selectors.workMenuFixed);
 
-    if (fixedSidebar[0]) {
-      var thisEl = fixedSidebar[0],
-          parent = thisEl.parentNode,
-          parentTop = parent.offsetTop,
-          fixedAt = thisEl.dataset.fixedat,
-          scrollTop = window.pageYOffset || 
-                      document.documentElement.scrollTop;
+    if (!el[0]) return;
 
-      var addFixed = (
-        (!fixedAt || ((parentTop - scrollTop) <= fixedAt)) &&
-        (window.innerWidth >= MaxMobileWidth)
-      ) ? true : false ;
+    var workMenu = el[0],
+        parent = workMenu.parentNode,
+        offsetY = (workMenu.dataset.offsety) ? (workMenu.dataset.offsety) : 0,
+        amountScrolled = window.pageYOffset || document.documentElement.scrollTop,
+        triggerPoint = _getYPos(parent) - offsetY,
+        biggerThanMobile = window.innerWidth >= MaxMobileWidth;
 
-      if (addFixed) {
-        thisEl.style.width = parent.offsetWidth + 'px';
-        thisEl.style.position = 'fixed';
+    if (!biggerThanMobile) return;
 
-        if (fixedAt) {
-          thisEl.style.top = fixedAt + 'px';
-        }
-      } else {
-        thisEl.style.width = 'auto';
-        thisEl.style.position = 'static';
-      }
+    // visible point, given more room for animation
+    if (amountScrolled >= (triggerPoint - 50)) {
+      workMenu.style.opacity = 1;
+    } else {
+      workMenu.style.opacity = 0;
+    }
+
+    // fixed point
+    if (amountScrolled >= triggerPoint) {
+      workMenu.style.width = parent.offsetWidth + 'px';
+      workMenu.style.position = 'fixed';
+      workMenu.style.top = offsetY + 'px';
+    } else {
+      workMenu.style.width = 'auto';
+      workMenu.style.position = 'static';
     }
   };
 
-  // var _handlePageTitlePastFold = function() {
-  //   var pageTitleArr = document.getElementsByClassName(Selectors.pageTitlePastFold);
+  var _handleWorkMenuClick = function(e) {
+    e.preventDefault();
 
-  //   if (!pageTitleArr[0]) {
-  //     // console.log('page title not found!');
-  //     return;
-  //   }
+    var newURL = e.target.getAttribute('href'),
+        offsetY = document.getElementsByClassName(Selectors.workMenuClick)[0].dataset.offsety,
+        target = document.querySelectorAll(newURL);
 
-  //   var pageTitle = pageTitleArr[0];
+    if (!target[0]) return;
 
-  //   if ((window.pageYOffset || document.documentElement.scrollTop) >= window.innerHeight) {
-  //     pageTitle.classList.add('visible');
-  //     return;
-  //   }
+    var targetTop = _getYPos(target[0]);
+    e.target.blur();
+    _scrollTo(parseInt(targetTop) - offsetY, 500);
+  };
 
-  //   pageTitle.classList.remove('visible');
-  // };
+  var _handleWorkMenuScrollBy = function() {
+
+  };
 
   var _handleWindowResize = function() {
     _setMaxMobileWidth();
@@ -152,55 +197,25 @@
 
   var _handleWindowScroll = function() {
     _handleHeaderScroll();
-    _handleSidebarScroll();
+    _handleWorkMenuFixed();
     // _handlePortraitScroll();
-    // _handlePageTitlePastFold();
-    // console.log(window.pageYOffset);
-  };
-
-  // extended from https://stackoverflow.com/a/31987330
-  var _scrollTo = function(to, duration) {
-    var scrollEl = document.documentElement,
-        maxBottom = scrollEl.offsetHeight - window.innerHeight;
-
-    if (to >= maxBottom) {
-      to = maxBottom;
-    } else if (to <= 0) {
-      to = 0;
-    }
-
-    var difference = to - window.scrollY,
-        perTick = difference / duration * 10;
-
-    setTimeout(function() {
-      window.scrollTo(window.scrollX, window.scrollY + perTick);
-      if (window.scrollY === to) return;
-      _scrollTo(to, duration - 10);
-    }, 10);
-  };
-
-  var _handleWorkMenuClick = function(e) {
-    e.preventDefault();
-
-    var newURL = e.target.getAttribute('href'),
-        newTarget = document.querySelectorAll(newURL)[0],
-        newTargetTop = newTarget.getBoundingClientRect().top - 
-                       document.body.getBoundingClientRect().top;
-
-    e.target.blur();
-    _scrollTo(parseInt(newTargetTop) - 100, 500);
+    _handleWorkMenuScrollBy();
   };
 
   var _bindEvents = function() {
     window.addEventListener('resize', _handleWindowResize);
     document.addEventListener('scroll', _handleWindowScroll);
 
-    var els = document.querySelectorAll('.' + Selectors.workMenu + ' a');
+    var els = document.querySelectorAll('.' + Selectors.workMenuClick + ' a');
 
     for (var i = 0; i < els.length; i++) {
       els[i].addEventListener('click', _handleWorkMenuClick);
     }
   };
+
+  // ---------------------------------
+  // INIT
+  // ---------------------------------
 
   obj._init = function() {
     _initBarba();

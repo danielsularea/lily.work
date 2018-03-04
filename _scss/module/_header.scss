@@ -11,7 +11,7 @@
     height: $v--header-height-md;
   }
 
-  .no-touchevents &.scrolled {
+  .no-touchevents &.fixed {
     position: fixed;
     border-bottom: 1px solid $v--color-gray1;
   }

@@ -1,5 +1,7 @@
 .m--workMenu {
   padding-right: 2rem;
+  opacity: 0;
+  transition: opacity 200ms;
 }
 
 .m--workMenu_title {
@@ -37,5 +39,23 @@
   a {
     font-family: $v--font-mono;
     color: $v--color-gray2;
+  }
+}
+
+.m--workMenu_top {
+  position: relative;
+  margin-top: 1rem;
+  padding-left: 1rem;
+
+  &:before {
+    content: '\2191';
+    position: absolute;
+    top: -0.1rem;
+    left: 0rem;
+    color: $v--color-gray2;
+  }
+
+  a {
+    // color: $v--color-gray5;
   }
 }
