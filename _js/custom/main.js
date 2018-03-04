@@ -7,9 +7,8 @@
   var Selectors = obj.settings = {
     headerScroll:       'js--headerScroll',
     portrait:           'l--home_portrait',
-    // pushToFold:         'js--pushToFold',
-    // pushToFoldEl:       'js--pushToFoldEl',
     fixedSidebar:       'js--fixedSidebar',
+    workMenu:           'm--workMenu',
     // pageTitlePastFold:  'js--pageTitlePastFold',
     zoomImages:         '[data-action="zoom"]',
   };
@@ -68,24 +67,8 @@
     MaxMobileWidth = parseInt(b, 10);
   };
 
-  // var _setPushToFold = function() {
-  //   var pushToFold = document.getElementsByClassName(Selectors.pushToFold),
-  //       pushToFoldEl = document.getElementsByClassName(Selectors.pushToFoldEl);
-
-  //   if (pushToFold[0] && pushToFoldEl[0]) {
-  //     var height = pushToFold[0].offsetHeight,
-  //         style = getComputedStyle(pushToFold[0]);
-
-  //     height += parseInt(style.marginTop) + parseInt(style.marginBottom);
-
-  //     var pushAmount = window.innerHeight - height;
-      
-  //     pushToFoldEl[0].style.marginTop = pushAmount + 'px';
-  //   }
-  // };
-
   var _setDimensions = function() {
-    // _setPushToFold();
+    
   };
 
   var _handleHeaderScroll = function() {
@@ -172,11 +155,51 @@
     _handleSidebarScroll();
     // _handlePortraitScroll();
     // _handlePageTitlePastFold();
+    // console.log(window.pageYOffset);
+  };
+
+  // extended from https://stackoverflow.com/a/31987330
+  var _scrollTo = function(to, duration) {
+    var scrollEl = document.documentElement,
+        maxBottom = scrollEl.offsetHeight - window.innerHeight;
+
+    if (to >= maxBottom) {
+      to = maxBottom;
+    } else if (to <= 0) {
+      to = 0;
+    }
+
+    var difference = to - window.scrollY,
+        perTick = difference / duration * 10;
+
+    setTimeout(function() {
+      window.scrollTo(window.scrollX, window.scrollY + perTick);
+      if (window.scrollY === to) return;
+      _scrollTo(to, duration - 10);
+    }, 10);
+  };
+
+  var _handleWorkMenuClick = function(e) {
+    e.preventDefault();
+
+    var newURL = e.target.getAttribute('href'),
+        newTarget = document.querySelectorAll(newURL)[0],
+        newTargetTop = newTarget.getBoundingClientRect().top - 
+                       document.body.getBoundingClientRect().top;
+
+    e.target.blur();
+    _scrollTo(parseInt(newTargetTop) - 100, 500);
   };
 
   var _bindEvents = function() {
-    window.addEventListener("resize", _handleWindowResize);
-    document.addEventListener("scroll", _handleWindowScroll);
+    window.addEventListener('resize', _handleWindowResize);
+    document.addEventListener('scroll', _handleWindowScroll);
+
+    var els = document.querySelectorAll('.' + Selectors.workMenu + ' a');
+
+    for (var i = 0; i < els.length; i++) {
+      els[i].addEventListener('click', _handleWorkMenuClick);
+    }
   };
 
   obj._init = function() {

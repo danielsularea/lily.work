@@ -26,25 +26,15 @@
                     {{ page.title }}
                   </div>
                   <ul class="m--workMenu_list">
-                    <li class="active">
-                      <a href="#background">Background</a>
-                    </li>
-                    <li>
-                      <a href="#personas">Personas</a>
-                    </li>
-                    <li>
-                      <a href="#concept-testing">Concept Testing</a>
-                    </li>
-                    <li>
-                      <a href="#design">Design</a>
-                    </li>
-                    <li>
-                      <a href="#acknowledgements">Acknowledgements</a>
-                    </li>
+                    {% for item in page.menu %}
+                      <li>
+                        <a href="#{{ item | replace: ' ', '-' | downcase }}">{{ item }}</a>
+                      </li>
+                    {% endfor %}
                   </ul>
                 </div>
               </div>
-              <section id="background" class="l--workPost_content m--content m--anchorWrap m--anchorWrap-external-hover g--grid_col-12 g--grid_col-md-8 g--grid_col-lg-6" itemprop="articleBody">
+              <section id="introduction" class="l--workPost_content m--content m--anchorWrap m--anchorWrap-external-hover g--grid_col-12 g--grid_col-md-8 g--grid_col-lg-6" itemprop="articleBody">
                 {{ content }}
               </section>
             </div>
