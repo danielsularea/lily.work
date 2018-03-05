@@ -85,17 +85,17 @@
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
     font-size: 2.4rem;
-    text-shadow: 2px 2px $v--color-white,
-               2px -2px $v--color-white,
-               -2px 2px $v--color-white,
-               -2px -2px $v--color-white;
+    // text-shadow: 2px 2px $v--color-white,
+    //            2px -2px $v--color-white,
+    //            -2px 2px $v--color-white,
+    //            -2px -2px $v--color-white;
 
-    .m--workList_anchor:hover & {
-      text-shadow: 2px 2px $v--color-yellow,
-                   2px -2px $v--color-yellow,
-                   -2px 2px $v--color-yellow,
-                   -2px -2px $v--color-yellow;
-    }
+    // .m--workList_anchor:hover & {
+    //   text-shadow: 2px 2px $v--color-yellow,
+    //                2px -2px $v--color-yellow,
+    //                -2px 2px $v--color-yellow,
+    //                -2px -2px $v--color-yellow;
+    // }
   }
 
   @media (min-width: map-get($v--grid-breakpoints, lg)) {

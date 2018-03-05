@@ -21,13 +21,13 @@
             </div>
             <div class="g--grid_row">
               <div class="g--grid_col-0 g--grid_col-md-4 g--grid_col-lg-3">
-                <div class="m--workMenu js--workMenuFixed js--workMenuClick js--workMenuScrollBy" data-offsetY="100">
+                <div class="m--workMenu js--workMenu" data-offsetY="100">
                   <div class="m--workMenu_title">
                     {{ page.title }}
                   </div>
                   <ul class="m--workMenu_list">
                     {% for item in page.menu %}
-                      <li>
+                      <li class="js--workMenuLink">
                         <a href="#{{ item | replace: ' ', '-' | downcase }}">{{ item }}</a>
                       </li>
                     {% endfor %}

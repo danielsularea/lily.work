@@ -2,16 +2,17 @@
   'use strict';
 
   var obj = mainObj;
-  var MaxMobileWidth;
+  // var MaxMobileWidth;
 
   var Selectors = obj.settings = {
-    headerScroll:       'js--headerScroll',
+    headerScroll:         'js--headerScroll',
     // portrait:           'l--home_portrait',
-    workMenuFixed:      'js--workMenuFixed',
-    workMenuClick:      'js--workMenuClick',
-    workMenuScrollBy:   'js--workMenuScrollBy',
-    zoomImages:         '[data-action="zoom"]',
+    workMenu:             'js--workMenu',
+    workMenuLink:         'js--workMenuLink',
+    zoomImages:           '[data-action="zoom"]',
   };
+
+  var WorkMenuConfig;
 
   // ---------------------------------
   // HELPER FUNCTIONS
@@ -42,8 +43,8 @@
   var _getYPos = function(element) {
     if (!element) return;
 
-    return element.getBoundingClientRect().top - 
-           document.body.getBoundingClientRect().top;
+    return element.getBoundingClientRect().top + 
+           (window.pageYOffset || document.documentElement.scrollTop);
   };
 
   // ---------------------------------
@@ -87,6 +88,7 @@
     Barba.Dispatcher.on('transitionCompleted', function (currentStatus, oldStatus, container) {
       _setDimensions();
       _initMediumZoom();
+      _bindEvents();
     });
   };
 
@@ -94,18 +96,66 @@
     mediumZoom(document.querySelectorAll(Selectors.zoomImages));
   };
 
-  var _setMaxMobileWidth = function() {
-    var b = window.getComputedStyle(
-              document.querySelector('body'), ':before'
-            ).getPropertyValue('content')
-            .replace('px','')
-            .replace('"', '');
+  // var _setMaxMobileWidth = function() {
+  //   var b = window.getComputedStyle(
+  //             document.querySelector('body'), ':before'
+  //           ).getPropertyValue('content')
+  //           .replace('px','')
+  //           .replace('"', '');
 
-    MaxMobileWidth = parseInt(b, 10);
+  //   MaxMobileWidth = parseInt(b, 10);
+  // };
+
+  var _clearWorkMenu = function() {
+    WorkMenuConfig = {
+      exists:   false,
+      element:  undefined,
+      offsetY:  0,
+      links:    {},
+      refs:     {}
+    };
+
+    return;
+  };
+
+  var _configWorkMenu = function() {
+    _clearWorkMenu();
+
+    var el = document.getElementsByClassName(Selectors.workMenu);
+
+    if (!el[0]) return;
+
+    var workMenu = el[0],
+        offsetY = (workMenu.dataset.offsety) ? (workMenu.dataset.offsety) : 0;
+
+    WorkMenuConfig.exists = true;
+    WorkMenuConfig.element = el[0];
+    WorkMenuConfig.offsetY = offsetY;
+
+    var workMenuLinks = document.querySelectorAll('.' + Selectors.workMenu + ' a');
+
+    for (var i = 0; i < workMenuLinks.length; i++) {
+      var refID = workMenuLinks[i].getAttribute('href').split('#')[1],
+          refEl = document.getElementById(refID);
+
+      WorkMenuConfig.links[refID] = workMenuLinks[i];
+      WorkMenuConfig.refs[refID] = refEl;
+    }
+  };
+
+  var _getWorkMenuTops = function() {
+    var tops = {};
+
+    for (var refID in WorkMenuConfig.refs) {
+      var top = parseInt(_getYPos(WorkMenuConfig.refs[refID]));
+      tops[refID] = top - WorkMenuConfig.offsetY;
+    }
+
+    return tops;
   };
 
   var _setDimensions = function() {
-    
+    _configWorkMenu();
   };
 
   // ---------------------------------
@@ -141,28 +191,27 @@
 
   // fix workMenu when scrolling past its parent
   var _handleWorkMenuFixed = function() {
-    var el = document.getElementsByClassName(Selectors.workMenuFixed);
+    if (!WorkMenuConfig.exists) return;
 
-    if (!el[0]) return;
-
-    var workMenu = el[0],
+    var workMenu = WorkMenuConfig.element,
         parent = workMenu.parentNode,
-        offsetY = (workMenu.dataset.offsety) ? (workMenu.dataset.offsety) : 0,
-        amountScrolled = window.pageYOffset || document.documentElement.scrollTop,
-        triggerPoint = _getYPos(parent) - offsetY,
-        biggerThanMobile = window.innerWidth >= MaxMobileWidth;
+        parentTop = parent.offsetTop,
+        offsetY = WorkMenuConfig.offsetY,
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop,
+        triggerPoint = _getYPos(parent) - offsetY;
+        // biggerThanMobile = window.innerWidth >= MaxMobileWidth;
 
-    if (!biggerThanMobile) return;
+    // if (!biggerThanMobile) return;
 
     // visible point, given more room for animation
-    if (amountScrolled >= (triggerPoint - 50)) {
+    if (scrollTop >= parentTop - offsetY - 75) {
       workMenu.style.opacity = 1;
     } else {
       workMenu.style.opacity = 0;
     }
 
     // fixed point
-    if (amountScrolled >= triggerPoint) {
+    if (parentTop - scrollTop <= offsetY) {
       workMenu.style.width = parent.offsetWidth + 'px';
       workMenu.style.position = 'fixed';
       workMenu.style.top = offsetY + 'px';
@@ -172,27 +221,62 @@
     }
   };
 
+  // smooth scroll on workMenu click
   var _handleWorkMenuClick = function(e) {
+    if (!WorkMenuConfig.exists) return;
+
     e.preventDefault();
 
-    var newURL = e.target.getAttribute('href'),
-        offsetY = document.getElementsByClassName(Selectors.workMenuClick)[0].dataset.offsety,
-        target = document.querySelectorAll(newURL);
+    var refID = e.target.getAttribute('href').split('#')[1],
+        refEl = WorkMenuConfig.refs[refID],
+        refTop = parseInt(_getYPos(refEl)) - WorkMenuConfig.offsetY;
 
-    if (!target[0]) return;
-
-    var targetTop = _getYPos(target[0]);
     e.target.blur();
-    _scrollTo(parseInt(targetTop) - offsetY, 500);
+    _scrollTo(refTop, 300);
   };
 
-  var _handleWorkMenuScrollBy = function() {
+  // fallback if smooth scroll fails
+  // var _handleWorkMenuClick = function(e) {
+  //   var offsetY = document.getElementsByClassName(Selectors.workMenu)[0].dataset.offsety,
+  //       scrollEl = document.documentElement,
+  //       maxBottom = scrollEl.offsetHeight - window.innerHeight;
 
+  //   if (window.scrollY >= maxBottom) { return; };
+  //   window.scroll(window.scrollX, window.scrollY - offsetY);
+  // };
+
+  var _handleWorkMenuScrollBy = function() {
+    if (!WorkMenuConfig.exists) return;
+
+    var workMenu = WorkMenuConfig.element,
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop,
+        tops = _getWorkMenuTops(),
+        maxScrolled = document.documentElement.offsetHeight - window.innerHeight;
+
+    for (var refID in WorkMenuConfig.links) {
+      var menuItem = WorkMenuConfig.links[refID].parentNode,
+          classes = menuItem.classList;
+
+      if (!classes.contains(Selectors.workMenuLink)) continue;
+
+      var refTop = tops[refID];
+
+      classes.remove('active');
+
+      if (scrollTop >= refTop - 1 || scrollTop >= maxScrolled) {
+        for (var _refID in WorkMenuConfig.links) {
+          WorkMenuConfig.links[_refID].parentNode.classList.remove('active');
+        }
+
+        classes.add('active');
+      }
+    }
   };
 
   var _handleWindowResize = function() {
-    _setMaxMobileWidth();
+    // _setMaxMobileWidth();
     _setDimensions();
+    _handleWorkMenuFixed();
   };
 
   var _handleWindowScroll = function() {
@@ -206,10 +290,8 @@
     window.addEventListener('resize', _handleWindowResize);
     document.addEventListener('scroll', _handleWindowScroll);
 
-    var els = document.querySelectorAll('.' + Selectors.workMenuClick + ' a');
-
-    for (var i = 0; i < els.length; i++) {
-      els[i].addEventListener('click', _handleWorkMenuClick);
+    for(var i in WorkMenuConfig.links) {
+      WorkMenuConfig.links[i].addEventListener('click', _handleWorkMenuClick);
     }
   };
 
@@ -219,7 +301,7 @@
 
   obj._init = function() {
     _initBarba();
-    _setMaxMobileWidth();
+    // _setMaxMobileWidth();
     _setDimensions();
     _initMediumZoom();
     _bindEvents();
