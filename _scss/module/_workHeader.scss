@@ -43,6 +43,7 @@
   max-width: 100%;
   max-height: 22rem;
   margin-top: 1rem;
+  @include u--animation-fade(750ms);
 }
 
 .m--workHeader_arrow {
@@ -59,9 +60,5 @@
 .m--workHeader_title,
 .m--workHeader_meta,
 .m--workHeader_arrow {
-  animation-name: fadeInUp;
-  animation-delay: 600ms;
-  animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
-  animation-duration: 500ms;
-  animation-fill-mode: both;
+  @include u--animation-fadeInUp(500ms);
 }

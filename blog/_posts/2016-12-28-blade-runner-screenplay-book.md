@@ -1,9 +1,9 @@
 ---
 layout: blogpost
-title:  Book Printing Exercise Part 2&colon; Blade Runner
+title:  Blade Runner in Print&mdash;And Better
 ---
 
-As an accidental sequel to my [last]({{ site.url }}/blog/the-usual-suspects-screenplay-book.html) screenplay project, I recently finished and printed another screenplay book for Blade Runner as a Christmas present for my boyfriend. This time, however, I avoided a lot (a lot!) of mistakes from first time around and made some design changes I'm much more satisfied with (print dimensions, typography, etc). With the last book being created over 2 years ago, I can't get over the fulfilling sense of holding something I made in my own hands. Here are my favorite shots:
+As an accidental sequel to my [last]({{ site.url }}/blog/the-usual-suspects-screenplay-book.html) screenplay project, I recently finished and printed another screenplay book. This time for Blade Runner and with way better design decisions (ie print dimensions, typography, margins, the works). Here are my favorite shots:
 
 {% include figure.html
   url="/assets/img/bladerunner/cover.jpg" 

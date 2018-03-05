@@ -50,8 +50,9 @@ Notable in this list, however, is that "lack of information" is not included.
 Nearly 40% of men and women in the US will be diagnosed with cancer within their lifetime. Each patient stands to undergo the most emotionally and physically significant experience they will ever have.
 
 {% include blockquote.html
-  quote="&quot;If we undertake to study human lives, we have to be ready to face human feelings.&quot;"
-  author="Virginia Dickson-Swift, et al"
+  quote="If we undertake to study human lives, we have to be ready to face human feelings."
+  cite1="(Ely et al, 1991)"
+  hasQuotes=true
 %}
 
 In order to fully comprehend the cancer journey, our personas will serve two purposes:
@@ -70,6 +71,10 @@ We choose to focus on direct, in-person interaction. In our research, we have fo
 ## Hypotheses
 
 We identify the problem statement to be difficulty navigating cancer information, not lack thereof. Therefore, we are not developing another source of information.
+
+Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla.
+
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus.
 
 ## Acknowledgements
 
