@@ -16,19 +16,29 @@ menu:
   - Personas
   - Guiding Principles
   - Hypotheses
-  - Acknowledgements
+  - Footnotes
 
 ---
 
-IBM partners with the American Cancer Society to develop a consumer-facing app to 
+In April 2016, IBM and American Cancer Society (ACS) announced a partnership to build a consumer-facing mobile app that would draw upon incredible resources from both sides: ACS's massive database of cancer knowledge and de-identified patient and caregiver data and IBM's artificial intelligent features, widely personified as "Watson".
 
-Due to the confidential nature of the project and the individuals involved, secondary research may be used to represent insights uncovered through primary research. Any other sensitive information may also be obfuscated or omitted.
+Within IBM, this was an ambitious project spearheaded by an early product development team of just three designers. *I was the product designer and owe my work to the two extraordinary user researchers.*
+
+Due to the confidential nature of the project and the individuals involved, secondary research is used to broadly represent insights uncovered and validated through primary research. Any other sensitive information may also be obfuscated or omitted.
 
 ## Background
 
-Founded in 1913, the American Cancer Society (ACS) sought to raise public awareness on a subject that was, at the time, responded with fear and silence. Today, cancer deaths have [dropped 25%](https://www.cancer.org/about-us/who-we-are/our-history.html){:target="_blank"} in the United States and open conversations have become vital to a higher quality of life during cancer experiences.
+Founded in 1913, the American Cancer Society (ACS) sought to raise public awareness on a subject that was, at the time, responded to with fear and silence. Today, cancer deaths have [dropped 25%](https://www.cancer.org/about-us/who-we-are/our-history.html){:target="_blank"} in the United States and open conversations have become vital to a higher quality of life during cancer experiences.
 
-However, despite these advances in modern medicine and supportive care, studies show that lay understanding of cancer is still suboptimal 
+However, despite these advances in modern medicine and supportive care, [many](https://www.ncbi.nlm.nih.gov/pubmed/25180371){:target="_blank"} [studies](https://www.ncbi.nlm.nih.gov/pubmed/12923796){:target="_blank"} still show concern that lay understanding of cancer is suboptimal. *Patients and their caregivers lack the medical framework to fully comprehend and manager their cancer.*
+
+{% include blockquote.html
+  quote="The 100 day period following cancer diagnosis is recognized as the 'existential plight in cancer'...Information acquired during this period shapes and defines patients' perspective about their condition."
+  cite1="(Ofran et al, 2012)"
+  hasQuotes=true
+%}
+
+often do not understand phrases often used in cancer consultations and that knowledge of basic anatomy cannot be assumed
 
 
 cancer patients still lack the medical framework to fully comprehend and manage their cancer.
@@ -76,6 +86,6 @@ Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sag
 
 Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus.
 
-## Acknowledgements
+## Footnotes
 
-Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum id ligula porta felis euismod semper. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+Due to the confidential nature of the project and the individuals involved, secondary research was used to generally represent insights uncovered and validated through primary research. Any other sensitive information may also be obfuscated or omitted.
