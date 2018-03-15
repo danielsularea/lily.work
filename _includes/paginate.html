@@ -20,7 +20,7 @@
       <div class="g--grid_col-md-5">
         {% if prev_post %}
           <a href="{{ prev_post.url }}" class="m--paginate_prev">
-            <span>Before</span>
+            <span>Earlier</span>
             {{ prev_post.title }}
           </a>
         {% endif %}
@@ -33,7 +33,7 @@
       <div class="g--grid_col-md-5">
         {% if next_post %}
           <a href="{{ next_post.url }}" class="m--paginate_next">
-            <span>After</span>
+            <span>Later</span>
             {{ next_post.title }}
           </a>
         {% endif %}
