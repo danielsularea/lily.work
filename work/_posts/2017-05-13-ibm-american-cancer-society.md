@@ -12,8 +12,8 @@ cover_img: cover.jpg
 
 menu:
   - Background
-  - The Team
-  - Generative Research
+  - Team
+  - Early Insights
   - Personas
   - Hypotheses
   - Footnotes
@@ -28,7 +28,7 @@ Due to the confidential nature of the project and the individuals involved, seco
 
 Founded in 1913, the American Cancer Society (ACS) sought to raise public awareness on a subject that was, at the time, responded to with fear and silence. Since then, cancer deaths have [dropped 25%](https://www.cancer.org/about-us/who-we-are/our-history.html){:target="_blank"} in the United States and open conversations have become vital to a higher quality of life during cancer experiences.
 
-However, despite these advances in modern medicine and supportive care, [many](https://www.ncbi.nlm.nih.gov/pubmed/25180371){:target="_blank"} [studies](https://www.ncbi.nlm.nih.gov/pubmed/12923796){:target="_blank"} still show concern that lay understanding of cancer is suboptimal. *Patients and their caregivers lack the medical framework to fully comprehend and manage their cancer.*
+However, even with advances in modern medicine and supportive care, [many](https://www.ncbi.nlm.nih.gov/pubmed/25180371){:target="_blank"} [studies](https://www.ncbi.nlm.nih.gov/pubmed/12923796){:target="_blank"} still show concern that lay understanding of cancer is suboptimal. *Patients and their caregivers lack the medical framework to fully comprehend and manage their cancer.*
 
 {% include blockquote.html
   quote="Information acquired [in the 100 days following diagnosis] shapes and defines patients' perspective about their condition."
@@ -36,29 +36,43 @@ However, despite these advances in modern medicine and supportive care, [many](h
   hasQuotes=true
 %}
 
-In order to empower conversations around cancer, ACS and IBM saw an opportunity to draw powerful resources from both sides: ACS's massive database of cancer knowledge and de-identified call center records and IBM's artificial intelligent features, widely personified as "Watson". *The mission is to build an consumer-facing mobile app that empowers patients and caregivers in having fuller and more educated conversations about their cancer.*
+In order to empower conversations around cancer, ACS and IBM saw an opportunity to combine powerful resources from both sides: ACS's massive database of cancer knowledge and IBM's artificial intelligent features, widely personified as "Watson". *The mission was to build a consumer-facing mobile app that empowers patients and caregivers in having fuller and more educated conversations about their cancer.*
 
-## The Team
+Our guiding principles were to:
+1. Navigate information noise, not add to it
+2. Strengthen human relationships
+3. Optimize both ACS and IBM resources
 
-Within IBM, this was an ambitious project spearheaded by an early product development team of just four members. *I was the product designer and owe my work to the project lead and two extraordinary user researchers.*
+## Team
 
-Together, we were responsible for biweekly updates to both ACS and IBM stakeholders and hand off to a production team, which  February 2017.
+Within IBM, this was an ambitious project spearheaded by an early product development team of just four members. *I was the product designer and owe my thanks to the project lead and two extraordinary user researchers.*
 
-## Generative Research
+Together, we were responsible for biweekly updates to both ACS and IBM stakeholders and ultimately hand off to a production team, which finished in February 2017.
 
-Despite the expanding variety of resources for cancer patients and caregivers, the predominant source of information remains to be healthcare professionals. However, 
+## Early Insights
 
-{% include blockquote.html
+Due to the sensitive nature of our investigation, the team needed to garner a sophisticated understanding of the cancer journey before approaching patients and their caregivers. *To begin, we leveraged our parternship to speak to specialists at ACS facilities, including a call center in Austin and [Hope Lodges](https://www.cancer.org/treatment/support-programs-and-services/patient-lodging/hope-lodge.html){:target="_blank"} in Boston and New York.* This is what we learned:
+
+1. **Health Literacy**\\
+ACS employees often found themselves consolidating and translating medical information for patients. Particularly important was pointing out what is most relevant to each individual's diagnosis and progress.
+
+2. **Online Research**\\
+As information online continues to be more comprehensive and accessible, patients and caregives struggle to recognize credible and truthful sources. This is especially difficult as the medical domain around cancer is constantly updating.
+
+3. **Clinical Encounter Support**\\
+Patients sought information in order to build a more meaningful conversation with their doctor. Their goals typically were to ask more educated questions, be more confident about their doctor's decisions, and follow up on confusing concepts in the aftermath of a consultation.
+
+<!-- Despite the expanding variety of resources for cancer patients and caregivers, the predominant source of information remains to be healthcare professionals. However,  -->
+
+<!-- {% include blockquote.html
   quote="Unless [information] is organized, processed, and available to the right people in a format for decision making, it is a burden, not a benefit."
   cite1="William Pollard"
   hasQuotes=true
-%}
+%} -->
 
-Regardless of type of information, patients and caregivers still struggle with credibility of the source, relevancy to their diagnosis, conflicting cross-references, and their own limited health literacy.
+<!-- Regardless of type of information, patients and caregivers still struggle with credibility of the source, relevancy to their diagnosis, conflicting cross-references, and their own limited health literacy.
 
-Notable in this list, however, is that "lack of information" is not included.
-
-Most people (77%) ‘strongly agreed’ or ‘agreed’ that they would have more confidence in online health information if it was endorsed by a recognised professional body. - Online information as a decision making aid for cancer patients: Recommendations from the Eurocancercoms project
+Most people (77%) ‘strongly agreed’ or ‘agreed’ that they would have more confidence in online health information if it was endorsed by a recognised professional body. - Online information as a decision making aid for cancer patients: Recommendations from the Eurocancercoms project -->
 
 ## Personas
 
@@ -74,14 +88,6 @@ In order to fully comprehend the cancer journey, our personas will serve two pur
 
 1. Validate and expand our assumptions surrounding 
 2. Formulate our understanding of the cancer experience so that our solution integrates seamlessly into existing scenarios.
-
-<!-- ## Guiding Principles
-
-1. Surface relevant information<br/>
-Help users navigate information by surfacing them as they become relevant.
-
-2. Strengthen relationships<br/>
-We choose to focus on direct, in-person interaction. In our research, we have found that the main motive for  -->
 
 ## Hypotheses
 
