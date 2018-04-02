@@ -5,11 +5,14 @@
   // var MaxMobileWidth;
 
   var Selectors = obj.settings = {
-    headerScroll:         'js--headerScroll',
-    // portrait:           'l--home_portrait',
-    workMenu:             'js--workMenu',
-    workMenuLink:         'js--workMenuLink',
-    zoomImages:           '[data-action="zoom"]',
+    headerScroll:             'js--headerScroll',
+    // portrait:              'l--home_portrait',
+    staticryptForm:           'js--staticryptForm',
+    staticryptInsertHeader:   'js--staticryptInsertHeader',
+    staticryptInsertArticle:  'js--staticryptInsertArticle',
+    workMenu:                 'js--workMenu',
+    workMenuLink:             'js--workMenuLink',
+    zoomImages:               '[data-action="zoom"]',
   };
 
   var WorkMenuConfig;
@@ -245,6 +248,54 @@
   //   window.scroll(window.scrollX, window.scrollY - offsetY);
   // };
 
+  var _handlePasswordSubmit = function(e) {
+    e.preventDefault();
+
+    var formArr = document.getElementsByClassName(Selectors.staticryptForm);
+
+    if (!formArr[0]) { return; }
+
+    var form = formArr[0],
+        passwordArr = form.querySelectorAll('[type="password"]'),
+        submitArr = form.querySelectorAll('[type="submit"]');
+
+    if (!passwordArr[0] || !submitArr[0]) { return; }
+
+    var password = passwordArr[0].value,
+        submit = submitArr[0].value,
+        encryptedMsg = form.dataset.encrypted,
+        encryptedHMAC = encryptedMsg.substring(0, 64),
+        encryptedHTML = encryptedMsg.substring(64),
+        decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(password).toString()).toString();
+
+    if (decryptedHMAC !== encryptedHMAC) {
+      alert('Bad passphrase!');
+      return;
+    }
+
+    var header = form.dataset.header,
+        articleBefore = form.dataset.articleBefore,
+        articleAfter = form.dataset.articleAfter,
+        plainHTML = CryptoJS.AES.decrypt(encryptedHTML, password).toString(CryptoJS.enc.Utf8);
+
+    form.remove();
+
+    var insertHeaderArr = document.getElementsByClassName(Selectors.staticryptInsertHeader),
+        insertArticleArr = document.getElementsByClassName(Selectors.staticryptInsertArticle);
+
+    if (insertHeaderArr[0]) {
+      insertHeaderArr[0].insertAdjacentHTML('beforeend', header);
+    }
+
+    if (insertArticleArr[0]) {
+      insertArticleArr[0].insertAdjacentHTML('beforeend', articleBefore + marked(plainHTML) + articleAfter);
+    }
+
+    _setDimensions();
+    _initMediumZoom();
+    _bindEvents();
+  };
+
   var _handleWorkMenuScrollBy = function() {
     if (!WorkMenuConfig.exists) return;
 
@@ -289,6 +340,7 @@
   var _bindEvents = function() {
     window.addEventListener('resize', _handleWindowResize);
     document.addEventListener('scroll', _handleWindowScroll);
+    document.addEventListener('submit', _handlePasswordSubmit);
 
     for(var i in WorkMenuConfig.links) {
       WorkMenuConfig.links[i].addEventListener('click', _handleWorkMenuClick);

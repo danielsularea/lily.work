@@ -72,10 +72,10 @@
   }
 }
 
-.m--paginate_all {
+.m--paginate_index {
   display: block;
-  height: 4rem;
-  line-height: 4rem;
+height: $v--paginate-height;
+line-height: $v--paginate-height;
   text-align: center;
   color: $v--color-gray3;
 }

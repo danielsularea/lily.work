@@ -1,0 +1,12 @@
+.l--workPost {
+
+}
+
+.l--workPost_header * {
+  @include u--animation-fade(500ms);
+}
+
+.l--workPost_content {
+  animation-delay: 500ms;
+  @include u--animation-fade(500ms);
+}

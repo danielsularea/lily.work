@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html cache="true" %}
+<body>
+  <div id="barba-wrapper">
+    <div class="barba-container">
+      <div data-transition="fade">
+        {% include header.html %}
+        
+        <main id="main" class="l--workPost" role="main" aria-labelledby="page-title">
+          <article id="article" class="g--grid-fixed js--staticryptInsertArticle" data-namespace="default" itemscope itemtype="http://schema.org/WorkPosting">
+            <div class="g--grid_row">
+              <header class="l--workPost_header m--workHeader g--grid_col-12 js--staticryptInsertHeader">
+                <div class="m--workHeader_meta" itemprop="datePublished">{{ page.company }} / {{ page.year }}</div>
+                <h1 id="page-title" class="m--workHeader_title" itemprop="name headline">
+                  {{ page.title }}
+                </h1>
+                <form class="m--staticrypt js--staticryptForm" action="#" method="post" data-encrypted="{{ page.encrypted }}" data-header="<img class='m--workHeader_img' src='{{ site.url }}/assets/img/{{ page.imgfolder }}/{{ page.cover_img }}' alt='{{ page.title }}' itemprop='image'><div class='m--workHeader_arrow'>&#8595;</div>" data-article-before="<div class='g--grid_row'><div class='g--grid_col-0 g--grid_col-md-4 g--grid_col-lg-3'><div class='m--workMenu js--workMenu' data-offsetY='100'><div class='m--workMenu_title'>{{ page.title }}</div><ul class='m--workMenu_list'>{% for item in page.menu %}<li class='js--workMenuLink'><a href='#{{ item | replace: ' ', '-' | downcase }}'>{{ item }}</a></li>{% endfor %}<li class='m--workMenu_top'><a href='#top'>Back to Top</a></li></ul></div></div><section id='top' class='l--workPost_content m--content m--anchorWrap m--anchorWrap-external-hover g--grid_col-12 g--grid_col-md-8 g--grid_col-lg-6' itemprop='articleBody'>" data-article-after="</section></div>{% include paginate.html category="work" %}">
+                  <input id="staticrypt-password"
+                         class="m--staticrypt_password"
+                         type="password"
+                         name="password"
+                         placeholder="passphrase"
+                         autocomplete="off"
+                         autofocus/>
+
+                  <input type="submit" class="m--staticrypt_submit" value="unlock"/>
+                </form>
+              </header>
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
+  </div>
+  {% include scripts.html %}
+</body>
+</html>

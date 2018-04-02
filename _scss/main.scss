@@ -25,6 +25,7 @@
 @import 'module/header';
 @import 'module/paginate';
 @import 'module/notFound';
+@import 'module/staticrypt';
 
 @import 'module/workList';
 @import 'module/workHeader';
@@ -35,3 +36,4 @@
 
 // Layout
 @import 'layout/home';
+@import 'layout/workPost';

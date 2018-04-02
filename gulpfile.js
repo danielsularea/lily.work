@@ -2,7 +2,7 @@
 
 var gulp          = require('gulp');
 var shell         = require('gulp-shell');
-var util          = require('gulp-util');
+var gutil         = require('gulp-util');
 var plumber       = require('gulp-plumber');
 var rename        = require('gulp-rename');
 var concat        = require('gulp-concat');
@@ -16,6 +16,11 @@ var autoprefixer  = require('gulp-autoprefixer');
 var sourcemaps    = require('gulp-sourcemaps');
 var jshint        = require('gulp-jshint');
 var stylish       = require('jshint-stylish');
+
+var CryptoJS      = require('crypto-js');
+var FileSystem    = require('fs');
+var through       = require('through2');
+var PluginError   = gutil.PluginError;
 
 gulp.task('style', () => {
   return gulp.src('_scss/*.scss')
@@ -67,6 +72,44 @@ gulp.task('script-custom', () => {
 
 gulp.task('script', ['script-lib', 'script-custom'], () => {});
 
+function encrypt(password) {
+  return through.obj(function(file, encoding, callback) {
+    if (file.isNull() || file.isDirectory()) {
+      this.push(file);
+      return callback();
+    }
+
+    // No support for streams
+    if (file.isStream()) {
+      this.emit('error', new PluginError({
+        plugin: 'Encrypt',
+        message: 'Streams are not supported.'
+      }));
+      return callback();
+    }
+
+    if (file.isBuffer()) {
+      var chunks = String(file.contents).split('---');
+
+      var encrypted = CryptoJS.AES.encrypt(chunks[2], password);
+      var hmac = CryptoJS.HmacSHA256(encrypted.toString(), CryptoJS.SHA256(password).toString()).toString();
+      var encryptedMessage = 'encrypted: ' + hmac + encrypted;
+
+      var result = [ '---', chunks[1], '\n', encryptedMessage, '\n', '---' ]
+
+      file.contents = new Buffer(result.join(''));
+      this.push(file);
+      return callback();
+    }
+  });
+}
+
+gulp.task('encrypt', () => {
+  return gulp.src('_work/*.*')
+    .pipe(encrypt('lilywantstoworkforyou'))
+    .pipe(gulp.dest('work/_posts'));
+});
+
 gulp.task('build', shell.task(['jekyll build --watch']));
 
 gulp.task('serve', () => {
@@ -80,7 +123,8 @@ gulp.task('serve', () => {
   gulp.watch('_scss/**/*.scss', ['style']);
   gulp.watch('_js/custom/**/*.js', ['script-custom']);
   gulp.watch('_js/lib/**/*.js', ['script-lib']);
+  gulp.watch('_work/*.*', ['encrypt']);
   gulp.watch('_site/**/*.*').on('change', browserSync.reload);
 });
 
-gulp.task('default', ['style', 'script', 'build', 'serve'], () => {});
+gulp.task('default', ['style', 'script', 'encrypt', 'build', 'serve'], () => {});
