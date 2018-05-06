@@ -26,8 +26,8 @@
 
 .m--paginate_prev {
   @media (min-width: map-get($v--grid-breakpoints, md)) {
-    margin-left: -1rem;
-    padding-left: 1rem;
+    // margin-left: -1rem;
+    // padding-left: 1rem;
     text-align: left;
 
     span {
@@ -38,20 +38,20 @@
         position: absolute;
         left: 0;
         margin-right: 0.4rem;
-        transition: left 200ms;
+        // transition: left 200ms;
       }
     }
 
-    &:hover span:before {
-      left: -0.6rem;
-    }
+    // &:hover span:before {
+    //   left: -0.6rem;
+    // }
   }
 }
 
 .m--paginate_next {
   @media (min-width: map-get($v--grid-breakpoints, md)) {
-    margin-right: -1rem;
-    padding-right: 1rem;
+    // margin-right: -1rem;
+    // padding-right: 1rem;
     text-align: right;
 
     span {
@@ -62,20 +62,20 @@
         position: absolute;
         right: 0;
         margin-left: 0.4rem;
-        transition: right 200ms;
+        // transition: right 200ms;
       }
     }
 
-    &:hover span:after {
-      right: -0.6rem;
-    }
+    // &:hover span:after {
+    //   right: -0.6rem;
+    // }
   }
 }
 
 .m--paginate_index {
   display: block;
-height: $v--paginate-height;
-line-height: $v--paginate-height;
+  height: $v--paginate-height;
+  line-height: $v--paginate-height;
   text-align: center;
   color: $v--color-gray3;
 }

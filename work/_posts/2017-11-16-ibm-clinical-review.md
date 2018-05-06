@@ -1,17 +1,42 @@
 ---
 layout: workpost
-title: Clinical Review
+title: Watson Imaging Clinical Review
 year: 2017
 company: IBM
 
-published: false
-
 summary: >
-  We use AI to reduce gaps of care and incorrect billing.
+  Keeping documentation in line so that doctors never lose a diagnosis.
 
 imgfolder: ibm
 cover_img: ibm.gif
 
-
-encrypted: 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
 ---
+
+Maecenas faucibus mollis interdum. Donec sed odio dui. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.
+
+Cras justo odio, dapibus ac facilisis in, egestas eget quam. Sed posuere consectetur est at lobortis. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+sources:
+- http://www.healthcareitnews.com/blog/why-clinical-documentation-improvement-so-important-hospitals
+- Secret Life of CDI Specialist: https://www.nursingcenter.com/journalarticle?Article_ID=1493953&Journal_ID=54016&Issue_ID=1493946
+- https://www.ibm.com/blogs/watson-health/introducing-ibm-watson-imaging-clinical-review/
+
+## Tellus Porta Euismod
+
+Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit.
+
+Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod. Curabitur blandit tempus porttitor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+
+Nulla non metus auctor fringilla. Sed posuere consectetur est at lobortis. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+
+## Donec Ullamcorper
+
+Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+Etiam porta sem malesuada magna mollis euismod. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Sed posuere consectetur est at lobortis.
+
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis.
+
+Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum id ligula porta felis euismod semper. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.

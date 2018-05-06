@@ -71,10 +71,10 @@
   }
 
   blockquote {
-    margin: 2rem;
+    margin: 3rem;
 
     @media (min-width: map-get($v--grid-breakpoints, md)) {
-      margin: 3rem 2.5rem;
+      margin: 4rem 2.5rem;
     }
 
     > p {

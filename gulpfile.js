@@ -90,14 +90,18 @@ function encrypt(password) {
 
     if (file.isBuffer()) {
       var chunks = String(file.contents).split('---');
+      var isEncrypt = chunks[1].indexOf('workpost_encrypted');
 
-      var encrypted = CryptoJS.AES.encrypt(chunks[2], password);
-      var hmac = CryptoJS.HmacSHA256(encrypted.toString(), CryptoJS.SHA256(password).toString()).toString();
-      var encryptedMessage = 'encrypted: ' + hmac + encrypted;
+      if (isEncrypt > 0) {
+        var encrypted = CryptoJS.AES.encrypt(chunks[2], password);
+        var hmac = CryptoJS.HmacSHA256(encrypted.toString(), CryptoJS.SHA256(password).toString()).toString();
+        var encryptedMessage = 'encrypted: ' + hmac + encrypted;
 
-      var result = [ '---', chunks[1], '\n', encryptedMessage, '\n', '---' ]
+        var result = [ '---', chunks[1], '\n', encryptedMessage, '\n', '---' ]
 
-      file.contents = new Buffer(result.join(''));
+        file.contents = new Buffer(result.join(''));
+      }
+
       this.push(file);
       return callback();
     }

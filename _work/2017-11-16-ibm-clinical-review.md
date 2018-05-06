@@ -1,13 +1,11 @@
 ---
 layout: workpost
-title: Clinical Review
+title: Watson Imaging Clinical Review
 year: 2017
 company: IBM
 
-published: false
-
 summary: >
-  We use AI to reduce gaps of care and incorrect billing.
+  Keeping documentation in line so that doctors never lose a diagnosis.
 
 imgfolder: ibm
 cover_img: ibm.gif
@@ -17,6 +15,11 @@ cover_img: ibm.gif
 Maecenas faucibus mollis interdum. Donec sed odio dui. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.
 
 Cras justo odio, dapibus ac facilisis in, egestas eget quam. Sed posuere consectetur est at lobortis. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+sources:
+- http://www.healthcareitnews.com/blog/why-clinical-documentation-improvement-so-important-hospitals
+- Secret Life of CDI Specialist: https://www.nursingcenter.com/journalarticle?Article_ID=1493953&Journal_ID=54016&Issue_ID=1493946
+- https://www.ibm.com/blogs/watson-health/introducing-ibm-watson-imaging-clinical-review/
 
 ## Tellus Porta Euismod
 

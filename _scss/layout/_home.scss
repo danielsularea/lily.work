@@ -55,7 +55,7 @@
   bottom: 0;
 }
 
-.l--home_bio_main {
+.l--home_bio_text {
   @include u--animation-fade(500ms);
   line-height: 1.4;
   font-size: 1.6rem;
@@ -103,7 +103,7 @@
   }
 }
 
-.l--home_bio_main,
+.l--home_bio_text,
 .l--home_bio_arrow {
   margin: 2rem 0;
 }

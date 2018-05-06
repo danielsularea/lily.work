@@ -5,23 +5,29 @@ year: 2018
 company: IBM
 
 summary: >
-  Women worldwide depend on periodic screening mammograms to detect breast cancer. But with an alarming shortage of radiologists to read them, we find a way to bridge the gap.
+  Women worldwide depend on mammograms to detect breast cancer. But with an alarming shortage of radiologists to read them, we use AI to step in.
 
 imgfolder: bca
 cover_img: temp.jpg
+
+menu:
+  - Problem
+  - Team
 ---
 
 Maecenas faucibus mollis interdum. Donec sed odio dui. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.
 
 Cras justo odio, dapibus ac facilisis in, egestas eget quam. Sed posuere consectetur est at lobortis. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-## Tellus Porta Euismod
+## Problem
 
 Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit.
 
-Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod. Curabitur blandit tempus porttitor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+## Team
 
-Nulla non metus auctor fringilla. Sed posuere consectetur est at lobortis. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+This offering is the most aggressive within the Care Advisors portfolio and therefore backed by an extensive team of sub-teams. *I headed design and worked closely with those leading offering management, data science, research, regulatory, and development.*
+
+Depending on project need, I led one other designer to accomplish short-term goals.
 
 ## Donec Ullamcorper
 
