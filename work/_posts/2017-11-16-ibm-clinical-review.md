@@ -4,6 +4,8 @@ title: Watson Imaging Clinical Review
 year: 2017
 company: IBM
 
+published: false
+
 summary: >
   Keeping documentation in line so that doctors never lose a diagnosis.
 
