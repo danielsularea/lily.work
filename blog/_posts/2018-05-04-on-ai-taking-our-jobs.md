@@ -5,9 +5,7 @@ title: Automation Anxiety
 published: false
 ---
 
-Working inside the Watson division of IBM's vast portfolio, I get asked and often thinking about, "Will AI take our jobs?". I try to answer this question as a designer building AI products.
-
-<!-- IBM's Watson shook the world of artifical intelligence in 2011 when it defeated past champions of _Jeopardy_ in their own game. -->
+IBM's Watson shook the world of artifical intelligence in 2011 when it defeated past champions of _Jeopardy_ in their own game. Today, this type of artifical intelligent advancement is posing the question: "will AI take our jobs?"
 
 My job requires me to interface with doctors regularly in order to understand them as users. But sometimes, I speak to them so that I might automate their work with artificial intelligence.
 
