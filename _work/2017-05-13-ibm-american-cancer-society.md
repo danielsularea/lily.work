@@ -5,7 +5,7 @@ year: 2016-7
 company: IBM
 
 summary: >
-  In a partnership with ACS, we design an app to help patients better understand their cancer diagnosis.
+  Building a mobile app to improve patients' understanding of their cancer, starting at the doctor's appointment.
 
 imgfolder: acs
 cover_img: cover.jpg

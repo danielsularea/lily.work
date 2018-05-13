@@ -4,10 +4,8 @@ title: Watson Imaging Clinical Review
 year: 2017
 company: IBM
 
-published: false
-
 summary: >
-  Keeping documentation in line so that doctors never lose a diagnosis.
+  Helping hospital staff search through a complex database.
 
 imgfolder: ibm
 cover_img: ibm.gif

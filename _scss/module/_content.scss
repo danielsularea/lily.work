@@ -22,20 +22,21 @@
 
   h3 {
     line-height: 1.5;
-    font-family: $v--font-sans-serif;
-    font-weight: normal;
-    font-size: 1.2rem;
+    // font-family: $v--font-sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
     color: $v--color-black;
   }
 
   > p {
+    position: relative;
     line-height: 1.875;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: $v--color-gray5;
 
     &:first-child {
       line-height: 1.8;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       color: $v--color-black;
     }
   }
@@ -47,8 +48,30 @@
 
   figure {
     position: relative;
-    margin: 1em auto;
+    margin: 3rem auto;
     text-align: center;
+  }
+
+  figure.m--content_figure {
+    position: absolute;
+    width: 250px;
+    margin: auto;
+
+    &.m--content_figure-right {
+      left: 100%;
+      padding-left: 6%;
+      text-align: left;
+    }
+
+    &.m--content_figure-left {
+      right: 100%;
+      padding-right: 6%;
+      text-align: right;
+    }
+
+    img {
+      max-height: 200px;
+    }
   }
 
   figcaption {
@@ -167,7 +190,7 @@
     li {
       margin-bottom: 0.5rem;
       line-height: 1.875;
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: $v--color-gray5;
     }
   }
