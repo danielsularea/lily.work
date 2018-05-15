@@ -30,14 +30,24 @@
 
   > p {
     position: relative;
-    line-height: 1.875;
-    font-size: 1.1rem;
+    line-height: 1.8;
+    font-size: 1rem;
     color: $v--color-gray5;
 
+    @media (min-width: map-get($v--grid-breakpoints, md)) {
+      line-height: 1.875;
+      font-size: 1.1rem;
+    }
+
     &:first-child {
-      line-height: 1.8;
-      font-size: 1.3rem;
+      line-height: 1.7;
+      font-size: 1.2rem;
       color: $v--color-black;
+
+      @media (min-width: map-get($v--grid-breakpoints, md)) {
+        line-height: 1.8;
+        font-size: 1.3rem;
+      }
     }
   }
 
@@ -189,9 +199,14 @@
   ul, ol {
     li {
       margin-bottom: 0.5rem;
-      line-height: 1.875;
-      font-size: 1.1rem;
+      line-height: 1.75;
+      font-size: 1rem;
       color: $v--color-gray5;
+
+      @media (min-width: map-get($v--grid-breakpoints, md)) {
+        line-height: 1.875;
+        font-size: 1.1rem;
+      }
     }
   }
 }

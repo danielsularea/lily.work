@@ -7,8 +7,8 @@ company: IBM
 summary: >
   Helping hospital staff search through a complex database.
 
-imgfolder: ibm
-cover_img: ibm.gif
+imgfolder: clinicalreview
+cover_img: temp.jpg
 
 ---
 
