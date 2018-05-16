@@ -8,7 +8,7 @@ summary: >
   Helping hospital staff search through a complex database.
 
 imgfolder: clinicalreview
-cover_img: temp.jpg
+cover_img: hospital.svg
 
 ---
 

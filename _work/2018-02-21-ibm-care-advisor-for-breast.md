@@ -23,7 +23,7 @@ menu:
 
 Care Advisor is a suite of "moonshot" AI offerings where each explores one division of medical imaging. This is my part in one of those moonshots.
 
-Notable is that this project is a less traditional example of my work as a product designer because the final solution has no real interface. Instead, I helped design and build the most ambitious AI service within the IBM Watson Health portfolio. However, if you're really looking for a more interaction design example, see <a href="../work/ibm-clinical-review.html">IBM Watson Clinical Review</a>.
+Note that this project is a less traditional example of my work as a product designer because the final solution has no interface. Instead, I helped design and build the most ambitious AI service within the IBM Watson Health portfolio. However, if you're really looking for a more interaction design example, see <a href="../work/ibm-clinical-review.html">IBM Watson Clinical Review</a>.
 
 ## My Role
 
@@ -31,7 +31,7 @@ Notable is that this project is a less traditional example of my work as a produ
   <img src="../assets/img/ca-breast/juggling.svg" />
 </figure>
 
-Care Advisor for Breast (CA-Breast) kicked off in early 2017 and *I began work as the team's product designer in July 2017*. I worked daily with team leads from offering management, research, regulatory, and development in order to bring this product to a global market.
+Care Advisor for Breast (CA-Breast) kicked off in early 2017 and *I began work as the team's product designer in July 2017*. I worked daily with the offering management, research, regulatory, and development teams in order to bring this product to a global market.
 
 At the beginning of this project, I was responsible for identifying and exploring the opportunity space given a broad direction. Once early validation was proven, I became responsible for designing and defining the solution, including the training and implementation of our machine learning algorithm.
 
@@ -44,9 +44,9 @@ Mammograms are the most effective but non-invasive practice used to detect early
 *However, the business challenged us with an open problem: there is a global shortage of radiologists and institutions are struggling to keep up with screening demand.*
 
 Our high level goals were to:
+- Solve a major problem related to screening mammography
 - Leverage artificial intelligence as part of the Care Advisor suite
-- Empower radiologists and enhance their work&mdash;not to replace them
-- 
+- Empower radiologists&mdash;not replace them
 
 <!-- Although we roughly knew from the start that we wanted apply machine learning to reading mammograms, we didn't actually know what that means. -->
 
@@ -61,7 +61,7 @@ During the project's inaugural 6 months, offering management and design conducte
 
 ### 1. Radiologists have to cram in mammograms in between other tasks
 
-Radiologists performed tasks far beyond screening mammograms, such as diagnostic imaging (for patients who come in with known issues) and biopsy procedures. Since those tasks involve scheduled facetime with patients, they could only read screening mammograms whenever they had a small amount of time, hoping that they'll be able to get all of it done by the end of the day.
+Radiologists performed tasks far beyond screening mammograms, such as diagnostic imaging (for patients who come in with known issues) and biopsy procedures. Since those tasks involve scheduled facetime with patients, they could only read screening mammograms whenever they had a small window of time, hoping that they'll be able to get all of it done by the end of the day.
 
 ### 2. Reading mammograms is like finding a needle in a haystack
 
@@ -82,23 +82,25 @@ Due to the poor quality of mammography in the 1990s, the FDA implemented MQSA to
 </figure>
 
 ### 4. The breast imaging community has "suffered" from AI already
-Computer-aided detection (CAD) was an initiatve to make sure nothing was ever missed in the mammogram by pointing out areas of suspicion using AI. This technology was widely adopted but ultimately received negative reviews. Only 20% of the radiologists we observed looked at the CAD markings before their own interpretation and most agree that it was like reading with a medical student due to its high false positive rate.
+Computer-aided detection (CAD) was an initiatve to make sure nothing was ever missed in the mammogram by pointing out areas of suspicion using AI. This technology was widely adopted but ultimately received extremely negative reviews. Only 20% of the radiologists we observed looked at the CAD markings before their own interpretation and most agree that it was like reading with a medical student.
 
 ## Rethink the Problem
 
-Once we wrapped up generative research, we at least knew that we were on the right track: screening mammograms were a tasking process that deserved automation.
+Once we wrapped up generative research, we at least knew that we were on the right track: screening mammograms were a tasking process that needed to be improved.
 
-However, the problem needed to be redefined. *While the shortage of radiologists is a major problem outside the US, we observed that American institutions instead suffered from a shortage of radiologists who specialize in breast imaging.*
+However, the initial problem needed to be redefined. *While the shortage of radiologists is a major problem outside the US, we observed that American institutions instead suffered from a shortage of radiologists who specialize in breast imaging.*
 
 <figure>
 	<img src="../assets/img/ca-breast/generalistspecialist.svg" width="330"/>
 </figure>
 
-Only 30% of mammograms are read by breast imaging specialists, which are radiologists with additional fellowship training specializing in breast imaging. This means a high reliance on generalists who read across many body systems without a specialization in any of them.
+Only 30% of mammograms are read by breast imaging specialists, which are radiologists with additional fellowship training specializing in breast imaging. This means a high reliance on generalists who read breast and many other body systems without a particular specialization in any of them.
 
 This raises two concerns:
 1. General radiologists may not perform at the same level as specialists, particularly on more complex and suspicious cases
-2. The already short supply of specialists may be wasted on looking at normal mammograms that do not warrant such high expertise
+2. The short supply of specialists may be wasting their time and expertise by looking at so many normal mammograms.
+
+*Our directive now then is to be able to address both the lack of specialists in the US and the lack of radiologists overall worldwide within one solution.*
 
 ## The Solution
 
@@ -108,9 +110,13 @@ With final blessing by offering management, *our emergent concept was Full Norma
 
 ### End-to-End
 
-Radiologists in reality only spend 90 seconds to read a completely normal case, from opening the study to submitting a report. While other early concepts considered partial automation or enhancement of the radiologist's workflow, the opportunity window was simply too short to bring true value.
+Radiologists in reality only spend 90 seconds to read a completely normal case, from opening the study to submitting a report. While other early concepts considered partial automation or enhancement of the radiologist's workflow while reading, the opportunity window was simply too short to bring true value.
 
 CA-Breast therefore fulfills the entire process from the moment the mammogram is received to final report generation, without ever requiring human intervention.
+
+<figure>
+	<img src="../assets/img/ca-breast/fullread.svg" />
+</figure>
 
 ### Normal Reads
 
@@ -119,6 +125,10 @@ However, we do not aim to replace the radiologist. We wish to take mundane, repe
 - Globally, radiologists handle less studies in general
 
 As a result, CA-Breast only performs a read on mammograms that the algorithm finds to be normal. This means that we will always leave the suspicious cases to a human reader.
+
+<figure>
+	<img src="../assets/img/ca-breast/normalread.svg" />
+</figure>
 
 ## Product Definition
 
