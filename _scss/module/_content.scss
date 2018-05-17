@@ -85,13 +85,18 @@
   }
 
   figcaption {
-    line-height: 1.3;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    line-height: 1.4;
+    font-family: $v--font-mono;
     font-size: 1rem;
     color: $v--color-gray4;
     text-align: left;
 
     &:before {
       content: '\2191';
+      position: absolute;
+      left: 0;
       margin-right: 0.5rem;
       vertical-align: text-bottom;
       color: $v--color-black;

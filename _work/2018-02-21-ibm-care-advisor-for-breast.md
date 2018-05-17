@@ -5,7 +5,7 @@ year: 2018
 company: IBM
 
 summary: >
-  Designing an AI service to read routine mammograms so doctors can focus on more complex work.
+  Designing an AI service to read mammograms because institutions worldwide are short on doctors.
 
 imgfolder: ca-breast
 cover_img: acquisition.svg
@@ -17,13 +17,12 @@ menu:
   - Rethink the Problem
   - The Solution
   - Product Definition
-  - Designs
-  - Outcome
+  - Where We Are Now
 ---
 
 Care Advisor is a suite of "moonshot" AI offerings where each explores one division of medical imaging. This is my part in one of those moonshots.
 
-Note that this project is a less traditional example of my work as a product designer because the final solution has no interface. Instead, I helped design and build the most ambitious AI service within the IBM Watson Health portfolio. However, if you're really looking for a more interaction design example, see <a href="../work/ibm-clinical-review.html">IBM Watson Clinical Review</a>.
+Note that this project is a less traditional example of my work as a product designer because the final solution has no interface. Instead, I helped design and build the most ambitious AI service within the IBM Watson Health portfolio. However, if you're really looking for an interaction design example, see <a href="../work/ibm-clinical-review.html">IBM Watson Clinical Review</a>.
 
 ## My Role
 
@@ -31,24 +30,24 @@ Note that this project is a less traditional example of my work as a product des
   <img src="../assets/img/ca-breast/juggling.svg" />
 </figure>
 
-Care Advisor for Breast (CA-Breast) kicked off in early 2017 and *I began work as the team's product designer in July 2017*. I worked daily with the offering management, research, regulatory, and development teams in order to bring this product to a global market.
+Care Advisor for Breast (CA-Breast) kicked off in early 2017 and *I began work as the team's product designer in July 2017*. I collaborated with the offering management, research, regulatory, and development teams in order to bring this product to a global market.
 
 At the beginning of this project, I was responsible for identifying and exploring the opportunity space given a broad direction. Once early validation was proven, I became responsible for designing and defining the solution, including the training and implementation of our machine learning algorithm.
 
-While I am still part of this project, this post only reflects my work on the team up until March 2018.
+*I am still part of this project but this post only reflects my work on the team up until March 2018.*
 
 ## The Problem
 
-Mammograms are the most effective but non-invasive practice used to detect early signs of breast cancer. As a result, women worldwide depend on radiologists to read screening mammograms in order to identify findings in their breast that may indicate cancer.
+Mammography is the most effective non-invasive procedure used to detect early signs of breast cancer. As a result, women worldwide depend on radiologists, which are doctors that diagnose diseases using medical imaging, to identify any findings in their breast that may indicate cancer.
 
-*However, the business challenged us with an open problem: there is a global shortage of radiologists and institutions are struggling to keep up with screening demand.*
+These radiologists are responsible for looking at, or "reading", the mammograms, after which they submit a report back to the patient's primary care physician, detailing what they find.
+
+*However, the business challenged us with an open problem: there is a global shortage of radiologists and institutions are struggling to keep up with mammography demand.*
 
 Our high level goals were to:
-- Solve a major problem related to screening mammography
+- Address the increasing global backlog of mammograms
 - Leverage artificial intelligence as part of the Care Advisor suite
 - Empower radiologists&mdash;not replace them
-
-<!-- Although we roughly knew from the start that we wanted apply machine learning to reading mammograms, we didn't actually know what that means. -->
 
 ## Early Insights
 
@@ -61,11 +60,11 @@ During the project's inaugural 6 months, offering management and design conducte
 
 ### 1. Radiologists have to cram in mammograms in between other tasks
 
-Radiologists performed tasks far beyond screening mammograms, such as diagnostic imaging (for patients who come in with known issues) and biopsy procedures. Since those tasks involve scheduled facetime with patients, they could only read screening mammograms whenever they had a small window of time, hoping that they'll be able to get all of it done by the end of the day.
+Radiologists performed tasks far beyond mammograms, such as diagnostic imaging (for patients who come in with known issues) and biopsy procedures. Since those tasks involve scheduled facetime with patients, they could only read mammograms whenever they had a small window of time, hoping that they'll be able to get all of it done by the end of the day.
 
 ### 2. Reading mammograms is like finding a needle in a haystack
 
-Among all the screening mammograms that radiologists look at, at least 90% of them are completely normal and require no additional investigation, meaning the patient simply returns next year. As a result, radiologists have to go through a high volume of studies and only a few of them are actionable.
+Among all the mammograms that radiologists look at, at least 90% of them are completely normal and the patient just comes back for screening again next year. As a result, radiologists have to go through a high volume of studies, searching for the small handful with signs of cancer that they can't afford to miss.
 
 <figure class="m--content_figure m--content_figure-left">
   <img src="../assets/img/ca-breast/regulatory.svg" />
@@ -74,7 +73,7 @@ Among all the screening mammograms that radiologists look at, at least 90% of th
 
 ### 3. Mammography is highly regulated and standardized
 
-Due to the poor quality of mammography in the 1990s, the FDA implemented MQSA to regulate the way they are performed. These set of rules and subsequent guidelines by accreditation bodies ensured that every mammogram at the most part followed the same procedures, right down to the structure and content of the final report that radiologists write their findings into.
+Due to the poor quality of mammography in the 1990s, the FDA implemented MQSA to regulate the way they are performed. These set of rules and subsequent guidelines by accreditation bodies ensured that every mammogram in the country followed the same procedure, from the way the mammogram is captured to the structure of the final report. Changes to these standards would be very difficult.
 
 <figure class="m--content_figure m--content_figure-right">
   <img src="../assets/img/ca-breast/ai.svg" />
@@ -86,73 +85,100 @@ Computer-aided detection (CAD) was an initiatve to make sure nothing was ever mi
 
 ## Rethink the Problem
 
-Once we wrapped up generative research, we at least knew that we were on the right track: screening mammograms were a tasking process that needed to be improved.
+Once we wrapped up generative research, we at least knew that we were on the right track: reading mammograms is a tasking process that needed to be improved.
 
-However, the initial problem needed to be redefined. *While the shortage of radiologists is a major problem outside the US, we observed that American institutions instead suffered from a shortage of radiologists who specialize in breast imaging.*
+However, the initial problem needed to be redefined: *although the shortage of radiologists is a major problem outside the US, we observed that American institutions instead suffered from a shortage of radiologists who specialize in breast imaging.*
+
+This is because while all radiologists are certified to and do read mammograms, only 10% are specialists who completed a fellowship focusing on breast imaging. This means a high reliance on generalists who read across many body systems without a particular specialization in any of them.
 
 <figure>
 	<img src="../assets/img/ca-breast/generalistspecialist.svg" width="330"/>
 </figure>
 
-Only 30% of mammograms are read by breast imaging specialists, which are radiologists with additional fellowship training specializing in breast imaging. This means a high reliance on generalists who read breast and many other body systems without a particular specialization in any of them.
-
 This raises two concerns:
 1. General radiologists may not perform at the same level as specialists, particularly on more complex and suspicious cases
 2. The short supply of specialists may be wasting their time and expertise by looking at so many normal mammograms.
 
-*Our directive now then is to be able to address both the lack of specialists in the US and the lack of radiologists overall worldwide within one solution.*
+*Our directive now then is to be able to address both the shortage of specialists in the US and the global shortage of radiologists overall within one solution.*
 
 ## The Solution
 
 For the next few weeks, I worked through 10 potential concepts with the research, regulatory, and development teams, balancing user value with technical and legal feasibility.
 
-With final blessing by offering management, *our emergent concept was Full Normal Reads, a solution that handles the end-to-end read of normal mammograms.* Let's break that down:
+With final blessing by offering management, *our emergent concept was Full Normal Reads, a solution that completely automates the end-to-end read of normal mammograms.* Let's break that down:
 
 ### End-to-End
 
 Radiologists in reality only spend 90 seconds to read a completely normal case, from opening the study to submitting a report. While other early concepts considered partial automation or enhancement of the radiologist's workflow while reading, the opportunity window was simply too short to bring true value.
 
-CA-Breast therefore fulfills the entire process from the moment the mammogram is received to final report generation, without ever requiring human intervention.
+*CA-Breast therefore fulfills the entire process from the moment the mammogram is received to submitting the final report, without ever requiring human intervention.*
 
 <figure>
 	<img src="../assets/img/ca-breast/fullread.svg" />
+	<!-- <figcaption>CA-Breast takes mammograms off the queue, processes it, generates a final report, and signs it off.</figcaption> -->
 </figure>
 
 ### Normal Reads
 
 However, we do not aim to replace the radiologist. We wish to take mundane, repetitive cases off the table so that:
 - In the US, breast imaging specialists can focus on complex cases that take fuller advantage of their expertise
-- Globally, radiologists handle less studies in general
+- Globally, radiologists handle less studies overall
 
-As a result, CA-Breast only performs a read on mammograms that the algorithm finds to be normal. This means that we will always leave the suspicious cases to a human reader.
+*As a result, CA-Breast only performs a read on mammograms that the algorithm finds to be normal. This means that we will always leave the suspicious cases to a human reader.*
 
 <figure>
 	<img src="../assets/img/ca-breast/normalread.svg" />
+	<!-- <figcaption>CA-Breast first reviews whether it believes the mammogram to be normal before moving forward. If abnormal, it defers it to the radiologist.</figcaption> -->
 </figure>
 
 ## Product Definition
 
-Although CA-Breast now had a much clearer direction, the specific inputs and outputs of the solution need to be defined.
+Although CA-Breast now had a much clearer direction, the specific inputs and outputs of the solution needed to be defined.
 
-*For the next 4 months, I conducted evaluative user research with the objective of complimenting our solution with existing human practices and performance levels with regards to reading normal screening mammograms.*
+*For the next 4 months, I conducted evaluative user research with the objective of understanding existing human practices and performance levels so that the solution will imitate or compliment them.*
 
-### 1. There is no universal normal. We need to compare to priors.
+### 1. Prior mammograms are vital to decision-making.
 
 There is no way to know what is truly normal within a woman's breast. Any patient may have natural biological markers that are unique to her.
 
-Therefore, it is not only good practice but also a required logistical step for the algorithm to compare the current mammogram to prior mammograms and assess whether a finding is new or has changed in appearance.
+Radiologists determine normal by comparing the current study to those from previous years for the same patient. They then look for findings that are new or growing in size.
 
-### 2. Some women may be at higher risk and should be managed differently
+<figure>
+	<img src="../assets/img/ca-breast/priors.svg" />
+</figure>
 
-Depending on personal and family history of breast cancer, as well as rare genetic mutations, some women are predisposed to develop breast cancer. 
+*Therefore, algorithm must consider not only the current mammogram, but also a set of priors in order to make an informed assessment.*
 
-## Designs
+<figure class="m--content_figure m--content_figure-left">
+  <img src="../assets/img/ca-breast/patient.svg" />
+</figure>
 
-Because our solution is an entirely autonomous read of the 
+### 2. Higher risk women should be managed differently
 
-## Outcome
+Depending on personal and family history of breast cancer, as well as rare genetic mutations, some women are predisposed to develop breast cancer. These patients should receive additional considerations, such as supplementary MRI, shorter intervals between screenings, and so on.
 
-The product is currently being tested in the wild at hospitals and undergoing regulatory review by the FDA.
+*As a result, CA-Breast must keep recommendation options configurable per site basis.* Not all sites agree on the same recommendation for high risk patients and we should not make that decision for them.
+
+<figure class="m--content_figure m--content_figure-right">
+  <img src="../assets/img/ca-breast/typewriter.svg" />
+</figure>
+
+### 3. Writing radiology reports is an art
+
+Even if their mammogram has no signs of cancer, most women present with some sort of benign finding. Radiologists wildly disagree when it comes to whether to just omit them from the report or, if not, how to even describe them.
+
+This was a difficult problem since an algorithm executes tasks within a distinct set of rules. But with the controversial and complex nature of writing a medical report, it isn't as simple as a configuration setting.
+
+My response was to acklowedge CA-Breast to have a certain personality type that carries a set of preferences. Disagreement would be impossible to avoid no matter what but if radiologists can understand its working style like they would with a colleague, it can reduce frustration.
+
+*After mapping the reporting styles of over 30 radiologists, I determined that CA-Breast would assume a moderately liberal personality*, which is identified with the following behaviors:
+- It omits findings from the report that are irrefutably benign
+- For benign findings that it does describe, it does so only to the extent that it's obvious what and where it is in the mammogram.
+- It would group similar findings wherever possible. Rather than separately reporting "X calcification at location A, Y calcification at location B", it might say "calcifications in [general area]".
+
+## Where We Are Now
+
+Once the product definitions were in place, I worked closely with the research and development team to deliver our first MVP. This version is now being tested at hospitals and undergoing regulatory review by the FDA in the US.
 
 I am currently focusing on expanding this solution to a worldwide market, starting from the UK.
 
