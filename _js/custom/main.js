@@ -93,7 +93,6 @@
     Barba.Dispatcher.on('transitionCompleted', function (currentStatus, oldStatus, container) {
       _checkPasswordInStorage();
       _setDimensions();
-      // _initMediumZoom();
       _bindEvents();
     });
   };
@@ -115,10 +114,6 @@
     if (insertArticleArr[0]) {
       insertArticleArr[0].insertAdjacentHTML('beforeend', articleBefore + marked(unlockedContent) + articleAfter);
     }
-
-    // _setDimensions();
-    // _initMediumZoom();
-    // _bindEvents();
 
     return;
   };
@@ -142,12 +137,6 @@
 
     _unlockPost(form, CryptoJS.AES.decrypt(encryptedHTML, password).toString(CryptoJS.enc.Utf8));
   };
-
-  // var _initMediumZoom = function() {
-  //   mediumZoom(document.querySelectorAll(Selectors.zoomImages), {
-  //     background: 'none'
-  //   });
-  // };
 
   // var _setMaxMobileWidth = function() {
   //   var b = window.getComputedStyle(
@@ -325,6 +314,9 @@
     sessionStorage.setItem(sessionStorageName, password.toString());
 
     _unlockPost(form, CryptoJS.AES.decrypt(encryptedHTML, password).toString(CryptoJS.enc.Utf8));
+
+    _setDimensions();
+    _bindEvents();
   };
 
   var _handleWorkMenuScrollBy = function() {
@@ -409,9 +401,9 @@
     }
 
     var zoomImages = document.getElementsByClassName(Selectors.zoomImages);
-    for (var i = 0; i < zoomImages.length; i++) {
-      zoomImages[i].classList.add('m--zoomImage');
-      zoomImages[i].addEventListener('click', function(e) {
+    for (var j = 0; j < zoomImages.length; j++) {
+      zoomImages[j].classList.add('m--zoomImage');
+      zoomImages[j].addEventListener('click', function() {
         _handleImageZoom(this);
       });
     }
@@ -426,7 +418,6 @@
     // _setMaxMobileWidth();
     _checkPasswordInStorage();
     _setDimensions();
-    // _initMediumZoom();
     // _bindEvents();
   };
 
