@@ -58,14 +58,14 @@
 
   figure {
     position: relative;
-    margin: 3rem auto;
+    margin: 3rem 0;
     text-align: center;
   }
 
   figure.m--content_figure {
     position: absolute;
     width: 250px;
-    margin: auto;
+    // margin: auto;
 
     &.m--content_figure-right {
       left: 100%;
@@ -86,7 +86,7 @@
 
   figcaption {
     margin-top: 1rem;
-    padding-left: 1rem;
+    // padding-left: 1rem;
     line-height: 1.4;
     font-family: $v--font-mono;
     font-size: 1rem;
@@ -95,8 +95,8 @@
 
     &:before {
       content: '\2191';
-      position: absolute;
-      left: 0;
+      // position: absolute;
+      // left: 0;
       margin-right: 0.5rem;
       vertical-align: text-bottom;
       color: $v--color-black;

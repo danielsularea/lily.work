@@ -11,8 +11,8 @@ imgfolder: ca-breast
 cover_img: acquisition.svg
 
 menu:
-  - My Role
   - The Problem
+  - My Role
   - Early Insights
   - Rethink the Problem
   - The Solution
@@ -23,6 +23,19 @@ menu:
 Care Advisor is a suite of "moonshot" AI offerings where each explores one division of medical imaging. This is my part in one of those moonshots.
 
 Note that this project is a less traditional example of my work as a product designer because the final solution has no interface. Instead, I helped design and build the most ambitious AI service within the IBM Watson Health portfolio. However, if you're really looking for an interaction design example, see <a href="../work/ibm-clinical-review.html">IBM Watson Clinical Review</a>.
+
+## The Problem
+
+Mammography is the most effective non-invasive procedure used to detect early signs of breast cancer. As a result, women worldwide depend on radiologists, which are doctors that diagnose diseases using medical imaging, to identify any findings in their breast that may indicate cancer.
+
+These radiologists are responsible for looking at, or "reading", the mammograms, after which they submit a report back to the patient's primary care physician, detailing what they find.
+
+However, the business challenged us with an open problem: *there is a global shortage of radiologists and institutions are struggling to keep up with mammography demand.*
+
+Our high level goals were to:
+- Address the increasing global backlog of mammograms
+- Leverage artificial intelligence as part of the Care Advisor suite
+- Empower radiologists&mdash;not replace them
 
 ## My Role
 
@@ -35,19 +48,6 @@ Care Advisor for Breast (CA-Breast) kicked off in early 2017 and *I began work a
 At the beginning of this project, I was responsible for identifying and exploring the opportunity space given a broad direction. Once early validation was proven, I became responsible for designing and defining the solution, including the training and implementation of our machine learning algorithm.
 
 *I am still part of this project but this post only reflects my work on the team up until March 2018.*
-
-## The Problem
-
-Mammography is the most effective non-invasive procedure used to detect early signs of breast cancer. As a result, women worldwide depend on radiologists, which are doctors that diagnose diseases using medical imaging, to identify any findings in their breast that may indicate cancer.
-
-These radiologists are responsible for looking at, or "reading", the mammograms, after which they submit a report back to the patient's primary care physician, detailing what they find.
-
-*However, the business challenged us with an open problem: there is a global shortage of radiologists and institutions are struggling to keep up with mammography demand.*
-
-Our high level goals were to:
-- Address the increasing global backlog of mammograms
-- Leverage artificial intelligence as part of the Care Advisor suite
-- Empower radiologists&mdash;not replace them
 
 ## Early Insights
 
@@ -64,7 +64,7 @@ Radiologists performed tasks far beyond mammograms, such as diagnostic imaging (
 
 ### 2. Reading mammograms is like finding a needle in a haystack
 
-Among all the mammograms that radiologists look at, at least 90% of them are completely normal and the patient just comes back for screening again next year. As a result, radiologists have to go through a high volume of studies, searching for the small handful with signs of cancer that they can't afford to miss.
+Among all the mammograms that radiologists look at, at least 90% of them are completely normal and the patient just comes back for screening again next year. As a result, radiologists have to go through a constant and high volume of studies, searching for the small handful with signs of cancer that they can't afford to miss.
 
 <figure class="m--content_figure m--content_figure-left">
   <img src="../assets/img/ca-breast/regulatory.svg" />
@@ -73,7 +73,7 @@ Among all the mammograms that radiologists look at, at least 90% of them are com
 
 ### 3. Mammography is highly regulated and standardized
 
-Due to the poor quality of mammography in the 1990s, the FDA implemented MQSA to regulate the way they are performed. These set of rules and subsequent guidelines by accreditation bodies ensured that every mammogram in the country followed the same procedure, from the way the mammogram is captured to the structure of the final report. Changes to these standards would be very difficult.
+Due to the poor quality of mammography in the 1990s, the FDA implemented MQSA to regulate the way they are performed. These set of rules and subsequent guidelines by accreditation bodies ensured that every mammogram in the US followed the same procedure, from the way the mammogram is captured to the structure of the final report. Changes to these standards would be very difficult.
 
 <figure class="m--content_figure m--content_figure-right">
   <img src="../assets/img/ca-breast/ai.svg" />
@@ -81,15 +81,15 @@ Due to the poor quality of mammography in the 1990s, the FDA implemented MQSA to
 </figure>
 
 ### 4. The breast imaging community has "suffered" from AI already
-Computer-aided detection (CAD) was an initiatve to make sure nothing was ever missed in the mammogram by pointing out areas of suspicion using AI. This technology was widely adopted but ultimately received extremely negative reviews. Only 20% of the radiologists we observed looked at the CAD markings before their own interpretation and most agree that it was like reading with a medical student.
+Computer-aided detection (CAD) was an initiatve to make sure nothing was ever missed in the mammogram by pointing out areas of suspicion using AI. This technology was widely adopted but ultimately received extremely negative reviews. Only 20% of the radiologists we observed glanced at the CAD markings before making their own interpretation and most agree that it was like reading with a medical student.
 
 ## Rethink the Problem
 
 Once we wrapped up generative research, we at least knew that we were on the right track: reading mammograms is a tasking process that needed to be improved.
 
-However, the initial problem needed to be redefined: *although the shortage of radiologists is a major problem outside the US, we observed that American institutions instead suffered from a shortage of radiologists who specialize in breast imaging.*
+However, the initial problem needed to be redefined: *The US is much better stocked in radiology staff than the rest of world. Instead, we observed that American institutions suffered from a shortage of radiologists who specialize in breast imaging.*
 
-This is because while all radiologists are certified to and do read mammograms, only 10% are specialists who completed a fellowship focusing on breast imaging. This means a high reliance on generalists who read across many body systems without a particular specialization in any of them.
+This is because while all radiologists are certified to and often do read mammograms, only 10% are specialists who completed a fellowship focusing on breast imaging. This means a high reliance on generalists who read across many body systems without a particular specialization in any of them.
 
 <figure>
 	<img src="../assets/img/ca-breast/generalistspecialist.svg" width="330"/>
@@ -99,7 +99,7 @@ This raises two concerns:
 1. General radiologists may not perform at the same level as specialists, particularly on more complex and suspicious cases
 2. The short supply of specialists may be wasting their time and expertise by looking at so many normal mammograms.
 
-*Our directive now then is to be able to address both the shortage of specialists in the US and the global shortage of radiologists overall within one solution.*
+*Our objective now then is to be able to address both the shortage of specialists in the US and the global shortage of radiologists overall.*
 
 ## The Solution
 
@@ -135,19 +135,23 @@ However, we do not aim to replace the radiologist. We wish to take mundane, repe
 
 Although CA-Breast now had a much clearer direction, the specific inputs and outputs of the solution needed to be defined.
 
-*For the next 4 months, I conducted evaluative user research with the objective of understanding existing human practices and performance levels so that the solution will imitate or compliment them.*
+*For the next 4 months, I conducted more generative and began evaluative user research with the objective of defining a solution that either imitates or compliments existing human practices and performance levels.*
+
+The following are just some of all the decisions that ultimately shaped the final product.
 
 ### 1. Prior mammograms are vital to decision-making.
 
-There is no way to know what is truly normal within a woman's breast. Any patient may have natural biological markers that are unique to her.
+There is no way to know what is truly normal within a woman's breast because many patients have natural biological markers that are unique to them.
 
-Radiologists determine normal by comparing the current study to those from previous years for the same patient. They then look for findings that are new or growing in size.
+Radiologists therefore determine normal by comparing the current mammogram to those from previous years for the same patient. Any findings that are either new or growing in size would immediately become suspicious.
 
 <figure>
 	<img src="../assets/img/ca-breast/priors.svg" />
 </figure>
 
-*Therefore, algorithm must consider not only the current mammogram, but also a set of priors in order to make an informed assessment.*
+*Therefore, our algorithm must consider not only the current mammogram, but also a set of priors in order to make an informed assessment.*
+
+And working with our radiologists, the algorithm imitates good human practices by preferring mammograms that are at least 2 years old so that changes are more blatant but no older than 5 years old so that it is still relevant.
 
 <figure class="m--content_figure m--content_figure-left">
   <img src="../assets/img/ca-breast/patient.svg" />
@@ -157,7 +161,7 @@ Radiologists determine normal by comparing the current study to those from previ
 
 Depending on personal and family history of breast cancer, as well as rare genetic mutations, some women are predisposed to develop breast cancer. These patients should receive additional considerations, such as supplementary MRI, shorter intervals between screenings, and so on.
 
-*As a result, CA-Breast must keep recommendation options configurable per site basis.* Not all sites agree on the same recommendation for high risk patients and we should not make that decision for them.
+However, not all radiologists agree on the same recommendation for high risk patients and it is often also down to the institution's protocol on what call to make. *As a result, CA-Breast must keep recommendation options configurable so that once a patient is identified as high risk, it follows the settings corresponding to institution procedures.*
 
 <figure class="m--content_figure m--content_figure-right">
   <img src="../assets/img/ca-breast/typewriter.svg" />
@@ -165,7 +169,7 @@ Depending on personal and family history of breast cancer, as well as rare genet
 
 ### 3. Writing radiology reports is an art
 
-Even if their mammogram has no signs of cancer, most women present with some sort of benign finding. Radiologists wildly disagree when it comes to whether to just omit them from the report or, if not, how to even describe them.
+Even if their mammogram has no signs of cancer, most women present with some sort of benign finding. Radiologists wildly disagree when it comes to whether to just omit these findings from the report or how to even describe them if not.
 
 This was a difficult problem since an algorithm executes tasks within a distinct set of rules. But with the controversial and complex nature of writing a medical report, it isn't as simple as a configuration setting.
 
@@ -178,7 +182,7 @@ My response was to acklowedge CA-Breast to have a certain personality type that 
 
 ## Where We Are Now
 
-Once the product definitions were in place, I worked closely with the research and development team to deliver our first MVP. This version is now being tested at hospitals and undergoing regulatory review by the FDA in the US.
+Once the product definitions were in place, I worked closely with the research and development team to deliver our MVP. This first release is now being tested at hospitals and undergoing regulatory review by the FDA in the US.
 
-I am currently focusing on expanding this solution to a worldwide market, starting from the UK.
+I am extremely thankful to have worked on a product that will be the first of its kind in the healthcare industry. I am now focusing on expanding this solution to a worldwide market, starting from the UK.
 

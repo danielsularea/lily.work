@@ -12,7 +12,8 @@
     staticryptInsertArticle:  'js--staticryptInsertArticle',
     workMenu:                 'js--workMenu',
     workMenuLink:             'js--workMenuLink',
-    zoomImages:               '[data-action="zoom"]',
+    zoomImages:               'js--zoom',
+    zoomImagesWidth:          'js--zoomWidth',
   };
 
   var sessionStorageName = 'lilychen';
@@ -92,7 +93,7 @@
     Barba.Dispatcher.on('transitionCompleted', function (currentStatus, oldStatus, container) {
       _checkPasswordInStorage();
       _setDimensions();
-      _initMediumZoom();
+      // _initMediumZoom();
       _bindEvents();
     });
   };
@@ -115,9 +116,9 @@
       insertArticleArr[0].insertAdjacentHTML('beforeend', articleBefore + marked(unlockedContent) + articleAfter);
     }
 
-    _setDimensions();
-    _initMediumZoom();
-    _bindEvents();
+    // _setDimensions();
+    // _initMediumZoom();
+    // _bindEvents();
 
     return;
   };
@@ -142,9 +143,11 @@
     _unlockPost(form, CryptoJS.AES.decrypt(encryptedHTML, password).toString(CryptoJS.enc.Utf8));
   };
 
-  var _initMediumZoom = function() {
-    mediumZoom(document.querySelectorAll(Selectors.zoomImages));
-  };
+  // var _initMediumZoom = function() {
+  //   mediumZoom(document.querySelectorAll(Selectors.zoomImages), {
+  //     background: 'none'
+  //   });
+  // };
 
   // var _setMaxMobileWidth = function() {
   //   var b = window.getComputedStyle(
@@ -352,6 +355,37 @@
     }
   };
 
+  var _handleImageZoom = function(target) {
+    var widthArr = document.getElementsByClassName(Selectors.zoomImagesWidth);
+
+    if (!widthArr[0]) { return; }
+
+    var figcaption = target.querySelector('figcaption');
+
+    if (target.classList.contains('m--zoomImage-open')) {
+      
+      if (figcaption) { figcaption.style.marginLeft = '0'; }
+
+      target.style.width = '100%';
+      target.style.marginLeft = '0';
+      target.classList.remove('m--zoomImage-open');
+      return;
+    }
+
+    target.classList.add('m--zoomImage-open');
+
+    var width = widthArr[0].offsetWidth,
+        marginLeft = target.getBoundingClientRect().left - widthArr[0].getBoundingClientRect().left;
+
+    if (figcaption) {
+      figcaption.style.marginLeft = marginLeft + 'px';
+      figcaption.style.width = target.clientWidth + 'px';
+    }
+
+    target.style.width = width + 'px';
+    target.style.marginLeft = '-' + marginLeft + 'px';
+  };
+
   var _handleWindowResize = function() {
     // _setMaxMobileWidth();
     _setDimensions();
@@ -373,6 +407,14 @@
     for(var i in WorkMenuConfig.links) {
       WorkMenuConfig.links[i].addEventListener('click', _handleWorkMenuClick);
     }
+
+    var zoomImages = document.getElementsByClassName(Selectors.zoomImages);
+    for (var i = 0; i < zoomImages.length; i++) {
+      zoomImages[i].classList.add('m--zoomImage');
+      zoomImages[i].addEventListener('click', function(e) {
+        _handleImageZoom(this);
+      });
+    }
   };
 
   // ---------------------------------
@@ -384,8 +426,8 @@
     // _setMaxMobileWidth();
     _checkPasswordInStorage();
     _setDimensions();
-    _initMediumZoom();
-    _bindEvents();
+    // _initMediumZoom();
+    // _bindEvents();
   };
 
   obj._init();

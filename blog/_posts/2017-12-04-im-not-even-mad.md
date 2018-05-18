@@ -9,19 +9,22 @@ In 1997, a small but quickly growing search engine company called AltaVista need
 
 Then in 2009, ironically another even more popular search engine, Google, acquired Carnegie Mellon's algorithm and deployed reCAPTCHA. This system expanded upon the original by asking users to identify two sets of texts: the first to validate the human user and the second to educate Google what the image says. Unbeknownst to the user, both sets, although spliced into a single image, came from a collection of scanned texts where Google only knew the meaning of the first. Essentially, if the user's input matches the first word, the user is already validated but she is also strung on a little bit longer to contribute the answer for the second. Then just two years later in 2011, this massive collaboration of unaware reCAPTCHA users completely digitized the New York Times archives and Google Books library. By 2015, the digitized literature was also translated.
 
-{% include figure.html 
+{% include figure.html
+  nozoom="true"
   url="/assets/img/captcha/scannedtext.png"
   alt="CAPTCHA using scanned text" %}
 
 As artificial intelligence became too intelligent (solving even the most distorted text at 99.8% accuracy without human intervention), Google shifted opportunity. More specifically, they wanted to pinpoint addresses on Google Maps so that directions were painstakingly accurate. So enter Street View and photos of house numbers replaced Google Books words.
 
-{% include figure.html 
+{% include figure.html
+  nozoom="true"
   url="/assets/img/captcha/streetview.png"
   alt="CAPTCHA using numbers on Street View" %}
 
 One more iteration later and we're at the latest version of reCAPTCHA, where users are now tasked to help identify objects in images, whose commercial application is vast but not yet known.
 
 {% include figure.html 
+  nozoom="true"
   url="/assets/img/captcha/objectid.png"
   alt="CAPTCHA using object identification" %}
 

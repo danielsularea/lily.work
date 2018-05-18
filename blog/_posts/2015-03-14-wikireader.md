@@ -14,12 +14,12 @@ This was my first attempt at a Chrome extension, which was overall, an excellent
 ## Overview
 Wikipedia.org has been one of the most timeless services on the web, offering vast amount of information to its users for free. However, at the same time, it has been one of the most unchanging platforms in terms of interface. For users who solely seek to gather information quickly, the old layout can be distracting. So in an effort to not only beautify presentation, I've also hidden the lesser used features such as switching languages (as this is a English only extension for now), editing, viewing edit history, and a few minor others.
 
-<!-- {% include figure.html 
+<!-- {% include figure.html
   url="/assets/img/wikireader/old.png"
   alt="Wikipedia without WikiReader"
   caption="Without WikiReader" %}
 
-{% include figure.html 
+{% include figure.html
   url="/assets/img/wikireader/new.png"
   alt="Wikipedia With WikiReader"
   caption="With WikiReader" %} -->

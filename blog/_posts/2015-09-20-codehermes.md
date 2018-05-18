@@ -20,12 +20,12 @@ In an effort to ease this pain and improve engagement with the professor, CodeHe
 ## The Approach
 We decided to implement CodeHermes in Java with Spring MVC and JSP. While my partners set up the AWS, I began to define the feature functionalities and sketched out the wireframes.
 
-{% include figure.html 
+{% include figure.html
   url="/assets/img/codehermes/sketch1.jpg"
   alt="Codehermes landing sketch"
   caption="Instructor login via Github. Students receive a link." %}
 
-{% include figure.html 
+{% include figure.html
   url="/assets/img/codehermes/sketch2.jpg"
   alt="Codehermes instructor portal"
   caption="Instructor portal, with real-time questions associated with each line number" %}
@@ -35,18 +35,18 @@ From there, I did some [rapid prototyping][prototype]{:target="_blank"} in Jekyl
 ## Instructor Portal
 The user is directed to the instructor portal immediately after logging in through Github. Inline and block comments are extracted from the repository files and displayed in a more digestable way. At the end of each line is also a counter, which increments as students submit questions and aids instructors in understanding where students are especially struggling. These questions are also updated in real-time, which smooth scrolls to and highlights the corresponding line upon hovering each one.
 
-{% include figure.html 
+{% include figure.html
   url="/assets/img/codehermes/init.gif"
   alt="" %}
 
 ## Student Portal
 A link is given at the top of the instructor portal, which should be distributed at the beginning of lecture. Students can then access the student portal to follow the code and submit real-time questions.
 
-{% include figure.html 
+{% include figure.html
   url="/assets/img/codehermes/img3.png"
   alt="" %}
 
-{% include figure.html 
+{% include figure.html
   url="/assets/img/codehermes/img4.png"
   alt="" %}
 
