@@ -26,7 +26,7 @@ Note that this project is a less traditional example of my work as a product des
 
 ## The Problem
 
-Mammography is the most effective non-invasive procedure used to detect early signs of breast cancer. As a result, women worldwide depend on radiologists, which are doctors that diagnose diseases using medical imaging, to identify any findings in their breast that may indicate cancer.
+Mammography is the most effective non-invasive procedure used to detect early signs of breast cancer. As a result, women worldwide depend on radiologists, who are doctors that diagnose diseases using medical imaging, to identify any findings in their breast that may indicate cancer.
 
 These radiologists are responsible for looking at, or "reading", the mammograms, after which they submit a report back to the patient's primary care physician, detailing what they find.
 
