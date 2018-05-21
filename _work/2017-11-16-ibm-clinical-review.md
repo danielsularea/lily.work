@@ -16,6 +16,7 @@ menu:
   - The Problem
   - Casual and Power Users
   - New Search Formulas
+  - New Search Storage
   - New Column Control
 ---
 
@@ -56,7 +57,7 @@ However, after 2 months of evaluative research, it was evident that *user behavi
 
 For instance, medical doctors who sought to resolve discrepancy issues were casual users. They typically only used a small portion of the application and logged in only when an issue they were responsible for was raised.
 
-Power users, on the other hand, were commonly found to be nurses or medical coders who logged into WICR almost daily as part of their job. This is because while only doctors had the authority to alter clinical documents, users such as nurses were responsible for reviewing, moderating, and ultimately policing the platform by sending reminders to those doctors.
+Power users, on the other hand, were commonly found to be nurses or medical coders who logged into WICR almost daily as part of their job. This is because while only doctors had the authority to alter clinical documents, these users were responsible for reviewing, moderating, and ultimately policing the platform by sending notices to those doctors.
 
 Therefore, with respect to these two user bases, I was able to observe the following insights.
 
@@ -74,23 +75,49 @@ Power users, however, had a more systematic approach. For instance, they might a
 
 ## New Search Formulas
 
-In order to give users control over a more comprehensive search, I created search formulas that would cater to our broad user base.
+With a total of 25 categories to search from, each with its own set of operators and data types, search formulas provide organization and control.
 
 <!-- <figure>
-  <img src="../assets/img/clinicalreview/formula.svg" alt="The basic components of a search formula" />
+  <img src="../assets/img/clinicalreview/datatypes.svg" alt="The basic components of a search formula" />
 </figure> -->
+
+<figure>
+  <img src="../assets/img/clinicalreview/formula.svg" alt="The basic components of a search formula" />
+</figure>
+
+And in order to cater to the full range of users, formulas can be built in two ways.
 
 ### Casual users have all their options laid out
 
-Filler for now
+Having visual choices and feedback is important to those who aren't familiar with the entire search toolbelt. This method is straightforward and comfortable.
+
+<figure class="js--zoom">
+  <video loop autoplay name="Manual search using modal inputs" src="../assets/img/clinicalreview/manualsearch.mov"></video>
+  <figcaption>Made in Framer</figcaption>
+</figure>
 
 ### Power users can just start typing
 
-Filler for now
+An efficient alternative is typing directly into the search bar, particularly for users who know exactly what they need. To help these power users even further, an autocomplete box follows them and provides look-ahead feedback.
+
+<figure class="js--zoom">
+  <video loop autoplay name="Quick search by directly typing into search bar" src="../assets/img/clinicalreview/typesearch.mov"></video>
+  <figcaption>Made in Framer</figcaption>
+</figure>
+
+## New Search Storage
+
+Because both types of users tend to perform so many repeated searches, allowing users to save a set of searches and keeping a history of their most recent searches expedites the process. These stored searches can also accessible in both the search bar and the search options modal.
+
+<figure class="js--zoom">
+  <img src="../assets/img/clinicalreview/searchstorage.png" alt="">
+</figure>
 
 ## New Column Control
 
-<!-- ## Introducing Column Control -->
+<figure>
+  <img src="../assets/img/clinicalreview/columncontrol.svg" alt="">
+</figure>
 
 <!-- ### Individual preferences
 
