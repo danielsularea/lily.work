@@ -66,7 +66,5 @@ p1searchbar.onClick (event, layer) ->
 		page.snapToPage(page14, true, time: 0)
 	Utils.delay 8.5, ->
 		page.snapToPage(page15, true, time: 0)
-	Utils.delay 9, ->
-		page.snapToPage(page16, true, time: 0)
 	Utils.delay 9.5, ->
 		p15rows.opacity = 1
