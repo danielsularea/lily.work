@@ -14,82 +14,78 @@ menu:
   - Background
   - My Role
   - The Problem
-  - Casual and Power Users
+  - Quick Fixes
   - New Search Formulas
-  - New Search Storage
-  - New Column Control
+  - Enhancements
+  - Results
 ---
 
-I worked on IBM's second release of Watson Imaging Clinical Review and overhauled the way users search and sort through the application's complex database.
+As part of IBM's second release of Watson Imaging Clinical Review, I re-examined the way users navigate the application's complex database.
 
 ## Background
 
-IBM <a href="https://www.ibm.com/blogs/watson-health/introducing-ibm-watson-imaging-clinical-review/" target="_blank">launched</a> Watson Imaging Clinical Review (WICR) in early 2017 as an NLP-based tool that compares clinical documents in the hospital and raises flags for any incompleteness or inaccuracies.
+In early 2017, IBM <a href="https://www.ibm.com/blogs/watson-health/introducing-ibm-watson-imaging-clinical-review/" target="_blank">launched</a> Watson Imaging Clinical Review (WICR) as an NLP-based tool that inspects clinical documents in the hospital and raises flags for any incompleteness or inaccuracies.
 
-However, hospitals have to pay add-on training fees in order to onboard their staff to the platform and IBM wanted a way to reduce costs that might impact the bottom line. In response, *the team's objective for WICR v2.0 was to overhaul the entire user experience.*
+Although this process is incredibly important as a part of standard care, hospitals do have to pay extremely high fees in order to train their staff to use the platform. So for WICR v2.0, IBM wanted a way to reduce costs that might impact the bottom line and *our team took the opportunity to overhaul the entire user experience.*
 
 ## My Role
 
-Effort towards WICR v2.0 began in late 2016, at which time I joined as the product designer. I worked with a design lead, user researcher, and offering manager.
+Effort towards WICR v2.0 began in late 2016, at which time I joined as the product designer and worked closely with a design lead, a user researcher, and an offering manager.
 
-During my involvement until July 2017, I was hands-on for every aspect of the design overhaul. However, *I was given ownership over the redesign of the search and sort functionalities on the application. This post reflects that particular portion of work.*
+During my involvement until July 2017, I was hands-on for every aspect of the redesign. *While I cannot share all of my work, this post reveals some pieces that I owned but ultimately didn't make it to the final product.*
 
 ## The Problem
 
-One of the biggest pain points for users was the discrepancy table from which they would select and resolve flagged issues. *Due to the sheer volume and complexity of information associated with each issue, the table quickly became overwhelming and difficult to navigate.*
+One of the biggest pain points for WICR users was the discrepancy table from which they would find and select flagged issues. *Due to the sheer volume and complexity of information associated with each issue, the table quickly became overwhelming and difficult to navigate.*
 
 <figure class="js--zoom">
   <img src="../assets/img/clinicalreview/v1.png" alt="Version 1 of Clinical Review" />
-  <figcaption>The discrepancy table from Watson Imaging Clinical Review v1.0</figcaption>
+  <!-- <figcaption>Trying to find specific issues in this discrepancy table can be limiting and confusing.</figcaption> -->
 </figure>
 
-Some blatant problems to start were:
-- The search bar was tucked away in the top-right corner and could only search within two categories
-- The filters did not address all of the possible categories and was limiting for those that it did
-- The discrepancy table was not configurable to include the remaining categories that were omitted from view&mdash;there were 25 categories in total
-- Open, pending, and closed cases were by default open accordion elements stacked on top of each other
+## Quick Fixes
+Before some real changes, there were a few obvious opportunities for improvements in the current design.
 
-## Casual and Power Users
+### Emphasize the search bar
 
-Because clinical documentation happens everywhere along a patient's care path, our users included a broad range of roles and capacities, such as primary care physicians, radiologists, nurses, medical coders, billers, and so on.
+The search bar was so tiny and tucked away that discoverability for users was very low. It was also placed above the navigation bar which created some hierarchical confusion.
 
-However, after 2 months of evaluative research, it was evident that *user behavior was roughly split into two camps: casual and power users.*
+<figure class="js--zoom">
+  <img src="../assets/img/clinicalreview/newsearchbar.svg" />
+</figure>
 
-For instance, medical doctors who sought to resolve discrepancy issues were casual users. They typically only used a small portion of the application and logged in only when an issue they were responsible for was raised.
+### Separate case stages by tabs
 
-Power users, on the other hand, were commonly found to be nurses or medical coders who logged into WICR almost daily as part of their job. This is because while only doctors had the authority to alter clinical documents, these users were responsible for reviewing, moderating, and ultimately policing the platform by sending notices to those doctors.
+There are three resolution stages for each discrepancy issue: open, pending, and closed. The discrepancy table distinguished each of these via individual table elements wrapped in its own open accordion element and stacked on top of each other. This created navigational and discoverability problems.
 
-Therefore, with respect to these two user bases, I was able to observe the following insights.
-
-### 1. Users had varying familiarity with the application
-
-An immediate conclusion to draw was that because casual users logged in far less frequently than power users, they were usually less familiar with the features of the application and would require more visual or textual guidance.
-
-In contrast, power users preferred efficiency and individual customization to accomplish their tasks.
-
-### 2. Users often performed the same set of searches
-
-Casual users whose objective was to fix their own flagged issues usually only searched for their own name in order to resolve discrepancies in bulk.
-
-Power users, however, had a more systematic approach. For instance, they might always start by narrowing down discrepancies to only the department or modality that they were responsible for. They may also narrow down by the type of discrepancy they want to address. Lastly, they may search by overdue days, number of reminders sent, or current status in order to drill down to problematic issues.
+<figure class="js--zoom">
+  <img src="../assets/img/clinicalreview/newcasetabs.svg" />
+</figure>
 
 ## New Search Formulas
 
-With a total of 25 categories to search from, each with its own set of operators and data types, search formulas provide organization and control.
+Our first major design solution for the discrepancy table was to introduce *Search Formulas, a set of building block searches that can be combined to be as comprehensive as necessary.*
 
-<!-- <figure>
-  <img src="../assets/img/clinicalreview/datatypes.svg" alt="The basic components of a search formula" />
-</figure> -->
+With 25 total categories to search from, each with its own set of operators and data types, I needed to overhaul search in a way that would provide organization and control.
 
 <figure>
-  <img src="../assets/img/clinicalreview/formula.svg" alt="The basic components of a search formula" />
+  <img src="../assets/img/clinicalreview/datatypes.svg" alt="The range of data types for each category" />
+  <figcaption>The range of data types for each category</figcaption>
 </figure>
 
-And in order to cater to the full range of users, formulas can be built in two ways.
+A single Search Formula therefore reflects a selected set of category, operator (if more than one for this category), and value so that users can compartmentalize what they were looking for.
+
+<figure>
+  <img src="../assets/img/clinicalreview/formula.svg" alt="Example of a single search formula" />
+</figure>
+
+And in order to cater to our full range of users, these formulas can be built in two ways.
 
 ### Casual users have all their options laid out
 
-Having visual choices and feedback is important to those who aren't familiar with the entire search toolbelt. This method is straightforward and comfortable.
+Doctors who only logged into WICR to resolve discrepancies that were flagged to them did so infrequently and used a small portion of the application when they did.
+
+As a result, having visual choices and feedback was important to casual users who weren't familiar with the entire search toolbelt. *The manual selection method then is straightforward and comfortable.*
 
 <figure class="js--zoom">
   <video loop autoplay name="Manual search using modal inputs" src="../assets/img/clinicalreview/manualsearch.mov"></video>
@@ -98,58 +94,49 @@ Having visual choices and feedback is important to those who aren't familiar wit
 
 ### Power users can just start typing
 
-An efficient alternative is typing directly into the search bar, particularly for users who know exactly what they need. To help these power users even further, an autocomplete box follows them and provides look-ahead feedback.
+On the other hand, hospital staff such as nurses and medical coders were responsible for reviewing clinical documents and logged into WICR almost daily to moderate and even police the platform by sending resolution notices to doctors.
+
+*Therefore, a more efficient alternative for these power users is to type directly into the search bar.* To provide further help, an autocomplete box follows the cursor and offers look-ahead feedback.
 
 <figure class="js--zoom">
   <video loop autoplay name="Quick search by directly typing into search bar" src="../assets/img/clinicalreview/typesearch.mov"></video>
   <figcaption>Made in Framer</figcaption>
 </figure>
 
-## New Search Storage
+## Enhancements
 
-Because both types of users tend to perform so many repeated searches, allowing users to save a set of searches and keeping a history of their most recent searches expedites the process. These stored searches can also accessible in both the search bar and the search options modal.
+While Search Formulas was well-received and took care of most of the complaints that users had, we didn't stop there and continued with additional enhancements.
+
+### Give users control over their table columns
+
+By default, the discrepancy table only fits 12 out of the 25 possible category columns, leaving the rest simply out of view. Requests for additional columns had to be added by the IT administrator, which would then be implemented across the application for every user in the hospital.
+
+This meant that users who had different objectives were loaded with information that they may not need and we were creating technical burden on the hospital by relying on the IT admin to do simple adjustments.
+
+Therefore, *we gave each user individual control over the columns they wanted to see*, which was configurable with the following sidebar.
 
 <figure class="js--zoom">
-  <img src="../assets/img/clinicalreview/searchstorage.png" alt="">
+  <img src="../assets/img/clinicalreview/newcolumncontrol.svg" alt="">
 </figure>
 
-## New Column Control
+### Expedite frequently used searches
 
-<figure>
-  <img src="../assets/img/clinicalreview/columncontrol.svg" alt="">
+One observation with users was that they often performed repeated searches. Doctors would consistently search by their own name to get the issues they needed to resolve and nurses would search by the department she was responsible for monitoring.
+
+To save all these users time, *we persisted a history of their most recent searches and allowed users to save the current set of Search Formulas*. These stored searches were accessible in both the search bar and the search options modal.
+
+<figure class="js--zoom">
+  <img src="../assets/img/clinicalreview/savesearch.svg" alt="">
 </figure>
 
-<!-- ### Individual preferences
+<!-- <figure class="js--zoom">
+  <img src="../assets/img/clinicalreview/savedsearches.svg" alt="">
+</figure> -->
 
-In WICR v1.0, additional columns to the discrepancy table had to be added by the IT administrator, which would then be implemented across the application for every user in the hospital.
+To take it a step further, we also offered the option to notify the user when a new discrepancy issue matching the saved search arrives.
 
-This meant that users who had different objectives were loaded with information they may not need and we were creating technical burden on the hospital.
+## Results
 
+Although these designs didn't make it to the final product, the substantial amount of work that did was the result of the team's fast iterations and continuous user research. Together, we were able to overhaul every single existing functionality and push for a couple new ones. We were also able to excite the healthcare community by showcasing the second release at some major tradeshows.
 
-### 2. Each category had a different data type to perform a search on
-
-### 3. Some categories weren't applicable to all -->
-
-<!-- As a result, my high level goals were to:
-- Enable comprehensive searches over the entire database
-- Save the users time and effort in their daily work
-- Give users control over how they want navigate the database -->
-
-<!-- Patients who are admitted into the hospital often transfer between multiple departments to receive tests and procedures. Often times, they are taken to the radiology department to receive medical imaging, such as chest CTs, brain MRIs, heart ultrasounds, and so on. Doctors known as radiologists then interpret these images and detail the diagnosis in a radiology report.
-
-In order to keep track that diagnosis, the electronic medical record contains a Problem List, which catalogues a patient's conditions and diseases. However, this table is <a href="https://histalk2.com/2017/09/27/readers-write-the-problem-list-is-the-problem/" target="_blank">notoriously neglected</a>, causing it to be inaccurate, incomplete, or out-of-date.
-
-<blockquote class="hasQuotes">
-  <p>Problem Lists are loaded with a combination of current and inactive complaints, symptoms, and diagnoses, and generally are a mess.</p>
-    <cite>
-      <div>Sam Bierstock, MD</div>
-      <div>The Problem List is the Problem</div>
-    </cite>
-</blockquote>
-
-Clinical Review (CR) therefore leverages NLP to extract the diagnosis from the radiologist's report and correlate it to the Problem List. When it finds a discrepancy, it notifies the hospital staff of the issue. -->
-
-<!-- sources:
-- http://www.healthcareitnews.com/blog/why-clinical-documentation-improvement-so-important-hospitals
-- Secret Life of CDI Specialist: https://www.nursingcenter.com/journalarticle?Article_ID=1493953&Journal_ID=54016&Issue_ID=1493946
-- https://www.ibm.com/blogs/watson-health/introducing-ibm-watson-imaging-clinical-review/ -->
+WICR v2.0 is now in its final stages of development and is expected to launch in late 2018.
