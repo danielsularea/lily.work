@@ -195,8 +195,25 @@
       WorkMenuConfig.refs[refID] = refEl;
     }
   };
+
+  var _resetZoomImages = function() {
+    var zoomImages = document.getElementsByClassName(Selectors.zoomImages);
+
+    if (!zoomImages[0]) { return; }
+
+    for (var k = 0; k < zoomImages.length; k++) {
+      var figcaption = zoomImages[k].querySelector('figcaption');
+      if (figcaption) { figcaption.style.marginLeft = '0'; }
+
+      zoomImages[k].style.width = '100%';
+      zoomImages[k].style.marginLeft = '0';
+      zoomImages[k].classList.remove('m--zoomImage-open');
+    }
+  };
+
   var _setDimensions = function() {
     _initWorkMenu();
+    _resetZoomImages();
   };
 
   // ---------------------------------
