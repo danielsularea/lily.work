@@ -8,7 +8,7 @@ summary: >
   Designing an AI to read mammograms in a worldwide shortage of doctors.
 
 imgfolder: ca-breast
-cover_img: acquisition.svg
+cover_img: cover.svg
 
 menu:
   - The Problem
@@ -50,13 +50,13 @@ Our high level goals were to:
 
 Care Advisor for Breast (CA-Breast) kicked off in early 2017 and *I began work as the team's product designer in July 2017*. I collaborated with the offering management, research, regulatory, and development teams in order to bring this product to a global market.
 
-<figure>
-  <img src="../assets/img/ca-breast/projtimeline.svg" />
-</figure>
-
 <!-- At the beginning of this project, I was responsible for identifying and exploring the opportunity space given a broad direction. Once early validation was proven, I became responsible for designing and defining the solution first within the US market. -->
 
 *I am still part of this project but this post only reflects my work on the team up until March 2018.*
+
+<figure>
+  <img src="../assets/img/ca-breast/projtimeline.svg" />
+</figure>
 
 ## Early Insights
 
