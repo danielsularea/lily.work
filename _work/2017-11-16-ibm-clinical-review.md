@@ -1,7 +1,7 @@
 ---
 layout: workpost_encrypted
 title: Watson Imaging Clinical Review
-year: 2017
+year: 2016-7
 company: IBM
 
 summary: >
