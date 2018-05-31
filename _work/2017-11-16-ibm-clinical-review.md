@@ -137,6 +137,6 @@ To take it a step further, we also offered the option to notify the user when a 
 
 ## Results
 
-Although these designs didn't make it to the final product, the substantial amount of work that did was the result of the team's fast iterations and continuous user research. Together, we were able to overhaul every single existing functionality and push for a couple new ones. We were also able to excite the healthcare community by showcasing the second release at some major tradeshows.
+Although these designs didn't make it to the final product, the substantial amount of work that did was the result of the team's fast iterations and continuous user research. *Together, we were able to overhaul every single existing functionality and push for a couple new ones.* We were also able to excite the healthcare community by personally showcasing the second release at some major tradeshows.
 
 WICR v2.0 is now in its final stages of development and is expected to launch in late 2018.

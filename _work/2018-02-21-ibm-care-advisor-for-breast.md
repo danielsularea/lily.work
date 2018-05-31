@@ -5,7 +5,7 @@ year: 2017-8
 company: IBM
 
 summary: >
-  Designing an AI to read mammograms in a worldwide shortage of doctors.
+  Designing an AI to read mammograms in a world short on doctors.
 
 imgfolder: ca-breast
 cover_img: breastcancerai.svg

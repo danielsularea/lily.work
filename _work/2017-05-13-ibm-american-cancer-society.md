@@ -12,7 +12,7 @@ cover_img: doctor.svg
 
 menu:
   - Background
-  - Team
+  - My Role
 ---
 
 In April 2016, IBM and the American Cancer Society announced a partnership to create the first advisor for those fighting cancer, powered by Watson cognitive computing.
@@ -33,6 +33,6 @@ However, even with advances in modern medicine and supportive care, <a href="htt
 
 In order to empower conversations around cancer, ACS and IBM saw an opportunity to combine powerful resources from both sides: ACS's massive database of cancer knowledge and IBM's artificial intelligent features, widely personified as "Watson". *The mission was to build a consumer-facing mobile app that empowers patients and caregivers in having fuller and more educated conversations about their cancer.*
 
-## Team
+## My Role
 
 This was an ambitious project spearheaded by an early product development team within IBM. *I was the product designer and worked with a project lead and two user researchers.*
