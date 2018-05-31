@@ -15,18 +15,28 @@
                 <h1 id="page-title" class="m--workHeader_title" itemprop="name headline">
                   {{ page.title }}
                 </h1>
-                <form class="m--staticrypt js--staticryptForm" action="#" method="post" data-encrypted="{{ page.encrypted }}" data-header="<img class='m--workHeader_img' src='{{ site.url }}/assets/img/{{ page.imgfolder }}/{{ page.cover_img }}' alt='{{ page.title }}' itemprop='image'><div class='m--workHeader_arrow'>&#8595;</div>" data-article-before="<div class='g--grid_row'><div class='g--grid_col-0 g--grid_col-md-4 g--grid_col-lg-4 g--grid_col-xl-3'><div class='m--workMenu js--workMenu' data-offsetY='100'><div class='m--workMenu_title'>{{ page.title }}</div><ul class='m--workMenu_list'>{% for item in page.menu %}<li class='js--workMenuLink'><a href='#{{ item | replace: ' ', '-' | downcase }}'>{{ item }}</a></li>{% endfor %}<li class='m--workMenu_top'><a href='#top'>Back to Top</a></li></ul></div></div><section id='top' class='l--workPost_content m--content m--anchorWrap m--anchorWrap-external-hover g--grid_col-12 g--grid_col-md-8 g--grid_col-lg-8 g--grid_col-xl-6' itemprop='articleBody'>" data-article-after="</section></div>{% include paginate.html category="work" %}">
+              </header>
+              <form class="m--staticrypt js--staticryptForm g--grid_row" action="#" method="post" data-encrypted="{{ page.encrypted }}" data-header="<img class='m--workHeader_img' src='{{ site.url }}/assets/img/{{ page.imgfolder }}/{{ page.cover_img }}' alt='{{ page.title }}' itemprop='image'><div class='m--workHeader_arrow'>&#8595;</div>" data-article-before="<div class='g--grid_row'><div class='g--grid_col-0 g--grid_col-md-4 g--grid_col-lg-4 g--grid_col-xl-3'><div class='m--workMenu js--workMenu' data-offsetY='100'><div class='m--workMenu_title'>{{ page.title }}</div><ul class='m--workMenu_list'>{% for item in page.menu %}<li class='js--workMenuLink'><a href='#{{ item | replace: ' ', '-' | downcase }}'>{{ item }}</a></li>{% endfor %}<li class='m--workMenu_top'><a href='#top'>Back to Top</a></li></ul></div></div><section id='top' class='l--workPost_content m--content m--anchorWrap m--anchorWrap-external-hover g--grid_col-12 g--grid_col-md-8 g--grid_col-lg-8 g--grid_col-xl-6' itemprop='articleBody'>" data-article-after="</section></div>{% include paginate.html category="work" %}">
+                <div class="g--grid_col-md-6 g--grid_push-md-3">
+                  <div class="js--staticryptAlert m--alert u--noDisplay m--anchorWrap m--anchorWrap-external-hover">
+                    <p class="m--alert_title">Incorrect passphrase!</p>
+                    <p class="m--alert_body">
+                      All of my projects are locked due to their confidential nature. If you don't have a password, contact me at <a href="mailto:lilyc5459@gmail.com" target="_blank"><span>lilyc5459@gmail.com</span></a> to ask.
+                    </p>
+                  </div>
+                </div>
+                <div class="g--grid_col-12">
                   <input id="staticrypt-password"
-                         class="m--staticrypt_password"
-                         type="password"
-                         name="password"
-                         placeholder="passphrase"
-                         autocomplete="off"
-                         autofocus/>
+                       class="m--staticrypt_password"
+                       type="password"
+                       name="password"
+                       placeholder="passphrase"
+                       autocomplete="off"
+                       autofocus/>
 
                   <input type="submit" class="m--staticrypt_submit" value="unlock"/>
-                </form>
-              </header>
+                </div>
+              </form>
             </div>
           </article>
         </main>

@@ -10,6 +10,7 @@
     staticryptForm:           'js--staticryptForm',
     staticryptInsertHeader:   'js--staticryptInsertHeader',
     staticryptInsertArticle:  'js--staticryptInsertArticle',
+    staticryptAlert:          'js--staticryptAlert',
     workMenu:                 'js--workMenu',
     workMenuLink:             'js--workMenuLink',
     zoomImages:               'js--zoom',
@@ -323,7 +324,14 @@
         decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(password).toString()).toString();
 
     if (decryptedHMAC !== encryptedHMAC) {
-      alert('Bad passphrase!');
+      var alertMsg = document.getElementsByClassName(Selectors.staticryptAlert);
+      if (alertMsg[0]) {
+        alertMsg[0].classList.remove('u--noDisplay');
+      }
+      else {
+        alert('Bad passphrase!');
+      }
+
       passwordArr[0].select();
       return;
     }

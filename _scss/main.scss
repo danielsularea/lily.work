@@ -8,6 +8,7 @@
 @import 'util/clearfix';
 @import 'util/float';
 @import 'util/noSelect';
+@import 'util/noDisplay';
 
 // Accessibility
 @import 'a11y/skipToContent';
@@ -25,6 +26,7 @@
 @import 'module/header';
 @import 'module/paginate';
 @import 'module/notFound';
+@import 'module/alert';
 @import 'module/staticrypt';
 @import 'module/zoomImage';
 
