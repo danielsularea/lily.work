@@ -8,7 +8,7 @@ summary: >
   Building a mobile app to improve patients' understanding of their cancer, starting at the doctor's appointment.
 
 imgfolder: acs
-cover_img: cover.jpg
+cover_img: doctor.svg
 
 menu:
   - Background
