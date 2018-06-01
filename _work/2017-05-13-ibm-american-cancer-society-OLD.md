@@ -59,7 +59,7 @@ Due to the sensitive nature of our investigation, the team needed to garner a so
 ACS employees often found themselves consolidating and translating medical information for patients. Particularly important was pointing out what is most relevant to each individual's diagnosis and progress.
 
 2. **Online Research**<br>
-As information online continues to be more comprehensive and accessible, patients and caregives struggle to recognize credible and truthful sources. This is especially difficult as the medical domain around cancer is constantly updating.
+As information online continues to be more comprehensive and accessible, patients and caregivers struggle to recognize credible and truthful sources. This is especially difficult as the medical domain around cancer is constantly updating.
 
 3. **Clinical Encounter Support**<br>
 Patients sought information in order to build a more meaningful conversation with their doctor. Their goals typically were to ask more educated questions, be more confident about their doctor's decisions, and follow up on confusing concepts in the aftermath of a consultation.
