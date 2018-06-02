@@ -5,7 +5,7 @@ year: 2016-7
 company: IBM
 
 summary: >
-  Building a mobile app to improve patients' understanding of their cancer, starting at the doctor's appointment.
+  Building a mobile app to improve patients' understanding of their cancer
 
 imgfolder: acs
 cover_img: doctor.svg
@@ -15,10 +15,11 @@ menu:
   - My Role
   - Early Insights
   - The Cancer Journey
-  - Proposed Solutions
+  - Guiding Principles
+  - Design Solutions
 ---
 
-In April 2016, IBM and the American Cancer Society announced a partnership to create the first advisor for those fighting cancer, powered by Watson cognitive computing.
+In April 2016, IBM and the American Cancer Society announced a partnership to create a Watson mobile app for those fighting cancer.
 
 ## Background
 
@@ -38,7 +39,7 @@ In order to empower conversations around cancer, ACS and IBM saw an opportunity 
 
 ## My Role
 
-This was an ambitious project spearheaded by an early product development team within IBM. *I joined as the product designer in October 2016 and worked with a project lead and two user researchers.*
+This was an ambitious project spearheaded by an early product development team within IBM. *I joined as the product designer in October 2016 and worked with a project lead and three user researchers.*
 
 Together, we were responsible for biweekly updates to both ACS and IBM stakeholders as well as the final hand off to the production team in February 2017.
 
@@ -46,45 +47,79 @@ Together, we were responsible for biweekly updates to both ACS and IBM stakehold
 
 To begin, we leveraged our partnership to speak to specialists at ACS facilities, including a call center in Austin and <a href="https://www.cancer.org/treatment/support-programs-and-services/patient-lodging/hope-lodge.html" target="_blank">Hope Lodges</a> in Boston and New York.
 
-*Our objective was to understand the information-seeking patterns and needs of patients and caregivers when they reach out to these facilities.* This is what we learned:
+*Our objective was to understand the information-seeking patterns and needs of cancer patients when they reach out to these facilities.* This is what we learned:
 
-### 1. Recognize credible and updated sources
-As information online continues to be more comprehensive and accessible, *patients and caregivers struggled to recognize credible and truthful sources.* This is especially difficult as the medical domain around cancer is constantly updating.
+### Recognize credible and updated sources
+As information online continues to be more comprehensive and accessible, patients struggled to recognize credible and truthful sources. This is especially difficult as the medical domain around cancer is constantly updating.
 
-### 2. Find relevancy in a sea of information
-Patients and caregivers often dialed in to the ACS call center to ask: *of all the information that they were given and had available, what was actually relevant to their diagnosis and progress?* And with no way to track repeat callers, ACS employees found that they had to ask basic information about the patient each and every call.
+### Find relevancy in a sea of information
+Patients often dialed in to the ACS call center to ask: of all the information that they were given and had available, what was actually relevant to their diagnosis and progress?
 
-### 3. Build meaningful conversation with doctors
-When patients looked up information outside of a doctor's appointment, *their goals typically were to prepare more educated questions for the next consult, become more confident about their doctor's decisions, and follow up on confusing concepts.*
+### Build meaningful conversation with doctors
+When patients looked up information outside of a doctor's appointment, their goals typically were to prepare more educated questions for the next consult, become more confident about their doctor's decisions, and follow up on any confusing concepts.
 
 ## The Cancer Journey
 
 Nearly 40% of men and women in the US will be diagnosed with cancer within their lifetime. Each patient and their caregiver stands to undergo the most emotionally and physically significant experience they will ever have.
 
-To understand this experience, we interviewed 30 patients and caregivers, as well as 43 healthcare professionals ranging between oncologists, nurses, and medical assistants.
+*To understand this experience, we interviewed 12 patients, 18 caregivers, and 43 healthcare professionals ranging between oncologists, nurses, and medical assistants.*
 
 <figure class="js--zoom">
   <img src="../assets/img/acs/cancerjourney.svg" alt="User cancer journey" />
   <figcaption>High level representation of what we've learned about a user's cancer journey</figcaption>
 </figure>
 
-Now that we've gained a more sophisticated understanding of the cancer journey, we created the following guiding principles going forward:
-1. Help navigate information noise, not add to it
-2. Strengthen human relationships
-3. XXX???
+## Guiding Principles
 
-## Proposed Solutions
+After 4 months of iterative user research, we were able to arrive at numerous key insights. From these, *we created the following guiding principles going forward:*
 
-After 4 months of user research and extensive help from Watson cognitive services development, *our team proposed a suite of AI features that would compliment each other but could also thrive as standalone.* Each one was validated through weeks of usability testing and would come down to business need and feasibility evaluations.
+### 1. Help navigate information noise, not add to it
 
-### Knowledge Collaboration
+We observed that patients didn't really struggle with a lack of information. Instead, they were usually so overwhelmed with information that they often needed ways to keep it all organized.
 
-We observed that patients and caregivers didn't really struggle with a lack of information. Instead, they were usually so overwhelmed with information that they would have to consolidate all their research into a "cancer binder", which they would take with them to doctor's appointments.
+Therefore, we should not crowd them with new information sources and only surface things that are relevant.
 
-This binder served as the source of truth, but it was also clunky, non-replicable, and difficult to index.
+### 2. Strengthen human relationships
 
-### Consult Transcription
+At the end of the day, althought patients described their cancer experience as truly a battle, they also expressed immense gratitude and felt an incredible bond for those who around them throughout the journey.
+
+As a result, we should never replace the roles of a patient's caregiver or their medical care team. Instead, we need to get tedious tasks out of the way so that they can just focus on providing support.
+
+### 3. Handle sensitive data with upfront transparency
+
+Patients didn't actually mind sharing their diagnosis and stories because talking about their cancer was a cathartic exercise. Instead, they were mindful of why unfamiliar prompters (particularly websites and researchers) wanted that information.
+
+In turn, we need to be honest about our usage of any sensitive information before asking for it.
+
+## Design Solutions
+
+After more than 4 months of collective research, we proposed a final solution that was tiered into the three major deliverables.
+
+### Short-Term: A cohesive home for cancer research
+
+<!-- Even more frustrating than being diagnosed with cancer was not being able to understand it. When something so personal was affecting their lives, patients felt the need to understand it and how it would might impact their immediate future.
+
+But as we'd already found, patients rarely lacked resources to find their answers. Rather, they were usually so overwhelmed with information that they would have to organize it into a "cancer binder", which they brought with them to every doctor's appointment. -->
+
+With an incredibly difficult journey ahead of them, patients and caregivers frequently kept a "cancer binder" between them to keep track of medical history, research materials, medications, symptoms, and more.
+
+Patients would then bring this binder with them to every medical appointment but over time, it was also cumbersome, non-replicable, and difficult to index.
+
+Therefore, at the core of our design solution, we designed a central space to create and keep resources 
+
+<figure>
+  <img src="../assets/img/acs/screen-home.svg" alt="User cancer journey" />
+  <!-- <figcaption>High level representation of what we've learned about a user's cancer journey</figcaption> -->
+</figure>
+
+### Mid-Term: Revisit appointments with a summarized transcript
 
 Caregivers often accompanied patients to their oncology appointments in order to be an extra pair of ears and take copious notes. However, caregivers still struggled to properly capture the medical jargon or concepts that doctors may bring up.
 
-To improve this experience, we 
+As a result, doctors said that *patients often recorded their consultation sessions even when their caregivers came in with them.* They would then take the tape home, rewind to understand the content, and come back with more questions.
+
+To improve this experience, we will leverage Watson's live speech-to-text capabilities 
+
+### Long-Term: Get access to experts with the context they need
+
+And with no way for ACS to track caller information, return callers found that they had to answer basic questions about their medical history each and every time.
