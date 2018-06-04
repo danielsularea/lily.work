@@ -93,6 +93,20 @@ As a result, doctors said that *many patients recorded their consultation sessio
 
 ## The Solution
 
+<figure class="js--zoom">
+  <img src="../assets/img/acs/wireframes.jpg" alt="">
+</figure>
+
+<figure>
+  <video loop autoplay name="" poster="../assets/img/acs/proto_createnote_poster.jpg" src="../assets/img/acs/proto_createnote.mov" height="500px"></video>
+  <figcaption>Made in Principle</figcaption>
+</figure>
+
+<figure>
+  <video loop autoplay name="" poster="../assets/img/acs/proto_record_poster.jpg" src="../assets/img/acs/proto_record2.mov" height="500px"></video>
+  <figcaption>Made in Principle</figcaption>
+</figure>
+
 ## Outcome
 
 ### Future Considerations
