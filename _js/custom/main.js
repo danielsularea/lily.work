@@ -327,8 +327,7 @@
       var alertMsg = document.getElementsByClassName(Selectors.staticryptAlert);
       if (alertMsg[0]) {
         alertMsg[0].classList.remove('u--noDisplay');
-      }
-      else {
+      } else {
         alert('Bad passphrase!');
       }
 

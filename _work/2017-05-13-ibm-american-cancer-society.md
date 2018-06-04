@@ -15,8 +15,8 @@ menu:
   - My Role
   - Early Insights
   - The Cancer Journey
-  - Guiding Principles
-  - Design Solutions
+  - The Solution
+  - Outcome
 ---
 
 In April 2016, IBM and the American Cancer Society announced a partnership to create a Watson mobile app for those fighting cancer.
@@ -45,81 +45,56 @@ Together, we were responsible for biweekly updates to both ACS and IBM stakehold
 
 ## Early Insights
 
-To begin, we leveraged our partnership to speak to specialists at ACS facilities, including a call center in Austin and <a href="https://www.cancer.org/treatment/support-programs-and-services/patient-lodging/hope-lodge.html" target="_blank">Hope Lodges</a> in Boston and New York.
+To begin, we leveraged our partnership with ACS to speak to specialists at various facilities, including a call center in Austin and <a href="https://www.cancer.org/treatment/support-programs-and-services/patient-lodging/hope-lodge.html" target="_blank">Hope Lodges</a> in Boston and New York.
 
-*Our objective was to understand the information-seeking patterns and needs of cancer patients when they reach out to these facilities.* This is what we learned:
+*Our objective was to understand the information-seeking patterns of cancer patients when they reached out to these resources.*
+
+In summary, patients often engaged with ACS specialists to:
 
 ### Recognize credible and updated sources
-As information online continues to be more comprehensive and accessible, patients struggled to recognize credible and truthful sources. This is especially difficult as the medical domain around cancer is constantly updating.
+As information online continues to be more comprehensive and accessible, patients struggled to recognize credible and truthful sources. This was especially difficult as the medical domain around cancer is constantly updating.
 
 ### Find relevancy in a sea of information
-Patients often dialed in to the ACS call center to ask: of all the information that they were given and had available, what was actually relevant to their diagnosis and progress?
+Patients rarely dialed in to the call center because they couldn't find information. Instead, they struggled to distinguish of all the information that they were given and had available, what was actually relevant to their diagnosis and progress?
 
 ### Build meaningful conversation with doctors
 When patients looked up information outside of a doctor's appointment, their goals typically were to prepare more educated questions for the next consult, become more confident about their doctor's decisions, and follow up on any confusing concepts.
 
 ## The Cancer Journey
 
-Nearly 40% of men and women in the US will be diagnosed with cancer within their lifetime. Each patient and their caregiver stands to undergo the most emotionally and physically significant experience they will ever have.
+Nearly 40% of men and women in the US will be diagnosed with cancer within their lifetime. Each patient stands to undergo the most emotionally and physically significant experience they will ever have.
 
-*To understand this experience, we interviewed 12 patients, 18 caregivers, and 43 healthcare professionals ranging between oncologists, nurses, and medical assistants.*
+To understand this experience, we interviewed 12 patients, 18 caregivers, and 43 healthcare professionals ranging between oncologists, nurses, and medical assistants.
 
 <figure class="js--zoom">
   <img src="../assets/img/acs/cancerjourney.svg" alt="User cancer journey" />
   <figcaption>High level representation of what we've learned about a user's cancer journey</figcaption>
 </figure>
 
-## Guiding Principles
+After gaining a more sophisticated understanding of the cancer journey, we noticed a few key insights:
 
-After 4 months of iterative user research, we were able to arrive at numerous key insights. From these, *we created the following guiding principles going forward:*
+### Patients' caregivers were typically their family members
 
-### 1. Help navigate information noise, not add to it
+Of all the patients we spoke to, very few were able to afford a licensed caregiver. Instead, *most caregivers were the patient's spouse or children*, who would take up additional housework and accompany them to the doctor's.
 
-We observed that patients didn't really struggle with a lack of information. Instead, they were usually so overwhelmed with information that they often needed ways to keep it all organized.
+And because these family members often didn't have a medical background themselves, they often coped with their sense of helplessness by becoming the primary person researching and compiling cancer information in order to support the patient.
 
-Therefore, we should not crowd them with new information sources and only surface things that are relevant.
+### Doctors remained the preferred source of information
 
-### 2. Strengthen human relationships
+Despite an increasing variety and volume of cancer resources through the internet, *patients still preferred to seek answers from their doctors because they were able to provide the most relevant and credible answers.*
 
-At the end of the day, althought patients described their cancer experience as truly a battle, they also expressed immense gratitude and felt an incredible bond for those who around them throughout the journey.
+And even when patients expressed concern about their doctor's judgement and wanted a second opinion, they consulted with other doctors from a different facility.
 
-As a result, we should never replace the roles of a patient's caregiver or their medical care team. Instead, we need to get tedious tasks out of the way so that they can just focus on providing support.
+### Patients wanted to revisit their conversations with their doctor
 
-### 3. Handle sensitive data with upfront transparency
+Caregivers often accompanied patients to their oncology appointments in order to be an extra pair of ears and take copious notes. However, since caregivers were typically unlicensed, they struggled to properly capture the medical jargon or concepts that doctors may bring up.
 
-Patients didn't actually mind sharing their diagnosis and stories because talking about their cancer was a cathartic exercise. Instead, they were mindful of why unfamiliar prompters (particularly websites and researchers) wanted that information.
+As a result, doctors said that *many patients recorded their consultation sessions even when their caregivers came in with them.* They would then take the tape home, rewind to understand the content, and come back with more questions.
 
-In turn, we need to be honest about our usage of any sensitive information before asking for it.
+## The Solution
 
-## Design Solutions
+## Outcome
 
-After more than 4 months of collective research, we proposed a final solution that was tiered into the three major deliverables.
+### Future Considerations
 
-### Short-Term: A cohesive home for cancer research
-
-<!-- Even more frustrating than being diagnosed with cancer was not being able to understand it. When something so personal was affecting their lives, patients felt the need to understand it and how it would might impact their immediate future.
-
-But as we'd already found, patients rarely lacked resources to find their answers. Rather, they were usually so overwhelmed with information that they would have to organize it into a "cancer binder", which they brought with them to every doctor's appointment. -->
-
-With an incredibly difficult journey ahead of them, patients and caregivers frequently kept a "cancer binder" between them to keep track of medical history, research materials, medications, symptoms, and more.
-
-Patients would then bring this binder with them to every medical appointment but over time, it was also cumbersome, non-replicable, and difficult to index.
-
-Therefore, at the core of our design solution, we designed a central space to create and keep resources 
-
-<figure>
-  <img src="../assets/img/acs/screen-home.svg" alt="User cancer journey" />
-  <!-- <figcaption>High level representation of what we've learned about a user's cancer journey</figcaption> -->
-</figure>
-
-### Mid-Term: Revisit appointments with a summarized transcript
-
-Caregivers often accompanied patients to their oncology appointments in order to be an extra pair of ears and take copious notes. However, caregivers still struggled to properly capture the medical jargon or concepts that doctors may bring up.
-
-As a result, doctors said that *patients often recorded their consultation sessions even when their caregivers came in with them.* They would then take the tape home, rewind to understand the content, and come back with more questions.
-
-To improve this experience, we will leverage Watson's live speech-to-text capabilities 
-
-### Long-Term: Get access to experts with the context they need
-
-And with no way for ACS to track caller information, return callers found that they had to answer basic questions about their medical history each and every time.
+Some unsolved UX problems.
