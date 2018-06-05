@@ -1,11 +1,10 @@
 .m--staticrypt {
   // margin: 2rem 0;
-  text-align: center;
   @include u--animation-fade(750ms);
 
-  // @media (min-width: map-get($v--grid-breakpoints, md)) {
-    // margin: 6rem 0;
-  // }
+  @media (min-width: map-get($v--grid-breakpoints, sm)) {
+    text-align: center;
+  }
 }
 
 .m--staticrypt_password,

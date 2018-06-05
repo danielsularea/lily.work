@@ -21,6 +21,64 @@ menu:
   - Footnotes
 ---
 
+## Guiding Principles
+
+After 4 months of iterative user research, we were able to arrive at numerous key insights. From these, *we created the following guiding principles going forward:*
+
+### 1. Help navigate information noise, not add to it
+
+We observed that patients didn't really struggle with a lack of information. Instead, they were usually so overwhelmed with information that they often needed ways to keep it all organized.
+
+Therefore, we should not crowd them with new information sources and only surface things that are relevant.
+
+### 2. Strengthen human relationships
+
+At the end of the day, althought patients described their cancer experience as truly a battle, they also expressed immense gratitude and felt an incredible bond for those who around them throughout the journey.
+
+As a result, we should never replace the roles of a patient's caregiver or their medical care team. Instead, we need to get tedious tasks out of the way so that they can just focus on providing support.
+
+### 3. Handle sensitive data with upfront transparency
+
+Patients didn't actually mind sharing their diagnosis and stories because talking about their cancer was a cathartic exercise. Instead, they were mindful of why unfamiliar prompters (particularly websites and researchers) wanted that information.
+
+In turn, we need to be honest about our usage of any sensitive information before asking for it.
+
+
+## Design Solutions
+
+After more than 4 months of collective research, we proposed a final solution that was tiered into the three major deliverables.
+
+### Short-Term: A cohesive home for cancer research
+
+<!-- Even more frustrating than being diagnosed with cancer was not being able to understand it. When something so personal was affecting their lives, patients felt the need to understand it and how it would might impact their immediate future.
+
+But as we'd already found, patients rarely lacked resources to find their answers. Rather, they were usually so overwhelmed with information that they would have to organize it into a "cancer binder", which they brought with them to every doctor's appointment. -->
+
+With an incredibly difficult journey ahead of them, patients and caregivers frequently kept a "cancer binder" between them to keep track of medical history, research materials, medications, symptoms, and more.
+
+Patients would then bring this binder with them to every medical appointment but over time, it was also cumbersome, non-replicable, and difficult to index.
+
+Therefore, at the core of our design solution, we designed a central space to create and keep resources 
+
+<figure>
+  <img src="../assets/img/acs/screens1.svg" alt="User cancer journey" />
+  <!-- <figcaption>High level representation of what we've learned about a user's cancer journey</figcaption> -->
+</figure>
+
+### Mid-Term: Revisit appointments with a summarized transcript
+
+Caregivers often accompanied patients to their oncology appointments in order to be an extra pair of ears and take copious notes. However, caregivers still struggled to properly capture the medical jargon or concepts that doctors may bring up.
+
+As a result, doctors said that *patients often recorded their consultation sessions even when their caregivers came in with them.* They would then take the tape home, rewind to understand the content, and come back with more questions.
+
+To improve this experience, we will leverage Watson's live speech-to-text capabilities 
+
+### Long-Term: Get access to experts with the context they need
+
+And with no way for ACS to track caller information, return callers found that they had to answer basic questions about their medical history each and every time.
+
+<!-- OLD OLD OLD -->
+
 In April 2016, IBM and the American Cancer Society announced a partnership to create the first advisor for those fighting cancer, powered by Watson cognitive computing.
 
 Due to the confidential nature of the project and the individuals involved, secondary research may be used to broadly represent certain insights gathered from primary research. Any other sensitive information may also be obfuscated or omitted.

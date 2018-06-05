@@ -12,14 +12,14 @@
 }
 
 .m--workHeader_title {
-  line-height: 1.125em;
+  line-height: 1.2em;
   font-family: $v--font-serif;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 2rem;
 
   @media (min-width: map-get($v--grid-breakpoints, sm)) {
-    line-height: 1.1em;
-    font-size: 1.9rem;
+    // line-height: 1.1em;
+    font-size: 2.2rem;
   }
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {

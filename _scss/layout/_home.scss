@@ -42,7 +42,7 @@
 
 .l--home_bio {
   position: relative;
-  height: 50vh;
+  height: 90vh;
   min-height: 300px;
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
@@ -52,7 +52,11 @@
 
 .l--home_bio-bottom {
   position: absolute;
-  bottom: 0;
+  bottom: 1rem;
+
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
+    bottom: 1.6rem;
+  }
 }
 
 .l--home_bio_text {
@@ -87,11 +91,11 @@
   position: relative;
   @include u--animation-fadeInUp(500ms);
   font-family: $v--font-mono;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: normal;
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   &:after {
