@@ -110,7 +110,7 @@ function encrypt(password) {
 
 gulp.task('encrypt', () => {
   return gulp.src('_work/*.*')
-    .pipe(encrypt('password'))
+    .pipe(encrypt('lilydoesgoodwork'))
     .pipe(gulp.dest('work/_posts'));
 });
 
