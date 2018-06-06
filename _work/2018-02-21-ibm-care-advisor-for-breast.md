@@ -189,7 +189,7 @@ Depending on personal and family history of breast cancer, as well as rare genet
 
 <figure>
   <img src="../assets/img/ca-breast/riskfactors.svg" />
-  <figcaption>The different combinations of risk factors and recommended follow-up.</figcaption>
+  <figcaption>Some of the risk factors and possible recommended follow-up</figcaption>
 </figure>
 
 However, while radiologists wildly disagree on a universal follow-up for high-risk patients, we have found that breast imaging institutions strive to standardize practice by enforcing one protocol for all its radiologists.
