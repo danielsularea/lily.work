@@ -126,7 +126,7 @@ This empowers patients to focus interacting with the doctor during the conversat
 Here is an example interaction in full:
 
 <figure>
-  <video loop autoplay controls name="Users can record the conversation at the doctor's office, take photos without stopping the tape, and view the speech-to-text transcription in real-time." poster="../assets/img/acs/proto_record_poster.jpg" src="https://j.gifs.com/xvWKKr.mp4" height="500px"></video>
+  <video loop autoplay controls name="Users can record the conversation at the doctor's office, take photos without stopping the tape, and view the speech-to-text transcription in real-time." poster="../assets/img/acs/proto_record_poster.jpg" src="../assets/img/acs/proto_record.mov" height="500px"></video>
   <figcaption>Users can record the conversation at the doctor's office, take photos without stopping the tape, and view the speech-to-text transcription in real-time.</figcaption>
 </figure>
 
@@ -149,10 +149,6 @@ Once a patient leaves the doctor's office, they often want to revisit the conver
 
 By training on the vast ACS database, *Watson can recognize and highlight keywords of interest in the transcript and break down the recording into sections of major topics so patients have digest the content quicker.*
 
-<figure class="js--zoom">
-  <img src="../assets/img/acs/screen-transcript.svg" alt="Watson can recognize and highlight keywords of interest in the transcript and break down the recording into sections of major topics so patients have digest the content quicker.">
-</figure>
-
 *The highlighted keywords also serve as faster, in-context search queries* by allowing users to click on them and be directed to ACS-approved resources on the phrase.
 
 The aim for this process is to reduce the frequent "I don't know what I don't know" phenomenon. Traditionally, patients have to reconstruct what they took away from their doctor into a completed question to ask elsewhere. Instead, we lower the research barrier and use the recorded conversation itself as a search generator.
@@ -160,7 +156,7 @@ The aim for this process is to reduce the frequent "I don't know what I don't kn
 Here is the final interaction:
 
 <figure>
-  <video loop autoplay controls name="After the appointment, users can review both the transcript and recording and dive into highlighted keywords that Watson recognizes from the ACS database." src="https://j.gifs.com/59oNOR.mp4" height="500px"></video>
+  <video loop autoplay controls name="After the appointment, users can review both the transcript and recording and dive into highlighted keywords that Watson recognizes from the ACS database." src="../assets/img/acs/proto_transcript.mov" height="500px"></video>
   <figcaption>After the appointment, users can review both the transcript and recording and dive into highlighted keywords that Watson recognizes from the ACS database.</figcaption>
 </figure>
 
