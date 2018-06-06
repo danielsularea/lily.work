@@ -89,7 +89,7 @@ As a result, having visual choices and feedback was important to casual users wh
 
 <figure class="js--zoom">
   <video loop autoplay name="Manual search using modal inputs" src="../assets/img/clinicalreview/manualsearch.mov"></video>
-  <figcaption>Made in Framer</figcaption>
+  <!-- <figcaption>Made in Framer</figcaption> -->
 </figure>
 
 ### Power users can just start typing
@@ -100,7 +100,7 @@ On the other hand, hospital staff such as nurses and medical coders were respons
 
 <figure class="js--zoom">
   <video loop autoplay name="Quick search by directly typing into search bar" src="../assets/img/clinicalreview/typesearch.mov"></video>
-  <figcaption>Made in Framer</figcaption>
+  <!-- <figcaption>Made in Framer</figcaption> -->
 </figure>
 
 ## Enhancements

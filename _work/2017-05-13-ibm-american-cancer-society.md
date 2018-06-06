@@ -36,7 +36,7 @@ However, even with advances in modern medicine and supportive care, <a href="htt
     </cite>
 </blockquote>
 
-In order to improve patient's understanding of their cancer, ACS and IBM saw an opportunity to combine powerful resources from both sides: ACS's massive database of cancer knowledge and IBM's artificial intelligent features, widely personified as "Watson". *The mission was to build a consumer-facing mobile app that empowers patients and caregivers to be more educated about their cancer.*
+In order to improve patients' understanding of their cancer, ACS and IBM saw an opportunity to combine powerful resources from both sides: ACS's massive database of cancer knowledge and IBM's artificial intelligent features, widely personified as "Watson". *The mission was to build a consumer-facing mobile app that empowers patients and caregivers to be more educated about their cancer.*
 
 ## My Role
 
@@ -50,16 +50,16 @@ To begin, we leveraged our partnership with ACS to speak to specialists at vario
 
 *Our objective was to understand the information-seeking patterns of cancer patients when they reached out to these resources.*
 
-In summary, patients often engaged with ACS specialists to:
+In summary, we found that patients typically engaged with ACS specialists in order to:
 
-### Recognize credible and updated sources
+### Recognize credible and up-to-date sources
 As information online continues to be more comprehensive and accessible, patients struggled to recognize credible and truthful sources. This was especially difficult as the medical domain around cancer is constantly updating.
 
 ### Find relevancy in a sea of information
 Patients rarely dialed in to the call center because they couldn't find information. Instead, they struggled to distinguish of all the information that they were given and had available, what was actually relevant to their diagnosis and progress?
 
-### Build meaningful conversation with doctors
-When patients looked up information outside of a doctor's appointment, their goals typically were to prepare more educated questions for the next consult, become more confident about their doctor's decisions, and follow up on any confusing concepts.
+### Build meaningfuls conversation with doctors
+When patients looked up information outside of a doctor's appointment, their goals typically were to prepare more educated questions for the next consult, become more confident about their doctor's decisions, and follow up on any confusing concepts from the appointment.
 
 ## The Cancer Journey
 
@@ -101,62 +101,80 @@ Over the last month of this project, we dedicated our time to conducting early c
   <figcaption>Early concept wireframes used during evaluative research</figcaption>
 </figure>
 
-*Equally important in this process was consulting the Watson cognitive services development team* in order to understand current and near future capabilities that we can feasibly support.
+*Equally important in this process was working closely with the Watson cognitive services development team* in order to understand current and near future capabilities that we can feasibly support.
 
-Therefore, from almost a dozen comprehensive concepts, we were able to narrow it down to just one.
+Therefore, from almost a dozen distinct concepts, we were able to narrow it down to just one.
 
 ## The Solution
 
-Although there were an abundance of opportunities to fill in information gaps for cancer patients, we found that the doctor's office had the most potential. *In an environment with a wealth of knowledge but no medical degree, both patients and caregivers struggle to take full advantage of their appointments.*
+Although there were an abundance of opportunities along the entire user journey, we found that improving comprehension of cancer at the doctor's office would have the most potential. *In an environment with a wealth of knowledge but no medical degree, both patients and caregivers struggled to take full advantage of doctor consultations.*
 
-Our solution is designed to be a digital counterpart in the room that make discussing complex topics more accessible and informative.
+As a result, we designed a digital counterpart in the room that would make discussing complex topics more accessible and informative.
 
 ### Focus less on taking notes, more on the conversation
 
-Doctors today are already accustomed to patients and their caregivers needing to tape their session in order to digest the heavy amounts of information they deliver.
+Doctors today are already accustomed to patients taping their sessions in order to digest the heavy amounts of information that they talk about.
 
-We leverage this behavior without disrupting it by offering *speech-to-text transcription of the conversation.*
+We leveraged this behavior without disrupting it by *enabling users to record the conversation with the addition of speech-to-text transcription.*
+
+<figure class="js--zoom">
+  <img src="../assets/img/acs/screen-recording.svg" alt="">
+</figure>
+
+This empowers patients to focus interacting with the doctor during the conversation and the caregiver to actively listen instead of jotting down words they don't understand.
+
+Here is an example interaction in full:
 
 <figure>
-  <video loop autoplay name="" poster="../assets/img/acs/proto_record_poster.jpg" src="../assets/img/acs/proto_record.mov" height="500px"></video>
+  <video loop autoplay controls name="Users can record the conversation at the doctor's office, take photos without stopping the tape, and view the speech-to-text transcription in real-time." poster="../assets/img/acs/proto_record_poster.jpg" src="../assets/img/acs/proto_record.mov" height="500px"></video>
   <figcaption>Users can record the conversation at the doctor's office, take photos without stopping the tape, and view the speech-to-text transcription in real-time.</figcaption>
 </figure>
 
-This empowers the user to focus on the conversation at hand instead of attempting to jot down words they don't understand.
+### Search through any conversation
+
+Currently, patients keep archives of voice memos or a binder of notes as traceable receipts for important discussions they're afraid of forgetting.
+
+But as conversations are transcribed to text in the app, each word is indexed so that *users can search through them at any time and no discussion is ever lost.*
+
+Search also suggests the most incidental keywords across all conversations so patients can find recordings by theme.
+
+<figure class="js--zoom">
+  <img src="../assets/img/acs/screen-search.svg" alt="Users can store, track, and search through every conversation.">
+  <figcaption>Users can store, track, and search through every conversation.</figcaption>
+</figure>
 
 ### Rewind and review key topics
 
-Trained on the vast ACS database, *Watson can also recognize out of the transcript, which phrases are major topics surrounding breast cancer.*
+Once a patient leaves the doctor's office, they often want to revisit the conversation and do personal research on major topics. But even with speech-to-text, reviewing hours of transcripts is still tedious.
 
-This allows the user to query a keyword straight from the context of their transcript and be directly taken to ACS-approved resources.
-
-<figure>
-  <video loop autoplay name="" src="../assets/img/acs/proto_transcript.mov" height="500px"></video>
-  <figcaption>After the appointment, users can review both the transcript and recording and dive into highlighted keywords that Watson recognizes from the ACS database.</figcaption>
-</figure>
-
-The aim for this tool is to reduce the common "I don't know what I don't know" phenomenon. Instead, this research method reduces the burden on users to seek out answers to a specific question by transforming a conversation to be one large questions generator.
-
-### Search through any conversation
-
-Currently, patients keep archives of tape recordings or a binder of notes as traceable receipts for details they're afraid of losing.
-
-But as conversations are transcribed to text in the app, each word is indexed so that no discussion is ever lost. Search also suggests the most incidental keywords across all conversations so patients can find recordings by theme.
+By training on the vast ACS database, *Watson can recognize and highlight keywords of interest in the transcript and break down the recording into sections of major topics so patients have digest the content quicker.*
 
 <figure class="js--zoom">
-  <img src="../assets/img/acs/screen-search.svg" alt="">
+  <img src="../assets/img/acs/screen-transcript.svg" alt="Watson can recognize and highlight keywords of interest in the transcript and break down the recording into sections of major topics so patients have digest the content quicker.">
+</figure>
+
+*The highlighted keywords also serve as faster, in-context search queries* by allowing users to click on them and be directed to ACS-approved resources on the phrase.
+
+The aim for this process is to reduce the frequent "I don't know what I don't know" phenomenon. Traditionally, patients have to reconstruct what they took away from their doctor into a completed question to ask elsewhere. Instead, we lower the research barrier and use the recorded conversation itself as a search generator.
+
+Here is the final interaction:
+
+<figure>
+  <video loop autoplay controls name="After the appointment, users can review both the transcript and recording and dive into highlighted keywords that Watson recognizes from the ACS database." src="../assets/img/acs/proto_transcript.mov" height="500px"></video>
+  <figcaption>After the appointment, users can review both the transcript and recording and dive into highlighted keywords that Watson recognizes from the ACS database.</figcaption>
 </figure>
 
 ## Next Steps
 
-Over a span of just 5 months, we were able to deliver a powerful concept validated by thorough user research. However, because of the short timeframe, there were a few considerations that were de-prioritized.
+Over a span of just 5 months, we were able to deliver a powerful concept validated by extensive user research. However, because of the short timeframe, there were a few considerations that were de-prioritized.
 
 As a result, *we advised the production team upon hand-off with a few key next steps:*
-- During concept testing, many users expressed desire for Watson to summarize each transcribed conversation as well. This would help cut down time spent revisitig the tape.
+- During concept testing, many users expressed desire for Watson to summarize each transcribed conversation. Perhaps pin this as a future milestone.
 - The prototypes do not reflect final visual design decisions. Please deliberate how to tie both ACS and IBM brands together.
-- It's important to further explore the consultation environment so that recording the conversation does not become intrusive or uncomfortable.
-- Directing users to ACS sanctioned resources based on highlighted keywords was highly valuable for patients. Dive deeper into how this information can be presented in a useful way, including leveraging additional tools we haven't considered (such as dialing the ACS call center).
-- We encountered a surprising number of non-native English patients and caregivers during our user interviews. Their largest struggles have consistently been with language barrier. Consider including translation services for the recorded transcripts.
+- It's important to further explore the doctor consultation environment so that recording the conversation does not become intrusive or uncomfortable.
+- Directing users to ACS sanctioned resources based on highlighted keywords was highly valuable for patients. Dive deeper into how this information can be presented in a useful way, including leveraging additional tools we haven't yet considered (such as dialing the ACS call center).
+- We encountered a surprising number of non-native English patients and caregivers during our user interviews. Consider multi-lingual support for transcripts.
+- In afterthought, we wished we'd spent more time on optimizing accessibility. We ask that the production team take this initiatve as it is relevant to many of our users.
 
 ## Outcome
 

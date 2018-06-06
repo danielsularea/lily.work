@@ -177,7 +177,7 @@ Radiologists therefore determine normal by comparing the current mammogram to th
 
 *Therefore, our algorithm must consider not only the current mammogram, but also a reliable set of priors in order to make the most informed assessment.*
 
-And from working with our radiologists, the algorithm imitates good human practices by preferring mammograms that are at least 2 years old so that changes are more blatant but no older than 5 years old so that it is still relevant.
+<!-- And from working with our radiologists, the algorithm imitates good human practices by preferring mammograms that are at least 2 years old so that changes are more blatant but no older than 5 years old so that it is still relevant. -->
 
 <figure class="m--content_figure m--content_figure-left">
   <img src="../assets/img/ca-breast/patient.svg" />
@@ -187,16 +187,14 @@ And from working with our radiologists, the algorithm imitates good human practi
 
 Depending on personal and family history of breast cancer, as well as rare genetic mutations, some women are predisposed to develop breast cancer. These patients should receive additional considerations, such as supplementary MRI, shorter intervals between screenings, and so on.
 
-However, many radiologists disagree on the factors that define a patient to be high risk as well as the appropriate follow-up.
-
-Although there is no common consensus, we have found that it is a finite set of conditions that map to a finite set of follow-up recommendations.
-
 <figure>
   <img src="../assets/img/ca-breast/riskfactors.svg" />
-  <figcaption>There are finite combinations of risk factors and recommended follow-up</figcaption>
+  <figcaption>Some of the risk factors and possible recommended follow-up</figcaption>
 </figure>
 
-*As a result, CA-Breast keeps recommendation options configurable so that once a patient is identified as high risk, it follows the settings corresponding to institution procedures.*
+However, while radiologists wildly disagree on a universal follow-up for high-risk patients, we have found that breast imaging institutions strive to standardize practice by enforcing one protocol for all its radiologists.
+
+*As a result, CA-Breast can confidently reflect this behavior by configuring a single recommendation output per site.*
 
 <figure class="m--content_figure m--content_figure-right">
   <img src="../assets/img/ca-breast/typewriter.svg" />
@@ -204,26 +202,30 @@ Although there is no common consensus, we have found that it is a finite set of 
 
 ### 3. Writing radiology reports is an art
 
-Even if their mammogram has no signs of cancer, most women present with some sort of benign finding. Radiologists wildly disagree on how to describe these benign findings in the report or whether to just omit them entirely so they don't cause confusion with malignant findings.
+Although mammography is heavily regulated in terms of xray quality and patient management, the reporting of any findings found in the mammogram is entirely up to the radiologist.
 
-This was a difficult problem since an algorithm executes tasks within a distinct set of rules. But with the complex and freeform nature of writing a medical report, it isn't as simple as a configuration setting.
+Even for women who are completely cancer-free, most of them still present with some sort of benign finding. And *while Watson is excellently trained on identifying benign findings from those that are malignant, it is not great at describing them in prose.*
 
-<!-- My response was to acklowedge CA-Breast to have a certain personality type that carries a set of preferences. Disagreement would be impossible to avoid no matter what but if radiologists can understand its working style like they would with a colleague, it can reduce frustration. -->
+And from mapping the reporting styles of more than 30 radiologists, I have found an unfortunately wide variety of preferences ranging everywhere from meticulous detailing of each finding to omitting mention of benign findings altogether.
 
-After mapping the reporting styles of over 30 radiologists, I worked with the research team on our current technical capabilities and limitations, and *acknowledged CA-Breast as a moderately liberal personality conforming to the following behaviors:*
+To further investigate, I consulted 9 more radiologists and our internal team of subject matter experts. From this, I found that although radiologists didn't conform on this matter, they also didn't quite care about how other radiologists did theirs as long as they followed good practice. Additionally, most benign findings in the image were just so painfully obvious that whether to omit it from the report was inconsequential.
+
+And after working closely with our research and data science teams, I also understood the technical and finance debt of training the algorithm to recognize the small visual characteristics that humans are capable of describing.
+
+*As a result, I recommended the following guidelines for Watson:*
 - It omits findings from the report that are irrefutably benign
-- For benign findings that it does describe, it describes its morphology and location to the extent that it's obvious what its corresponding counterpart is in the mammogram image itself.
+- For benign findings that it does describe, it describes its morphology and location to the extent that it's counterpart in the mammogram image is clear
 - It would group similar findings wherever possible, rather than describe each one individually
 
 ## Next Steps
 
 That brings us to today's objectives and challenges.
 
-My time between March 2018 to now has been overwhelmingly spent with the research and development teams to design a machine learning algorithm, decide how to collect and annotate data in order to train the algorithm, and determine the way its outputs translate into real product application.
+My time since March 2018 has been overwhelmingly spent with the research and development teams to design a machine learning algorithm, decide how to collect and annotate data in order to train the algorithm, and determine the way its outputs translate into real product application.
 
-While I can't divulge my work from here onwards, here are some of the interesting questions we've been asking recently:
+While I can't divulge my work from here onwards, here are some of the interesting questions we'd asked next:
 - What constitutes suspicious change between current and prior mammograms? Is it growth in numbers? In size? Change in location?
 - How do we handle in-breast foreign bodies such as implants, clips, surgical sutures, pacemakers, so on?
 - If a radiologist disagrees with CA-Breast's assessment on a mammogram, how should it react?
 
-This first release is now being tested at hospitals and undergoing regulatory review by the FDA in the US. *I am now focusing on expanding this solution to a worldwide market, starting from the UK.*
+The first release of Care Advisor for Breast is now being tested at hospitals and undergoing regulatory review by the FDA in the US. *I am now focusing on expanding this solution to a worldwide market, starting from the UK.*
