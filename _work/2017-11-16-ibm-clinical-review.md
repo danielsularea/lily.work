@@ -15,7 +15,7 @@ menu:
   - My Role
   - The Problem
   - Quick Fixes
-  - New Search Formulas
+  - Redefining Search
   - Enhancements
   - Results
 ---
@@ -62,24 +62,63 @@ There are three resolution stages for each discrepancy issue: open, pending, and
   <img src="../assets/img/clinicalreview/newcasetabs.svg" />
 </figure>
 
-## New Search Formulas
+## Redefining Search
 
-Our first major design solution for the discrepancy table was to introduce *Search Formulas, a set of building block searches that can be combined to be as comprehensive as necessary.*
+The main complaint we received about the search and filter functions was that they weren't nearly as comprehensive enough to match the complexity of the discrepancy database itself. WICR users didn't feel like they had full control over how they wanted to drill down to issues.
 
-With 25 total categories to search from, each with its own set of operators and data types, I needed to overhaul search in a way that would provide organization and control.
+With 25 total categories to search from, each with its own set of operators and data types, *we needed to overhaul search in a way that would provide organization and control.*
 
 <figure>
   <img src="../assets/img/clinicalreview/datatypes.svg" alt="The range of data types for each category" />
   <figcaption>The range of data types for each category</figcaption>
 </figure>
 
-A single Search Formula therefore reflects a selected set of category, operator (if more than one for this category), and value so that users can compartmentalize what they were looking for.
+### First Attempt
+
+By default, WICR v1.0 offered five filters. However, this was often difficult to correlate with the column it was filtering and limited in terms of options.
+
+<figure class="js--zoom">
+  <img src="../assets/img/clinicalreview/earlyproto1_old.svg" />
+  <figcaption>Filters didn't correspond with table columns</figcaption>
+</figure>
+
+*Our first attempt then was to add and associate filters to each column.* For certain appropriate columns, we also introduced freeform text inputs instead of dropdown options to broaden search capabitilies.
+
+<figure class="js--zoom">
+  <img src="../assets/img/clinicalreview/earlyproto1.svg" />
+  <figcaption>1st attempt: attach each filter to its column</figcaption>
+</figure>
+
+Unfortunately, user feedback wasn't entirely positive. While we solved the initial need to match filters to columns, we created a couple of new problems:
+- Users weren't certain whether they should search in the broad search bar up top or in individual filters beneathe each column
+- The filters were too busy and added a lot of noise to an already crowded interface
+- There was no obvious way to search within the many more additional categories that weren't visible as a column
+- There was no accommodation for operators (ex: more than 4 days)
+
+### Second Attempt
+
+*Our next attempt aimed to increase control and decrease visual noise.* We did this by hiding the actual filter building process unless explicitly called for while still allowing the use of operators and different datatypes for every potential category.
+
+<figure class="js--zoom">
+  <img src="../assets/img/clinicalreview/earlyproto2.svg" />
+  <figcaption>2nd attempt: Allow even finer and more powerful controls while reducing default visual noise</figcaption>
+</figure>
+
+While this design was much closer than the last one, there were still some interaction points that could have been finessed. Our usability testing revealed that:
+- In the default state without any set filters, users missed the "Add Filter" button because they were looking for a search bar
+- Building multiple filters was tedious and slow&mdash;there were too many unnecessary clicks
+
+### Final Solution
+
+Closely iterating on the last attempt, we finalized the concept of *Search Formulas, a set of building block searches that can be combined to be as comprehensive as necessary.*
+
+Each Search Formula reflects a selected set of category, operator (if more than one for this category), and value so that users can compartmentalize what they were looking for.
 
 <figure>
   <img src="../assets/img/clinicalreview/formula.svg" alt="Example of a single search formula" />
 </figure>
 
-And in order to cater to our full range of users, these formulas can be built in two ways.
+However, rather than creating Search Formulas like we did in the second attempt, *we realized that there were two distinct behaviors of nagivating the database that we needed to accommodate.*
 
 ### Casual users have all their options laid out
 
@@ -88,7 +127,7 @@ Doctors who only logged into WICR to resolve discrepancies that were flagged to 
 As a result, having visual choices and feedback was important to casual users who weren't familiar with the entire search toolbelt. *The manual selection method then is straightforward and comfortable.*
 
 <figure class="js--zoom">
-  <video loop autoplay name="Manual search using modal inputs" src="../assets/img/clinicalreview/manualsearch.mov"></video>
+  <video controls loop autoplay name="Manual search using modal inputs" src="../assets/img/clinicalreview/manualsearch.mov"></video>
   <!-- <figcaption>Made in Framer</figcaption> -->
 </figure>
 
@@ -99,7 +138,7 @@ On the other hand, hospital staff such as nurses and medical coders were respons
 *Therefore, a more efficient alternative for these power users is to type directly into the search bar.* To provide further help, an autocomplete box follows the cursor and offers look-ahead feedback.
 
 <figure class="js--zoom">
-  <video loop autoplay name="Quick search by directly typing into search bar" src="../assets/img/clinicalreview/typesearch.mov"></video>
+  <video controls loop autoplay name="Quick search by directly typing into search bar" src="../assets/img/clinicalreview/typesearch.mov"></video>
   <!-- <figcaption>Made in Framer</figcaption> -->
 </figure>
 
