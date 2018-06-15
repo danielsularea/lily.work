@@ -17,7 +17,7 @@ title: Works
   </div>
   <!-- <h2>Selected Work</h2> -->
   <ol class="m--workList">
-    {% for project in site.categories["work"] %}
+    {% for project in site.categories["work"] reversed %}
       <li>
         <a href="{{ project.url }}" class="m--workList_anchor" itemscope itemtype="http://schema.org/BlogPosting" alt="{{ project.title }}">
           <span class="m--workList_title" itemprop="name headline">{{ project.title }}</span>
