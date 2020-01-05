@@ -1,9 +1,9 @@
 ---
 layout: blogpost
-title: I'm Not Even Mad
+title: The Fascinating History of CAPTCHA
 ---
 
-There is a fantastic story I once learned about the history of CAPTCHA that still impresses me to this day.
+The history of CAPTCHA demonstrates a complex problem space that produced an incredibly elegant solution.
 
 ## A Brief History
 
@@ -55,26 +55,8 @@ Now we're at the latest version of reCAPTCHA, where users are now tasked to help
   url="/assets/img/captcha/objectid.png"
   alt="CAPTCHA using object identification" %}
 
-## Why I'm Not Mad
-
-Now, if all of that made you a little mad about Google being kind of underhanded, I don't blame you. No one likes to be "tricked" into doing something.
-
-But then I thought about it. Throwing a fit that Google used reCAPTCHA to digitize Google Books and improve Google Maps is like getting mad that the store is charging 2 cents on a 1 cent piece of candy when they're pooling all that money into building a playground next to my house.
-
-And, after 2 years working within the healthcare industry, I've unfortunately adapted a viewpoint that with such a multi-faceted domain, not everybody can win all the time. A designer just has to minimize loss in this sort of situation.
-
-But Google was faced with a three-sided tug-a-war: the needs of websites to protect themselves against malicious bots, the needs of human users to pass through these tests frictionlessly, and the needs of Google to generate profit. And it kicked it all out of the water.
-
-The three-sided solution:
-1. Towards the first, Google matched increasingly smarter computer vision with harder challenges, moving from text to object identification.
-2. Yet at the same time, the modern tech giant that ultimately toppled AltaVista also made reCAPTCHA significantly easier for humans. According to the [team][google]{:target="_blank"}, "It's much easier to tap photos of cats or turkeys than to tediously type a line of distorted text on your phone." Furthermore, Google analyzes the user's history with CAPTCHAs and weighs how human their behavior is so that they might just bypass the puzzle entirely (called the No CAPTCHA experience).
-3. Lastly, of course, Google made major strides in the face of artificial intelligence as a whole, which in turn, I'm sure, made massive profits in numerous business streams.
-
-I mean, not only was I slapped in the face that I was being whiny about a complex domain, I was starstruck as a fellow artificial intelligence designer.
-
-AI does not have simple problems. Just training a machine learning algorithm costs enormous amounts of money and effort and Google managed to do it while benefiting the general public.
-
-Could all this goodwill be a sneaky way to make more money? Sure! But I'm sorry, every company is a business and if you can solve a problem that makes money while doing some good, I can't even be mad.
+## Conclusion
+TODO
 
 ## Post-Script
 And as a final note: one of the founding members on the original Carnegie Mellon team gave a [TEDx talk][TEDxCMU]{:target="_blank"} shortly after the first major success of digitizing the Google Books library and said that he created reCAPTCHA because he felt bad about wasting 10 seconds of people's day without it contributing to something. And so it goes.

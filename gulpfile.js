@@ -22,7 +22,7 @@ var FileSystem    = require('fs');
 var through       = require('through2');
 var PluginError   = gutil.PluginError;
 
-gulp.task('style', () => {
+function style() {
   return gulp.src('_scss/*.scss')
     .pipe(plumber({
       errorHandler: function (err) {
@@ -33,16 +33,17 @@ gulp.task('style', () => {
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(autoprefixer({
-      browsers: ['last 5 versions'],
+      Browserslist: ['last 5 versions'],
       cascade: false
     }))
     .pipe(rename({suffix: '.min'}))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('assets/css'))
     // .pipe(browserSync.stream());
-});
+};
+gulp.task(style);
 
-gulp.task('script-lib', () => {
+function scriptLib() {
   return gulp.src('_js/lib/*.js')
     .pipe(plumber({
       errorHandler: function (err) {
@@ -53,9 +54,10 @@ gulp.task('script-lib', () => {
     .pipe(concat('lib.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('assets/js'));
-});
+};
+gulp.task(scriptLib);
 
-gulp.task('script-custom', () => {
+function scriptCustom() {
   return gulp.src('_js/custom/*.js')
     .pipe(plumber({
       errorHandler: function (err) {
@@ -68,11 +70,10 @@ gulp.task('script-custom', () => {
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
     .pipe(gulp.dest('assets/js'));
-});
+};
+gulp.task(scriptCustom);
 
-gulp.task('script', ['script-lib', 'script-custom'], () => {});
-
-function encrypt(password) {
+function encryptHelper(password) {
   return through.obj(function(file, encoding, callback) {
     if (file.isNull() || file.isDirectory()) {
       this.push(file);
@@ -108,15 +109,19 @@ function encrypt(password) {
   });
 }
 
-gulp.task('encrypt', () => {
+function encrypt() {
   return gulp.src('_work/*.*')
-    .pipe(encrypt('lilydoesgoodwork'))
+    .pipe(encryptHelper('lilydoesgoodwork'))
     .pipe(gulp.dest('work/_posts'));
-});
+};
+gulp.task(encrypt);
 
-gulp.task('build', shell.task(['jekyll build --watch']));
+function build() {
+  shell.task(['jekyll build --watch'])
+};
+gulp.task(build);
 
-gulp.task('serve', () => {
+function serve() {
   browserSync.init({
     server: {
       baseDir: '_site/'
@@ -124,11 +129,12 @@ gulp.task('serve', () => {
     port: 4000
   });
 
-  gulp.watch('_scss/**/*.scss', ['style']);
-  gulp.watch('_js/custom/**/*.js', ['script-custom']);
-  gulp.watch('_js/lib/**/*.js', ['script-lib']);
-  gulp.watch('_work/*.*', ['encrypt']);
+  gulp.watch('_scss/**/*.scss', gulp.series(style));
+  gulp.watch('_js/custom/**/*.js', gulp.series(scriptCustom));
+  gulp.watch('_js/lib/**/*.js', gulp.series(scriptLib));
+  gulp.watch('_work/*.*', gulp.series(encrypt));
   gulp.watch('_site/**/*.*').on('change', browserSync.reload);
-});
+};
+gulp.task(serve);
 
-gulp.task('default', ['style', 'script', 'encrypt', 'build', 'serve'], () => {});
+gulp.task('default', gulp.parallel(style, scriptLib, scriptCustom, build, serve));
