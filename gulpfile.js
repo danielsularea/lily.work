@@ -116,11 +116,6 @@ function encrypt() {
 };
 gulp.task(encrypt);
 
-function build() {
-  shell.task(['jekyll build --watch'])
-};
-gulp.task(build);
-
 function serve() {
   browserSync.init({
     server: {
@@ -129,12 +124,14 @@ function serve() {
     port: 4000
   });
 
-  gulp.watch('_scss/**/*.scss', gulp.series(style));
+  gulp.watch('_scss/**/*.scss', gulp.series(style), () => {
+    shell.task(['jekyll build'])
+  });
   gulp.watch('_js/custom/**/*.js', gulp.series(scriptCustom));
   gulp.watch('_js/lib/**/*.js', gulp.series(scriptLib));
-  gulp.watch('_work/*.*', gulp.series(encrypt));
+  // gulp.watch('_work/*.*', gulp.series(encrypt));
   gulp.watch('_site/**/*.*').on('change', browserSync.reload);
 };
 gulp.task(serve);
 
-gulp.task('default', gulp.parallel(style, scriptLib, scriptCustom, build, serve));
+gulp.task('default', gulp.series(style, scriptLib, scriptCustom, serve));

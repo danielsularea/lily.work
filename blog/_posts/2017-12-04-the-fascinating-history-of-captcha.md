@@ -17,7 +17,7 @@ In 1997, a small but quickly growing search engine company called AltaVista need
 
 It took a few more years for a second team at Carnegie Mellon in 2003 to perfect the algorithm that generated the distorted texts and coin the system the Completely Automated Public Turing Test to tell Computers and Humans Apart (CAPTCHA).
 
-Then in 2009, another search engine, Google, acquired Carnegie Mellon's algorithm and deployed reCAPTCHA. This system expanded upon the original by asking users to identify *two sets of real words rather than random letters and numbers.*
+Then in 2009, another search engine, Google, acquired Carnegie Mellon's algorithm and deployed reCAPTCHA. This system expanded upon the original by asking users to identify two sets of real words rather than random letters and numbers.
 
 {% include figure.html
   nozoom="true"
@@ -25,13 +25,11 @@ Then in 2009, another search engine, Google, acquired Carnegie Mellon's algorith
   caption="The new reCAPTCHA was a set of two real words"
   alt="Google's revamped reCAPTCHA" %}
 
-Why specifically two words? Because the first was to validate the user as human with a word Google already knew the answer to but the second was actually to educate Google what the word was.
+Why specifically two words? Because unbeknownst to the user, both sets of words, although spliced into a single image, came from different collections of scanned texts. One was from a library of texts that Google already knew the corresponding word to and the other from a set where Google did not. Essentially, if the user's input matched the first word, the user was already validated but then strung on a little bit longer to contribute the answer for the second and enhance Google's known library.
 
-Because unbeknownst to the user, both sets of words, although spliced into a single image, came from a collection of scanned texts. Essentially, if the user's input matches the first word, the user is already validated but she is also strung on a little bit longer to contribute the answer for the second.
+After two years, Google harnessed all the crowdsourced answers to completely digitize the New York Times archives and Google Books library.
 
-All of this happening under our noses for two years and Google was able to completely digitized the New York Times archives and Google Books library.
-
-But then, as artificial intelligence became too intelligent (solving even the most distorted text at 99.8% accuracy without human intervention), Google shifted opportunity.
+Then, as artificial intelligence became too intelligent (solving even the most distorted text at 99.8% accuracy without human intervention), Google shifted opportunity.
 
 {% include figure.html
   nozoom="true"
@@ -39,27 +37,30 @@ But then, as artificial intelligence became too intelligent (solving even the mo
   caption="Artifical intelligence was catching up to the squiggly words"
   alt="Artifical intelligence was catching up to the squiggly words" %}
 
-Now, Google wanted to pinpoint addresses on Google Maps so that directions were painstakingly accurate. So enter Street View and soon photos of house numbers replaced the Google Books words.
+Google wanted to pinpoint addresses on Google Maps to improve the accuracy of route directions. So enter Street View and soon photos of house numbers replaced the Google Books words.
 
 {% include figure.html
   nozoom="true"
   url="/assets/img/captcha/streetview.png"
   alt="CAPTCHA using numbers on Street View" %}
 
-And once this venture was finished&mdash;and we know it is because dang, are Google's directions accurate&mdash;they moved on to the next iteration.
-
-Now we're at the latest version of reCAPTCHA, where users are now tasked to help identify objects in images, which obviously is another step towards better computer vision.
+And once this venture was finished, they moved to what we have today, where users are now tasked to help identify objects in images, which is another step towards better computer vision.
 
 {% include figure.html 
   nozoom="true"
   url="/assets/img/captcha/objectid.png"
   alt="CAPTCHA using object identification" %}
 
-## Conclusion
-TODO
+## Why This is Awesome
+Google was faced with a three-sided tug-a-war: the needs of websites to protect themselves against malicious bots, the needs of human users to pass through these tests frictionlessly, and the needs of Google to generate profit.
+
+And although the solution seems so obvious now that we have it, I'm incredibly impressed by how elegantly ReCAPTCHA solves every single facet:
+1. Towards the first, Google matched increasingly smarter computer vision with harder challenges, moving from text to object identification.
+2. Yet at the same time, the modern tech giant that ultimately toppled AltaVista also made reCAPTCHA significantly easier for humans. In addition to asking users to tap pictures rather than decipher text, Google now also analyzes the user's history with CAPTCHAs and weighs how human their behavior has been so that they might just bypass the puzzle entirely (called the No CAPTCHA experience).
+3. Lastly, of course, Google made major strides in the face of artificial intelligence as a whole, which in turn, I'm sure, made massive profits in their numerous business streams.
 
 ## Post-Script
-And as a final note: one of the founding members on the original Carnegie Mellon team gave a [TEDx talk][TEDxCMU]{:target="_blank"} shortly after the first major success of digitizing the Google Books library and said that he created reCAPTCHA because he felt bad about wasting 10 seconds of people's day without it contributing to something. And so it goes.
+And as a final note: one of the founding members on the original Carnegie Mellon team gave a [TEDx talk][TEDxCMU]{:target="_blank"} shortly after the first major success of digitizing the Google Books library and said that he created reCAPTCHA because he felt bad about wasting 10 seconds of people's day without it contributing to something.
 
 [TEDxCMU]: https://www.ted.com/talks/luis_von_ahn_massive_scale_online_collaboration/transcript
 [google]: https://security.googleblog.com/2014/12/are-you-robot-introducing-no-captcha.html

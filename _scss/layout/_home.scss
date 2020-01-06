@@ -40,7 +40,7 @@
   }
 }
 
-.l--home_bio {
+.l--home_fold {
   position: relative;
   height: 90vh;
   min-height: 300px;
@@ -50,21 +50,20 @@
   }
 }
 
-.l--home_bio-bottom {
+.l--home_fold-bottom {
   position: absolute;
-  bottom: 1rem;
-
-  @media (min-width: map-get($v--grid-breakpoints, md)) {
-    bottom: 1.6rem;
-  }
+  bottom: 0;
+  background-color: white;
 }
 
-.l--home_bio_text {
+.l--home_bio {
   @include u--animation-fade(500ms);
+  padding-bottom: 1rem;
   line-height: 1.4;
   font-size: 1.6rem;
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
+    padding-bottom: 1.6rem;
     line-height: 1.4;
     font-size: 2.2rem;
   }
@@ -73,18 +72,10 @@
     line-height: 1.6;
     font-size: 2.8rem;
   }
+}
 
-  span {
-    display: inline;
-
-    @media (min-width: map-get($v--grid-breakpoints, sm)) {
-      display: block;
-    }
-
-    &:first-child {
-      color: $v--color-blue;
-    }
-  }
+.l--home_bio_name {
+  color: $v--color-blue;
 }
 
 .l--home_bio_arrow {
@@ -107,11 +98,6 @@
   }
 }
 
-.l--home_bio_text,
-.l--home_bio_arrow {
-  margin: 2rem 0;
-}
-
 @media (min-width: map-get($v--grid-breakpoints, md)) {
   .l--home_portrait {
     position: absolute;
@@ -119,7 +105,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('../img/me.jpg') no-repeat center center fixed;
+    background: url('../img/me.png') no-repeat center center fixed;
     background-size: 15%;
   }
 }
