@@ -58,12 +58,12 @@
 
 .l--home_bio {
   @include u--animation-fade(500ms);
-  padding-bottom: 1rem;
+  padding-bottom: 1.6rem;
   line-height: 1.4;
   font-size: 1.6rem;
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
-    padding-bottom: 1.6rem;
+    padding-bottom: 2.4rem;
     line-height: 1.4;
     font-size: 2.2rem;
   }
@@ -80,32 +80,20 @@
 
 .l--home_bio_arrow {
   position: relative;
-  @include u--animation-fadeInUp(500ms);
-  font-family: $v--font-mono;
-  font-size: 1.2rem;
-  font-weight: normal;
+  top: -0.25rem;
+  font-family: $v--font-sans-serif;
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
-    font-size: 1.4rem;
-  }
-
-  &:after {
-    content: '\2193';
-    position: absolute;
-    // margin-top: -0.2rem;
-    margin-left: 0.4rem;
-    font-family: $v--font-sans-serif;
+    top: -0.5rem;
   }
 }
 
-@media (min-width: map-get($v--grid-breakpoints, md)) {
-  .l--home_portrait {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('../img/me.png') no-repeat center center fixed;
-    background-size: 15%;
-  }
+.l--home_portrait {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../img/me.png') no-repeat center center fixed;
+  background-size: 15%;
 }
