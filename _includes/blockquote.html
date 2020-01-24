@@ -1,9 +1,0 @@
-<blockquote {% if include.hasQuotes %}class="hasQuotes"{% endif %}>
-  <p>{{ include.quote }}</p>
-  {% if include.cite1 or include.cite2 %}
-    <cite>
-      {% if include.cite1 %}<div>{{ include.cite1 }}</div>{% endif %}
-      {% if include.cite2 %}<div>{{ include.cite2 }}</div>{% endif %}
-    </cite>
-  {% endif %}
-</blockquote>

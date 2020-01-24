@@ -5,67 +5,23 @@
 }
 
 html, body {
-  width: 100%;
-  height: 100%;
   overflow-x: hidden;
+  margin: 0;
+  font-size: 10px;
 
-  &:before {
-    content: '#{map-get($v--grid-breakpoints, lg)}';
-    display: none;
-    position: absolute;
-    left: -1000px;
-    top: -1000px;
+  @media (min-width: map-get($v--grid-breakpoints, xl)) {
+    font-size: 12px;
   }
-}
-
-html {
-  height: auto;
-  overflow: auto;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  padding-bottom: 1rem;
-  font-family: $v--site-font-family;
-  font-size: 100%;
+  font-family: $v--font-family;
   color: $v--color-black;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-rendering: optimizeLegibility;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-color: $v--color-white;
+  font-size: 1.8rem;
+  color: $v--color-black;
 }
-
-::selection {
-  background: $v--color-yellow;
-  // color: $v--site-selection-color;
-}
-
-::-moz-selection {
-  background: $v--color-yellow;
-  // color: $v--site-selection-color;
-}
-
-main {
-  margin-top: $v--main-marginTop;
-
-  @media (min-width: map-get($v--grid-breakpoints, md)) {
-    margin-top: $v--main-marginTop-md;
-  }
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-
-  &:focus,
-  .no-touchevents &:hover {
-    background-color: $v--color-yellow;
-    color: $v--color-black;
-  }
-}
-
-// ul {
-//   padding-left: 1rem;
-// }

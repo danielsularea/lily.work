@@ -1,15 +1,14 @@
-title: Lily Chen - Product Designer and Developer
+title: Lily Chen
 author: Lily Chen
 description: >
-  Lily is currently a developer at IBM Watson Health based in Cambridge, Massachusetts. 
-  She recently graduated from Cornell studying computer science.
-keywords: developer,cornell,ibm,web,front-end,backend,design,jquery,node,rails,ruby,django,HTML,CSS,javascript
+  Lily is currently a Product Designer at AngelList. Previously, IBM and Cornell.
+keywords: product,designer,angellist,ibm,cornell
 baseurl: "" # the subpath of your site, e.g. /blog/
 # url: "http://lily.work/"
 permalink: none
 
 # Contact
-email: 			    lilyc5459@gmail.com
+email:          lilyc5459@gmail.com
 twitter_url:    https://twitter.com/lllychen
 twitter_handle: "@lllychen"
 github_url:     https://github.com/lllychen
@@ -17,8 +16,6 @@ linkedin_url:   https://www.linkedin.com/in/lllychen
 
 # Build settings
 sass:
+  sass_dir: _scss
   style: compressed
-markdown: kramdown
-highlighter: rouge
-exclude: ['node_modules', 'gulpfile.js', 'package.json', 'assets/psd']
-include: ['_scss', '*.scss', '.htaccess']
+exclude: ['node_modules', 'gulpfile.js', 'package.json']

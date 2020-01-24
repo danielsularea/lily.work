@@ -15,24 +15,24 @@
 // Font
 // --------------------------------------------------
 $v--font-url:                   '../fonts';
-$v--font-serif:                 'Lyon Display', Georgia, serif;
-$v--font-sans-serif:            'Graphik', Helvetica Neue, Helvetica, Arial, sans-serif;
-$v--font-mono:                  'GT Pressura Mono', monospace;
+$v--font-family:                'Graphik',
+                                -apple-system,
+                                BlinkMacSystemFont,
+                                "Segoe UI",
+                                Roboto
+                                Oxygen-Sans,
+                                Ubuntu,
+                                Cantarell,
+                                "Helvetica Neue",
+                                Helvetica,
+                                Arial,
+                                sans-serif;
 
 // Color
 $v--color-white:                #ffffff;
-$v--color-black:                #333333;
-$v--color-blue:                 #0000ff;
-$v--color-yellow:               #fefeca;
-$v--color-gray1:                #f6f6f6;
-$v--color-gray2:                #dddddd;
-$v--color-gray3:                #a2a2a2;
-$v--color-gray4:                #6f6f6f;
-$v--color-gray5:                #555d6d;
-
-// Site
-// --------------------------------------------------
-$v--site-font-family:           $v--font-sans-serif;
+$v--color-black:                #033435;
+$v--color-gray1:                #8999b0;
+$v--color-gray2:                #555d6d;
 
 // Grid
 // --------------------------------------------------
@@ -60,34 +60,3 @@ $v--grid-gutter-widths: (
   lg: $v--grid-gutter-width,
   xl: $v--grid-gutter-width
 );
-
-// --------------------------------------------------
-// Module
-// --------------------------------------------------
-// Header
-// --------------------------------------------------
-$v--header-height:              2.3rem;
-$v--header-height-md:           3.5rem;
-
-// Paginate
-// --------------------------------------------------
-$v--paginate-height:            4rem;
-
-// Main
-// --------------------------------------------------
-$v--main-marginTop:             $v--header-height + 2rem;
-$v--main-marginTop-md:          $v--header-height-md + 4rem;
-
-// Worklist
-// --------------------------------------------------
-$v--workList_item-marginLeft:   2.6rem;
-$v--workList_anchor-padding:    0.4rem;
-
-// Bloglist
-// --------------------------------------------------
-$v--blogList_item-height:       3rem;
-
-// --------------------------------------------------
-// Layout
-// --------------------------------------------------
-
