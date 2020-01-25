@@ -66,17 +66,26 @@
     &.active {
       opacity: 1;
     }
+  }
 
-    // &:after {
-    //   content: '\2193';
-    //   padding-left: 0.5rem;
-    //   opacity: 0;
-    // }
+  .article {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-decoration: none;
+  }
 
-    // &:hover:after,
-    // &.active,
-    // &.active:after {
-    //   opacity: 1;
-    // }
+  .article_title {
+    display: inline;
+    line-height: 1.5;
+    font-size: 2.4rem;
+    text-decoration: underline;
+  }
+
+  .article_year {
+    display: inline;
+    font-size: 1.2rem;
+    color: #C6A167;
   }
 }
