@@ -15,6 +15,8 @@ npm init
 npm install jekyll-bliss --save-prod
 ```
 
+Then your build command on Netlify should become `bliss build`.
+
 ## SCSS compile is weird
 I haven't figured this out yet but relying on Jekyll Sass Converter has been a pain. Although I'm building on local dev just fine, I keep getting thrown odd errors on production.
 
