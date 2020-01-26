@@ -31,6 +31,3 @@ My friend turned 21 two weeks back and to immortalize his favorite film of all t
 {% include figure.html
   url="/assets/img/usualsuspects/spread6.png" 
   alt="Spread of Keyser Soze" %}
-
-
-[espresso]: http://cornell.indiebound.com/cornell-store-presents-espresso-book-machine
