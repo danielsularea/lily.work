@@ -4,7 +4,7 @@ description: >
   Lily is currently a Product Designer at AngelList. Previously, IBM and Cornell.
 keywords: product,designer,angellist,ibm,cornell
 baseurl: "" # the subpath of your site, e.g. /blog/
-# url: "http://lily.work/"
+url: "https://lilywork.netlify.com/"
 permalink: none
 
 # Contact
@@ -16,7 +16,7 @@ linkedin_url:   https://www.linkedin.com/in/lllychen
 
 # Build settings
 sass:
-  sass_dir: _scss
+  sass_dir: ./_scss
   style: compressed
 exclude: ['node_modules', 'gulpfile.js', 'package.json']
 
