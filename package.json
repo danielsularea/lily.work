@@ -1,0 +1,23 @@
+{
+  "name": "lllychen.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "jekyll-bliss": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lllychen/lllychen.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lllychen/lllychen.github.io/issues"
+  },
+  "homepage": "https://github.com/lllychen/lllychen.github.io#readme"
+}
