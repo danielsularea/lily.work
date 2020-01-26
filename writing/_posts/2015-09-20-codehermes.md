@@ -1,5 +1,6 @@
 ---
 title: How I won a Hackathon
+category: code
 published: false
 
 imgfolder: codehermes

@@ -31,7 +31,7 @@
     color: $v--color-yellow;
   }
 
-  @media (min-width: map-get($v--grid-breakpoints, sm)) {
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
     top: 50%;
     left: auto;
     right: 80%;
@@ -40,17 +40,19 @@
 }
 
 .post_content {
-  position: absolute;
+  position: fixed;
   top: 5rem;
   left: 0;
   right: 0;
+  bottom: 0;
   width: 100%;
   border-top: 2px solid $v--color-black;
   padding: 5rem 0;
   background-color: $v--color-white;
   color: $v--color-black;
+  overflow: scroll;
 
-  @media (min-width: map-get($v--grid-breakpoints, sm)) {
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
     top: 0;
     left: auto;
     width: 80%;
@@ -65,18 +67,28 @@
   h1, h2, h3, p,
   pre, ul, ol {
     display: block;
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
 
-    @media (min-width: map-get($v--grid-breakpoints, sm)) {
+    @media (min-width: map-get($v--grid-breakpoints, md)) {
+      margin-left: 15rem;
+      margin-right: 15rem;
+    }
+
+    @media (min-width: map-get($v--grid-breakpoints, xl)) {
       margin-left: 20rem;
       margin-right: 20rem;
     }
   }
 
   figure, figcaption {
-    margin-left: 4rem;
-    margin-right: 4rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    @media (min-width: map-get($v--grid-breakpoints, md)) {
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
   }
 
   h1 {
@@ -95,11 +107,11 @@
     font-weight: 500;
   }
 
-  // h3 {
-  //   font-size: 1.2rem;
-  //   font-weight: 500;
-  //   text-transform: uppercase;
-  // }
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
   
 	p {
 		margin-top: 1.5rem;

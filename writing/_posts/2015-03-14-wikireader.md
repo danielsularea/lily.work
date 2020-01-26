@@ -1,5 +1,6 @@
 ---
 title: Building a Chrome Extension Using Mostly CSS
+category: code
 
 imgfolder: wikireader
 cover_img: init.gif

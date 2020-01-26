@@ -2,11 +2,7 @@
 layout: index
 ---
 
-a.nav.active(href="/") Work &darr;
-a.nav(href="/info") Info &darr;
-
-h2 Projects
-p Coming soon
+| {% include projects.html %}
 
 h2 Writing
 | {% for post in site.categories["writing"] %}

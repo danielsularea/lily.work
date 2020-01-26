@@ -1,5 +1,6 @@
 ---
 title:  Screenplay Series&colon; Blade Runner
+category: design
 ---
 
 As an unintentional sequel to my [last screenplay project](/writing/screenplay-the-usual-suspects.html), I recently printed another screenplay book. This time for Blade Runner and with way better design decisions (ie print dimensions, typography, margins, the works). I also scoured the internet for some concept sketches to throw in there. Here are my favorite shots:
