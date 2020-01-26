@@ -19,3 +19,10 @@ sass:
   sass_dir: _scss
   style: compressed
 exclude: ['node_modules', 'gulpfile.js', 'package.json']
+
+defaults:
+  -
+    scope:
+      path: "writing/_posts/*"
+    values:
+      layout: "writing"

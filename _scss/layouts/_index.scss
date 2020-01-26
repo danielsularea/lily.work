@@ -1,8 +1,8 @@
 .index {
-  padding: 5rem;
+  padding: 5rem 0;
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
-    padding: 10rem;
+    padding: 10rem 0;
   }
 
   h1 {
@@ -52,15 +52,15 @@
       }
 
       &:hover:after {
-        color: #C6A167;
+        color: $v--color-yellow;
       }
     }
   }
-
+  
   .nav {
     margin-right: 3rem;
     opacity: 0.3;
-    text-decoration: none;
+    text-decoration: none;;
 
     &:hover,
     &.active {
@@ -85,7 +85,7 @@
 
   .article_year {
     display: inline;
+    margin-left: 0.2rem;
     font-size: 1.2rem;
-    color: #C6A167;
   }
 }

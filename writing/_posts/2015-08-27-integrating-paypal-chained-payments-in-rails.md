@@ -1,5 +1,4 @@
 ---
-layout: writing
 title:  Integrating PayPal Chained Payments in Rails
 ---
 

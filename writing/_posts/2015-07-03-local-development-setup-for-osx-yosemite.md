@@ -1,5 +1,4 @@
 ---
-layout: writing
 title:  Local Development Setup for OS X Yosemite
 ---
 

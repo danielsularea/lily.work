@@ -1,40 +1,104 @@
-.post {
-	h1 {
-    margin: 3rem 0 1.5rem;
-    line-height: 1.3;
-    font-size: 5.6rem;
-    font-weight: 500;
+.post_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.post_bg_overlay {
+  display: block !important;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: $v--color-white;
+  opacity: 90%;
+}
+
+.post_close {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  text-decoration: none;
+  color: $v--color-yellow;
+
+  @media (min-width: map-get($v--grid-breakpoints, sm)) {
+    top: 50%;
+    left: auto;
+    right: 80%;
+    transform: rotate(-90deg);
+  }
+}
+
+.post_content {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-top: 2px solid $v--color-black;
+  padding: 5rem 0;
+  background-color: $v--color-white;
+  color: $v--color-black;
+
+  @media (min-width: map-get($v--grid-breakpoints, sm)) {
+    top: 0;
+    left: auto;
+    width: 80%;
+    border-top: none;
+    border-left: 2px solid $v--color-black;
+  }
+
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
+    padding: 10rem 0;
+  }
+
+  h1, h2, h3, p,
+  pre, ul, ol {
+    display: block;
+    margin-left: 5rem;
+    margin-right: 5rem;
+
+    @media (min-width: map-get($v--grid-breakpoints, sm)) {
+      margin-left: 20rem;
+      margin-right: 20rem;
+    }
+  }
+
+  figure, figcaption {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 5rem;
+    line-height: 1.2;
+    font-size: 3.6rem;
+    font-weight: 400;
   }
 
   h2 {
-    margin: 0 0 1rem;
-    line-height: 1.2;
-    font-size: 3.6rem;
-    font-weight: 500;
-  }
-
-  h3 {
-    margin: 0 0 1rem;
-    line-height: 1.5;
-    font-size: 2.4rem;
-    font-weight: 500;
-  }
-
-  h4 {
-    margin: 0 0 1rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
     line-height: 1.4;
     font-size: 2rem;
     font-weight: 500;
   }
 
-  h5 {
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-transform: uppercase;
-  }
+  // h3 {
+  //   font-size: 1.2rem;
+  //   font-weight: 500;
+  //   text-transform: uppercase;
+  // }
   
 	p {
-		margin: 1rem 0 0;
+		margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     line-height: 1.8125;
     font-size: 1.6rem;
     color: $v--color-gray2;
@@ -44,9 +108,109 @@
       font-size: 1.5rem;
     }
 
-    &:first-child {
+    &:first-of-type {
     	line-height: 1.762;
-	    font-size: 2rem;
+	    font-size: 1.75rem;
+      color: $v--color-black;
     }
 	}
+
+  a {
+    color: inherit;
+  }
+
+  figure {
+    position: relative;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  // figure.m--content_figure {
+  //   position: absolute;
+  //   width: 250px;
+  //   // margin: auto;
+
+  //   &.m--content_figure-right {
+  //     left: 100%;
+  //     padding-left: 6%;
+  //     text-align: left;
+  //   }
+
+  //   &.m--content_figure-left {
+  //     right: 100%;
+  //     padding-right: 6%;
+  //     text-align: right;
+  //   }
+
+  //   img {
+  //     max-height: 200px;
+  //   }
+  // }
+
+  figcaption {
+    margin-top: 1rem;
+    line-height: 1.4;
+    font-size: 1rem;
+    text-align: left;
+
+    &:before {
+      content: '\2191';
+      margin-right: 0.5rem;
+      vertical-align: text-bottom;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  video {
+    max-width: 90%;
+    max-height: 90%;
+    margin: 1rem 0 2rem;
+    box-shadow: rgba(0,0,0,0.4) 0 20px 50px;
+    object-fit: cover;
+  }
+
+  pre,
+  code {
+    background-color: #f2f0ed;
+  }
+
+  pre {
+    padding: 1rem;
+    direction: ltr;
+    white-space: pre;
+    hyphens: none;
+    tab-size: 4;
+    overflow-x: scroll;
+    text-align: left;
+    line-height: 1.5;
+    font-size: 1.333rem;
+
+    code {
+      padding: 0;
+    }
+  }
+
+  code {
+    display: inline;
+    padding: 0 0.2rem;
+  }
+
+  ul, ol {
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.8125;
+      font-size: 1.6rem;
+      color: $v--color-gray2;
+
+      @media (min-width: map-get($v--grid-breakpoints, xl)) {
+        line-height: 1.8333;
+        font-size: 1.5rem;
+      }
+    }
+  }
 }

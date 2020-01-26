@@ -1,5 +1,4 @@
 ---
-layout: writing
 title:  Notes on Using Ajax Content in Jekyll
 ---
 

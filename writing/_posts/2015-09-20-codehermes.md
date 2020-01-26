@@ -1,6 +1,6 @@
 ---
-layout: writing
 title: How I won a Hackathon
+published: false
 
 imgfolder: codehermes
 cover_img: init.gif

@@ -1,4 +1,33 @@
----
----
+doc
+html(lang="en")
+  | {% include head.html %}
+  body.post
+    .post_bg.index
+      .g--grid-fixed
+        h1
+          | Lily is a Product Designer based in San Francisco. Currently,
+          |
+          a(href="https://angel.co", target="_blank") AngelList
+          | . Previously,
+          |
+          a(href="https://ibm.com", target="_blank") IBM
+          | .
+        a.nav.active(href="/") Work &darr;
+        a.nav(href="/info") Info &darr;
 
-| {{ content }}
+        h2 Projects
+        p Coming soon
+
+        h2 Writing
+        | {% for post in site.categories["writing"] %}
+        a.article(href="{{ post.url }}")
+          .article_title {{ post.title }}
+          .article_year {{ post.date | date: "%Y" }}
+        | {% endfor %}
+      a.post_bg_overlay(href="/")
+    a.post_close(href="/") &uarr; Back
+    .post_content.g--grid
+      .g--grid_row
+        h1 {{ page.title }}
+        | {{ content }}
+    | {% include scripts.html %}
