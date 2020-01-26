@@ -1,5 +1,5 @@
 ---
-title: Notes on Deploying Jekyll Bliss to Netlify
+title: Notes on Deploying to Netlify with Jekyll Bliss
 category: code
 ---
 
