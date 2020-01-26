@@ -22,7 +22,7 @@ head(itemscope, itemtype="http://schema.org/WebSite")
   meta(name="twitter:creator", content="{{ site.twitter_handle }}")
   meta(name="application-name", content="{{ site.title }}")
   meta(name="title", content="{{ site.title }}")
-  link(rel="icon", href="{{ site.url }}/assets/img/icon.png")
+  link(rel="icon", href="/assets/img/favicon.png")
   link(rel="stylesheet", href="/assets/css/main.css")
   link(rel="canonical", href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}", itemprop="url")
   | {% include g_analytics.html %}

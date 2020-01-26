@@ -26,5 +26,12 @@ For instance, it kept complaining about a file that definitely existed. The path
 Error: File to import not found or unreadable: vendor/pygments
 ```
 
+## Layouts is nesting whole HTML documents
+This is probably the worst hiccup in my opinion. It seems that the order in which Bliss is compiling pug and Jekyll is compiling pages using layouts is off. This means I end up nesting an entire HTML document within the body of another one.
+
+This happens unpredictably. Every now and then, the order lines up and I get a perfectly normal document.
+
+This honestly might be the deal breaker that churns me from Jekyll altogether.
+
 ## Overall, Netlify is awesome
-I can't believe I didn't migrate over earlier. At the small scale projects I'm working with, it's free and is so much more powerful than Github Pages. I might abandon Jekyll soon altogether.
+I can't believe I didn't migrate over earlier. At the small scale projects I'm working with, it's free and is so much more powerful than Github Pages. Despite all the years with Jekyll, I'm okay with dropping it. I might play around with Harp instead.

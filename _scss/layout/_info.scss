@@ -1,5 +1,7 @@
-.index {
+.info {
   padding: 5rem 0;
+  background-color: $v--color-black;
+  color: $v--color-white;
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
     padding: 10rem 0;
@@ -60,9 +62,10 @@
         display: inline-block;
         position: absolute;
         margin-left: 0.1em;
-        color: $v--color-black;
+        color: $v--color-white;
       }
 
+      &:hover,
       &:hover:after {
         color: $v--color-yellow;
       }
@@ -86,50 +89,11 @@
     }
   }
 
-  .article {
-    margin: 2rem 0;
+  .block {
+    margin-bottom: 2rem;
 
-    @media (min-width: map-get($v--grid-breakpoints, md)) {
+    &:last-child {
       margin: 0;
-    }
-
-    a {
-      text-decoration: none;
-
-      &:hover {
-        color: $v--color-yellow;
-      }
-
-      @media (min-width: map-get($v--grid-breakpoints, md)) {
-        display: inline-flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-      }
-    }
-  }
-
-  .article_title {
-    display: inline;
-    line-height: 1.4;
-    font-size: 2rem;
-    text-decoration: underline;
-
-    @media (min-width: map-get($v--grid-breakpoints, md)) {
-      line-height: 1.5;
-      font-size: 2.4rem;
-    }
-  }
-
-  .article_year {
-    margin-top: 0.6rem;
-    margin-left: 0.2rem;
-    font-size: 1.5rem;
-    color: $v--color-black;
-
-    @media (min-width: map-get($v--grid-breakpoints, md)) {
-      display: inline;
-      font-size: 1.2rem;
     }
   }
 }
