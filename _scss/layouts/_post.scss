@@ -18,13 +18,18 @@
 }
 
 .post_close {
-  position: fixed;
+  position: fixed !important;
   top: 2rem;
   left: 50%;
   right: auto;
   transform: translateX(-50%);
   text-decoration: none;
-  color: $v--color-yellow;
+  color: $v--color-black;
+  
+  &:hover,
+  .post_bg_overlay:hover + & {
+    color: $v--color-yellow;
+  }
 
   @media (min-width: map-get($v--grid-breakpoints, sm)) {
     top: 50%;
@@ -70,8 +75,8 @@
   }
 
   figure, figcaption {
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
   }
 
   h1 {
@@ -117,6 +122,11 @@
 
   a {
     color: inherit;
+
+    &:hover,
+    &:focus {
+      color: $v--color-yellow;
+    }
   }
 
   figure {
