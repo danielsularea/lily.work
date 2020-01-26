@@ -31,7 +31,7 @@ This is probably the worst hiccup in my opinion. It seems that the order in whic
 
 This happens unpredictably. Every now and then, the order lines up and I get a perfectly normal document.
 
-This honestly might be the deal breaker that churns me from Jekyll altogether.
+This might be the deal breaker that makes me switch from Jekyll altogether.
 
 ## Overall, Netlify is awesome
 I can't believe I didn't migrate over earlier. At the small scale projects I'm working with, it's free and is so much more powerful than Github Pages. Despite all the years with Jekyll, I'm okay with dropping it. I might play around with Harp instead.
