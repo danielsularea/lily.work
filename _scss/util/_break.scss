@@ -1,0 +1,23 @@
+.u--break-md {
+	display: inline;
+
+	@media (min-width: map-get($v--grid-breakpoints, md)) {
+		display: block;
+	}
+}
+
+.u--break-lg {
+	display: inline;
+	
+	@media (min-width: map-get($v--grid-breakpoints, lg)) {
+		display: block;
+	}
+}
+
+.u--break-xl {
+	display: inline;
+	
+	@media (min-width: map-get($v--grid-breakpoints, xl)) {
+		display: block;
+	}
+}

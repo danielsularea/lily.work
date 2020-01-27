@@ -1,3 +1,39 @@
 .u--noDisplay {
   display: none;
 }
+
+.u--noDisplay-sm-down {
+	@media (max-width: map-get($v--grid-breakpoints, sm)) {
+		display: none;
+	}
+}
+
+.u--noDisplay-md-down {
+	@media (max-width: map-get($v--grid-breakpoints, md)) {
+		display: none;
+	}
+}
+
+.u--noDisplay-lg-down {
+	@media (max-width: map-get($v--grid-breakpoints, lg)) {
+		display: none;
+	}
+}
+
+.u--noDisplay-sm-up {
+	@media (min-width: map-get($v--grid-breakpoints, sm)) {
+		display: none;
+	}
+}
+
+.u--noDisplay-md-up {
+	@media (min-width: map-get($v--grid-breakpoints, md)) {
+		display: none;
+	}
+}
+
+.u--noDisplay-lg-up {
+	@media (min-width: map-get($v--grid-breakpoints, lg)) {
+		display: none;
+	}
+}

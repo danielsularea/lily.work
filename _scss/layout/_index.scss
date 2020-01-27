@@ -1,5 +1,6 @@
 .l--index {
   padding: 5rem 0;
+  background-color: $v--color-beige;
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
     padding: 10rem 0;
