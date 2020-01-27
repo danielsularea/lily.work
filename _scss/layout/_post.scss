@@ -1,4 +1,8 @@
-.post_bg {
+.l--post {
+  
+}
+
+.l--post_bg {
   position: fixed;
   top: 0;
   left: 0;
@@ -6,7 +10,7 @@
   right: 0;
 }
 
-.post_bg_overlay {
+.l--post_bg_overlay {
   display: block !important;
   position: absolute !important;
   top: 0;
@@ -17,7 +21,7 @@
   opacity: 90%;
 }
 
-.post_close {
+.l--post_close {
   position: fixed !important;
   top: 2rem;
   left: 50%;
@@ -27,7 +31,7 @@
   color: $v--color-black;
   
   &:hover,
-  .post_bg_overlay:hover + & {
+  .l--post_bg_overlay:hover + & {
     color: $v--color-yellow;
   }
 
@@ -39,7 +43,7 @@
   }
 }
 
-.post_content {
+.l--post_content {
   position: fixed;
   top: 5rem;
   left: 0;
@@ -113,8 +117,8 @@
     // text-transform: uppercase;
   }
   
-	p {
-		margin-top: 1.5rem;
+  p {
+    margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     line-height: 1.8125;
     font-size: 1.6rem;
@@ -126,11 +130,11 @@
     }
 
     &:first-of-type {
-    	line-height: 1.762;
-	    font-size: 1.75rem;
+      line-height: 1.762;
+      font-size: 1.75rem;
       color: $v--color-black;
     }
-	}
+  }
 
   a {
     color: inherit;

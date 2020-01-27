@@ -1,24 +1,24 @@
 doc
 html(lang="en")
   | {% include head.html %}
-  body.post
-    .post_bg.index
+  body.l--post
+    .l--post_bg.l--index
       .g--grid-fixed
         | {% include nav.html %}
         | {% include projects.html %}
 
         h2 Writing
         | {% for post in site.categories["writing"] %}
-        .article
-          a(href="{{ post.url }}")
-            .article_title {{ post.title }}
-            .article_year {{ post.date | date: "%Y" }}
+        .m--blogroll
+          a.m--blogroll_title(href="{{ post.url }}") {{ post.title }}
+          .m--blogroll_dots
+          .m--blogroll_year {{ post.date | date: "%b %Y" }}
         | {% endfor %}
-      a.post_bg_overlay(href="/")
-      a.post_close(href="/") &uarr; Back
-    .post_content.g--grid
+      a.l--post_bg_overlay(href="/")
+      a.l--post_close(href="/") &uarr; Back
+    .l--post_content.g--grid
       .g--grid_row
-        h3.post_date {{ page.date | date: "%b %d, %Y" }}
+        h3.l--post_date {{ page.date | date: "%b %d, %Y" }}
         h1 {{ page.title }}
         | {{ content }}
     | {% include scripts.html %}

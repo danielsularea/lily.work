@@ -1,0 +1,49 @@
+.m--blogroll {
+  margin: 2rem 0;
+  line-height: 1.4;
+  font-size: 2rem;
+
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 2.4rem;
+  }
+}
+
+.m--blogroll_title {
+  display: inline;
+
+  &:hover {
+    color: $v--color-yellow;
+  }
+
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
+    flex-grow: 0;
+    flex-shrink: 0;
+    text-decoration: none;
+  }
+}
+
+.m--blogroll_dots {
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
+    flex-grow: 1;
+    height: 2px;
+    border-top: 2px dotted $v--color-black;
+  }
+}
+
+.m--blogroll_year {
+  margin-top: 0.6rem;
+  margin-left: 0.2rem;
+  color: $v--color-black;
+
+  @media (min-width: map-get($v--grid-breakpoints, md)) {
+    display: inline;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}

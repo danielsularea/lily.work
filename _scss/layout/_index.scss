@@ -1,4 +1,4 @@
-.index {
+.l--index {
   padding: 5rem 0;
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
@@ -67,70 +67,6 @@
       &:hover:after {
         color: $v--color-yellow;
       }
-    }
-  }
-
-  .nav {
-    margin-right: 3rem;
-    opacity: 0.3;
-    line-height: 1.4;
-    font-size: 1.8rem;
-    text-decoration: none;
-
-    &:hover,
-    &.active {
-      opacity: 1;
-    }
-
-    &:hover {
-      color: $v--color-yellow;
-    }
-  }
-
-  .article {
-    margin: 2rem 0;
-
-    @media (min-width: map-get($v--grid-breakpoints, md)) {
-      margin: 0;
-    }
-
-    a {
-      text-decoration: none;
-
-      &:hover {
-        color: $v--color-yellow;
-      }
-
-      @media (min-width: map-get($v--grid-breakpoints, md)) {
-        display: inline-flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-      }
-    }
-  }
-
-  .article_title {
-    display: inline;
-    line-height: 1.4;
-    font-size: 2rem;
-    text-decoration: underline;
-
-    @media (min-width: map-get($v--grid-breakpoints, md)) {
-      line-height: 1.5;
-      font-size: 2.4rem;
-    }
-  }
-
-  .article_year {
-    margin-top: 0.6rem;
-    margin-left: 0.2rem;
-    font-size: 1.5rem;
-    color: $v--color-black;
-
-    @media (min-width: map-get($v--grid-breakpoints, md)) {
-      display: inline;
-      font-size: 1.2rem;
     }
   }
 }

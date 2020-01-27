@@ -1,4 +1,4 @@
-.info {
+.l--info {
   padding: 5rem 0;
   background-color: $v--color-black;
   color: $v--color-white;
@@ -69,23 +69,6 @@
       &:hover:after {
         color: $v--color-yellow;
       }
-    }
-  }
-
-  .nav {
-    margin-right: 3rem;
-    opacity: 0.3;
-    line-height: 1.4;
-    font-size: 1.8rem;
-    text-decoration: none;
-
-    &:hover,
-    &.active {
-      opacity: 1;
-    }
-
-    &:hover {
-      color: $v--color-yellow;
     }
   }
 

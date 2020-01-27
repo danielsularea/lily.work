@@ -5,9 +5,6 @@
 
 // Utility
 @import 'util/clearfix';
-// @import 'util/float';
-// @import 'util/noDisplay';
-// @import 'util/noWrap';
 
 // Global
 @import 'global/site';
@@ -18,6 +15,10 @@
 @import 'layout/index';
 @import 'layout/info';
 @import 'layout/post';
+
+// Module
+@import 'module/nav';
+@import 'module/blogroll';
 
 // Vendor
 // @import 'vendor/pygments';
