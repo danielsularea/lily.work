@@ -1,5 +1,5 @@
 ---
-title:  Screenplay Series&colon; The Usual Suspects
+title:  Print Design&colon; The Usual Suspects
 category: design
 ---
 

@@ -1,5 +1,5 @@
 ---
-title:  Screenplay Series&colon; Blade Runner
+title:  Print Design&colon; Blade Runner
 category: design
 ---
 
