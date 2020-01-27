@@ -54,7 +54,8 @@
   padding: 5rem 0;
   background-color: $v--color-white;
   color: $v--color-black;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
 
   @media (min-width: map-get($v--grid-breakpoints, md)) {
     top: 0;
