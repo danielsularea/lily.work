@@ -1,6 +1,5 @@
 ---
 title:  Integrating PayPal Chained Payments in Rails
-category: code
 ---
 
 Recently, I've noticed a severe lack of tutorials on PayPal API integration. And even if I do end up finding one, it's very [outdated][railscast]{:target="_blank"}. PayPal's documentation itself is alright, but not great, so here's my take.

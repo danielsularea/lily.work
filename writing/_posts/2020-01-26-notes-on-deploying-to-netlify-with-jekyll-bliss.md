@@ -1,6 +1,5 @@
 ---
 title: Notes on Deploying to Netlify with Jekyll Bliss
-category: code
 ---
 
 A designer at AngelList told me about [Harp](http://harpjs.com/) recently and how it supported Jade (now called Pug) natively. This kind of got me wondering if I could get Jekyll to work with Pug as well, which led me to Jekyll Bliss and Netlify.

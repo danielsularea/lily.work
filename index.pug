@@ -2,12 +2,5 @@
 layout: index
 ---
 
-| {% include projects.html %}
-
-h2 Writing
-| {% for post in site.categories["writing"] %}
-.m--blogroll
-  a.m--blogroll_title(href="{{ post.url }}") {{ post.title }}
-  .m--blogroll_dots
-  .m--blogroll_year {{ post.date | date: "%b %Y" }}
-| {% endfor %}
+| {% include workList.html %}
+| {% include blogList.html %}

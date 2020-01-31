@@ -1,0 +1,7 @@
+h2 Projects
+| {% for post in site.categories["project"] %}
+.m--blogroll
+  a.m--blogroll_title(href="{{ post.url }}") {{ post.title }}
+  .m--blogroll_dots
+  .m--blogroll_year {{ post.company }}
+| {% endfor %}

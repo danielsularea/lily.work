@@ -1,6 +1,5 @@
 ---
 title:  Local Development Setup for OS X Yosemite
-category: code
 ---
 
 I purchased a new Macbook and found myself in the very tasking process of setting everything back the way it used to be so I've decided to document what I do for a general setup.

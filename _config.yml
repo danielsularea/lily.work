@@ -25,4 +25,11 @@ defaults:
     scope:
       path: "writing/_posts/*"
     values:
-      layout: "writing"
+      layout: "post"
+      category: "writing"
+  -
+    scope:
+      path: "project/_posts/*"
+    values:
+      layout: "post"
+      category: "project"

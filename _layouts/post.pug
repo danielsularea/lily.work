@@ -5,20 +5,17 @@ html(lang="en")
     .l--post_bg.l--index
       .g--grid-fixed
         | {% include nav.html %}
-        | {% include projects.html %}
-
-        h2 Writing
-        | {% for post in site.categories["writing"] %}
-        .m--blogroll
-          a.m--blogroll_title(href="{{ post.url }}") {{ post.title }}
-          .m--blogroll_dots
-          .m--blogroll_year {{ post.date | date: "%b %Y" }}
-        | {% endfor %}
+        | {% include workList.html %}
+        | {% include blogList.html %}
       a.l--post_bg_overlay(href="/")
       a.l--post_close(href="/") &uarr; Back
     .l--post_content.g--grid
       .g--grid_row
+        | {% if page.category == "writing" %}
         h3.l--post_date {{ page.date | date: "%b %d, %Y" }}
+        | {% elsif page.category == "project" %}
+        h3.l--post_date {{ page.company }}
+        | {% endif %}
         h1 {{ page.title }}
         | {{ content }}
     | {% include scripts.html %}

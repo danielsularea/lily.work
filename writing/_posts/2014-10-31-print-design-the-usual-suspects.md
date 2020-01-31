@@ -1,6 +1,5 @@
 ---
 title:  Print Design&colon; The Usual Suspects
-category: design
 ---
 
 My friend turned 21 two weeks back and to immortalize his favorite film of all time, I designed and printed The Usual Suspects screenplay into a 160-page book. Here are a selected few of my favorite spreads.

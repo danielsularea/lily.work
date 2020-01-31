@@ -1,6 +1,5 @@
 ---
 title: 3 Ways to Show Your Design had Business Impact
-category: design
 ---
 
 In a portfolio review, how do you show your interviewer your work was important?
