@@ -1,8 +1,14 @@
 .m--worklist {
   margin-top: 5rem;
 
-  &:hover .m--worklist_info {
-    color: $v--color-yellow;
+  &:hover {
+    .m--worklist_info {
+      color: $v--color-yellow;
+    }
+
+    .m--worklist_img {
+      transform: scale(1.05);
+    }
   }
 
   p {
@@ -11,28 +17,25 @@
   }
 }
 
-.m--worklist_info {
-  margin-bottom: 1rem;
+.m--worklist_info.m--worklist_info {
+  display: block;
+  padding-bottom: 1rem;
   text-decoration: none;
 }
 
-.m--worklist_img {
+.m--worklist_cover {
   display: block;
   flex: 1 auto;
   width: 100%;
   overflow: hidden;
   height: 24rem;
+}
 
-  div {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: all .5s;
-  }
-
-  &:hover div {
-    transform: scale(1.05);
-  }
+.m--worklist_img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all .5s;
 }

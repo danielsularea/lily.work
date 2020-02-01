@@ -3,7 +3,7 @@ title: Company Profiles
 company: AngelList
 
 imgfolder: data-angellist
-cover: newsletter.webp
+cover: cover.webp
 ---
 
 I led design to rebuild Company Profiles from the ground up. As a result, we tripled user acquisition and conversion, and significantly improved site performance.

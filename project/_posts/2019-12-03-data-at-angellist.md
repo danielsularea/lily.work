@@ -3,19 +3,15 @@ title: Company Data
 company: AngelList
 
 imgfolder: data-angellist
-cover: cover.webp
+cover: data-modal.webp
 ---
 
-Shortly after launching Company Profiles, my team was renamed Company Data and doubled down on data acquisition efforts to support the product we'd just shipped.
-
-<figure>
-  <img src="../assets/img/{{ page.imgfolder }}/cover.webp" />
-</figure>
+Shortly after launching Company Profiles, my team was renamed Company Data and doubled down on data acquisition and data hygiene efforts to support the product we'd just shipped.
 
 While I can't share the results of this work, I can speak to the public design experiments we ran.
 
 ## Data collection modal
-To improve data completeness and freshness, we served up a modal to collect information from recruiters outside of the profile editing flow. We explored with the amount and type of information being asked for as well as the frequency that the prompt appears. We also integrated the ability to confirm data we collected from 3rd-party sources.
+To improve data completeness and freshness, we served up a modal to collect information from recruiters outside of the profile editing flow. We experimented with the amount and type of information being asked for as well as the frequency that the prompt appears. We also integrated the ability to confirm data we collected from 3rd-party sources.
 
 <figure>
   <img src="../assets/img/{{ page.imgfolder }}/data-modal.webp" />
@@ -31,4 +27,4 @@ The resulting traffic to their profiles averaged 7-8x their organic traffic and 
 </figure>
 
 ## Resumer parser
-With over 4.5 million community-managed profiles, we constantly wrangled with junk and spam. 70% of these profiles came from our resume parser, which created a new Company Profile for every unindexed company found on a candidate's resume. As a result, we experimented with prompting the user for a URL before the profile creation began across different locations and inteference methods.
+With over 4.5 million community-managed profiles, we constantly wrangled with junk and spam. 70% of these profiles came from our resume parser, which created a new Company Profile for every unindexed company found on a candidate's resume. As a result, we explored a URL entry prompt before profile creation begins across different locations and inteference methods.

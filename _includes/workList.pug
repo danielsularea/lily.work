@@ -6,6 +6,6 @@
       p 0{{ forloop.index }}.
       p {{ post.company }}
       p {{ post.title }}
-    a.m--worklist_img(href="{{ post.url }}")
-      div(style="background-image: url('/assets/img/{{ post.imgfolder }}/{{ post.cover }}')")
+    a.m--worklist_cover(href="{{ post.url }}")
+      .m--worklist_img(style="background-image: url('/assets/img/{{ post.imgfolder }}/{{ post.cover }}')")
   | {% endfor %}
