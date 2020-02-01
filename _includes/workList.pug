@@ -1,7 +1,11 @@
-h2 Projects
-| {% for post in site.categories["project"] %}
-.m--blogroll
-  a.m--blogroll_title(href="{{ post.url }}") {{ post.title }}
-  .m--blogroll_dots
-  .m--blogroll_year {{ post.company }}
-| {% endfor %}
+//- h2 Projects
+.m--worklist
+  | {% for post in site.categories["project"] %}
+  .m--worklist_project
+    a.m--worklist_info(href="{{ post.url }}")
+      //- p 0{{ forloop.index }}.
+      p {{ post.company }}
+      p {{ post.title }}
+    a.m--worklist_img(href="{{ post.url }}")
+      img(src="/assets/img/{{ post.imgfolder }}/{{ post.cover }}")
+  | {% endfor %}

@@ -2,9 +2,16 @@
 layout: post
 title: Company Profiles
 company: AngelList
+
+imgfolder: data-angellist
+cover: newsletter.webp
 ---
 
 I led design to rebuild Company Profiles from the ground up. As a result, we tripled user acquisition and conversion, and significantly improved site performance.
+
+<figure>
+  <img src="../assets/img/data-angellist/newsletter.webp" />
+</figure>
 
 ## The Challenge
 As a core piece of our talent marketplace, Company Profiles should represent employers as a great place to work and compel job seekers to apply. However, because it was originally created to capture fundraising attention, the profiles were misaligned with recruiters and candidates alike and fell behind our competitors.

@@ -1,0 +1,41 @@
+.m--worklist {
+  display: flex;
+}
+
+.m--worklist_project {
+  flex: 1;
+  width: 50%;
+
+  &:nth-child(odd) {
+    padding-right: 0.5rem;
+  }
+
+  &:nth-child(even) {
+    padding-left: 0.5rem;
+  }
+}
+
+.m--worklist_info {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+
+  p {
+    line-height: 1.5;
+    font-size: 2.4rem;
+  }
+}
+
+.m--worklist_img {
+  flex: 1 auto;
+  overflow: hidden;
+
+  img {
+    max-width: 100%;
+    transition: all .5s;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
