@@ -45,8 +45,8 @@
 // Rows contain and clear the floats of your columns.
 .g--grid_row {
   @include clearfix();
-  margin-left: ceil(($v--grid-gutter-width / -2));
-  margin-right: floor(($v--grid-gutter-width / -2));
+  margin-left: ($v--grid-gutter-width / -2);
+  margin-right: ($v--grid-gutter-width / -2);
 }
 
 // Column
@@ -88,8 +88,8 @@
   .g--grid_col-xl-#{$i} {
     position: relative;
     min-height: 1px; // prevent cols from collapsing when empty
-    padding-left:  ceil(($v--grid-gutter-width / 2)); // inner gutter via padding
-    padding-right: floor(($v--grid-gutter-width / 2)); // inner gutter via padding
+    padding-left:  ($v--grid-gutter-width / 2); // inner gutter via padding
+    padding-right: ($v--grid-gutter-width / 2); // inner gutter via padding
     width: 100%;
     float: left;
   }

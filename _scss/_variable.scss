@@ -54,7 +54,7 @@ $v--grid-max-widths: (
   xl: 1200px
 );
 
-$v--grid-gutter-width:          0;
+$v--grid-gutter-width:          1rem;
 $v--grid-gutter-widths: (
   xs: $v--grid-gutter-width,
   sm: $v--grid-gutter-width,

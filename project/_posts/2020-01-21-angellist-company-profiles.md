@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Company Profiles
 company: AngelList
 
