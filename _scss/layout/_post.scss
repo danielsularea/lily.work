@@ -153,29 +153,12 @@
     margin-top: 3rem;
     margin-bottom: 3rem;
     text-align: center;
+
+    &.figure-video {
+      background-color: #DBE5E6;
+      padding: 5rem 0;
+    }
   }
-
-  // figure.m--content_figure {
-  //   position: absolute;
-  //   width: 250px;
-  //   // margin: auto;
-
-  //   &.m--content_figure-right {
-  //     left: 100%;
-  //     padding-left: 6%;
-  //     text-align: left;
-  //   }
-
-  //   &.m--content_figure-left {
-  //     right: 100%;
-  //     padding-right: 6%;
-  //     text-align: right;
-  //   }
-
-  //   img {
-  //     max-height: 200px;
-  //   }
-  // }
 
   figcaption {
     margin-top: 1rem;
@@ -196,11 +179,10 @@
   }
 
   video {
-    max-width: 90%;
-    max-height: 90%;
     margin: 1rem 0 2rem;
     box-shadow: rgba(0,0,0,0.4) 0 20px 50px;
     object-fit: cover;
+    border-radius: 24px;
   }
 
   pre,

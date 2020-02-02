@@ -23,13 +23,13 @@ exclude: ['node_modules', 'gulpfile.js', 'package.json']
 defaults:
   -
     scope:
-      path: "writing/_posts/*"
+      path: "blog/_posts/*"
     values:
       layout: "post"
-      category: "writing"
+      category: "blog"
   -
     scope:
-      path: "project/_posts/*"
+      path: "work/_posts/*"
     values:
       layout: "post"
-      category: "project"
+      category: "work"
