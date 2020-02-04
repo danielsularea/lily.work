@@ -8,6 +8,10 @@ cover: cover.webp
 
 In a world short on doctors, Care Advisor for Breast uses computer vision to read mammograms and detect breast cancer.
 
+<figure>
+  <img src="../assets/img/{{ page.imgfolder }}/overview.webp" />
+</figure>
+
 ## The Challenge
 
 Screening mammography is the most effective non-invasive procedure used to detect early signs of breast cancer. However, There is a global shortage of radiologists and an increasing demand for mammograms.
@@ -32,11 +36,11 @@ During the project's inaugural 6 months, the PM and I conducted contextual inqui
 
 ### 1. Screening mammograms are very tedious
 
-Radiologists perform tasks far beyond screening mammograms and only 5-10% of screening mammograms have cause for further investigation. As a result, radiologists have to wade through a high and monotonous volume of routine cases in order to find the small handful with signs of cancer that they can't afford to miss.
+Radiologists perform tasks far beyond screening mammograms and only 5-10% of them have cause for further investigation. As a result, radiologists have to wade through a high and monotonous volume of routine cases in order to find the small handful with signs of cancer that they can't afford to miss.
 
 ### 2. The breast imaging community has "suffered" from AI already
 
-Computer-aided detection (CAD) was an initiatve to make sure nothing was ever missed in the mammogram by pointing out areas of suspicion using AI. This technology was widely enforced but negatively received.
+Computer-aided detection (CAD) was an initiatve to make sure nothing was ever missed in the mammogram by applying AI to point out areas of suspicion. This technology is widely enforced but negatively received.
 
 Only 20% of the radiologists we observed glanced at the CAD markings before making their own interpretation and most agree that it was like reading with a med student.
 
@@ -51,9 +55,11 @@ Only 10% of American radiologists complete a fellowship focusing on breast imagi
 
 After consistent feedback on more than 10 concepts, we green lit what would become Care Advisor for Breast.
 
-This solution used the computer vision capabilities of IBM Watson to automate the 90% of mammogram studies that are completely normal. This means that if any evidence of breast cancer is detected, it is queued to be read by a human radiologist.
+This solution used the computer vision capabilities of IBM Watson to automate up to 95% of mammogram studies that are completely normal. This means that if any evidence of breast cancer is detected, it is queued to be read by a human radiologist.
 
-[ Screenshots ]
+<figure>
+  <img src="../assets/img/{{ page.imgfolder }}/cover.webp" />
+</figure>
 
 ### Considering prior mammograms
 There is no way to know what is truly normal within a woman's breast because many patients have natural biological markers that are unique to them.
@@ -62,15 +68,21 @@ Watson imitates good human practices by preferring mammograms that are at least 
 
 [ Screenshots ]
 
+### Revising reports
+
+
+<figure>
+  <img src="../assets/img/{{ page.imgfolder }}/edit.webp" />
+</figure>
+
 ### Flagging higher risk women
-Depending on personal and family history of breast cancer, as well as rare genetic mutations, some women are predisposed to develop breast cancer. These patients would receive additional considerations (supplementary MRI, shorter intervals between screenings, etc) in accordance to each instution protocol.
+Depending on personal and family history of breast cancer, as well as rare genetic mutations, some women are predisposed to develop breast cancer.
 
-[ Screenshots ]
+These patients would receive additional considerations (supplementary MRI, shorter intervals between screenings, etc) in accordance to each institution protocol.
 
-### Writing reports
-After studying the reporting styles of more than 30 radiologists, I worked with our data science team to determine Watson's own linguistic rules.
-
-[ Screenshots ]
+<figure>
+  <img src="../assets/img/{{ page.imgfolder }}/highrisk.webp" />
+</figure>
 
 ## Conclusion
 My time up until my departure has been overwhelmingly spent with the research and engineering teams to design a machine learning algorithm, decide how to collect and annotate data in order to train the algorithm, and determine the way its outputs translate into real product application.

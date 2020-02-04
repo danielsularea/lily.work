@@ -15,16 +15,17 @@ In IBM's second release of Watson Imaging Clinical Review, we re-examined the wa
 
 In 2017, Watson Imaging Clinical Review (WICR) <a href="https://www.ibm.com/blogs/watson-health/introducing-ibm-watson-imaging-clinical-review/">launched</a> as an NLP-based tool that inspects clinical documents in the hospital and raises flags for any incompleteness or inaccuracies.
 
+For WICR v2.0, IBM wanted a way to reduce staff training costs that would impact the bottom line and *our team was asked to overhaul the entire user experience.*
+
+
 <figure>
   <img src="../assets/img/{{ page.imgfolder }}/old.webp" alt="Version 1 of Clinical Review" />
   <!-- <figcaption>Trying to find specific issues in this discrepancy table can be limiting and confusing.</figcaption> -->
 </figure>
 
-For WICR v2.0, IBM wanted a way to reduce staff training costs that would impact the bottom line and *our team was asked to overhaul the entire user experience.*
-
-<figure>
+<!-- <figure>
   <img src="../assets/img/{{ page.imgfolder }}/new.webp" alt="Version 1 of Clinical Review" />
-</figure>
+</figure> -->
 
 ## My Role
 

@@ -2,18 +2,14 @@
 title: Redesigning Company Profiles
 company: AngelList
 
-imgfolder: data-angellist
+imgfolder: copro
 cover: cover.webp
 ---
 
-I led design to rebuild Company Profiles from the ground up. As a result, we tripled user acquisition and conversion, and significantly improved site performance.
-
-<figure>
-  <img src="../assets/img/data-angellist/newsletter.webp" />
-</figure>
+I led design to rebuild AngelList's Company Profiles from the ground up. As a result, we tripled user acquisition and conversion, and significantly improved site performance.
 
 ## The Challenge
-As a core piece of our talent marketplace, Company Profiles should represent employers as a great place to work and compel job seekers to apply. But, originally created to capture fundraising attention, the profiles were misaligned with recruiters and candidates alike and fell behind our competitors.
+As a core piece of our talent marketplace, Company Profiles should represent employers as a great place to work and compel job seekers to apply. But, originally created to capture fundraising attention, the profiles became misaligned with recruiters and candidates alike and fell behind our competitors.
 
 Our priority was to ship a product that met table stakes requirements. Any nice-to-haves would have to come later.
 
@@ -31,7 +27,7 @@ Evaluating the utility of each existing feature in user research, we ruthlessly 
 Stuff
 
 ## Introduce New Data
-As a valuable resource to candidates, we need to at least bring ourselves up to the playing field by providing a baseline set of data. The biggest gap in this being culture data.
+As a valuable resource to candidates, we need to at least bring ourselves up to the playing field by providing a baseline set of data. The biggest gap in this being company culture.
 
 ## Engage data completion
 ### Mirrored editing
