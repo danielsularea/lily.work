@@ -108,9 +108,14 @@
   h3 {
     margin-top: 3rem;
     margin-bottom: 1rem;
-    font-size: 1.4rem;
+    line-height: 1.8125;
+    font-size: 1.6rem;
     font-weight: 500;
-    // text-transform: uppercase;
+
+    @media (min-width: map-get($v--grid-breakpoints, xl)) {
+      line-height: 1.8333;
+      font-size: 1.5rem;
+    }
   }
   
   p {
@@ -132,6 +137,11 @@
     }
   }
 
+  em {
+    background-color: $v--color-highlight;
+    font-style: normal;
+  }
+
   a {
     color: inherit;
 
@@ -147,8 +157,23 @@
     text-align: center;
 
     &.figure-video {
-      background-color: #DBE5E6;
-      padding: 5rem 0;
+      padding: 5rem 4rem;
+
+      @media (min-width: map-get($v--grid-breakpoints, md)) {
+        padding-left: 15rem;
+        padding-right: 15rem;
+      }
+
+      @media (min-width: map-get($v--grid-breakpoints, xl)) {
+        padding-left: 20rem;
+        padding-right: 20rem;
+      }
+
+      video {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+      }
     }
   }
 

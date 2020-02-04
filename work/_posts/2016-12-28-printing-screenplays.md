@@ -1,9 +1,9 @@
 ---
-title:  Print Design
+title:  Printing screenplays
 company: Personal
 
 imgfolder: print/bladerunner
-cover: spread1.png
+cover: spread2.png
 ---
 
 One of my favorite gifts to give to friends and family is to layout and print the screenplay of their favorite movie. These are some of my favorite spreads.

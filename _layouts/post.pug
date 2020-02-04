@@ -11,9 +11,9 @@ html(lang="en")
       a.l--post_close(href="/") &uarr; Back
     .l--post_content.g--grid
       .g--grid_row
-        | {% if page.category == "writing" %}
+        | {% if page.category == "blog" %}
         h3.l--post_date {{ page.date | date: "%b %d, %Y" }}
-        | {% elsif page.category == "project" %}
+        | {% elsif page.category == "work" %}
         h3.l--post_date {{ page.company }}
         | {% endif %}
         h1 {{ page.title }}

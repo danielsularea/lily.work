@@ -1,5 +1,5 @@
 ---
-title: Company Profiles
+title: Redesigning Company Profiles
 company: AngelList
 
 imgfolder: data-angellist

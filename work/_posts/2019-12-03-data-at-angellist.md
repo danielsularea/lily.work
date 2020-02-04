@@ -1,9 +1,9 @@
 ---
-title: Company Data
+title: Data at AngelList
 company: AngelList
 
 imgfolder: data-angellist
-cover: newsletter.webp
+cover: data-modal.webp
 ---
 
 Shortly after launching Company Profiles, my team was renamed Company Data and doubled down on data acquisition and data hygiene efforts to support the product we'd just shipped.

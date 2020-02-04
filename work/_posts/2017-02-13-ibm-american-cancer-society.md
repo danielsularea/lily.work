@@ -1,12 +1,16 @@
 ---
-title: American Cancer Society
-company: IBM
+title: A mobile app for cancer patients
+company: IBM Watson
 
 imgfolder: acs
 cover: scroll.webp
 ---
 
 In 2016, IBM and the American Cancer Society announced a partnership to create an AI mobile app for patients fighting cancer.
+
+<figure>
+  <img src="../assets/img/acs/scroll.webp" alt="Watson can recognize and highlight keywords of interest in the transcript and break down the recording into sections of major topics so patients have digest the content quicker.">
+</figure>
 
 ## The Challenge
 Despite readily accessible resources on cancer today, <a href="https://www.ncbi.nlm.nih.gov/pubmed/25180371" target="_blank">numerous</a> <a href="https://www.ncbi.nlm.nih.gov/pubmed/12923796" target="_blank">studies</a> still show concern that lay understanding of cancer is suboptimal. Patients and their caregivers lack the medical framework to fully comprehend and manage their cancer.
@@ -66,7 +70,7 @@ In an environment with a wealth of knowledge but no medical degree, both patient
 
 Doctors today are already accustomed to patients taping their sessions in order to digest the heavy amounts of information that they talk about. We piggybacked this behavior by providing live speech-to-text transcription.
 
-<figure class="figure-video">
+<figure class="figure-video" style="background-color: #DBE5E6;">
   <video loop autoplay controls name="Users can record the conversation at the doctor's office, take photos without stopping the tape, and view the speech-to-text transcription in real-time." poster="../assets/img/acs/proto_record_poster.jpg" src="../assets/img/acs/record.mov" height="560px"></video>
   <!-- <figcaption>Users can record the conversation at the doctor's office, take photos without stopping the tape, and view the speech-to-text transcription in real-time.</figcaption> -->
 </figure>
@@ -90,15 +94,11 @@ Once a patient leaves the doctor's office, they often want to revisit the conver
 
 By training on the vast ACS database, Watson can recognize and highlight terms of interest in the transcript and break down the recording into sections of major topics so patients have revisit the content easier.
 
-<figure>
-  <img src="../assets/img/acs/scroll.webp" alt="Watson can recognize and highlight keywords of interest in the transcript and break down the recording into sections of major topics so patients have digest the content quicker.">
-</figure>
-
 The highlighted terms also serve as faster, in-context search queries by allowing users to click on them and be directed to ACS-approved related resources.
 
 <!-- The aim for this process is to reduce the frequent "I don't know what I don't know" phenomenon. Traditionally, patients have to reconstruct what they took away from their doctor into a completed question to ask elsewhere. Instead, we lower the research barrier and use the recorded conversation itself as a search generator. -->
 
-<figure class="figure-video">
+<figure class="figure-video" style="background-color: #DBE5E6;">
   <video loop autoplay controls name="After the appointment, users can review both the transcript and recording and dive into highlighted keywords that Watson recognizes from the ACS database." src="../assets/img/acs/review.mov" height="560px"></video>
   <!-- <figcaption>After the appointment, users can review both the transcript and recording and dive into highlighted keywords that Watson recognizes from the ACS database.</figcaption> -->
 </figure>
@@ -107,4 +107,4 @@ The highlighted terms also serve as faster, in-context search queries by allowin
 
 Although both IBM and ACS stakeholders were excited with this direction, the partnership was ultimately put on hold and we hope that it returns from its hiatus in the near future.
 
-We are happy, however, to have developed a collaborative relationship with ACS and their various facilities during our engagement so that design was able to re-connect with patients and caregivers on a regular basis.
+However, the collaborative relationship we developed with ACS and their various facilities during this project allowed us to re-connect with patients and caregivers on a regular basis for future projects.
