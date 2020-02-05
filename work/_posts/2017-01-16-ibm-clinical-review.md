@@ -52,7 +52,7 @@ Doctors who only logged into WICR to resolve flagged issues did so infrequently.
 
 Having visual choices and feedback was important to casual users who weren't familiar with the entire search toolbelt. *The manual selection method then is straightforward and comfortable.*
 
-<figure class="figure-video" style="background-color: #85BEFF;">
+<figure class="figure-video" style="background-color: #D4C9EA;">
   <video controls loop autoplay style="border-radius: 8px;" name="Manual search using modal inputs" src="../assets/img/{{ page.imgfolder }}/manualsearch.mov"></video>
   <!-- <figcaption>Made in Framer</figcaption> -->
 </figure>
@@ -63,7 +63,7 @@ On the other hand, hospital staff such as nurses and medical coders were respons
 
 *These power users are able to type complex searches directly into the search bar.* To provide further help, an autocomplete box follows the cursor and offers look-ahead feedback.
 
-<figure class="figure-video" style="background-color: #85BEFF;">
+<figure class="figure-video" style="background-color: #D4C9EA;">
   <video controls loop autoplay style="border-radius: 8px;" name="Quick search by directly typing into search bar" src="../assets/img/{{ page.imgfolder }}/typesearch.mov"></video>
   <!-- <figcaption>Made in Framer</figcaption> -->
 </figure>
