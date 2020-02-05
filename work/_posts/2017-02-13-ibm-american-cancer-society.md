@@ -13,7 +13,7 @@ In 2016, IBM and the American Cancer Society announced a partnership to create a
 </figure>
 
 ## The Challenge
-Despite readily accessible resources on cancer today, <a href="https://www.ncbi.nlm.nih.gov/pubmed/25180371" target="_blank">numerous</a> <a href="https://www.ncbi.nlm.nih.gov/pubmed/12923796" target="_blank">studies</a> still show concern that lay understanding of cancer is suboptimal. Patients and their caregivers lack the medical framework to fully comprehend and manage their cancer.
+Despite readily accessible resources on cancer today, <a href="https://www.ncbi.nlm.nih.gov/pubmed/25180371" target="_blank">numerous</a> <a href="https://www.ncbi.nlm.nih.gov/pubmed/12923796" target="_blank">studies</a> still show concern that lay understanding of cancer is suboptimal. *Patients and their caregivers lack the medical framework to fully comprehend and manage their cancer.*
 
 <!-- <blockquote>
   <div class="hasQuotes">Information acquired [in the 100 days following diagnosis] shapes and defines patients' perspective about their condition.</div>
@@ -39,32 +39,28 @@ To understand this experience, we interviewed 8 patients, 15 caregivers, and 43 
 
 <figure class="narrow">
   <img src="../assets/img/acs/cancerjourney.svg" alt="User cancer journey" />
-  <figcaption>The cancer journey at a high level</figcaption>
+  <!-- <figcaption>The cancer journey at a high level</figcaption> -->
 </figure>
 
 After gaining a more sophisticated understanding of the cancer journey, we derived a few key insights:
 
 ### Patients' caregivers were typically their family members
 
-Of all the patients we spoke to, very few were able to afford a licensed caregiver. Instead, most caregivers were the patient's spouse or children, who didn't have a medical background.
-
-They often coped with their sense of helplessness by becoming the primary researcher and compiling cancer information on the patient's behalf.
+Very few patients are able to afford a licensed caregiver. Instead, most caregivers were the patient's spouse or children, who didn't have a medical background and coped by becoming the primary information gatherer on the patient's behalf.
 
 ### Doctors remained the preferred source of information
 
-Despite an increasing variety and volume of cancer resources through the internet, patients still preferred to seek answers from their doctors because they were able to provide the most relevant and credible answers.
+Despite an increasing variety and volume of cancer resources through the internet, patients still preferred to seek answers from their doctors. Even when patients expressed concern about their doctor's judgement, second opinions still came from other doctors.
 
-And even when patients expressed concern about their doctor's judgement, second opinions still came from other doctors.
-
-### Patients had to repeat conversations with their doctor
+### Patients struggled to digest so much medical information
 
 Caregivers often accompanied patients to their oncology appointments in order to take copious notes as well as record their consultations. They would then take the information home, review and research it, and come back with more questions.
 
 ## The Solution
 
-We tested early concepts with an additional 4 more patients and 3 caregivers, all of whom have experienced cancer treatment.
+We iterated on early concepts with a consistent set of 4 patients and 3 caregivers, all of whom have experienced cancer treatment.
 
-In an environment with a wealth of knowledge but no medical degree, both patients and caregivers struggled to take full advantage of doctor consultations. We ultimately designed a digital counterpart in the room that would make discussing complex topics more digestable.
+In an environment with a wealth of knowledge but no medical degree, both patients and caregivers struggled to take full advantage of doctor consultations. *We ultimately designed a digital counterpart in the room that would make discussing complex topics more digestable.*
 
 ### Focus less on taking notes, more on the conversation
 
@@ -94,7 +90,7 @@ Once a patient leaves the doctor's office, they often want to revisit the conver
 
 By training on the vast ACS database, Watson can recognize and highlight terms of interest in the transcript and break down the recording into sections of major topics so patients have revisit the content easier.
 
-The highlighted terms also serve as faster, in-context search queries by allowing users to click on them and be directed to ACS-approved related resources.
+The highlighted terms also serve as easier, in-context search queries by allowing users to click on them and be directed to ACS-approved related resources.
 
 <!-- The aim for this process is to reduce the frequent "I don't know what I don't know" phenomenon. Traditionally, patients have to reconstruct what they took away from their doctor into a completed question to ask elsewhere. Instead, we lower the research barrier and use the recorded conversation itself as a search generator. -->
 

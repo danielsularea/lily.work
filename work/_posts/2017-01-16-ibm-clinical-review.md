@@ -9,7 +9,7 @@ imgfolder: wicr
 cover: cover.webp
 ---
 
-In IBM's second release of Watson Imaging Clinical Review, we re-examined the way users navigate the application's complex database.
+In IBM's second release of Watson Imaging Clinical Review, we revisited the way users navigate the application's complex database.
 
 ## Background
 
@@ -29,9 +29,9 @@ For WICR v2.0, IBM wanted a way to reduce staff training costs that would impact
 
 ## My Role
 
-I worked on WICR v2.0 from 2016-7 with a design lead, a user researcher, and a product manager.
+I worked on WICR v2.0 from 2016 to 2017 with a design lead, a user researcher, and a product manager.
 
-## Overhauled Search Experience
+## Brand New Search
 
 By far the biggest pain point for users was searching through the sheer volume and complexity of information in the table.
 
@@ -42,53 +42,29 @@ By far the biggest pain point for users was searching through the sheer volume a
 
 With 25 total categories to search from, each with its own set of operators and data types, *we needed to overhaul search in a way that would provide organization and control.*
 
-### First Attempt
-
-By default, WICR v1.0 offered five filters that were difficult to match to the corresponding column. Our first attempt then was to add and associate filters to each column.
-
-<figure class="narrow">
-  <img src="../assets/img/{{ page.imgfolder }}/earlyproto1.svg" />
-  <!-- <figcaption>1st attempt: attach each filter to its column</figcaption> -->
+<figure>
+  <img src="../assets/img/{{ page.imgfolder }}/protos.webp" alt="The range of data types for each category" />
 </figure>
 
-Unfortunately, user feedback uncovered a list of new problems:
-- Users weren't certain whether they should search in the broad search bar up top or in individual filters beneathe each column
-- The filters were too busy and added a lot of noise to an already crowded interface
-- There was no obvious way to search additional categories that weren't visible as a column
-- There was no accommodation for operators (ex: more than 4 days)
+### Manual Search for Casual Users
 
-### Second Attempt
-
-Our next attempt tucked the filter building process into a popover.
-
-<figure class="narrow">
-  <img src="../assets/img/{{ page.imgfolder }}/earlyproto2.svg" />
-  <!-- <figcaption>2nd attempt: Allow even finer and more powerful controls while reducing default visual noise</figcaption> -->
-</figure>
-
-Our usability tests still fell flat:
-- In the default state without any set filters, users missed the "Add Filter" button because they were looking for a search bar
-- Building multiple filters was tedious and slow&mdash;there were too many unnecessary clicks
-
-### Solution: Manual Search for Casual Users
-
-Doctors who only logged into WICR to resolve discrepancies that were flagged to them did so infrequently.
+Doctors who only logged into WICR to resolve flagged issues did so infrequently.
 
 Having visual choices and feedback was important to casual users who weren't familiar with the entire search toolbelt. *The manual selection method then is straightforward and comfortable.*
 
 <figure class="figure-video" style="background-color: #85BEFF;">
-  <video controls loop autoplay name="Manual search using modal inputs" src="../assets/img/{{ page.imgfolder }}/manualsearch.mov"></video>
+  <video controls loop autoplay style="border-radius: 8px;" name="Manual search using modal inputs" src="../assets/img/{{ page.imgfolder }}/manualsearch.mov"></video>
   <!-- <figcaption>Made in Framer</figcaption> -->
 </figure>
 
-### Solution: Typeahead Search for Power Users
+### Typeahead Search for Power Users
 
-On the other hand, hospital staff such as nurses and medical coders were responsible for reviewing clinical documents and logged into WICR almost daily to moderate and even police the platform by sending resolution notices to doctors.
+On the other hand, hospital staff such as nurses and medical coders were responsible for reviewing clinical documents and logged into WICR almost daily.
 
-*Therefore, a more efficient alternative for these power users is to type directly into the search bar.* To provide further help, an autocomplete box follows the cursor and offers look-ahead feedback.
+*These power users are able to type complex searches directly into the search bar.* To provide further help, an autocomplete box follows the cursor and offers look-ahead feedback.
 
 <figure class="figure-video" style="background-color: #85BEFF;">
-  <video controls loop autoplay name="Quick search by directly typing into search bar" src="../assets/img/{{ page.imgfolder }}/typesearch.mov"></video>
+  <video controls loop autoplay style="border-radius: 8px;" name="Quick search by directly typing into search bar" src="../assets/img/{{ page.imgfolder }}/typesearch.mov"></video>
   <!-- <figcaption>Made in Framer</figcaption> -->
 </figure>
 
@@ -99,7 +75,7 @@ By default, the discrepancy table only fits 12 out of the 25 possible category c
 Instead, we gave each user individual control over the columns they wanted to see.
 
 <figure>
-  <img src="../assets/img/{{ page.imgfolder }}/newcolumncontrol.svg" alt="">
+  <img src="../assets/img/{{ page.imgfolder }}/columncontrol.webp" alt="">
 </figure>
 
 ## Saved searches
@@ -107,7 +83,7 @@ Instead, we gave each user individual control over the columns they wanted to se
 Users was that they often performed repeated searches. To save time, we persisted a history of their most recent searches and allowed users to save the current set of Search Formulas.
 
 <figure>
-  <img src="../assets/img/{{ page.imgfolder }}/savesearch.svg" alt="">
+  <img src="../assets/img/{{ page.imgfolder }}/savesearch.webp" alt="">
 </figure>
 
 ## Conclusion

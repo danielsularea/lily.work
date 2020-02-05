@@ -11,7 +11,7 @@ I led design to rebuild AngelList's Company Profiles from the ground up. As a re
 ## The Challenge
 As a core piece of our talent marketplace, Company Profiles should represent employers as a great place to work and compel job seekers to apply. But, originally created to capture fundraising attention, the profiles became misaligned with recruiters and candidates alike and fell behind our competitors.
 
-Our priority was to ship a product that met table stakes requirements. Any nice-to-haves would have to come later.
+Our priority was to first ship a product that met table stakes requirements. Any nice-to-haves would have to come later.
 
 ## Process
 I was the lead designer with contributions from my Head of Design and worked closely with three other engineers. I led user research, design, and eventually product management. The project lasted 9 months and was fully shipped in Aug 2019.

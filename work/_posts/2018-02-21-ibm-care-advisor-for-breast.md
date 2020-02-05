@@ -9,12 +9,12 @@ cover: cover.webp
 In a world short on doctors, Care Advisor for Breast uses computer vision to read mammograms and detect breast cancer.
 
 <figure>
-  <img src="../assets/img/{{ page.imgfolder }}/overview.webp" />
+  <img src="../assets/img/{{ page.imgfolder }}/cover.webp" />
 </figure>
 
 ## The Challenge
 
-Screening mammography is the most effective non-invasive procedure used to detect early signs of breast cancer. However, There is a global shortage of radiologists and an increasing demand for mammograms.
+Screening mammography is the most effective non-invasive procedure used to detect early signs of breast cancer. However, *there is a global shortage of radiologists and an increasing demand for mammograms.*
 
 Our high level goals were to:
 - Investigate breast imaging practices in the US and UK markets
@@ -55,10 +55,19 @@ Only 10% of American radiologists complete a fellowship focusing on breast imagi
 
 After consistent feedback on more than 10 concepts, we green lit what would become Care Advisor for Breast.
 
-This solution used the computer vision capabilities of IBM Watson to automate up to 95% of mammogram studies that are completely normal. This means that if any evidence of breast cancer is detected, it is queued to be read by a human radiologist.
+*This solution used the computer vision capabilities of IBM Watson to automate up to 95% of mammogram studies that are completely normal.* This means that if any evidence of breast cancer is detected, it is queued to be read by a human radiologist.
 
 <figure>
   <img src="../assets/img/{{ page.imgfolder }}/cover.webp" />
+</figure>
+
+### Writing reports
+Comparing the reporting styles of more than 30 radiologists, I observed a wide variety of stylistic choices ranging from meticulous detailing to omitting mention of benign findings altogether.
+
+In order to save annotation costs for ML training, Watson discards irrefutably benign findings from the report. For any that are described, it is explicit about the finding's morphology and location to the extent that it's counterpart in the mammogram image is clear.
+
+<figure>
+  <img src="../assets/img/{{ page.imgfolder }}/findings.webp" />
 </figure>
 
 ### Considering prior mammograms
@@ -66,13 +75,8 @@ There is no way to know what is truly normal within a woman's breast because man
 
 Watson imitates good human practices by preferring mammograms that are at least 2 years old so that changes are more blatant but no older than 5 years old so that it remains relevant.
 
-[ Screenshots ]
-
-### Revising reports
-
-
 <figure>
-  <img src="../assets/img/{{ page.imgfolder }}/edit.webp" />
+  <img src="../assets/img/{{ page.imgfolder }}/priors.webp" />
 </figure>
 
 ### Flagging higher risk women
