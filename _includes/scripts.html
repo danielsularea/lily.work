@@ -12,7 +12,8 @@
       url : url,
       dataType : 'html',
       success : function(data) {
-        window.location= url;
+        window.location = url;
+        Cookies.set('lily', hash);
       },
       error : function(xhr, ajaxOptions, thrownError) {
         // parent.location.hash = hash;
@@ -32,17 +33,26 @@
 
   $('a[href]').on('click', function() {
     if ($('body').data('index')) {
-      console.log($('body').data('index'));
-      Cookies.set('lilyTop', $(window).scrollTop(), { expires: 1 });
+      Cookies.set('lilyTop', $(window).scrollTop());
     }
   });
 
   $(document).ready(function() {
+    var isLocked = typeof Cookies.get('lily') === 'undefined';
+
+    if (isLocked && !($('body').data('public'))) {
+      window.location = '/';
+    }
+
+    if (!isLocked) {
+      $('.m--worklist').css({'display':'block'});
+      $('.m--lock').css({'display':'none'});
+    }
+
     if (typeof Cookies.get('lilyTop') === 'undefined'){
       // no cookie
     } else {
       if ($('body').data('index')) {
-        console.log(Cookies.get('lilyTop'));
         $(window).scrollTop(Cookies.get('lilyTop'));
       } else {
         $('.l--post_bg').css({'top':'-'+Cookies.get('lilyTop')});

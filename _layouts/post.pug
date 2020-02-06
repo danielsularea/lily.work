@@ -1,10 +1,11 @@
 doc
 html(lang="en")
   | {% include head.html %}
-  body.l--post
+  body.l--post(data-public="{% if page.category == 'blog' %}true{% endif %}")
     .l--post_bg.l--index
       .g--grid-fixed
         | {% include nav.html %}
+        | {% include lock.html %}
         | {% include workList.html %}
         | {% include blogList.html %}
       a.l--post_bg_overlay(href="../")

@@ -1,7 +1,7 @@
 doc
 html(lang="en")
   | {% include head.html %}
-  body.l--index(data-index="true")
+  body.l--index(data-public="true", data-index="true")
     .g--grid-fixed
       | {% include nav.html %}
       | {{ content }}
