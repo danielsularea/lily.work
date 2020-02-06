@@ -1,33 +1,52 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
 <script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
 <script type="text/javascript">
-  "use strict";
+  'use strict';
   function loadPage(pwd) {
     var hash = pwd;
     hash = Sha1.hash(pwd);
-    var url = hash + "/index.html";
+    var url = hash + '/index.html';
 
     $.ajax({
       url : url,
-      dataType : "html",
+      dataType : 'html',
       success : function(data) {
-        console.log("success");
         window.location= url;
       },
       error : function(xhr, ajaxOptions, thrownError) {
-        console.log("fail");
         // parent.location.hash = hash;
-        $("#password").attr("placeholder","Incorrect password");
-        $("#password").val("");
+        $('#password').attr('placeholder','Incorrect password');
+        $('#password').val('');
       }
     });
   }
 
-  $("#submit").on("click", function() {
-    loadPage($("#password").val());
+  $('#submit').on('click', function() {
+    loadPage($('#password').val());
   });
 
-  $("#password").keypress(function(e) {
-    if (e.which == 13) loadPage($("#password").val());
+  $('#password').keypress(function(e) {
+    if (e.which == 13) loadPage($('#password').val());
+  });
+
+  $('a[href]').on('click', function() {
+    if ($('body').data('index')) {
+      console.log($('body').data('index'));
+      Cookies.set('lilyTop', $(window).scrollTop(), { expires: 1 });
+    }
+  });
+
+  $(document).ready(function() {
+    if (typeof Cookies.get('lilyTop') === 'undefined'){
+      // no cookie
+    } else {
+      if ($('body').data('index')) {
+        console.log(Cookies.get('lilyTop'));
+        $(window).scrollTop(Cookies.get('lilyTop'));
+      } else {
+        $('.l--post_bg').css({'top':'-'+Cookies.get('lilyTop')});
+      }
+    }
   });
 </script>

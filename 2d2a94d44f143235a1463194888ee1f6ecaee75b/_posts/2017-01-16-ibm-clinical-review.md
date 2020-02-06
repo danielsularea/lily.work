@@ -6,14 +6,16 @@ summary: >
   Overhauling how the hospital staff navigates through a complex database.
 
 imgfolder: wicr
-cover: cover.webp
+cover: cover.png
 ---
 
 In IBM's second release of Watson Imaging Clinical Review, we revisited the way users navigate the application's complex database.
 
-<figure>
-  <img src="/assets/img/{{ page.imgfolder }}/cover.webp" alt="New Version of Clinical Review" />
-</figure>
+<picture>
+  <source srcset="/assets/img/{{ page.imgfolder }}/cover.webp" type="image/webp">
+  <source srcset="/assets/img/{{ page.imgfolder }}/cover.png" type="image/png">
+  <img src="/assets/img/{{ page.imgfolder }}/cover.png" />
+</picture>
 
 ## Background
 
@@ -22,14 +24,11 @@ In 2017, Watson Imaging Clinical Review (WICR) <a href="https://www.ibm.com/blog
 For WICR v2.0, IBM wanted a way to reduce staff training costs that would impact the bottom line and *our team was asked to overhaul the entire user experience.*
 
 
-<figure>
-  <img src="/assets/img/{{ page.imgfolder }}/old.webp" alt="Version 1 of Clinical Review" />
-  <!-- <figcaption>Trying to find specific issues in this discrepancy table can be limiting and confusing.</figcaption> -->
-</figure>
-
-<!-- <figure>
-  <img src="/assets/img/{{ page.imgfolder }}/new.webp" alt="Version 1 of Clinical Review" />
-</figure> -->
+<picture>
+  <source srcset="/assets/img/{{ page.imgfolder }}/old.webp" type="image/webp">
+  <source srcset="/assets/img/{{ page.imgfolder }}/old.png" type="image/png">
+  <img src="/assets/img/{{ page.imgfolder }}/old.png" />
+</picture>
 
 ## My Role
 
@@ -40,15 +39,16 @@ I worked on WICR v2.0 from 2016 to 2017 with a design lead, a user researcher, a
 By far the biggest pain point for users was searching through the sheer volume and complexity of information in the table.
 
 <figure>
-  <img src="/assets/img/{{ page.imgfolder }}/datatypes.svg" alt="The range of data types for each category" />
-  <!-- <figcaption>The range of data types for each category</figcaption> -->
+  <img src="/assets/img/{{ page.imgfolder }}/datatypes.svg" />
 </figure>
 
 With 25 total categories to search from, each with its own set of operators and data types, *we needed to overhaul search in a way that would provide organization and control.*
 
-<figure>
-  <img src="/assets/img/{{ page.imgfolder }}/protos.webp" alt="The range of data types for each category" />
-</figure>
+<picture>
+  <source srcset="/assets/img/{{ page.imgfolder }}/protos.webp" type="image/webp">
+  <source srcset="/assets/img/{{ page.imgfolder }}/protos.png" type="image/png">
+  <img src="/assets/img/{{ page.imgfolder }}/protos.png" />
+</picture>
 
 ### Manual Search for Casual Users
 
@@ -57,7 +57,7 @@ Doctors who only logged into WICR to resolve flagged issues did so infrequently.
 Having visual choices and feedback was important to casual users who weren't familiar with the entire search toolbelt. *The manual selection method then is straightforward and comfortable.*
 
 <figure class="figure-video" style="background-color: #D4C9EA;">
-  <video controls loop autoplay style="border-radius: 8px;" name="Manual search using modal inputs" src="/assets/img/{{ page.imgfolder }}/manualsearch.mov"></video>
+  <video controls loop autoplay style="border-radius: 8px;" src="/assets/img/{{ page.imgfolder }}/manualsearch.mp4"></video>
   <!-- <figcaption>Made in Framer</figcaption> -->
 </figure>
 
@@ -68,8 +68,7 @@ On the other hand, hospital staff such as nurses and medical coders were respons
 *These power users are able to type complex searches directly into the search bar.* To provide further help, an autocomplete box follows the cursor and offers look-ahead feedback.
 
 <figure class="figure-video" style="background-color: #D4C9EA;">
-  <video controls loop autoplay style="border-radius: 8px;" name="Quick search by directly typing into search bar" src="/assets/img/{{ page.imgfolder }}/typesearch.mov"></video>
-  <!-- <figcaption>Made in Framer</figcaption> -->
+  <video controls loop autoplay style="border-radius: 8px;" src="/assets/img/{{ page.imgfolder }}/typesearch.mp4"></video>
 </figure>
 
 ## Columns Control
@@ -78,17 +77,21 @@ By default, the discrepancy table only fits 12 out of the 25 possible category c
 
 Instead, we gave each user individual control over the columns they wanted to see.
 
-<figure>
-  <img src="/assets/img/{{ page.imgfolder }}/columncontrol.webp" alt="">
-</figure>
+<picture>
+  <source srcset="/assets/img/{{ page.imgfolder }}/columncontrol.webp" type="image/webp">
+  <source srcset="/assets/img/{{ page.imgfolder }}/columncontrol.png" type="image/png">
+  <img src="/assets/img/{{ page.imgfolder }}/columncontrol.png">
+</picture>
 
 ## Saved Searches
 
 Users was that they often performed repeated searches. To save time, we persisted a history of their most recent searches and allowed users to save the current set of Search Formulas.
 
-<figure>
-  <img src="/assets/img/{{ page.imgfolder }}/savesearch.webp" alt="">
-</figure>
+<picture>
+  <source srcset="/assets/img/{{ page.imgfolder }}/savesearch.webp" type="image/webp">
+  <source srcset="/assets/img/{{ page.imgfolder }}/savesearch.png" type="image/png">
+  <img src="/assets/img/{{ page.imgfolder }}/savesearch.png">
+</picture>
 
 ## Conclusion
 

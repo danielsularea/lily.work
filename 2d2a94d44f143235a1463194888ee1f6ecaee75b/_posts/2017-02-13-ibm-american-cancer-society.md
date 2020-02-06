@@ -3,14 +3,16 @@ title: A mobile app for cancer patients
 company: IBM Watson
 
 imgfolder: acs
-cover: scroll.webp
+cover: scroll.png
 ---
 
 In 2016, IBM and the American Cancer Society announced a partnership to create an AI mobile app for patients fighting cancer.
 
-<figure>
-  <img src="/assets/img/acs/scroll.webp" alt="Watson can recognize and highlight keywords of interest in the transcript and break down the recording into sections of major topics so patients have digest the content quicker.">
-</figure>
+<picture>
+  <source srcset="/assets/img/{{ page.imgfolder }}/scroll.webp" type="image/webp">
+  <source srcset="/assets/img/{{ page.imgfolder }}/scroll.png" type="image/png">
+  <img src="/assets/img/{{ page.imgfolder }}/scroll.png">
+</picture>
 
 ## The Challenge
 Despite readily accessible resources on cancer today, <a href="https://www.ncbi.nlm.nih.gov/pubmed/25180371" target="_blank">numerous</a> <a href="https://www.ncbi.nlm.nih.gov/pubmed/12923796" target="_blank">studies</a> still show concern that lay understanding of cancer is suboptimal. *Patients and their caregivers lack the medical framework to fully comprehend and manage their cancer.*
@@ -38,8 +40,7 @@ Nearly 40% of men and women in the US will be diagnosed with cancer within their
 To understand this experience, we interviewed 8 patients, 15 caregivers, and 43 healthcare professionals ranging between oncologists, nurses, and medical assistants.
 
 <figure class="narrow">
-  <img src="/assets/img/acs/cancerjourney.svg" alt="User cancer journey" />
-  <!-- <figcaption>The cancer journey at a high level</figcaption> -->
+  <img src="/assets/img/{{ page.imgfolder }}/cancerjourney.svg" />
 </figure>
 
 After gaining a more sophisticated understanding of the cancer journey, we derived a few key insights:
@@ -67,7 +68,7 @@ In an environment with a wealth of knowledge but no medical degree, both patient
 Doctors today are already accustomed to patients taping their sessions in order to digest the heavy amounts of information that they talk about. We piggybacked this behavior by providing live speech-to-text transcription.
 
 <figure class="figure-video" style="background-color: #DBE5E6;">
-  <video loop autoplay controls name="Users can record the conversation at the doctor's office, take photos without stopping the tape, and view the speech-to-text transcription in real-time." poster="/assets/img/acs/proto_record_poster.jpg" src="/assets/img/acs/record.mov" height="560px"></video>
+  <video loop autoplay controls poster="/assets/img/{{ page.imgfolder }}/scroll.png" src="/assets/img/{{ page.imgfolder }}/record.mp4" height="560px"></video>
   <!-- <figcaption>Users can record the conversation at the doctor's office, take photos without stopping the tape, and view the speech-to-text transcription in real-time.</figcaption> -->
 </figure>
 
@@ -79,10 +80,11 @@ But as conversations are transcribed to text in the app, each word is indexed so
 
 Search also suggests the most incidental keywords across all conversations so patients can find recordings by theme.
 
-<figure>
-  <img src="/assets/img/acs/library.webp" alt="Users can store, track, and search through every conversation.">
-  <!-- <figcaption>Users can store, track, and search through every conversation.</figcaption> -->
-</figure>
+<picture>
+  <source srcset="/assets/img/{{ page.imgfolder }}/library.webp" type="image/webp">
+  <source srcset="/assets/img/{{ page.imgfolder }}/library.png" type="image/png">
+  <img src="/assets/img/{{ page.imgfolder }}/library.png">
+</picture>
 
 ### Rewind and review key topics
 
@@ -95,7 +97,7 @@ The highlighted terms also serve as easier, in-context search queries by allowin
 <!-- The aim for this process is to reduce the frequent "I don't know what I don't know" phenomenon. Traditionally, patients have to reconstruct what they took away from their doctor into a completed question to ask elsewhere. Instead, we lower the research barrier and use the recorded conversation itself as a search generator. -->
 
 <figure class="figure-video" style="background-color: #DBE5E6;">
-  <video loop autoplay controls name="After the appointment, users can review both the transcript and recording and dive into highlighted keywords that Watson recognizes from the ACS database." src="/assets/img/acs/review.mov" height="560px"></video>
+  <video loop autoplay controls src="/assets/img/{{ page.imgfolder }}/review.mp4" height="560px"></video>
   <!-- <figcaption>After the appointment, users can review both the transcript and recording and dive into highlighted keywords that Watson recognizes from the ACS database.</figcaption> -->
 </figure>
 

@@ -3,14 +3,16 @@ title: Detecting breast cancer using AI
 company: IBM Watson
 
 imgfolder: ca-breast
-cover: cover.webp
+cover: cover.png
 ---
 
 In a world short on doctors, Care Advisor for Breast uses computer vision to read mammograms and detect breast cancer.
 
-<figure>
-  <img src="/assets/img/{{ page.imgfolder }}/cover.webp" />
-</figure>
+<picture>
+	<source srcset="/assets/img/{{ page.imgfolder }}/cover.webp" type="image/webp">
+	<source srcset="/assets/img/{{ page.imgfolder }}/cover.png" type="image/png">
+  <img src="/assets/img/{{ page.imgfolder }}/cover.png" />
+</picture>
 
 ## The Challenge
 
@@ -30,9 +32,11 @@ I stopped working at the company once we submitted our solution for clinical tri
 
 During the project's inaugural 6 months, the PM and I conducted contextual inquiries at 5 breast imaging institutions with 22 total participants.
 
-<figure>
-  <img src="/assets/img/{{ page.imgfolder }}/research.webp" />
-</figure>
+<picture>
+	<source srcset="/assets/img/{{ page.imgfolder }}/research.webp" type="image/webp">
+	<source srcset="/assets/img/{{ page.imgfolder }}/research.png" type="image/png">
+  <img src="/assets/img/{{ page.imgfolder }}/research.png" />
+</picture>
 
 ### 1. Screening mammograms are very tedious
 
@@ -57,36 +61,44 @@ After consistent feedback on more than 10 concepts, we green lit what would beco
 
 *This solution used the computer vision capabilities of IBM Watson to automate up to 95% of mammogram studies that are completely normal.* This means that if any evidence of breast cancer is detected, it is queued to be read by a human radiologist.
 
-<figure>
-  <img src="/assets/img/{{ page.imgfolder }}/cover.webp" />
-</figure>
+<picture>
+	<source srcset="/assets/img/{{ page.imgfolder }}/cover.webp" type="image/webp">
+	<source srcset="/assets/img/{{ page.imgfolder }}/cover.png" type="image/png">
+  <img src="/assets/img/{{ page.imgfolder }}/cover.png" />
+</picture>
 
 ### Writing reports
 Comparing the reporting styles of more than 30 radiologists, I observed a wide variety of stylistic choices ranging from meticulous detailing to omitting mention of benign findings altogether.
 
 In order to save annotation costs for ML training, Watson discards irrefutably benign findings from the report. For any that are described, it is explicit about the finding's morphology and location to the extent that it's counterpart in the mammogram image is clear.
 
-<figure>
-  <img src="/assets/img/{{ page.imgfolder }}/findings.webp" />
-</figure>
+<picture>
+	<source srcset="/assets/img/{{ page.imgfolder }}/findings.webp" type="image/webp">
+	<source srcset="/assets/img/{{ page.imgfolder }}/findings.png" type="image/png">
+  <img src="/assets/img/{{ page.imgfolder }}/findings.png" />
+</picture>
 
 ### Considering prior mammograms
 There is no way to know what is truly normal within a woman's breast because many patients have natural biological markers that are unique to them.
 
 Watson imitates good human practices by preferring mammograms that are at least 2 years old so that changes are more blatant but no older than 5 years old so that it remains relevant.
 
-<figure>
-  <img src="/assets/img/{{ page.imgfolder }}/priors.webp" />
-</figure>
+<picture>
+	<source srcset="/assets/img/{{ page.imgfolder }}/priors.webp" type="image/webp">
+	<source srcset="/assets/img/{{ page.imgfolder }}/priors.png" type="image/png">
+  <img src="/assets/img/{{ page.imgfolder }}/priors.png" />
+</picture>
 
 ### Flagging higher risk women
 Depending on personal and family history of breast cancer, as well as rare genetic mutations, some women are predisposed to develop breast cancer.
 
 These patients would receive additional considerations (supplementary MRI, shorter intervals between screenings, etc) in accordance to each institution protocol.
 
-<figure>
-  <img src="/assets/img/{{ page.imgfolder }}/highrisk.webp" />
-</figure>
+<picture>
+	<source srcset="/assets/img/{{ page.imgfolder }}/highrisk.webp" type="image/webp">
+	<source srcset="/assets/img/{{ page.imgfolder }}/highrisk.png" type="image/png">
+  <img src="/assets/img/{{ page.imgfolder }}/highrisk.png" />
+</picture>
 
 ## Conclusion
 My time up until my departure has been overwhelmingly spent with the research and engineering teams to design a machine learning algorithm, decide how to collect and annotate data in order to train the algorithm, and determine the way its outputs translate into real product application.

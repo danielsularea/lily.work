@@ -73,6 +73,7 @@
   pre, ul, ol,
   blockquote,
   figure.narrow,
+  picture.narrow,
   figure:not(.narrow) figcaption {
     display: block;
     margin-left: 4rem;
@@ -151,7 +152,8 @@
     }
   }
 
-  figure {
+  figure,
+  picture {
     position: relative;
     margin: 3rem 0;
     text-align: center;
