@@ -1,0 +1,33 @@
+.lock {
+	margin-top: 5rem;
+
+	input,
+	button {
+		height: 4rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		line-height: 4rem;
+    font-size: 1.6rem;
+    color: $v--color-black;
+	}
+
+	input {
+		border: none;
+		box-shadow: none;
+    background-color: $v--color-white;
+    border-radius: 4px;
+	}
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $v--color-yellow;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $v--color-yellow;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: $v--color-yellow;
+}
