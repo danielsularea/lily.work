@@ -33,7 +33,11 @@
   flex: 1 auto;
   width: 100%;
   overflow: hidden;
-  height: 36rem;
+  height: 24rem;
+
+  @media (min-width: map-get($v--grid-breakpoints, sm)) {
+    height: 36rem;
+  }
 }
 
 .m--worklist_img {
