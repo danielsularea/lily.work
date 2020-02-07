@@ -61,9 +61,9 @@ The redesign consolidated existing styles and began to define a system not only 
 </figure>
 
 ### Rebuilt fundamentals
-The People and Funding pages made up the core of the profile and saw their first update in 4 years. This redesign largely solves UX issues with the way information was represented so that it addresses the questions job seekers have.
+The People and Funding pages made up the core of the profile and saw their first update in 4 years. This redesign largely solves UX issues with the way information are represented so that it addresses the questions job seekers have.
 
-In particular, people cards offer more upfront detail into their background and funding history follows a more apparent timeline.
+In particular, the people cards now offer more upfront detail into their background and funding history follows a more apparent timeline.
 
 <picture>
   <source srcset="/assets/img/{{ page.imgfolder }}/pages.webp" type="image/webp" />
