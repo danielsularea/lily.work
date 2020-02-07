@@ -13,7 +13,7 @@
       dataType : 'html',
       success : function(data) {
         window.location = url;
-        Cookies.set('lily', hash);
+        Cookies.set('_laccess', hash);
       },
       error : function(xhr, ajaxOptions, thrownError) {
         // parent.location.hash = hash;
@@ -33,12 +33,12 @@
 
   $('a[href]').on('click', function() {
     if ($('body').data('index')) {
-      Cookies.set('lilyTop', $(window).scrollTop());
+      Cookies.set('_ltop', $(window).scrollTop());
     }
   });
 
   $(document).ready(function() {
-    var isLocked = typeof Cookies.get('lily') === 'undefined';
+    var isLocked = typeof Cookies.get('_laccess') === 'undefined';
 
     if (isLocked && !($('body').data('public'))) {
       window.location = '/';
@@ -49,13 +49,13 @@
       $('.m--lock').css({'display':'none'});
     }
 
-    if (typeof Cookies.get('lilyTop') === 'undefined'){
+    if (typeof Cookies.get('_ltop') === 'undefined'){
       // no cookie
     } else {
       if ($('body').data('index')) {
-        $(window).scrollTop(Cookies.get('lilyTop'));
+        $(window).scrollTop(Cookies.get('_ltop'));
       } else {
-        $('.l--post_bg').css({'top':'-'+Cookies.get('lilyTop')});
+        $('.l--post_bg').css({'top':'-'+Cookies.get('_ltop')});
       }
     }
   });
