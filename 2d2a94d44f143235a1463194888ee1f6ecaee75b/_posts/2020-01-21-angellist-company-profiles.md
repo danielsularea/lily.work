@@ -20,7 +20,7 @@ As a core piece of our talent marketplace, *Company Profiles should represent em
 Our priority was to first ship a product that met table stakes requirements. Any nice-to-have features would have to come later.
 
 ## Process
-I was the lead designer with contributions from my Head of Design and worked closely with three engineers. I led user research, design, and eventually product management. The project lasted 9 months and was fully rolled out in August 2019.
+I was the lead designer working with another designer and three engineers. I led user research, design, and eventually product management. The project lasted 9 months and was fully rolled out in August 2019.
 
 ## Existing Problems
 ### Fragmented information architecture
