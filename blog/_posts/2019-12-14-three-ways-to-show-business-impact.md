@@ -4,14 +4,14 @@ title: 3 Ways to Show Your Design had Business Impact
 
 As designers, we’re constantly standing up for our users and measuring our success with higher Net Promoter Scores (NPS), improved usability, and higher engagement metrics. But when you sit down in your next product design interview and present your work to people outside of those projects, they may not be able to grasp the value of your work. In other words, your interviewer (who may not necessarily be a designer!) might not see how your designs contributed to the overall business objective.
 
-Sure, PMs are usually the ones held accountable for the company’s KPIs. But more and more, teams (especially within startups) are improving their cross-disciplinary literacy so they can all push towards a central goal without language barriers. And as part of that, great designers know how to solve problems for their users by driving business impact (https://medium.com/hubspot-product/designers-should-forget-about-coding-learn-product-management-instead-5285b538b364).
+Sure, PMs are usually the ones held accountable for the company’s KPIs. But more and more, teams (especially within startups) are improving their cross-disciplinary literacy so they can all push towards a central goal without language barriers. And as part of that, great designers know how to solve problems for their users by [driving business impact](https://medium.com/hubspot-product/designers-should-forget-about-coding-learn-product-management-instead-5285b538b364).
 
 Over the past 4 years, I’ve conducted hundreds of product design interviews and, as a result, observed many different strategies that candidates use to showcase themselves and their work. Taking from that experience, here are 3 ways you can demonstrate the business impact of your work in your next portfolio review.
 
 
 ## 1. Explain why your project became a priority
 
-For a lot of designers, the PM is the de facto owner of the roadmap. But regardless of how much say you may have had in establishing the roadmap, great designers still need to understand why this project was prioritized (https://blackboxofpm.com/ruthless-prioritization-e4256e3520a9) for you to dedicate your time to it.
+For a lot of designers, the PM is the de facto owner of the roadmap. But regardless of how much say you may have had in establishing the roadmap, great designers still need to [understand why this project was prioritized](https://blackboxofpm.com/ruthless-prioritization-e4256e3520a9) for you to dedicate your time to it.
 
 The answer I get to this question is often a summary of early findings from user research. And while that is definitely an acceptable response, you can take it much further by tracing it to business goals and where it fits within the overall roadmap.
 
@@ -26,7 +26,7 @@ Your awareness of a broader reason for the work you’re doing will not only dem
 
 In every portfolio review, I ask for success metrics and whether they were moved once the design was implemented. More often than not, candidates will speak about improved usability study results.
 
-However, standout candidates drill a level deeper (https://blog.alexaroman.com/how-to-measure-the-impact-of-your-work-28aad3bcd6cf) into how their design impacted the overall business goals. This typically surfaces as acquisition, conversion, monetization, or retention rates.
+However, standout candidates [drill a level deeper](https://blog.alexaroman.com/how-to-measure-the-impact-of-your-work-28aad3bcd6cf) into how their design impacted the overall business goals. This typically surfaces as acquisition, conversion, monetization, or retention rates.
 
 **Average Answer**: “In usability tests, participants found the final designs to be far more valuable and easier to understand.”
 
