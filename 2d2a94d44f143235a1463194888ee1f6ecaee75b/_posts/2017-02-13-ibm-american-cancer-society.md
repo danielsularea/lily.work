@@ -103,6 +103,4 @@ The highlighted terms also serve as easier, in-context search queries by allowin
 
 ## Conclusion
 
-Although both IBM and ACS stakeholders were excited with this direction, the partnership was ultimately put on hold and we hope that it returns from its hiatus in the near future.
-
-However, the collaborative relationship we developed with ACS and their various facilities during this project allowed us to re-connect with patients and caregivers on a regular basis for future projects.
+We finished handoff in 2017. Both IBM and ACS stakeholders were excited with this direction and the app is now under development in Shanghai.
